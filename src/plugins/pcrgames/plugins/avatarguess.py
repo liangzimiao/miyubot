@@ -19,8 +19,6 @@ from nonebot.adapters import Bot, Event
 from nonebot.adapters.cqhttp import Bot, MessageSegment, message,Message
 from pydantic.errors import TupleError
 from src.plugins.nonebot_guild_patch import GuildMessageEvent
-from configs.path_config import IMAGE_PATH
-from configs.path_config import GIF_PATH
 from utils.message_builder import image
 from pathlib import Path
 from nonebot.permission import MESSAGE, SUPERUSER
