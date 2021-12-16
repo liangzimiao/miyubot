@@ -166,5 +166,4 @@ src/plugins/nonebot_plugin_heweather
 src/plugins/nonebot_plugin_setu_now
 src/plugins/nonebot_hanayori
 data
-src/plugins/calendar/data.json
-src/plugins/rss/data.json
+src/plugins/**/data.json
