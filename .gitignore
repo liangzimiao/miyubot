@@ -110,6 +110,8 @@ celerybeat.pid
 
 # Environments
 .env
+.env.dev
+.env.prod
 .venv
 env/
 venv/
@@ -138,9 +140,31 @@ dmypy.json
 # pytype static type analyzer
 .pytype/
 
-
-
 # End of https://www.toptal.com/developers/gitignore/api/python
-/.env.dev
-/.env.prod
-data.json
+.db
+baidu_translate.json
+phantomjs.exe
+pyproject.toml
+README.md
+requirements.txt
+twitter.db
+phantomjs.exe
+configs/config.py
+bilibili.db
+docker-compose.yml
+Dockerfile
+go-cqhttp
+utils/log.py
+src/plugins/____tmp
+src/plugins/ceshi
+src/plugins/jibot
+src/plugins/pcrgames/data/pcr_avatar_guess.db
+src/plugins/pcrgames/data/pcr_card_guess.db
+src/plugins/pcrgames/data/pcr_desc_guess.db
+src/plugins/nonebot_plugin_twitter
+src/plugins/nonebot_plugin_heweather
+src/plugins/nonebot_plugin_setu_now
+src/plugins/nonebot_hanayori
+data
+src/plugins/calendar/data.json
+src/plugins/rss/data.json
