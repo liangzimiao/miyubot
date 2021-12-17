@@ -17,7 +17,7 @@ from nonebot.adapters.cqhttp import Bot, Message, MessageSegment
 from nonebot.plugin import on_command, on_regex
 from nonebot.typing import T_State
 
-from alicebot.plugins.nonebot_guild_patch import GuildMessageEvent
+from src.plugins.nonebot_guild_patch import GuildMessageEvent
 from .config import Config
 
 global_config = get_driver().config
