@@ -5,17 +5,24 @@
 @File    : __init__.py.py
 @DES     : 
 """
-from io import BytesIO
-import time
-from nonebot.adapters.cqhttp import Message, MessageSegment
-from nonebot.adapters.cqhttp.event import Sender
-from src.plugins.nonebot_guild_patch import GuildMessageEvent, patched_send
-from pydantic import BaseSettings
-from nonebot import get_driver
 import base64
+import json
+import os
+import time
+from io import BytesIO
+from collections import defaultdict
 import unicodedata
 import zhconv
 from PIL import Image
+from nonebot import get_driver, logger
+from nonebot.adapters.cqhttp import Message
+from nonebot.adapters.cqhttp.event import Sender
+from pydantic import BaseSettings
+import pytz
+from datetime import datetime, timedelta
+from src.plugins.nonebot_guild_patch import GuildMessageEvent, patched_send
+
+
 class Config(BaseSettings):
     bot_id: str
     bot_guild_id: str
@@ -48,6 +55,7 @@ def pic2b64(pic: Image) -> str:
     base64_str = base64.b64encode(buf.getvalue()).decode()
     return 'base64://' + base64_str
 
+
 def normalize_str(string) -> str:
     """
     规范化unicode字符串 并 转为小写 并 转为简体
@@ -56,3 +64,60 @@ def normalize_str(string) -> str:
     string = string.lower()
     string = zhconv.convert(string, 'zh-hans')
     return string
+
+
+def load_config(inbuilt_file_var):
+    """
+    Just use `config = load_config(__file__)`,
+    you can get the config.json as a dict.
+    """
+    filename = os.path.join(os.path.dirname(inbuilt_file_var), 'config.json')
+    try:
+        with open(filename, encoding='utf8') as f:
+            config = json.load(f)
+            return config
+    except Exception as e:
+        logger.exception(e)
+        return {}
+
+
+class DailyNumberLimiter:
+    tz = pytz.timezone('Asia/Shanghai')
+
+    def __init__(self, max_num):
+        self.today = -1
+        self.count = defaultdict(int)
+        self.max = max_num
+
+    def check(self, key) -> bool:
+        now = datetime.now(self.tz)
+        day = (now - timedelta(hours=5)).day
+        if day != self.today:
+            self.today = day
+            self.count.clear()
+        return bool(self.count[key] < self.max)
+
+    def get_num(self, key):
+        return self.count[key]
+
+    def increase(self, key, num=1):
+        self.count[key] += num
+
+    def reset(self, key):
+        self.count[key] = 0
+
+
+def concat_pic(pics, border=5):
+    num = len(pics)
+    w, h = pics[0].size
+    des = Image.new('RGBA', (w, num * h + (num - 1) * border), (255, 255, 255, 255))
+    for i, pic in enumerate(pics):
+        des.paste(pic, (0, i * (h + border)), pic)
+    return des
+
+
+def pic2b64(pic: Image) -> str:
+    buf = BytesIO()
+    pic.save(buf, format='PNG')
+    base64_str = base64.b64encode(buf.getvalue()).decode()
+    return 'base64://' + base64_str
