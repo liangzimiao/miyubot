@@ -91,7 +91,7 @@ async def disable_aichat(bot: Bot, event: GuildMessageEvent):
     await close.finish(f'人工智障已禁用')
 
 
-reply = on_command('')
+reply = on_command('',block=False)
 
 
 @reply.handle()
