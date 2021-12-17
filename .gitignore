@@ -167,3 +167,6 @@ src/plugins/nonebot_plugin_setu_now
 src/plugins/nonebot_hanayori
 data
 src/plugins/**/data.json
+/src/plugins/pcrgames/plugins/gacha/local_ver.json
+/src/plugins/pcrgames/plugins/gacha/backup.json
+src/plugins/pcrgames/plugins/gacha/group_pool_config.json
