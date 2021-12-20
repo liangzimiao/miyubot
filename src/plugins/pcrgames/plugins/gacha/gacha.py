@@ -1,6 +1,6 @@
 import random
 
-from ... import chara
+from src.plugins.pcrgames import chara
 from utils import load_config
 
 

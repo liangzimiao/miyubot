@@ -1,36 +1,14 @@
-import os
 import random
 from collections import defaultdict
-import re
-from ... import chara
+from nonebot import on_startswith
+from nonebot.adapters.cqhttp import MessageSegment, Message
+from nonebot.typing import T_State
+from src.plugins.nonebot_guild_patch import GuildMessageEvent
+from utils import concat_pic, pic2b64
+from .config import Config
 from .gacha import Gacha
 from .update import *
-from nonebot import logger
-from src.plugins.nonebot_guild_patch import GuildMessageEvent, patched_send
-from nonebot.adapters.cqhttp.event import Sender
-from nonebot.typing import T_State
-from nonebot.adapters.cqhttp import Bot, MessageSegment, Message
-from nonebot import on_command, on_startswith
-from nonebot import require
-import asyncio
-import base64
-import html
-import json
-import math
-import os
-import random
-import re
-import string
-import time
-import traceback
-from io import BytesIO
-import aiohttp
-import feedparser
-from PIL import Image
-from utils import send_guild_message
-from nonebot import get_driver
-from .config import Config
-from utils import normalize_str, concat_pic, pic2b64
+from ... import chara
 
 try:
     import ujson as json

@@ -1,23 +1,17 @@
 import importlib
 from io import BytesIO
-from nonebot import permission
 from nonebot.plugin import on_command
-from nonebot.adapters import Bot, Event
 import pygtrie
 import requests
-from fuzzywuzzy import fuzz, process
+from fuzzywuzzy import process
 from PIL import Image
-from nonebot.adapters.cqhttp import Bot, MessageSegment, message, Message
-from pydantic.errors import TupleError
-from typing import (Any, Callable, Dict, Iterable, List, NamedTuple, Optional,
-                    Set, Tuple, Union)
+from nonebot.adapters.cqhttp import Bot
 
-from aiocqhttp import Event as CQEvent
 from nonebot.permission import SUPERUSER
 # from hoshino import   sucmd
 import utils
 from . import _pcr_data
-from . import R
+from utils import R
 
 UNKNOWN = 1000
 UnavailableChara = {

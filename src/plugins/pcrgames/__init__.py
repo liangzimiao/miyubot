@@ -6,8 +6,10 @@ import os
 import sqlite3
 import requests
 import json
+
 global_config = get_driver().config
 config = Config(**global_config.dict())
+
 
 class Dao:
     def __init__(self, db_path):
@@ -88,26 +90,28 @@ class Game:
         return self.gm.db.record_winning(self.gid, self.winner)
 
 
-def get_guild_member_info(get_gid,uid):
+def get_guild_member_info(get_gid, uid):
     url = f'http://127.0.0.1:5700/get_guild_members?guild_id={get_gid}'
     req = requests.get(url)
-    d=json.loads(req.text)
+    d = json.loads(req.text)
 
     for e in d['data']['admins']:
-        if  e['tiny_id']==uid:
+        if e['tiny_id'] == uid:
             return e['nickname']
     for e in d['data']['members']:
-        if  e['tiny_id']==uid:
+        if e['tiny_id'] == uid:
             return e['nickname']
-    
-
 
 
 _sub_plugins = set()
 _sub_plugins |= nonebot.load_plugins(
-    str((Path(__file__).parent / "plugins").
-    resolve()))
-_sub_plugins = set()
-_sub_plugins |= nonebot.load_plugins(
-    str((Path(__file__).parent / "plugins/guess").
-    resolve()))
+    str((Path(__file__).parent / "plugins/").
+        resolve()))
+# _sub_plugins = set()
+# _sub_plugins |= nonebot.load_plugins(
+#     str((Path(__file__).parent / "plugins/guess").
+#         resolve()))
+# _sub_plugins = set()
+# _sub_plugins |= nonebot.load_plugins(
+#     str((Path(__file__).parent / "plugins/gacha").
+#         resolve()))
