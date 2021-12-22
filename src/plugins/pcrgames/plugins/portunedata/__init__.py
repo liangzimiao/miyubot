@@ -11,6 +11,8 @@ import random
 from PIL import Image, ImageDraw, ImageFont
 from nonebot import on_keyword
 from nonebot.adapters.cqhttp import MessageSegment
+from nonebot.adapters.cqhttp.event import MessageEvent
+from nonebot.plugin import on_command
 
 from src.plugins.nonebot_guild_patch import GuildMessageEvent
 from utils import DailyNumberLimiter, pic2b64
@@ -148,11 +150,14 @@ def vertical(str):
     return '\n'.join(list)
 
 
-pcr_portune = on_keyword({'抽签', '人品', '运势'})
+pcr_portune = on_command("抽签", aliases={'人品', '运势'}, priority=5)
 
 
 @pcr_portune.handle()
-async def portune(bot, event: GuildMessageEvent):
+async def portune(bot, event: MessageEvent):
+    args = str(event.get_message()).strip()
+    if args:
+        return
     # if not lmt.check(uid):
     # await bot.finish(ev, f'你今天已经抽过签了，欢迎明天再来~', at_sender=True)
     # lmt.increase(uid)
