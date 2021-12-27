@@ -4,12 +4,12 @@ from io import BytesIO
 
 import requests
 from PIL import Image, ImageDraw, ImageFont
-from nonebot.adapters.cqhttp import Bot, MessageSegment
+from nonebot.adapters.cqhttp import Bot, MessageSegment, Event
 from nonebot.plugin import on_startswith
 from nonebot.typing import T_State
-
 from ..nonebot_guild_patch import GuildMessageEvent
 from .config import Config
+import filetype
 
 matcher = on_startswith('要我一直')
 
@@ -32,7 +32,7 @@ def img_gen(pic):
 
 
 @matcher.handle()
-async def ywyz(bot: Bot, event: GuildMessageEvent, state: T_State):
+async def ywyz(bot: Bot, event: Event, state: T_State):
     match = re.search(r"\[CQ:image,file=(.*),url=(.*)\]", str(event.message))
     if not match:
         return
