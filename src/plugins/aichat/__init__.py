@@ -9,14 +9,14 @@ from ..nonebot_guild_patch import GuildMessageEvent
 from nonebot import get_driver
 from nonebot.adapters.cqhttp import Bot
 from nonebot.plugin import on_command, on_message
-
+from .data_source import AiChat
 from .config import Config
 from .data_source import Request
 
 global_config = get_driver().config
 config = Config(**global_config.dict())
 bot_guild_id = config.dict().get("bot_guild_id")
-black_word = ['色图', '来一井', '贵族签到']  # 如果有不想触发的词可以填在这里
+black_word = ['色图', '来一井', '贵族签到', '关于']  # 如果有不想触发的词可以填在这里
 
 SecretId = ''  # 填你的SecretId
 SecretKey = ''  # 填你的SecretKey
@@ -64,7 +64,7 @@ def load_data():
         traceback.print_exc()
 
 
-enable = on_command('调整AI概率')
+enable = AiChat().on_command('调整AI概率', '调整AI概率')
 
 
 @enable.handle()
@@ -83,7 +83,7 @@ async def enable_aichat(bot: Bot, event: GuildMessageEvent):
     await enable.finish(f'人工智障已启用, 当前bot回复概率为{chance}%.')
 
 
-close = on_command('关闭人工智障')
+close = AiChat().on_command('关闭人工智障', '关闭人工智障')
 
 
 @close.handle()
@@ -92,7 +92,7 @@ async def disable_aichat(bot: Bot, event: GuildMessageEvent):
     await close.finish(f'人工智障已禁用')
 
 
-reply = on_message(block=False)
+reply = AiChat().on_message(block=False)
 
 
 @reply.handle()

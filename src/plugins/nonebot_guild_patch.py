@@ -1,4 +1,7 @@
 import inspect
+import re
+
+from nonebot.typing import overrides
 from typing_extensions import Literal
 from typing import List, Union, Optional
 from pydantic import Field, BaseModel, validator
@@ -8,6 +11,9 @@ from nonebot.adapters.cqhttp.bot import Bot
 from nonebot.adapters.cqhttp.utils import escape
 from nonebot.adapters.cqhttp.message import Message, MessageSegment
 from nonebot.adapters.cqhttp.event import Event, NoticeEvent, MessageEvent
+import nonebot
+
+config = nonebot.get_driver().config
 
 
 class GuildMessageEvent(MessageEvent):
@@ -30,6 +36,15 @@ class GuildMessageEvent(MessageEvent):
             return str(Message(raw_message))
         raise ValueError('unknown raw message type')
 
+    @overrides(MessageEvent)
+    def is_tome(self) -> bool:
+        matcher = re.match(f'^\[CQ:at,qq=([0-9]+?)].*', self.raw_message)
+        if matcher:
+            at_id = matcher.group(1)
+            return at_id == str(config.dict().get('bot_guild_id'))
+        return False
+
+
 class ReactionInfo(BaseModel):
     emoji_id: str
     emoji_index: int
@@ -41,6 +56,7 @@ class ReactionInfo(BaseModel):
     class Config:
         extra = "allow"
 
+
 class ChannelNoticeEvent(NoticeEvent):
     __event__ = "notice.channel"
     self_tiny_id: int
@@ -50,11 +66,13 @@ class ChannelNoticeEvent(NoticeEvent):
 
     sub_type: None = None
 
+
 class MessageReactionUpdatedNoticeEvent(ChannelNoticeEvent):
     __event__ = "notice.message_reactions_updated"
     notice_type: Literal["message_reactions_updated"]
     message_id: str
     current_reactions: Optional[List[ReactionInfo]] = None
+
 
 class SlowModeInfo(BaseModel):
     slow_mode_key: int
@@ -64,6 +82,7 @@ class SlowModeInfo(BaseModel):
 
     class Config:
         extra = "allow"
+
 
 class ChannelInfo(BaseModel):
     owner_guild_id: int
@@ -81,6 +100,7 @@ class ChannelInfo(BaseModel):
     class Config:
         extra = "allow"
 
+
 class ChannelUpdatedNoticeEvent(ChannelNoticeEvent):
     __event__ = "notice.channel_updated"
     notice_type: Literal["channel_updated"]
@@ -88,11 +108,13 @@ class ChannelUpdatedNoticeEvent(ChannelNoticeEvent):
     old_info: ChannelInfo
     new_info: ChannelInfo
 
+
 class ChannelCreatedNoticeEvent(ChannelNoticeEvent):
     __event__ = "notice.channel_created"
     notice_type: Literal["channel_created"]
     operator_id: int
     channel_info: ChannelInfo
+
 
 class ChannelDestoryedNoticeEvent(ChannelNoticeEvent):
     __event__ = "notice.channel_destoryed"
@@ -100,7 +122,9 @@ class ChannelDestoryedNoticeEvent(ChannelNoticeEvent):
     operator_id: int
     channel_info: ChannelInfo
 
+
 original_send = Bot.send
+
 
 async def patched_send(self: Bot, event: Event,
                        message: Union[Message, MessageSegment, str], **kwargs):
