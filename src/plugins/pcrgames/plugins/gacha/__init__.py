@@ -1,11 +1,13 @@
 import random
 from collections import defaultdict
-from nonebot import on_startswith
+
 from nonebot.adapters.cqhttp import MessageSegment, Message
 from nonebot.typing import T_State
+
 from src.plugins.nonebot_guild_patch import GuildMessageEvent
 from utils import concat_pic, pic2b64
 from .config import Config
+from .data_source import GachaService
 from .gacha import Gacha
 from .update import *
 from ... import chara
@@ -43,12 +45,12 @@ def dump_pool_config():
         json.dump(_group_pool, f, ensure_ascii=False)
 
 
-gacha_10_aliases = ('抽十连', '十连', '十连！', '十连抽', '来个十连', '来发十连', '来次十连', '抽个十连', '抽发十连', '抽次十连', '十连扭蛋', '扭蛋十连',
-                    '10连', '10连！', '10连抽', '来个10连')
-gacha_1_aliases = ('单抽', '单抽！', '来发单抽', '来个单抽', '来次单抽', '扭蛋单抽', '单抽扭蛋')
-gacha_300_aliases = ('抽一井', '来一井', '来发井', '抽发井', '天井扭蛋', '扭蛋天井')
+gacha_10_aliases = {'抽十连', '十连', '十连！', '十连抽', '来个十连', '来发十连', '来次十连', '抽个十连', '抽发十连', '抽次十连', '十连扭蛋', '扭蛋十连',
+                    '10连', '10连！', '10连抽', '来个10连'}
+gacha_1_aliases = {'单抽', '单抽！', '来发单抽', '来个单抽', '来次单抽', '扭蛋单抽', '单抽扭蛋'}
+gacha_300_aliases = {'抽一井', '来一井', '来发井', '抽发井', '天井扭蛋', '扭蛋天井'}
 
-check_pick = on_command('查看卡池', aliases={'卡池资讯', '看看卡池', '康康卡池', '看看up', '看看UP'})
+check_pick = GachaService().on_command('查看卡池', aliases={'卡池资讯', '看看卡池', '康康卡池', '看看up', '看看UP'}, docs='查看卡池')
 
 
 @check_pick.handle()
@@ -66,7 +68,7 @@ async def gacha_info(bot, event: GuildMessageEvent):
 POOL_NAME_TIP = '请选择以下卡池\n> 选择卡池 jp\n> 选择卡池 tw\n> 选择卡池 bilibili\n> 选择卡池 fes\n> 选择卡池 七冠\n> 选择卡池 联动\n> 选择卡池 ' \
                 '限定（现已全部实装）\n> 选择卡池 mix '
 
-switch_pick = on_startswith('切换卡池')
+switch_pick = GachaService().on_regex('切换卡池', '切换卡池 BL/TW/JP/...')
 
 
 @switch_pick.handle()
@@ -167,7 +169,7 @@ async def set_pool(bot, event: GuildMessageEvent, state: T_State):
 #     if not tenjo_limit.check(ev.user_id):
 #         await bot.finish(ev, TENJO_EXCEED_NOTICE, at_sender=True)
 
-gacha_one = on_startswith(gacha_1_aliases)
+gacha_one = GachaService().on_command('单抽', '来一发', aliases=gacha_1_aliases)
 
 
 @gacha_one.handle()
@@ -182,7 +184,7 @@ async def gacha_1(bot, event: GuildMessageEvent):
     await gacha_one.finish(Message(f'素敵な仲間が増えますよ！\n{res}'), at_sender=True)
 
 
-gacha_ten = on_startswith(gacha_10_aliases)
+gacha_ten = GachaService().on_command('十连', '来十发', aliases=gacha_10_aliases)
 
 
 @gacha_ten.handle()
@@ -209,7 +211,7 @@ async def gacha_10(bot, event: GuildMessageEvent):
     # await silence(ev, silence_time)
 
 
-gacha_sanhyaku = on_startswith(gacha_300_aliases)
+gacha_sanhyaku = GachaService().on_command('来一井', '难免井了', aliases=gacha_300_aliases)
 
 
 @gacha_sanhyaku.handle()
