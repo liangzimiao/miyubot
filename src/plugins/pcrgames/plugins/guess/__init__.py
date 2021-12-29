@@ -8,3 +8,4 @@
 from .avatarguess import *
 from .descguess import *
 from .cardguess import *
+from .voiceguess import *
