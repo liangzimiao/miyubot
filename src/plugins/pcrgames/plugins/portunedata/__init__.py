@@ -19,13 +19,7 @@ from utils import DailyNumberLimiter, pic2b64
 from utils import R
 from .luck_desc import luck_desc
 from .luck_type import luck_type
-
-sv_help = '''
-[抽签|人品|运势|抽凯露签]
-随机角色/指定凯露预测今日运势
-准确率高达114.514%！
-'''.strip()
-# 帮助文本
+from .data_source import PortuneData
 
 lmt = DailyNumberLimiter(1)
 # 设置每日抽签的次数，默认为1
@@ -150,7 +144,7 @@ def vertical(str):
     return '\n'.join(list)
 
 
-pcr_portune = on_command("抽签", aliases={'人品', '运势'}, priority=5)
+pcr_portune = PortuneData().on_command("抽签", "抽签", aliases={'人品', '运势'}, priority=5)
 
 
 @pcr_portune.handle()
@@ -166,7 +160,7 @@ async def portune(bot, event: MessageEvent):
     await pcr_portune.send(pic, at_sender=True)
 
 
-xcw_portune = on_keyword({'抽镜华签', '抽小仓唯签', '抽xcw签', '抽露娜签'})
+xcw_portune = PortuneData().on_keyword({'抽镜华签', '抽小仓唯签', '抽xcw签', '抽露娜签'}, "抽特定签")
 
 
 @xcw_portune.handle()
