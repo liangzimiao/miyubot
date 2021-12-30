@@ -16,6 +16,7 @@ from nonebot.typing import T_State
 
 import utils
 from src.plugins.pcrgames import GameMaster, chara, _pcr_data, get_guild_member_info
+from .data_source import Guess
 
 PATCH_SIZE = 32
 ONE_TURN_TIME = 20
@@ -23,7 +24,7 @@ DB_PATH = os.sep.join(['src', 'plugins', 'pcrgames', 'data', 'pcr_avatar_guess.d
 BLACKLIST_ID = [1072, 1908, 4031, 9000]
 gm = GameMaster(DB_PATH)
 
-matcher = on_command("猜头像难度设置", permission=SUPERUSER, priority=5)
+matcher = Guess().on_command("猜头像难度设置", "猜头像难度设置", permission=SUPERUSER, priority=5)
 
 
 @matcher.handle()
@@ -36,7 +37,7 @@ async def avatar_guess(bot: Bot, event: MessageEvent, state: T_State):
         return
 
 
-matcher = on_command("猜头像时间设置", permission=SUPERUSER, priority=5)
+matcher = Guess().on_command("猜头像时间设置", "猜头像难度设置", permission=SUPERUSER, priority=5)
 
 
 @matcher.handle()
@@ -49,7 +50,7 @@ async def avatar_guess(bot: Bot, event: MessageEvent, state: T_State):
         return
 
 
-matcher = on_command("猜头像排行", aliases={"猜头像排名", "猜头像排行榜", "猜头像群排行"}, priority=5)
+matcher = Guess().on_command("猜头像排行", "猜头像排行", aliases={"猜头像排名", "猜头像排行榜", "猜头像群排行"}, priority=5)
 
 
 @matcher.handle()
@@ -93,7 +94,7 @@ async def description_guess_group_ranking(bot: Bot, event: MessageEvent, state: 
         await matcher.send("\n".join(msg))
 
 
-matcher = on_command("猜头像", priority=5)
+matcher = Guess().on_command("猜头像", "猜头像", priority=5)
 
 
 @matcher.handle()
@@ -144,7 +145,7 @@ async def avatar_guess(bot: Bot, event: MessageEvent, state: T_State):
         await matcher.send(Message(txt + meg) + f"\n很遗憾，没有人答对~")
 
 
-sv = on_message(priority=5)
+sv = Guess().on_message(priority=5)
 
 
 @sv.handle()

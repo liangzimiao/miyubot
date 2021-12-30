@@ -13,6 +13,7 @@ from nonebot.plugin import on_command, on_message
 from nonebot.typing import T_State
 
 from src.plugins.pcrgames import GameMaster, chara, _pcr_data, get_guild_member_info
+from .data_source import Guess
 
 PREPARE_TIME = 5
 ONE_TURN_TIME = 12
@@ -20,7 +21,7 @@ TURN_NUMBER = 5
 DB_PATH = f'src\plugins\pcrgames\data\pcr_desc_guess.db'
 gm = GameMaster(DB_PATH)
 
-matcher = on_command("猜角色排行", aliases={"猜角色排名", "猜角色排行榜", "猜角色群排行"}, priority=5)
+matcher = Guess().on_command("猜角色排行", "猜角色排行", aliases={"猜角色排名", "猜角色排行榜", "猜角色群排行"}, priority=5)
 
 
 @matcher.handle()
@@ -64,7 +65,7 @@ async def description_guess_group_ranking(bot: Bot, event: MessageEvent, state: 
         await matcher.send("\n".join(msg))
 
 
-matcher = on_command("猜角色", aliases={"猜人物"}, priority=5)
+matcher = Guess().on_command("猜角色", "猜角色", aliases={"猜人物"}, priority=5)
 
 
 @matcher.handle()
@@ -115,7 +116,7 @@ async def avatar_guess(bot: Bot, event: MessageEvent, state: T_State):
         await matcher.send(Message(txt + meg) + f"\n很遗憾，没有人答对~")
 
 
-sv = on_message(priority=5)
+sv = Guess().on_message(priority=5)
 
 
 @sv.handle()
