@@ -1,9 +1,12 @@
+from nonebot import get_driver
+from nonebot.adapters.cqhttp import Bot
 from nonebot.adapters.cqhttp.event import PrivateMessageEvent
 from nonebot.rule import Rule
 from nonebot.adapters.cqhttp import MessageEvent, GroupMessageEvent
 from src.plugins.nonebot_guild_patch import GuildMessageEvent
-
+from .config import Config
 from .service import ServiceTools
+from nonebot.typing import T_State
 
 
 def is_in_service(service: str) -> Rule:
@@ -32,8 +35,19 @@ def is_in_service(service: str) -> Rule:
     return Rule(_is_in_service)
 
 
-def to_bot() -> Rule:
-    async def _to_bot(bot, event, state) -> bool:
-        return event.is_tome()
+global_config = get_driver().config
+config = Config(**global_config.dict())
+bot_id = config.dict().get("bot_id")
+bot_guild_id=config.dict().get("bot_guild_id")
 
+
+def to_bot()-> Rule:
     return Rule(_to_bot)
+async def _to_bot(bot: "Bot", event: MessageEvent, state: T_State) -> bool:
+                jud=f"[CQ:at,qq={bot_guild_id}" in str(event.raw_message)
+                #print(f"[CQ:at,qq={bot_guild_id}" in str(event.raw_message))
+                if jud:
+                    jud=True
+                print (bool(event.is_tome()|jud))
+                return bool(event.is_tome()|jud)
+
