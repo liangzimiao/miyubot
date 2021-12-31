@@ -36,13 +36,14 @@ class GuildMessageEvent(MessageEvent):
             return str(Message(raw_message))
         raise ValueError('unknown raw message type')
 
-    @overrides(MessageEvent)
-    def is_tome(self) -> bool:
-        matcher = re.match(f'^\[CQ:at,qq=([0-9]+?)].*', self.raw_message)
-        if matcher:
-            at_id = matcher.group(1)
-            return at_id == str(config.dict().get('bot_guild_id'))
-        return False
+    # @overrides(MessageEvent)
+    # def is_tome(self) -> bool:
+    #     matcher = re.match(f'^\[CQ:at,qq=([0-9]+?)].*', self.raw_message)
+    #     if matcher:
+    #         at_id = matcher.group(1)
+    #         # self.raw_message = re.sub(f'^\[CQ:at,qq=([0-9]+?)]', '', self.raw_message)
+    #         return at_id == str(config.dict().get('bot_guild_id'))
+    #     return False
 
 
 class ReactionInfo(BaseModel):

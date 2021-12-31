@@ -39,7 +39,7 @@ service_info = Helper().on_command("帮助", "获取服务详细帮助", rule=to
 
 @service_info.handle()
 async def _ready_service_info(bot: Bot, event: MessageEvent, state: T_State):
-    msg = str(event.message).split(" ")
+    msg = event.get_plaintext().split(" ")
     service = msg[0]
     try:
         cmd = msg[1]

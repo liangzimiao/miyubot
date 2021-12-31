@@ -278,7 +278,7 @@ async def voice_guess(bot: Bot, event: MessageEvent, state: T_State):
         await matcher.send(Message(txt + meg) + f"\n很遗憾，没有人答对~")
 
 
-sv = on_message(priority=5)
+sv = Guess().on_message(priority=5)
 
 
 @sv.handle()

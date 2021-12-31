@@ -38,16 +38,14 @@ def is_in_service(service: str) -> Rule:
 global_config = get_driver().config
 config = Config(**global_config.dict())
 bot_id = config.dict().get("bot_id")
-bot_guild_id=config.dict().get("bot_guild_id")
+bot_guild_id = config.dict().get("bot_guild_id")
 
 
-def to_bot()-> Rule:
+def to_bot() -> Rule:
     return Rule(_to_bot)
-async def _to_bot(bot: "Bot", event: MessageEvent, state: T_State) -> bool:
-                jud=f"[CQ:at,qq={bot_guild_id}" in str(event.raw_message)
-                #print(f"[CQ:at,qq={bot_guild_id}" in str(event.raw_message))
-                if jud:
-                    jud=True
-                print (bool(event.is_tome()|jud))
-                return bool(event.is_tome()|jud)
 
+
+async def _to_bot(bot: Bot, event: MessageEvent, state: T_State) -> bool:
+    jud = f"[CQ:at,qq={bot_guild_id}" in str(event.raw_message)
+    # print(f"[CQ:at,qq={bot_guild_id}" in str(event.raw_message))
+    return event.is_tome() | jud
