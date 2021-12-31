@@ -76,9 +76,9 @@ async def set_pool(bot, event: GuildMessageEvent, state: T_State):
     gc_id = f'{event.channel_id}_{event.guild_id}'
     name = normalize_str(event.message.extract_plain_text()[4:])
     if not name:
-        await bot.finish(POOL_NAME_TIP, at_sender=True)
+        await switch_pick.finish(POOL_NAME_TIP, at_sender=True)
     elif name in ('国', '国服', 'cn'):
-        await bot.finish('请选择以下卡池\n> 选择卡池 b服\n> 选择卡池 台服')
+        await switch_pick.finish('请选择以下卡池\n> 选择卡池 b服\n> 选择卡池 台服')
     elif name in ('b', 'b服', 'bl', 'bilibili'):
         name = 'BL'
     elif name in ('台', '台服', 'tw', 'sonet'):
@@ -90,15 +90,15 @@ async def set_pool(bot, event: GuildMessageEvent, state: T_State):
     elif name in ('七冠', 'セブンクラウンズ'):
         name = 'セブンクラウンズ'
     elif name in ('联动', '活动'):
-        await bot.finish('请选择以下卡池\n> 选择卡池 re0\n> 选择卡池 偶像大师')
+        await switch_pick.finish('请选择以下卡池\n> 选择卡池 re0\n> 选择卡池 偶像大师')
     elif name in ('RE:0联动', 're0联动', 're0'):
         name = 're0'
     elif name in ('偶像大师联动', '偶像大师活动', '偶像大师'):
         name = '偶像大师'
     elif name in ('限定'):
-        await bot.finish('请选择以下卡池\n> 选择卡池 泳装限定\n> 选择卡池 万圣限定\n> 选择卡池 圣诞限定\n> 选择卡池 春节限定\n> 选择卡池 情人节限定')
+        await switch_pick.finish('请选择以下卡池\n> 选择卡池 泳装限定\n> 选择卡池 万圣限定\n> 选择卡池 圣诞限定\n> 选择卡池 春节限定\n> 选择卡池 情人节限定')
     elif name in ('泳装限定'):
-        await bot.finish(
+        await switch_pick.finish(
             '请选择以下卡池\n> 选择卡池 泳装佩可\n> 选择卡池 泳装铃莓\n> 选择卡池 泳装凯露\n> 选择卡池 泳装珠希\n> 选择卡池 泳装铃奈\n> 选择卡池 泳装咲恋\n> 选择卡池 泳装真琴\n> 选择卡池 泳装真步\n> 选择卡池 泳装流夏')
     elif name in ('泳装佩可', '泳装吃货', '水吃'):
         name = '泳裝-佩可'
@@ -121,7 +121,7 @@ async def set_pool(bot, event: GuildMessageEvent, state: T_State):
     elif name in ('泳装纯', '泳装黑骑', '水纯'):
         name = '泳裝-纯'
     elif name in ('万圣限定'):
-        await bot.finish('请选择以下卡池\n> 选择卡池 万圣忍\n> 选择卡池 万圣美咲\n> 选择卡池 万圣小仓唯')
+        await switch_pick.finish('请选择以下卡池\n> 选择卡池 万圣忍\n> 选择卡池 万圣美咲\n> 选择卡池 万圣小仓唯')
     elif name in ('万圣忍', '瓜忍'):
         name = '萬聖節-忍'
     elif name in ('万圣美咲', '万圣大眼', '瓜眼'):
@@ -129,7 +129,7 @@ async def set_pool(bot, event: GuildMessageEvent, state: T_State):
     elif name in ('万圣小仓唯', 'mcw', '猫唯'):
         name = '萬聖節-鏡華'
     elif name in ('圣诞限定'):
-        await bot.finish('请选择以下卡池\n> 选择卡池 圣诞千歌\n> 选择卡池 圣诞绫音\n> 选择卡池 圣诞克里斯蒂娜')
+        await switch_pick.finish('请选择以下卡池\n> 选择卡池 圣诞千歌\n> 选择卡池 圣诞绫音\n> 选择卡池 圣诞克里斯蒂娜')
     elif name in ('圣诞千歌', '圣千'):
         name = '聖誕節-千歌'
     elif name in ('圣诞绫音', '圣诞熊锤'):
@@ -137,7 +137,7 @@ async def set_pool(bot, event: GuildMessageEvent, state: T_State):
     elif name in ('圣诞克里斯蒂娜', '圣克', '蛋壳'):
         name = '聖誕節-克莉絲蒂娜'
     elif name in ('春节限定'):
-        await bot.finish('请选择以下卡池\n> 选择卡池 新年优衣\n> 选择卡池 新年日和\n> 选择卡池 正月凯露\n> 选择卡池 正月可可萝')
+        await switch_pick.finish('请选择以下卡池\n> 选择卡池 新年优衣\n> 选择卡池 新年日和\n> 选择卡池 正月凯露\n> 选择卡池 正月可可萝')
     elif name in ('新年优衣', '春田'):
         name = '新年-優衣'
     elif name in ('新年日和', '春猫'):
@@ -147,13 +147,13 @@ async def set_pool(bot, event: GuildMessageEvent, state: T_State):
     elif name in ('正月可可萝', '春妈'):
         name = '正月-可可蘿'
     elif name in ('情人节限定'):
-        await bot.finish('请选择以下卡池\n> 选择卡池 情人节静流')
+        await switch_pick.finish('请选择以下卡池\n> 选择卡池 情人节静流')
     elif name in ('情人节静流', '情姐'):
         name = '情人節-靜流'
     elif name in ('混', '混合', 'mix'):
         name = 'MIX'
     else:
-        await bot.finish(f'未知卡池 {POOL_NAME_TIP}', at_sender=True)
+        await switch_pick.finish(f'未知卡池 {POOL_NAME_TIP}', at_sender=True)
     _group_pool[gc_id] = name
     dump_pool_config()
     await switch_pick.send(f'卡池已切换为{name}池', at_sender=True)
