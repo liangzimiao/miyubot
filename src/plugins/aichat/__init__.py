@@ -3,6 +3,9 @@ import os
 import random
 import re
 import traceback
+from nonebot.adapters.cqhttp.event import MessageEvent
+from nonebot.permission import SUPERUSER
+from nonebot.rule import to_me
 
 import requests
 from ..nonebot_guild_patch import GuildMessageEvent
@@ -64,12 +67,19 @@ def load_data():
         traceback.print_exc()
 
 
-enable = AiChat().on_command('调整AI概率', '调整AI概率')
+enable = AiChat().on_command('调整AI概率', '调整AI概率',permission=SUPERUSER)
 
 
 @enable.handle()
-async def enable_aichat(bot: Bot, event: GuildMessageEvent):
-    gc_id = f'{event.guild_id}_{event.channel_id}'
+async def enable_aichat(bot: Bot, event: MessageEvent):
+    type = str(event.message_type)
+    if type == 'group':
+        get_gid = event.group_id
+    elif type == 'private':
+        return
+    elif type == 'guild':
+        get_gid = f'{event.guild_id}_{event.channel_id}'
+    gc_id = get_gid
     s = str(event.get_plaintext())
     if s:
         if s.isdigit() and 0 < int(s) < 51:
@@ -83,12 +93,20 @@ async def enable_aichat(bot: Bot, event: GuildMessageEvent):
     await enable.finish(f'人工智障已启用, 当前bot回复概率为{chance}%.')
 
 
-close = AiChat().on_command('关闭人工智障', '关闭人工智障')
+close = AiChat().on_command('关闭人工智障', '关闭人工智障',permission=SUPERUSER)
 
 
 @close.handle()
-async def disable_aichat(bot: Bot, event: GuildMessageEvent):
-    ai_chance.pop(str(f'{event.channel_id}_{event.guild_id}'))
+async def disable_aichat(bot: Bot, event: MessageEvent):
+    type = str(event.message_type)
+    if type == 'group':
+        get_gid = event.group_id
+    elif type == 'private':
+        return
+    elif type == 'guild':
+        get_gid = f'{event.guild_id}_{event.channel_id}'
+    gc_id = get_gid
+    ai_chance.pop(str(gc_id))
     await close.finish(f'人工智障已禁用')
 
 
@@ -96,15 +114,22 @@ reply = AiChat().on_message(block=False)
 
 
 @reply.handle()
-async def ai_reply(bot: Bot, event: GuildMessageEvent):
+async def ai_reply(bot: Bot, event: MessageEvent):
     msg = str(event.get_plaintext())
-    gc_id = f'{event.guild_id}_{event.channel_id}'
+    type = str(event.message_type)
+    if type == 'group':
+        get_gid = event.group_id
+    elif type == 'private':
+        return
+    elif type == 'guild':
+        get_gid = f'{event.guild_id}_{event.channel_id}'
+    gc_id = get_gid
     tag = False
     # if msg.startswith(f'[CQ:at,qq={event.get_user_id()}]'):
     #     text = re.sub(cq_code_pattern, '', msg).strip()
     #     if event.get_user_id() == bot_guild_id:
     #         tag = True
-    if len(event.get_message()) > 1 and str(event.get_message()[0]) == f'[CQ:at,qq={bot_guild_id}]':
+    if (len(event.get_message()) > 1 and str(event.get_message()[0]) == f'[CQ:at,qq={bot_guild_id}]')or f'[CQ:at,qq={event.self_id }]'in str(event.raw_message):
         tag = True
 
     if msg == '' or msg in black_word or len(msg) > 100 or gc_id not in ai_chance:
