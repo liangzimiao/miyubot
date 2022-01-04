@@ -20,7 +20,7 @@ async def _ready_block_user(bot: Bot, event: MessageEvent, state: T_State):
 
 @block_user.got("block_user", "哪位？GKD！")
 async def _deal_block_user(bot: Bot, event: MessageEvent, state: T_State):
-    user_id = state["block_user"]
+    user_id = f'{state["block_user"]}'
     quit_list = ["算了", "罢了"]
     if user_id in quit_list:
         await block_user.finish("...看来有人逃过一劫呢")
@@ -44,7 +44,7 @@ async def _ready_unblock_user(bot: Bot, event: MessageEvent, state: T_State):
 
 @unblock_user.got("unblock_user", "哪位？GKD！")
 async def _deal_unblock_user(bot: Bot, event: MessageEvent, state: T_State):
-    user_id = state["unblock_user"]
+    user_id = f'{state["unblock_user"]}'
     quit_list = ["算了", "罢了"]
     if user_id in quit_list:
         await unblock_user.finish("...有人又得继续在小黑屋呆一阵子了")
@@ -68,7 +68,7 @@ async def _ready_block_group(bot: Bot, event: MessageEvent, state: T_State):
 
 @block_group.got("block_group", "哪个群？GKD！")
 async def _deal_block_group(bot: Bot, event: MessageEvent, state: T_State):
-    group_id = state["block_group"]
+    group_id =f'{state["block_group"]}'
     quit_list = ["算了", "罢了"]
     if group_id in quit_list:
         await block_group.finish("...看来有一群逃过一劫呢")
@@ -92,7 +92,7 @@ async def _ready_unblock_group(bot: Bot, event: MessageEvent, state: T_State):
 
 @unblock_group.got("unblock_group", "哪个群？GKD！")
 async def _deal_unblock_group(bot: Bot, event: MessageEvent, state: T_State):
-    group_id = state["unblock_group"]
+    group_id = f'{state["unblock_group"]}'
     quit_list = ["算了", "罢了"]
     if group_id in quit_list:
         await unblock_group.finish("...有一群又得继续在小黑屋呆一阵子了")
@@ -206,7 +206,7 @@ async def _ready_group_block_service(
 async def _deal_group_block_service(bot: Bot, event: MessageEvent, state: T_State):
     aim_service = state["group_block_service"]
     if type(event) is GroupMessageEvent:
-        group_id = event.group_id
+        group_id = f"{event.group_id}"
         nick = '本群'
     elif type(event) is GuildMessageEvent:
         group_id = f'''{event.guild_id}_{event.channel_id}'''
@@ -241,7 +241,7 @@ async def _deal_group_unblock_service(
 ):
     aim_service = state["group_unblock_service"]
     if type(event) is GroupMessageEvent:
-        group_id = event.group_id
+        group_id = f"{event.group_id}"
         nick = '本群'
     elif type(event) is GuildMessageEvent:
         group_id = f'''{event.guild_id}_{event.channel_id}'''
