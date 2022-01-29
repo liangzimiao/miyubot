@@ -169,3 +169,5 @@ src/plugins/**/data.json
 /src/plugins/pcrgames/plugins/gacha/local_ver.json
 /src/plugins/pcrgames/plugins/gacha/backup.json
 src/plugins/pcrgames/plugins/gacha/group_pool_config.json
+/src/plugins/pcrgames/plugins/gacha/CHARA_NAME.json
+/src/plugins/pcrgames/plugins/gacha/config.json
