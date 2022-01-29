@@ -145,7 +145,7 @@ dmypy.json
 baidu_translate.json
 phantomjs.exe
 pyproject.toml
-README.md
+src/**/README.md
 requirements.txt
 twitter.db
 configs/config.py
