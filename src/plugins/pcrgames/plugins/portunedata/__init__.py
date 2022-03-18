@@ -10,11 +10,10 @@ import random
 
 from PIL import Image, ImageDraw, ImageFont
 from nonebot import on_keyword
-from nonebot.adapters.cqhttp import MessageSegment
-from nonebot.adapters.cqhttp.event import MessageEvent
-from nonebot.plugin import on_command
+from nonebot.adapters.onebot.v11 import MessageSegment
+from nonebot.adapters.onebot.v11.event import MessageEvent
 
-from src.plugins.nonebot_guild_patch import GuildMessageEvent
+from nonebot_plugin_guild_patch import GuildMessageEvent
 from utils import DailyNumberLimiter, pic2b64
 from utils import R
 from .luck_desc import luck_desc

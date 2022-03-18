@@ -13,11 +13,11 @@ import filetype
 import requests
 from nonebot import get_driver
 from nonebot import logger
-from nonebot.adapters.cqhttp import Bot, Message, MessageSegment
-from nonebot.plugin import on_command, on_regex
+from nonebot.adapters.onebot.v11 import Bot, Message, MessageSegment
+from nonebot.plugin import on_command
 from nonebot.typing import T_State
+from nonebot_plugin_guild_patch import GuildMessageEvent
 
-from ..nonebot_guild_patch import GuildMessageEvent
 from .config import Config
 from .data_source import WhatToEat
 

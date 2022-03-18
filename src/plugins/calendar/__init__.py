@@ -5,11 +5,12 @@ import traceback
 
 from nonebot import get_driver
 from nonebot import logger
-from nonebot import require
-from nonebot.adapters.cqhttp import Bot, Message
-from nonebot.plugin import on_regex, on_command
+from nonebot.adapters.onebot.v11 import Bot, Message
+from nonebot.plugin import on_regex
 from nonebot.typing import T_State
-from src.plugins.nonebot_guild_patch import GuildMessageEvent
+from nonebot_plugin_apscheduler import scheduler
+from nonebot_plugin_guild_patch import GuildMessageEvent
+
 from utils import send_guild_message
 from .config import Config
 from .generate import *
@@ -21,7 +22,7 @@ config = Config(**global_config.dict())
 matcher = on_regex(pattern=r'^([国台日])?服?日[历程](.*)')
 # matcher = on_command('asdf')
 
-scheduler = require("nonebot_plugin_apscheduler").scheduler
+# scheduler = require("nonebot_plugin_apscheduler").scheduler
 
 
 @matcher.handle()

@@ -8,8 +8,8 @@ import asyncio
 import os
 import random
 
-from nonebot.adapters.cqhttp import Bot, MessageSegment, Message
-from nonebot.adapters.cqhttp.event import MessageEvent
+from nonebot.adapters.onebot.v11 import Bot, MessageSegment, Message
+from nonebot.adapters.onebot.v11.event import MessageEvent
 from nonebot.permission import SUPERUSER
 from nonebot.plugin import on_command, on_message
 from nonebot.typing import T_State

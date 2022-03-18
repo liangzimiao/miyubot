@@ -3,17 +3,15 @@ import os
 import random
 import re
 import traceback
-from nonebot.adapters.cqhttp.event import MessageEvent
-from nonebot.permission import SUPERUSER
-from nonebot.rule import to_me
 
 import requests
-from ..nonebot_guild_patch import GuildMessageEvent
 from nonebot import get_driver
-from nonebot.adapters.cqhttp import Bot
-from nonebot.plugin import on_command, on_message
-from .data_source import AiChat
+from nonebot.adapters.onebot.v11 import Bot
+from nonebot.adapters.onebot.v11.event import MessageEvent
+from nonebot.permission import SUPERUSER
+
 from .config import Config
+from .data_source import AiChat
 from .data_source import Request
 
 global_config = get_driver().config

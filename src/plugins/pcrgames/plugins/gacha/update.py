@@ -8,8 +8,7 @@ from utils import aiorequests, normalize_str
 from . import chara_master
 from ...chara import download_chara_icon, roster
 from nonebot.adapters import Bot, Event
-# from src.plugins.nonebot_guild_patch import GuildMessageEvent, patched_send
-
+from nonebot_plugin_apscheduler import scheduler
 # 卡池更新是否通知管理员
 NOTICE = False
 
@@ -24,7 +23,6 @@ local_pool_backup_path = os.path.join(os.path.dirname(__file__), 'backup.json')
 online_ver_url = 'https://api.redive.lolikon.icu/gacha/gacha_ver.json'
 online_pool_url = 'https://api.redive.lolikon.icu/gacha/default_gacha.json'
 online_pcr_data_url = 'https://api.redive.lolikon.icu/gacha/unitdata.py'
-scheduler = require("nonebot_plugin_apscheduler").scheduler
 
 global_config = get_driver().config
 config = Config(**global_config.dict())

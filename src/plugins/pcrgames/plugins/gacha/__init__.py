@@ -1,10 +1,10 @@
 import random
 from collections import defaultdict
 
-from nonebot.adapters.cqhttp import MessageSegment, Message
+from nonebot.adapters.onebot.v11 import MessageSegment, Message
 from nonebot.typing import T_State
 
-from src.plugins.nonebot_guild_patch import GuildMessageEvent
+from nonebot_plugin_guild_patch import GuildMessageEvent
 from utils import concat_pic, pic2b64
 from .config import Config
 from .data_source import GachaService

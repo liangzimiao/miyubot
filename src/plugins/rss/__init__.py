@@ -1,9 +1,3 @@
-from nonebot import logger
-from src.plugins.nonebot_guild_patch import GuildMessageEvent, patched_send
-from nonebot.adapters.cqhttp.event import Sender
-from nonebot.adapters.cqhttp import Bot, MessageSegment, Message
-from nonebot import on_command
-from nonebot import require
 import asyncio
 import base64
 import html
@@ -16,11 +10,18 @@ import string
 import time
 import traceback
 from io import BytesIO
+
 import aiohttp
 import feedparser
 from PIL import Image
-from utils import send_guild_message
 from nonebot import get_driver
+from nonebot import logger
+from nonebot import on_command
+from nonebot.adapters.onebot.v11 import Bot, Message
+from nonebot_plugin_apscheduler import scheduler
+
+from nonebot_plugin_guild_patch import GuildMessageEvent
+from utils import send_guild_message
 from .config import Config
 
 global_config = get_driver().config
@@ -429,8 +430,6 @@ async def rss_cmd(bot: Bot, event: GuildMessageEvent):
         msg = '参数错误'
     await rss.send(Message(msg))
 
-
-scheduler = require("nonebot_plugin_apscheduler").scheduler
 
 
 @scheduler.scheduled_job('interval', minutes=5)

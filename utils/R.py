@@ -1,7 +1,7 @@
 import os
 from urllib.parse import urljoin
 from urllib.request import pathname2url
-from nonebot.adapters.cqhttp import MessageSegment
+from nonebot.adapters.onebot.v11 import MessageSegment
 from PIL import Image
 from utils import pic2b64
 #import hoshino

@@ -7,36 +7,16 @@
 import asyncio
 import os
 import random
-from re import M
-import utils
-import shutil
-from nonebot import on_keyword
-from nonebot.adapters.cqhttp.event import File, MessageEvent
-from nonebot.plugin import on_command, on_message
-from nonebot.rule import to_me
-from nonebot.typing import T_State
-from nonebot.adapters import Bot, Event
-from nonebot.adapters.cqhttp import Bot, MessageSegment, message, Message
-from pydantic.errors import TupleError
-from configs.path_config import IMAGE_PATH
-from configs.path_config import GIF_PATH
-from utils.message_builder import image
-from pathlib import Path
-from nonebot.permission import MESSAGE, SUPERUSER
-from typing import Union, List
-from nonebot.adapters.cqhttp.permission import GROUP, GROUP_OWNER, PRIVATE, GROUP_ADMIN
-import os
-import random
-from nonebot import require
-from src.plugins.pcrgames import GameMaster, chara, _pcr_data, get_guild_member_info
 
-import asyncio
-import os
-import random
 import aiohttp
 import requests
 from bs4 import BeautifulSoup
+from nonebot.adapters.onebot.v11 import Bot, MessageSegment, Message
+from nonebot.adapters.onebot.v11.event import MessageEvent
+from nonebot.typing import T_State
+
 from configs.path_config import PCR_PATH
+from src.plugins.pcrgames import GameMaster, chara, get_guild_member_info
 from .data_source import Guess
 
 '''

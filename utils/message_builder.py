@@ -1,5 +1,5 @@
 from configs.path_config import IMAGE_PATH, VOICE_PATH
-from nonebot.adapters.cqhttp.message import MessageSegment
+from nonebot.adapters.onebot.v11.message import MessageSegment
 from typing import Union, List
 from pathlib import Path
 import os

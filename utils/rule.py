@@ -1,9 +1,9 @@
 from nonebot import get_driver
-from nonebot.adapters.cqhttp import Bot
-from nonebot.adapters.cqhttp.event import PrivateMessageEvent
+from nonebot.adapters.onebot.v11 import Bot
+from nonebot.adapters.onebot.v11.event import PrivateMessageEvent
 from nonebot.rule import Rule
-from nonebot.adapters.cqhttp import MessageEvent, GroupMessageEvent
-from src.plugins.nonebot_guild_patch import GuildMessageEvent
+from nonebot.adapters.onebot.v11 import MessageEvent, GroupMessageEvent
+from nonebot_plugin_guild_patch import GuildMessageEvent
 from .config import Config
 from .service import ServiceTools
 from nonebot.typing import T_State

@@ -5,7 +5,7 @@ import pygtrie
 import requests
 from fuzzywuzzy import process
 from PIL import Image
-from nonebot.adapters.cqhttp import Bot
+from nonebot.adapters.onebot.v11 import Bot
 
 from nonebot.permission import SUPERUSER
 # from hoshino import   sucmd
