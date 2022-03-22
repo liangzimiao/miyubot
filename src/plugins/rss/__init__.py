@@ -303,7 +303,8 @@ async def guild_process():
                         msg = format_msg(news)
                     try:
                         await send_guild_message(key.split("_")[0], key.split("_")[1], msg)
-                    except:
+                    except Exception as e:
+                        logger.error(e)
                         logger.info(f'guild: {key} 推送失败')
                 await asyncio.sleep(1)
 
@@ -322,6 +323,8 @@ async def rss_add(gc_id, rss_url):
         pass
         # data['guild_rss'][gc_id] = default_rss
     if rss_url not in set(data['guild_rss'][gc_id]):
+        if gc_id not in data['guild_rss']:
+            data['guild_rss'][gc_id] = list()
         data['guild_rss'][gc_id].append(rss_url)
     else:
         return '订阅列表中已存在该项目'
@@ -379,7 +382,7 @@ async def rss_cmd(bot: Bot, event: GuildMessageEvent):
         pass
     msg = ''
     gc_id = f'{event.guild_id}_{event.channel_id}'
-    args = event.get_plaintext().split(' ')
+    args = event.get_plaintext().split(' ')[1:]
     # todo 判断为管理员再进行操作
     is_admin = True
     if len(args) == 0:
@@ -429,7 +432,6 @@ async def rss_cmd(bot: Bot, event: GuildMessageEvent):
     else:
         msg = '参数错误'
     await rss.send(Message(msg))
-
 
 
 @scheduler.scheduled_job('interval', minutes=5)

@@ -44,10 +44,10 @@ async def send_guild_message(guild_id, channel_id, message_str):
     sender = Sender(user_id=bot_id)
     event = GuildMessageEvent(time=int(time.time()), self_id=bot_id,
                               post_type='message', sub_type='channel', user_id=bot_guild_id,
-                              message_type='guild', message_id='133-38101123160', guild_id=guild_id,
+                              message_type='guild', message_id='557-1040527614', guild_id=guild_id,
                               channel_id=channel_id, message="0",
                               sender=sender, self_tiny_id=int(bot_guild_id))
-    await patched_send(bot, event, Message(message_str))
+    await patched_send(bot, event, message_str)
 
 
 def pic2b64(pic: Image) -> str:
