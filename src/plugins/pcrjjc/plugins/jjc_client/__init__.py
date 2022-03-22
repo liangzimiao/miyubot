@@ -39,6 +39,7 @@ async def on_query_arena_all(bot: Bot, event: MessageEvent, state: T_State):
     elif (datetime.now() - last_time).seconds > 10 and request_lock.locked():
         request_lock.release()
     await request_lock.acquire()
+    last_time = datetime.now()
     # await bot.send_private_msg(
     #     user_id=acinfo['admin'],
     #     message=f'''详情查询{state['_matched_groups'][1]}'''
