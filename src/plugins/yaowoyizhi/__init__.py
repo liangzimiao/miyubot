@@ -6,8 +6,6 @@ import requests
 from PIL import Image, ImageDraw, ImageFont
 from nonebot.adapters.onebot.v11 import Bot, MessageSegment, Event
 from nonebot.typing import T_State
-
-from .config import Config
 from .data_source import Yaowoyizhi
 
 matcher = Yaowoyizhi().on_command("要我一直", "e.g.要我一直寄吗")

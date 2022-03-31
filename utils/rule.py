@@ -4,7 +4,7 @@ from nonebot.adapters.onebot.v11.event import PrivateMessageEvent
 from nonebot.rule import Rule
 from nonebot.adapters.onebot.v11 import MessageEvent, GroupMessageEvent
 from nonebot_plugin_guild_patch import GuildMessageEvent
-from .config import Config
+from .base_config import Config
 from .service import ServiceTools
 from nonebot.typing import T_State
 

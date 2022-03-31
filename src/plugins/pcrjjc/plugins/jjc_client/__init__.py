@@ -8,7 +8,6 @@ from nonebot.typing import T_State
 from nonebot import logger
 from nonebot_plugin_guild_patch import GuildMessageEvent
 from utils import send_guild_message
-from .create_img import generate_info_pic, generate_support_pic
 from .data_source import Arena
 from datetime import datetime
 

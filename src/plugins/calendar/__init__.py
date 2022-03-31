@@ -12,13 +12,11 @@ from nonebot_plugin_apscheduler import scheduler
 from nonebot_plugin_guild_patch import GuildMessageEvent
 
 from utils import send_guild_message
-from .config import Config
 from .generate import *
 
 guild_data = {}
 
 global_config = get_driver().config
-config = Config(**global_config.dict())
 matcher = on_regex(pattern=r'^([国台日])?服?日[历程](.*)')
 # matcher = on_command('asdf')
 

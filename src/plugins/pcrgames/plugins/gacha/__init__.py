@@ -3,10 +3,8 @@ from collections import defaultdict
 
 from nonebot.adapters.onebot.v11 import MessageSegment, Message
 from nonebot.typing import T_State
-
 from nonebot_plugin_guild_patch import GuildMessageEvent
 from utils import concat_pic, pic2b64
-from .config import Config
 from .data_source import GachaService
 from .gacha import Gacha
 from .update import *
@@ -18,9 +16,6 @@ except:
     import json
 
 global_config = get_driver().config
-config = Config(**global_config.dict())
-bot_id = config.dict().get("bot_id")
-bot_guild_id = config.dict().get("bot_guild_id")
 
 # jewel_limit = DailyNumberLimiter(15000)
 # tenjo_limit = DailyNumberLimiter(5)

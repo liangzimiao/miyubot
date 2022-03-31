@@ -17,12 +17,8 @@ from nonebot.adapters.onebot.v11 import Bot, Message, MessageSegment
 from nonebot.plugin import on_command
 from nonebot.typing import T_State
 from nonebot_plugin_guild_patch import GuildMessageEvent
-
-from .config import Config
 from .data_source import WhatToEat
 
-global_config = get_driver().config
-config = Config(**global_config.dict())
 foodsPath = os.path.join(os.path.dirname(__file__), 'foods')
 
 chi = WhatToEat().on_regex(r'^(今天|[早中午晚][上饭餐午]|夜宵)吃(什么|啥|点啥)', '今天吃啥')

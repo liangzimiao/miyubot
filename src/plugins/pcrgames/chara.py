@@ -1,17 +1,17 @@
 import importlib
 from io import BytesIO
-from nonebot.plugin import on_command
+
 import pygtrie
 import requests
-from fuzzywuzzy import process
 from PIL import Image
+from fuzzywuzzy import process
 from nonebot.adapters.onebot.v11 import Bot
-
 from nonebot.permission import SUPERUSER
-# from hoshino import   sucmd
+from nonebot.plugin import on_command
+
 import utils
-from . import _pcr_data
 from utils import R
+from . import _pcr_data
 
 UNKNOWN = 1000
 UnavailableChara = {

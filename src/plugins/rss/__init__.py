@@ -22,12 +22,7 @@ from nonebot_plugin_apscheduler import scheduler
 
 from nonebot_plugin_guild_patch import GuildMessageEvent
 from utils import send_guild_message
-from .config import Config
 
-global_config = get_driver().config
-config = Config(**global_config.dict())
-bot_id = config.dict().get("bot_id")
-bot_guild_id = config.dict().get("bot_guild_id")
 rss_news = {}
 data = {
     'rsshub': 'http://1.117.219.198:1200',
@@ -378,7 +373,7 @@ rss = on_command('rss')
 
 @rss.handle()
 async def rss_cmd(bot: Bot, event: GuildMessageEvent):
-    if event.get_user_id() == bot_id:
+    if event.get_user_id() == bot.self_id:
         pass
     msg = ''
     gc_id = f'{event.guild_id}_{event.channel_id}'

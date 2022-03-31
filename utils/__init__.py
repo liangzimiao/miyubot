@@ -12,7 +12,8 @@ import time
 from collections import defaultdict
 from datetime import datetime, timedelta
 from io import BytesIO
-
+from nonebot.adapters.onebot.v11.event import MessageEvent,GroupMessageEvent
+from nonebot_plugin_guild_patch import GuildMessageEvent
 import pytz
 import unicodedata
 import zhconv
@@ -122,3 +123,16 @@ def pic2b64(pic: Image) -> str:
     pic.save(buf, format='PNG')
     base64_str = base64.b64encode(buf.getvalue()).decode()
     return 'base64://' + base64_str
+
+def get_event_gid(event:MessageEvent)-> str:
+    """
+    获取event组id[只针对group与guild]
+    """
+    message_type = str(event.message_type)
+    if message_type == 'group':
+        return str(event.group_id)
+    elif message_type == 'guild':
+        return f'{event.guild_id}_{event.channel_id}'
+    else:
+        logger.warning("message-type不是群聊消息，无须处理")
+        raise  BaseException

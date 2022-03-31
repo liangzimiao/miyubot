@@ -31,7 +31,6 @@ share/python-wheels/
 .installed.cfg
 *.egg
 MANIFEST
-
 # PyInstaller
 #  Usually these files are written by a python script from a template
 #  before PyInstaller builds the exe, so as to inject date/other infos into it.
@@ -165,6 +164,7 @@ src/plugins/nonebot_plugin_heweather
 src/plugins/nonebot_plugin_setu_now
 src/plugins/nonebot_hanayori
 data
+**/account.json
 src/plugins/**/data.json
 /src/plugins/pcrgames/plugins/gacha/local_ver.json
 /src/plugins/pcrgames/plugins/gacha/backup.json

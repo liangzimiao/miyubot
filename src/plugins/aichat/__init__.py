@@ -5,21 +5,18 @@ import re
 import traceback
 
 import requests
-from nonebot import get_driver
 from nonebot.adapters.onebot.v11 import Bot
 from nonebot.adapters.onebot.v11.event import MessageEvent
 from nonebot.permission import SUPERUSER
 
-from .config import Config
+from utils import get_event_gid
+from utils.base_config import BotInfo,Tuling
 from .data_source import AiChat
 from .data_source import Request
 
-global_config = get_driver().config
-config = Config(**global_config.dict())
-bot_guild_id = config.dict().get("bot_guild_id")
 black_word = ['色图', '来一井', '贵族签到', '关于']  # 如果有不想触发的词可以填在这里
 
-SecretId = ''  # 填你的SecretId
+SecretId = ''  # 填你的SecretIdR
 SecretKey = ''  # 填你的SecretKey
 
 try:
@@ -70,14 +67,7 @@ enable = AiChat().on_command('调整AI概率', '调整AI概率',permission=SUPER
 
 @enable.handle()
 async def enable_aichat(bot: Bot, event: MessageEvent):
-    type = str(event.message_type)
-    if type == 'group':
-        get_gid = event.group_id
-    elif type == 'private':
-        return
-    elif type == 'guild':
-        get_gid = f'{event.guild_id}_{event.channel_id}'
-    gc_id = get_gid
+    g_id=get_event_gid(event)
     s = str(event.get_plaintext())
     if s:
         if s.isdigit() and 0 < int(s) < 51:
@@ -86,7 +76,7 @@ async def enable_aichat(bot: Bot, event: MessageEvent):
             await enable.finish('参数错误: 请输入1-50之间的整数.')
     else:
         chance = DEFAULT_AI_CHANCE  # 后面不接数字时调整为默认概率
-    ai_chance[gc_id] = chance
+    ai_chance[g_id] = chance
     save_data()
     await enable.finish(f'人工智障已启用, 当前bot回复概率为{chance}%.')
 
@@ -96,15 +86,8 @@ close = AiChat().on_command('关闭人工智障', '关闭人工智障',permissio
 
 @close.handle()
 async def disable_aichat(bot: Bot, event: MessageEvent):
-    type = str(event.message_type)
-    if type == 'group':
-        get_gid = event.group_id
-    elif type == 'private':
-        return
-    elif type == 'guild':
-        get_gid = f'{event.guild_id}_{event.channel_id}'
-    gc_id = get_gid
-    ai_chance.pop(str(gc_id))
+    g_id = get_event_gid(event)
+    ai_chance.pop(g_id)
     await close.finish(f'人工智障已禁用')
 
 
@@ -114,33 +97,19 @@ reply = AiChat().on_message(block=False)
 @reply.handle()
 async def ai_reply(bot: Bot, event: MessageEvent):
     msg = str(event.get_plaintext())
-    type = str(event.message_type)
-    if type == 'group':
-        get_gid = event.group_id
-    elif type == 'private':
-        return
-    elif type == 'guild':
-        get_gid = f'{event.guild_id}_{event.channel_id}'
-    gc_id = get_gid
+    g_id = get_event_gid(event)
     tag = False
-    # if msg.startswith(f'[CQ:at,qq={event.get_user_id()}]'):
-    #     text = re.sub(cq_code_pattern, '', msg).strip()
-    #     if event.get_user_id() == bot_guild_id:
-    #         tag = True
-    if (len(event.get_message()) > 1 and str(event.get_message()[0]) == f'[CQ:at,qq={bot_guild_id}]')or f'[CQ:at,qq={event.self_id }]'in str(event.raw_message):
+    if f'[CQ:at,qq={BotInfo.bot_guild_id}]' in str(event.raw_message) or f'[CQ:at,qq={event.self_id }]'in str(event.raw_message):
         tag = True
-
-    if msg == '' or msg in black_word or len(msg) > 100 or gc_id not in ai_chance:
+    if msg == '' or msg in black_word or len(msg) > 100 or g_id not in ai_chance:
         return
-    if random.randint(1, 100) <= ai_chance[gc_id] or tag:
+    if random.randint(1, 100) <= ai_chance[g_id] or tag:
         req = Request()
-        req.userInfo.apiKey = config.dict().get("tuling_apikey")
+        req.userInfo.apiKey = Tuling.tuling_apikey
         req.userInfo.userId = '114514'
         req.perception.inputText.text = msg
-        res = requests.post(url=config.dict().get("tuling_url"), data=req.to_json(), timeout=5)
+        res = requests.post(url=Tuling.tuling_url, data=req.to_json(), timeout=5)
         if res.status_code == 200:
             result = json.loads(res.content)['results'][0]['values']['text']
             await reply.finish(result)
-
-
 load_data()
