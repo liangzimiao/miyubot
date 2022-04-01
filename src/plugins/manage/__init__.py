@@ -2,9 +2,9 @@ import re
 
 from nonebot.typing import T_State
 from nonebot.permission import SUPERUSER
-from nonebot.adapters.cqhttp import Bot, MessageEvent, GroupMessageEvent
-from src.plugins.nonebot_guild_patch import GuildMessageEvent
-from nonebot.adapters.cqhttp.permission import GROUP_OWNER, GROUP_ADMIN
+from nonebot.adapters.onebot.v11 import Bot, MessageEvent, GroupMessageEvent
+from nonebot_plugin_guild_patch import GuildMessageEvent
+from nonebot.adapters.onebot.v11.permission import GROUP_OWNER, GROUP_ADMIN
 
 from .data_source import Manage
 

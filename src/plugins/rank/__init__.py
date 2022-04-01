@@ -1,24 +1,14 @@
-from nonebot import on_keyword
-from nonebot.adapters.cqhttp.event import File, MessageEvent
-from nonebot.plugin import on_command
-from nonebot.rule import to_me
-from nonebot.typing import T_State
-from nonebot.adapters import Bot, Event
-from nonebot.adapters.cqhttp import Bot, MessageSegment, message, Message
-from src.plugins.nonebot_guild_patch import GuildMessageEvent
-from configs.path_config import IMAGE_PATH, PCR_PATH
-from configs.path_config import GIF_PATH
-from utils.message_builder import image
-from pathlib import Path
-from nonebot.permission import MESSAGE, SUPERUSER
-from typing import Union, List
-from nonebot.adapters.cqhttp.permission import GROUP, GROUP_OWNER, PRIVATE, GROUP_ADMIN
-import os
-import random
-import os
 import json
-import random
-import datetime
+import os
+
+from nonebot.adapters import Event
+from nonebot.adapters.onebot.v11 import Bot, MessageSegment, Message
+from nonebot.adapters.onebot.v11.event import MessageEvent
+from nonebot.permission import SUPERUSER
+from nonebot.plugin import on_command
+from nonebot.typing import T_State
+
+from configs.path_config import PCR_PATH
 
 matcher = on_command("万用表", permission=SUPERUSER, priority=5)
 

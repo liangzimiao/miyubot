@@ -1,14 +1,10 @@
 from pathlib import Path
 from nonebot import get_driver
 import nonebot
-from .config import Config
 import os
 import sqlite3
 import requests
 import json
-
-global_config = get_driver().config
-config = Config(**global_config.dict())
 
 
 class Dao:

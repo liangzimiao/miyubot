@@ -8,9 +8,10 @@ from nonebot.matcher import Matcher
 from nonebot.permission import Permission
 from nonebot.typing import T_State, T_Handler, T_RuleChecker
 from nonebot.rule import Rule, command, keyword, regex
+from nonebot.adapters.onebot.v11 import Bot, Event
 
 if TYPE_CHECKING:
-    from nonebot.adapters import Bot, Event
+    from nonebot.adapters.onebot.v11 import Bot, Event
 
 SERVICE_DIR = Path(".") / "data" / "service"
 SERVICES_DIR = SERVICE_DIR / "services"
@@ -255,7 +256,7 @@ class Service:
         cmd_list[cmd] = CommandInfo(type=_type, docs=docs, aliases=list(aliases)).dict()
         self._save_cmds(cmd_list)
 
-        async def _strip_cmd(bot: "Bot", event: "Event", state: T_State):
+        async def _strip_cmd(bot: Bot, event: Event, state: T_State):
             message = event.get_message()
             segment = message.pop(0)
             new_message = message.__class__(

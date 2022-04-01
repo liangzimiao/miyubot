@@ -1,8 +1,7 @@
+from nonebot.adapters.onebot.v11 import Bot, MessageEvent
 from nonebot.typing import T_State
-from nonebot.adapters.cqhttp import Bot, MessageEvent
-from src.plugins.nonebot_guild_patch import GuildMessageEvent
+
 from utils.rule import to_bot
-from nonebot.rule import to_me
 from .data_source import Helper
 
 main_help = Helper().on_command(

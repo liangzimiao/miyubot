@@ -1,10 +1,10 @@
 
 
-from nonebot.adapters.cqhttp.event import MessageEvent
+from nonebot.adapters.onebot.v11.event import MessageEvent
 from nonebot.plugin import on_endswith, on_startswith
 from nonebot.typing import T_State
 from src.plugins.pcrgames import  chara
-from nonebot.adapters.cqhttp import Bot, Message
+from nonebot.adapters.onebot.v11 import Bot, Message
 matcher =on_endswith({'是谁','是谁?','是谁？'},priority=5)
 @matcher.handle()
 async def whois(bot: Bot, event: MessageEvent,state: T_State):

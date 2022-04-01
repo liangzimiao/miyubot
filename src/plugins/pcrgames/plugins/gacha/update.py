@@ -2,14 +2,13 @@
 import json
 import os
 from ast import literal_eval
-from .config import Config
 from nonebot import on_command, get_bot, logger, require, get_driver
 from utils import aiorequests, normalize_str
 from . import chara_master
 from ...chara import download_chara_icon, roster
 from nonebot.adapters import Bot, Event
-# from src.plugins.nonebot_guild_patch import GuildMessageEvent, patched_send
-
+from nonebot_plugin_apscheduler import scheduler
+from utils.base_config import BotInfo
 # 卡池更新是否通知管理员
 NOTICE = False
 
@@ -24,12 +23,9 @@ local_pool_backup_path = os.path.join(os.path.dirname(__file__), 'backup.json')
 online_ver_url = 'https://api.redive.lolikon.icu/gacha/gacha_ver.json'
 online_pool_url = 'https://api.redive.lolikon.icu/gacha/default_gacha.json'
 online_pcr_data_url = 'https://api.redive.lolikon.icu/gacha/unitdata.py'
-scheduler = require("nonebot_plugin_apscheduler").scheduler
 
-global_config = get_driver().config
-config = Config(**global_config.dict())
 
-superUser = config.dict().get("superusers")
+superusers = BotInfo.superusers
 
 
 async def get_online_pcrdata():
@@ -246,7 +242,7 @@ async def update_pool_chat(bot: Bot, event: Event):
     """
     手动更新卡池时试用此命令
     """
-    if event.get_user_id() != superUser[0]:
+    if event.get_user_id() != superusers[0]:
         return
     status = await update_pool()
     if status == 0:
@@ -265,7 +261,7 @@ async def update_pool_force_chat(bot: Bot, event: Event):
     """
     强制更新卡池
     """
-    if event.get_user_id() != superUser[0]:
+    if event.get_user_id() != superusers[0]:
         return
     status = await update_pool(force=True)
     if status == 0:
@@ -279,7 +275,7 @@ async def update_pool_force_chat(bot: Bot, event: Event):
 @scheduler.scheduled_job('cron', hour='17', minute='05')
 async def update_pool_sdj():
     bot = get_bot()
-    master_id = superUser[0]
+    master_id = superusers[0]
     self_ids = list(bot._wsr_api_clients)
     sid = self_ids[0]
 
