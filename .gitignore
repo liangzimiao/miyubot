@@ -158,3 +158,4 @@ src
 **/gacha/**json
 plugins/**/LICENSE
 plugins/test
+data
