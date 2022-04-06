@@ -4,13 +4,14 @@ from nonebot import logger
 from nonebot.plugin import on_command
 import pygtrie
 import requests
-from fuzzywuzzy import process
+from fuzzywuzzy import process,fuzz
 from PIL import Image
 from nonebot.adapters.onebot.v11 import Bot
 from nonebot.permission import SUPERUSER
 import utils
 from . import pcr_data
 from utils import R
+import difflib
 
 UNKNOWN = 1000
 UnavailableChara = {
@@ -58,7 +59,8 @@ class Roster:
 
     def guess_id(self, name):
         """@return: id, name, score"""
-        name, score = process.extractOne(name, self._all_name_list, processor=utils.normalize_str)
+        #name, score = process.extractOne(name, self._all_name_list, processor=utils.normalize_str)
+        name, score = match(name, self._all_name_list)
         return self._roster[name], name, score
 
     def parse_team(self, namestr):
@@ -79,6 +81,12 @@ class Roster:
 
 roster = Roster()
 
+def match(query, choices):
+    query=utils.normalize_str(query)
+    a = difflib.get_close_matches(query,choices,1,cutoff=0.6)
+    a=a[0]
+    b=fuzz.ratio(query,a)
+    return a,b
 
 def name2id(name):
     return roster.get_id(name)
