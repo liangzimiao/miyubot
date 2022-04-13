@@ -86,16 +86,11 @@ class Game:
 
 
 def get_guild_member_info(get_gid, uid):
-    url = f'http://127.0.0.1:5700/get_guild_members?guild_id={get_gid}'
+    url = f'http://127.0.0.1:5700/get_guild_member_profile?guild_id={get_gid}&user_id={uid}'
     req = requests.get(url)
     d = json.loads(req.text)
-
-    for e in d['data']['admins']:
-        if e['tiny_id'] == uid:
-            return e['nickname']
-    for e in d['data']['members']:
-        if e['tiny_id'] == uid:
-            return e['nickname']
+    e = d['data']
+    return e['nickname']
 
             
 from .avatarguess import *
