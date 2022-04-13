@@ -1,5 +1,6 @@
 import importlib
 from io import BytesIO
+from nonebot.adapters.onebot.v11.event import MessageEvent
 from nonebot import logger
 from nonebot.plugin import on_command
 import pygtrie
@@ -84,8 +85,12 @@ roster = Roster()
 def match(query, choices):
     query=utils.normalize_str(query)
     a = difflib.get_close_matches(query,choices,1,cutoff=0.6)
-    a=a[0]
+    if a  :
+        a=a[0]
+    else :
+        a=choices[0]
     b=fuzz.ratio(query,a)
+    logger.info(f'匹配结果 {a} 相似度{b}')
     return a,b
 
 def name2id(name):
@@ -265,9 +270,9 @@ matcher = on_command("下载角色头像", permission=SUPERUSER, priority=5)
 
 
 @matcher.handle()
-async def download_pcr_chara_icon(bot: Bot):
+async def download_pcr_chara_icon(bot: Bot,event:MessageEvent):
     try:
-        id_ = roster.get_id(bot.current_arg_text.strip())
+        id_ = roster.get_id(event.message.extract_plain_text().strip("下载角色头像 "))
         assert id_ != UNKNOWN, '未知角色名'
         download_chara_icon(id_, 6)
         download_chara_icon(id_, 3)
