@@ -40,7 +40,7 @@ async def gacha_info(bot, event: MessageEvent):
 
 
 #单抽
-matcher = UmaGachaService().on_command("马娘单抽", "马娘单抽",aliases={"uma gahca one","来发马娘单抽"}, permission=SUPERUSER, priority=5)
+matcher = UmaGachaService().on_command("马娘单抽", "马娘单抽",aliases={"uma gahca one","来发马娘单抽"}, priority=5)
 
 @matcher.handle()
 async def handle_func():
@@ -54,7 +54,7 @@ async def handle_func():
         )
 
 #10连
-matcher = UmaGachaService().on_command("马娘十连","马娘十连", aliases={"马娘10连","十连马娘"}, permission=SUPERUSER, priority=5)
+matcher = UmaGachaService().on_command("马娘十连","马娘十连", aliases={"马娘10连","十连马娘"},  priority=5)
 
 @matcher.handle()
 async def handle_func():
@@ -69,7 +69,7 @@ async def handle_func():
         )
 
 #一井
-matcher = UmaGachaService().on_command("马娘一井","马娘一井", aliases={"马之井","来一井马娘"}, permission=SUPERUSER, priority=5)
+matcher = UmaGachaService().on_command("马娘一井","马娘一井", aliases={"马之井","来一井马娘"},  priority=5)
 
 @matcher.handle()
 async def handle_func():
@@ -122,7 +122,7 @@ async def handle_func():
 
 
 #支援卡单抽
-matcher = UmaGachaService().on_command("支援卡单抽","支援卡单抽" ,aliases={"uma gahca support one","来发支援卡单抽"}, permission=SUPERUSER, priority=5)
+matcher = UmaGachaService().on_command("支援卡单抽","支援卡单抽" ,aliases={"uma gahca support one","来发支援卡单抽"}, priority=5)
 
 @matcher.handle()
 async def handle_func(): 
@@ -138,7 +138,7 @@ async def handle_func():
         )
 
 #10连
-matcher = UmaGachaService().on_command("支援卡十连","支援卡十连", aliases={"支援卡10连","十连支援卡"}, permission=SUPERUSER, priority=5)
+matcher = UmaGachaService().on_command("支援卡十连","支援卡十连", aliases={"支援卡10连","十连支援卡"}, priority=5)
 
 @matcher.handle()
 async def handle_func():
@@ -151,7 +151,7 @@ async def handle_func():
         at_sender=True
         )
 
-matcher = UmaGachaService().on_command("支援卡一井","支援卡一井", aliases={"卡之井","来一井支援卡"}, permission=SUPERUSER, priority=5)
+matcher = UmaGachaService().on_command("支援卡一井","支援卡一井", aliases={"卡之井","来一井支援卡"}, priority=5)
 
 @matcher.handle()
 async def handle_func(): 
