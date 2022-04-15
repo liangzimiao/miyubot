@@ -36,7 +36,7 @@ class UmaGacha(object):
         #up.append(up_id)
         pick=random.randint(0,999)
         if pick<30:
-            if pick<15:
+            if pick<=7:
                 if UNKNOWN in up:
                     gacha_one=random.choice(self.dic["3"])
                 else:
@@ -72,7 +72,7 @@ class UmaGacha(object):
             gacha_ten.append(self.gacha_one(up_id))
         pick=random.randint(0,999)
         if pick<30:
-            if pick<15:
+            if pick<=7:
                 if UNKNOWN in up:#无up
                     gacha_ten.append(random.choice(self.dic["3"]))
                 else:#有up
@@ -137,7 +137,7 @@ class UmaSupGacha(object):
         #up.append(up_id)
         pick=random.randint(0,999)
         if pick<30:
-            if pick<15:
+            if pick<=7:
                 if UNKNOWN in up:
                     gacha_one=random.choice(self.dic["SSR"])
                 else:
@@ -173,7 +173,7 @@ class UmaSupGacha(object):
             gacha_ten.append(self.gacha_one(up_id))
         pick=random.randint(0,999)
         if pick<30:
-            if pick<15:
+            if pick<=7:
                 if UNKNOWN in up:#无up
                     gacha_ten.append(random.choice(self.dic["SSR"]))
                 else:#有up
