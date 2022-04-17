@@ -52,7 +52,7 @@ async def handle_serivce(bot: Bot,state: T_State = State()):
     service_name=str(state["serivce"])
     print(service_name)
     if service_name not in ["国", "台", "日", "国服", "台服", "日服", "cn", "jp", "tw", "CN", "TW", "JP", "陆","陆服", "b", "B"]:
-        await matcher.reject("你想查询的区服暂不支持，请重新输入！")
+        await matcher.finish("你想查询的区服暂不支持，请重新输入！")
 
     service=get_service(service_name)
     config = get_json(service)
