@@ -16,52 +16,55 @@ UNKNOWN = 1000
 
 class UmaGacha(object):
 
-    def __init__(self):
+    def __init__(self,type):
+        self.type=type
         super().__init__()
         self.load_pool()
 
     def load_pool(self):
 
         try:
-            self.dic=Uma_res().star_id_dict
-            #self.uma_name_path = os.path.join(os.path.dirname(__file__), 'uma_gacha.json')
-            #with open(self.uma_name_path, "w",encoding="utf-8") as f:
-            #    f.write(json.dumps(self.dic, ensure_ascii=False, indent=4, separators=(',', ':')))    
-            logger.info(f'uma-gacha初始化成功')
+            if self.type=="chara":
+                self.dic=Uma_res().star_id_dict
+                self.rare=["3","2","1"]
+            elif self.type=="support_card":
+                self.dic=Uma_res().rare_id_dict
+                self.rare=["SSR","SR","R"]
+            else:
+                logger.error(f'uma-gacha初始化失败')
+            logger.info(f'uma_gacha_{self.type}初始化成功')
         except Exception as e:
-            logger.error(f'uma-gacha初始化失败 {e}')
+            logger.error(f'uma_gacha初始化失败 {e}')
 #单抽
     def gacha_one(self,up_id:list):
         up=up_id
         #up.append(up_id)
-        pick=random.randint(0,999)
-        if pick<30:
-            if pick<=7:
-                if UNKNOWN in up:
-                    gacha_one=random.choice(self.dic["3"])
-                else:
-                    gacha_one=str(random.choice(up)) 
-                    while gacha_one not in self.dic["3"]:
-                        gacha_one=str(random.choice(up))  
+        pick=random.uniform(0,999)
+        up3=0
+        up2=0
+        for i in up :
+            if i in self.dic[self.rare[0]]:
+                up3+=1#三星up数量
+            elif i in self.dic[self.rare[0]]:
+                up2+=1#两星up数量
+        if pick<30:#出3星
+            if up3>=2 and pick<=14:
+                gacha_one=str(random.choice(up)) 
+            elif up3==1 and pick<=7:
+                gacha_one=str(random.choice(up))
             else:
-                gacha_one=random.choice(self.dic["3"])
-        elif pick<180:
-            if pick<75:
-                flag=False
-                for i in up :
-                    if i in self.dic["2"]:
-                        flag=True
-                        break
-                if not flag:#无up
-                    gacha_one=random.choice(self.dic["2"])
-                else:#有up
-                    gacha_one=str(random.choice(up)) 
-                    while gacha_one not in self.dic["2"]:
-                        gacha_one=str(random.choice(up))
-            else:   
-                gacha_one=random.choice(self.dic["2"])
-        else :
-            gacha_one=random.choice(self.dic["1"])
+                gacha_one=random.choice(self.dic[self.rare[0]]) 
+            while gacha_one not in self.dic[self.rare[0]]:
+                gacha_one=str(random.choice(up)) 
+        elif pick<180: #出2星
+            if up2>=1 and pick<48.75:
+                gacha_one=str(random.choice(up)) 
+                while gacha_one not in self.dic[self.rare[1]]:
+                    gacha_one=str(random.choice(up))    
+            else:
+                gacha_one=random.choice(self.dic[self.rare[1]])
+        else:#出1星
+            gacha_one=random.choice(self.dic[self.rare[2]])  
         return gacha_one
 #十连
     def gacha_ten(self,up_id:list)->list:
@@ -70,32 +73,32 @@ class UmaGacha(object):
         gacha_ten=[]
         for _ in range(9):  # 前9连
             gacha_ten.append(self.gacha_one(up_id))
-        pick=random.randint(0,999)
+        pick=random.uniform(0,999)
+        up3=0
+        up2=0    
+        for i in up :
+            if i in self.dic[self.rare[0]]:
+                up3+=1#三星up数量
+            elif i in self.dic[self.rare[1]]:
+                up2+=1#两星up数量
         if pick<30:
-            if pick<=7:
-                if UNKNOWN in up:#无up
-                    gacha_ten.append(random.choice(self.dic["3"]))
-                else:#有up
-                    gacha_ten.append(str(random.choice(up))) 
-                    while gacha_ten[-1] not in self.dic["3"]:
-                        del(gacha_ten[-1])
-                        gacha_ten.append(str(random.choice(up)))  
-            else:
-                gacha_ten.append(random.choice(self.dic["3"]))
-        else :
-            flag=False
-            for i in up :
-                if i in self.dic["2"]:
-                    flag=True
-                    break
-            if not flag:#无up
-                gacha_ten.append(random.choice(self.dic["2"]))
-            else:#有up
+            if up3>=2 and pick<=14:
                 gacha_ten.append(str(random.choice(up))) 
-                while gacha_ten[-1] not in self.dic["2"]:
-                    
+            elif up3==1 and pick<=7:
+                gacha_ten.append(str(random.choice(up))) 
+            else:
+                gacha_ten.append(random.choice(self.dic[self.rare[0]])) 
+            while gacha_ten[-1] not in self.dic[self.rare[0]]:
+                del(gacha_ten[-1])
+                gacha_ten.append(str(random.choice(up)))  
+        else :
+            if up2>=1 and pick<151.25:
+                gacha_ten.append(str(random.choice(up))) 
+                while gacha_ten[-1] not in self.dic[self.rare[1]]:
                     del(gacha_ten[-1])
-                    gacha_ten.append(str(random.choice(up)))
+                    gacha_ten.append(str(random.choice(up)))  
+            else:
+                gacha_ten.append(random.choice(self.dic[self.rare[1]]))
         return gacha_ten
 #一井
     def gacha_jing(self,up_id:list)->list:
@@ -107,112 +110,14 @@ class UmaGacha(object):
             gacha_jing.append(self.gacha_ten(up_id))
         for ten in gacha_jing:
             for one in ten:
-                if str(one) in self.dic["3"]:
+                if str(one) in self.dic[self.rare[0]]:
                     gacha.append(one)
-                elif str(one) in self.dic["2"]:
+                elif str(one) in self.dic[self.rare[1]]:
                     two_star=two_star+1
                 else:
                     one_star=one_star+1
         return gacha,two_star,one_star
 
-class UmaSupGacha(object):
-
-    def __init__(self):
-        super().__init__()
-        self.load_pool()
-
-    def load_pool(self):
-
-        try:
-            self.dic=Uma_res().rare_id_dict
-            #self.uma_name_path = os.path.join(os.path.dirname(__file__), 'uma_gacha.json')
-            #with open(self.uma_name_path, "w",encoding="utf-8") as f:
-            #    f.write(json.dumps(self.dic, ensure_ascii=False, indent=4, separators=(',', ':')))    
-            logger.info(f'uma-gacha-support初始化成功')
-        except Exception as e:
-            logger.error(f'uma-gacha-support初始化失败 {e}')
-#单抽
-    def gacha_one(self,up_id:list):
-        up=up_id
-        #up.append(up_id)
-        pick=random.randint(0,999)
-        if pick<30:
-            if pick<=7:
-                if UNKNOWN in up:
-                    gacha_one=random.choice(self.dic["SSR"])
-                else:
-                    gacha_one=str(random.choice(up))
-                    while gacha_one not in self.dic["SSR"]:
-                        gacha_one=str(random.choice(up)) 
-            else:
-                gacha_one=random.choice(self.dic["SSR"])
-        elif pick<180:
-            if pick<75:
-                flag=False
-                for i in up :
-                    if i in self.dic["SR"]:
-                        flag=True
-                        break
-                if not flag:#无up
-                    gacha_one=random.choice(self.dic["SR"])
-                else:#有up
-                    gacha_one=str(random.choice(up)) 
-                    while gacha_one not in self.dic["SR"]:
-                        gacha_one=str(random.choice(up)) 
-            else :
-                gacha_one=random.choice(self.dic["SR"])
-        else :
-            gacha_one=random.choice(self.dic["R"])
-        return gacha_one
-#十连
-    def gacha_ten(self,up_id:list)->list:
-        up=up_id
-        #up.append(up_id)
-        gacha_ten=[]
-        for _ in range(9):  # 前9连
-            gacha_ten.append(self.gacha_one(up_id))
-        pick=random.randint(0,999)
-        if pick<30:
-            if pick<=7:
-                if UNKNOWN in up:#无up
-                    gacha_ten.append(random.choice(self.dic["SSR"]))
-                else:#有up
-                    gacha_ten.append(str(random.choice(up))) 
-                    while gacha_ten[-1] not in self.dic["SSR"]:
-                        del(gacha_ten[-1])
-                        gacha_ten.append(str(random.choice(up)))
-        else :
-            flag=False
-            for i in up :
-                if i in self.dic["SR"]:
-                    flag=True
-                    break
-            if not flag:#无up
-                gacha_ten.append(random.choice(self.dic["SR"]))
-            else:#有up
-                gacha_ten.append(str(random.choice(up))) 
-                while gacha_ten[-1] not in self.dic["SR"]:
-                    del(gacha_ten[-1])
-                    gacha_ten.append(str(random.choice(up)))
-        return gacha_ten
-#一井
-    def gacha_jing(self,up_id:list)->list:
-        gacha_jing=[]
-        gacha=[]
-        two_star=0
-        one_star=0
-        for _ in range(20):
-            gacha_jing.append(self.gacha_ten(up_id))
-        for ten in gacha_jing:
-            for one in ten:
-                if str(one) in self.dic["SSR"]:
-                    gacha.append(one)
-                elif str(one) in self.dic["SR"]:
-                    two_star=two_star+1
-                else:
-                    one_star=one_star+1
-        return gacha,two_star,one_star
-                
 class Up_pool():
 
     def __init__(self):
@@ -230,13 +135,19 @@ class Up_pool():
         self.up_chara_name=self.pool_data_list[0]["chara_name"]
         self.up_card_name=self.pool_data_list[0]["card_name"]
         self.up_chara_id=[]
-        for i in range(len(self.up_chara_name)):
-            self.up_chara_id.append(str(guess_id(self.up_chara_name[i])[0]))
+        if len(self.up_chara_name)>0:
+            for i in range(len(self.up_chara_name)):
+                self.up_chara_id.append(str(guess_id(self.up_chara_name[i])[0]))
+        else:
+            self.up_chara_id.append(str(UNKNOWN))
         self.up_card_id=[]
-        for i in self.pool_data_list[0]["card_img_altt"]:
-            m=i.split(" ")[2]
-            i=m.split(".")[0]
-            self.up_card_id.append(i)
+        if len(self.pool_data_list[0]["card_img_altt"])>0:
+            for i in self.pool_data_list[0]["card_img_altt"]:
+                m=i.split(" ")[2]
+                i=m.split(".")[0]
+                self.up_card_id.append(i)
+        else:
+            self.up_card_id.append(str(UNKNOWN))
         
         self.up_time=self.pool_data_list[0]["time"]#.replace("\n","")
 
@@ -313,5 +224,6 @@ class Up_pool():
             f.write(json.dumps(pool_data_list, ensure_ascii=False, indent=4, separators=(',', ':')))
 
 uppool = Up_pool()  
-gacha = UmaGacha()  
-supgacha = UmaSupGacha()         
+gacha = UmaGacha(type="chara")  
+#supgacha = UmaSupGacha()         
+supgacha = UmaGacha(type="support_card") 
