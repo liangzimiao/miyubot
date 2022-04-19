@@ -153,18 +153,18 @@ class Up_pool():
 
         self.up_chara_pool=self.pool_data_list[0]["chara_pool_title"]
         save_path=os.path.join(os.path.dirname(__file__), 'chara_pool_img.png')
-        if not os.path.exists(save_path):
-            rsp = requests.get(self.pool_data_list[0]["chara_pool_img"], stream=True, timeout=5).content
-            with open(save_path,"wb")as fp:
-                    fp.write(rsp) 
+        #if not os.path.exists(save_path):
+        rsp = requests.get(self.pool_data_list[0]["chara_pool_img"], stream=True, timeout=5).content
+        with open(save_path,"wb")as fp:
+            fp.write(rsp) 
         self.up_chara_pool_img=save_path
 
         self.up_card_pool=self.pool_data_list[0]["card_pool_title"]
         save_path=os.path.join(os.path.dirname(__file__), 'card_pool_img.png')
-        if not os.path.exists(save_path):
-            rsp = requests.get(self.pool_data_list[0]["card_pool_img"], stream=True, timeout=5).content
-            with open(save_path,"wb")as fp:
-                    fp.write(rsp) 
+        #if not os.path.exists(save_path):
+        rsp = requests.get(self.pool_data_list[0]["card_pool_img"], stream=True, timeout=5).content
+        with open(save_path,"wb")as fp:
+            fp.write(rsp) 
         self.up_card_pool_img=save_path
 #更新卡池
     def update_pool(self):

@@ -155,6 +155,7 @@ matcher = on_command("更新马娘资源", permission=SUPERUSER, priority=5)
 async def update_uma_data():
     try:
         uma_res.update_chara_res()
+        uma_res.update_chara_name()
         uma_res.update_card_res()
         await matcher.send('ok')
     except Exception as e:
