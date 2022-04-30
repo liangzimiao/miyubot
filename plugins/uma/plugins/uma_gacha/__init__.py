@@ -4,6 +4,7 @@ from nonebot.adapters.onebot.v11 import  MessageSegment
 from plugins.uma.plugins.uma_gacha.data_source import UmaGachaService
 from plugins.uma.plugins.uma_gacha.draw import draw
 from plugins.uma.plugins.uma_gacha.gacha import uppool, gacha, supgacha
+from plugins.uma.uma_data.resources import uma_res
 from utils import  pic2b64
 from nonebot.adapters.onebot.v11.event import MessageEvent
 from nonebot.adapters.onebot.v11 import Message
@@ -93,27 +94,27 @@ async def handle_func():
         res=pic2b64(res)
         meg += f"{MessageSegment.image(file =res ,cache=False,)}"   
     if s3 <= 0:
-            meg = "竟...竟然没有3★？！\n"
+            meg = "竟...竟然没有3★？！\n" 
     msg = [
-        f"\n素敵な仲間が増えますよ！ {meg}\n",
+        f"\n✨The Favorite Star✨ {meg}\n",
         f"★★★×{s3} ★★×{s2} ★×{s1}\n"]         
     if up == 0 and s3 == 0:
-        msg.append("太惨了，咱们还是退款删游吧...")
+        msg.append("😭太惨了，咱们还是退款删游吧...")
     elif up == 0 and s3 > 7:
-        msg.append("up呢？我的up呢？")
+        msg.append("😫😫😫up呢？我的up呢？")
     elif up == 0 and s3 <= 3:
-        msg.append("这位酋长，梦幻包考虑一下？")
+        msg.append("😥这位酋长，梦幻包考虑一下？")
     elif up == 0:
         if up_chara == 1000:
             msg.append('抽到想要的角色了吗?')
         else:
-            msg.append("据说天井的概率只有12.16%")
+            msg.append("💫 据说天井的概率只有12.16% ")
     elif up == 3:
-        msg.append("抽井母五一气呵成！")
+        msg.append("🍀 记忆碎片一大堆！您是托吧？🍀")
     elif up >= 4:
-        msg.append("记忆碎片一大堆！您是托吧？")
-    elif s3 > 7:
-        msg.append("已经够欧了")
+        msg.append("🥕 抽井母五一气呵成！🥕")
+    elif s3 >= 10:
+        msg.append("🍧 欧皇寿命极短 🍧")
 
     await matcher.send(
             msg,
@@ -177,25 +178,25 @@ async def handle_func():
     if s3 <= 0:
             meg = "竟...竟然没有SSR？！\n"
     msg = [
-        f"\n素敵な仲間が増えますよ！ {meg}",
+        f"\n✨Support Card Gacha✨ {meg}",
         f"SSR×{s3} SR×{s2} R×{s1}\n"]         
     if up == 0 and s3 == 0:
-        msg.append("太惨了，咱们还是退款删游吧...\n")
+        msg.append("😭太惨了，咱们还是退款删游吧...")
     elif up == 0 and s3 > 4:
-        msg.append("up呢？我的up呢？")
-    elif up == 0 and s3 <= 3:
-        msg.append("这位酋长，梦幻包考虑一下？")
+        msg.append("😫😫😫up呢？我的up呢？")
+    elif s3 <= 3:
+        msg.append("😥这位酋长，梦幻包考虑一下？")
     elif up == 0:
         if up_card == 1000:
             msg.append('抽到想要的卡了吗?')
         else:
-            msg.append("据说天井的概率只有12.16%")
+            msg.append("💫  据说天井的概率只有12.16% ")
     elif up == 3:
-        msg.append("还要不要继续抽呢？")
+        msg.append("🍩 还要不要继续抽呢？🍩")
     elif up >= 4:
-        msg.append("已经够满破力")
-    elif s3 > 7:
-        msg.append("欧皇寿命极短")
+        msg.append("🍀 出了好多up！🍀")
+    elif s3 >= 10:
+        msg.append("🍰 欧皇寿命极短 🍰")
     
     await matcher.send(
             msg,
@@ -206,6 +207,9 @@ matcher = UmaGachaService().on_command("更新马娘卡池","更新马娘卡池"
 @matcher.handle()
 async def update_uma_pool():
     try:
+        uma_res.update_chara_res()
+        uma_res.update_chara_name()
+        uma_res.update_card_res()
         uppool.update_pool()
         await matcher.send('ok')
     except Exception as e:

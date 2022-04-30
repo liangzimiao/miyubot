@@ -52,7 +52,7 @@ class Uma_res:
     def update_chara_res(self):
         url="https://wiki.biligame.com/umamusume/%E8%B5%9B%E9%A9%AC%E5%A8%98%E5%9B%BE%E9%89%B4"
         res=requests.get(url).text
-        src='data-param1="(.*?)" .*?\n<td><a href="(.*?)" title="(.*?)"><img alt="Chr icon (.*?) 01.png" src=".*?".* srcset=".*?1.5x, (.*?) 2x".*/></a>\n</td>\n<td>.*?>.*?>(.*?)】'
+        src='data-param1="(.*?)" .*?\n<td><a href="(.*?)" title="(.*?)"><img alt="Chr icon (.*?) 01.png" src=".*?".* srcset=".*?1.5x, (.*?) 2x".*/></a>\n</td>\n<td>.*?>.*?>(.*?)】</a>'
         chara_src_list=re.findall(src,res,re.M)
         self.chara_info_dict={}
         self.id_name_dict={}

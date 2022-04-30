@@ -30,7 +30,7 @@ class Roster:
             names_list=[]
             names_list.append(names)
             for n in names:
-                #n = utils.normalize_str(n)
+                n = utils.normalize_str(n)
                 if n not in self._roster:
                     self._roster[n] = idx
                 else:

@@ -159,3 +159,7 @@ src
 plugins/**/LICENSE
 plugins/test
 data
+.idea
+plugins/uma/plugins/uma_gacha/card_pool_img.png
+plugins/uma/plugins/uma_gacha/chara_pool_img.png
+plugins/uma/plugins/uma_gacha/pool_data.json
