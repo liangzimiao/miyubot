@@ -120,7 +120,7 @@ async def on_input_card_name(bot: Bot, event: MessageEvent):
         card_info_dict=json.load(f)
     answer = card_info_dict[game.answer]["chara"]   
 
-    flag = (guess_id(c)[0]==guess_id(answer)[0]) and (guess_id(c)[2]>=90 and guess_id(answer)[0]>=90)
+    flag = (guess_id(c)[0]==guess_id(answer)[0]) and guess_id(c)[2]>=90 and guess_id(answer)[0]>=90
     if (c == answer) or  flag:
 
         game.winner = event.user_id
