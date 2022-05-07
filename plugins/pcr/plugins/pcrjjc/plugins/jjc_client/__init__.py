@@ -2,7 +2,6 @@ import re
 from asyncio import Lock
 from json import load
 from os.path import dirname, join
-
 from nonebot.adapters.onebot.v11 import MessageEvent, Bot, GroupMessageEvent, MessageSegment
 from nonebot.typing import T_State
 from nonebot import logger
@@ -10,6 +9,7 @@ from nonebot_plugin_guild_patch import GuildMessageEvent
 from utils import send_guild_message
 from .data_source import Arena
 from datetime import datetime
+import math
 
 curpath = dirname(__file__)
 # 下面的内容后续优化为对象类型
@@ -49,6 +49,26 @@ async def on_query_arena_all(bot: Bot, event: MessageEvent, state: T_State):
     )
     oldMessageEvent = event
     response_check = True
+
+
+short_path=Arena().on_regex(r'^击剑路[径线] ?([0-9]{0,5})$','最优击剑路径')
+
+@short_path.handle()
+async def arena_route(bot:Bot,event:MessageEvent,state: T_State):
+    num=int(state['_matched_groups'][0])
+    result=[]
+    while num>1:
+        if len(result)>=5:
+            break
+        if num<=11:
+            num = 1
+        elif num<69:
+            num -= 10
+        else:
+            num = math.floor(num*0.85)
+        result.append(str(num))
+    await short_path.send("\n{}".format("🤺".join(result)), at_sender=True)
+
 
 
 validated = Arena().on_message(block=False)
