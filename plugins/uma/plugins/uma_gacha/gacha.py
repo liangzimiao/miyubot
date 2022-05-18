@@ -256,7 +256,7 @@ class Up_Pool():
                 m=i.split("_")[2]
                 i=m.split(".")[0]
                 dic=Uma_res().rare_id_dict
-                if i in (dic["SSR"]or dic["SR"]or dic["R"]):
+                if i in dic["SSR"]or i in dic["SR"]or i in  dic["R"]:
                     self.up_card_id.append(i)
             print(self.up_card_id)
         else:

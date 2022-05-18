@@ -359,6 +359,14 @@
         "url":"https://patchwiki.biligame.com/images/umamusume/thumb/4/46/4shyrsmzi8qga6kqvp8rwads0vrjba6.png/200px-Chr_icon_1030_103002_01.png",
         "jp_name":"Make up Vampire!"
     },
+    "103101":{
+        "star":"3",
+        "chara_web":"https://wiki.biligame.com//umamusume/%E8%89%BE%E5%B0%BC%E6%96%AF%E9%A3%8E%E7%A5%9E",
+        "cn_name":"艾尼斯风神",
+        "png_name":"103101",
+        "url":"https://patchwiki.biligame.com/images/umamusume/thumb/d/d6/grr55i21i3k7x4zepgpxd5sx038o8is.png/200px-Chr_icon_1031_103101_01.png",
+        "jp_name":"オールタイム・フィーバー"
+    },
     "103201":{
         "star":"1",
         "chara_web":"https://wiki.biligame.com//umamusume/%E7%88%B1%E4%B8%BD%E9%80%9F%E5%AD%90",
@@ -543,6 +551,14 @@
         "url":"https://patchwiki.biligame.com/images/umamusume/thumb/7/75/1y2kxy3in8ohtwp74ryrawv48tdlyf0.png/200px-Chr_icon_1060_106001_01.png",
         "jp_name":"ポインセチア・リボン"
     },
+    "106002":{
+        "star":"3",
+        "chara_web":"https://wiki.biligame.com//umamusume/%E3%80%90RUN%EF%BC%86WIN%E3%80%91%E4%BC%98%E7%A7%80%E7%B4%A0%E8%B4%A8",
+        "cn_name":"【RUN＆WIN】优秀素质",
+        "png_name":"106002",
+        "url":"https://patchwiki.biligame.com/images/umamusume/thumb/7/7f/2wf86mq9bwsgf94dm6ur8bnuwdoq6oa.png/200px-Chr_icon_1060_106002_01.png",
+        "jp_name":"【RUN＆WIN】"
+    },
     "106101":{
         "star":"1",
         "chara_web":"https://wiki.biligame.com//umamusume/%E5%B8%9D%E7%8E%8B%E5%85%89%E8%BE%89",
@@ -550,6 +566,14 @@
         "png_name":"106101",
         "url":"https://patchwiki.biligame.com/images/umamusume/thumb/5/56/jv77cwr30vbiwkuudui4f5097ievpep.png/200px-Chr_icon_1061_106101_01.png",
         "jp_name":"キング・オブ・エメラルド"
+    },
+    "106102":{
+        "star":"3",
+        "chara_web":"https://wiki.biligame.com//umamusume/%E3%80%90%E7%99%BD%E3%81%8F%E6%B0%97%E9%AB%98%E3%81%8D%E6%BF%80%E5%8A%B1%E3%81%AE%E8%A3%85%E3%80%91%E5%B8%9D%E7%8E%8B%E5%85%89%E8%BE%89",
+        "cn_name":"【白く気高き激励の装】帝王光辉",
+        "png_name":"106102",
+        "url":"https://patchwiki.biligame.com/images/umamusume/thumb/7/77/6fpzxzbvb6p0389vb4fvx1o22nuoygw.png/200px-Chr_icon_1061_106102_01.png",
+        "jp_name":"【白く気高き激励の装】"
     },
     "106201":{
         "star":"2",

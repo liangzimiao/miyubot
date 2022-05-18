@@ -1,4 +1,48 @@
 {
+    "30097":{
+        "rare":"SSR",
+        "type":"智力",
+        "effecct":"干劲效果提升, 速度加成, 智力加成, 训练效果提升, 初期羁绊计量格提升, 赛后加成, 粉丝数加成, 启发等级提升, 启发发生率提升, 得意率提升, 智力友情回复量提升",
+        "png_name":"Support_thumb_30097",
+        "url":"https://patchwiki.biligame.com/images/umamusume/thumb/2/22/jw6edmk32xeq10hv6cw6q7jd19k1gag.png/200px-Support_thumb_30097.png",
+        "jp_name":"【Dear Mr. C.B.】ミスターシービー",
+        "cn_name":"【Dear Mr. C.B.】千明代表",
+        "chara":"千明代表",
+        "origin":"卡池"
+    },
+    "30096":{
+        "rare":"SSR",
+        "type":"力量",
+        "effecct":"力量加成, 初期力量提升, 初期羁绊计量格提升, 启发等级提升, 启发发生率提升, 得意率提升",
+        "png_name":"Support_thumb_30096",
+        "url":"https://patchwiki.biligame.com/images/umamusume/thumb/b/be/poukstq2zs1ztc1di223pxjb8zuxuut.png/200px-Support_thumb_30096.png",
+        "jp_name":"【フレフレ☆プリンセス！】カワカミプリンセス",
+        "cn_name":"【Hurray Hurray☆Princess！】川上公主",
+        "chara":"川上公主",
+        "origin":"活动"
+    },
+    "30095":{
+        "rare":"SSR",
+        "type":"速度",
+        "effecct":"速度加成, 初期力量提升, 初期羁绊计量格提升, 赛后加成, 粉丝数加成, 启发等级提升, 启发发生率提升, 得意率提升, 技能Pt加成",
+        "png_name":"Support_thumb_30095",
+        "url":"https://patchwiki.biligame.com/images/umamusume/thumb/b/b2/9juroeeozv6woerjs8yqa2k2yzrbmw5.png/200px-Support_thumb_30095.png",
+        "jp_name":"【そのエールは世界を変えた】シーキングザパール",
+        "cn_name":"【那声加油改变了世界】采珠",
+        "chara":"采珠",
+        "origin":"卡池"
+    },
+    "30094":{
+        "rare":"SSR",
+        "type":"毅力",
+        "effecct":"速度加成, 毅力加成, 训练效果提升, 初期羁绊计量格提升, 赛后加成, 粉丝数加成, 得意率提升",
+        "png_name":"Support_thumb_30094",
+        "url":"https://patchwiki.biligame.com/images/umamusume/thumb/3/32/3h391u70iazd56rjx5nsoppknf2rfmv.png/200px-Support_thumb_30094.png",
+        "jp_name":"【届け、このオモイ！】バンブーメモリー",
+        "cn_name":"【传达吧，这份思念！】青竹回忆",
+        "chara":"青竹回忆",
+        "origin":"卡池"
+    },
     "30093":{
         "rare":"SSR",
         "type":"力量",
@@ -934,6 +978,17 @@
         "chara":"特别周",
         "origin":"卡池"
     },
+    "20047":{
+        "rare":"SR",
+        "type":"耐力",
+        "effecct":"训练效果提升, 初期羁绊计量格提升, 赛后加成, 粉丝数加成, 启发等级提升, 启发发生率提升, 技能Pt加成",
+        "png_name":"Support_thumb_20047",
+        "url":"https://patchwiki.biligame.com/images/umamusume/thumb/1/1a/7lbdx7ydtlc8gn0dcyojwf1ebue6yav.png/200px-Support_thumb_20047.png",
+        "jp_name":"【Step! Smile! Wink!】トウカイテイオー",
+        "cn_name":"【Step! Smile! Wink!】东海帝王",
+        "chara":"东海帝皇",
+        "origin":"卡池"
+    },
     "20046":{
         "rare":"SR",
         "type":"智力",
@@ -1416,6 +1471,17 @@
         "jp_name":"【やれやれ、お帰り】フジキセキ",
         "cn_name":"【哎呀呀，欢迎回来】富士奇迹",
         "chara":"富士奇迹",
+        "origin":"卡池"
+    },
+    "10078":{
+        "rare":"R",
+        "type":"智力",
+        "effecct":"智力加成, 初期羁绊计量格提升, 赛后加成, 粉丝数加成, 启发等级提升, 启发发生率提升, 得意率提升, 智力友情回复量提升",
+        "png_name":"Support_thumb_10078",
+        "url":"https://patchwiki.biligame.com/images/umamusume/thumb/a/ae/dks6lpit2w92iapzvxy9zb7udvn29hc.png/200px-Support_thumb_10078.png",
+        "jp_name":"【トレセン学園】ミスターシービー",
+        "cn_name":"【特雷森学园】千明代表",
+        "chara":"千明代表",
         "origin":"卡池"
     },
     "10077":{
