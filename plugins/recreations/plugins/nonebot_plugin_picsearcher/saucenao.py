@@ -81,14 +81,12 @@ async def get_pic_from_url(url: str):
 
 async def get_des(url: str):
     image_data: List[Tuple] = await get_pic_from_url(url)
-    msg = f"SauceNAO"
-    yield msg
     if not image_data:
         msg: str = "SauceNAO\n找不到高相似度的"
         yield msg
         return
     for pic in image_data:
-        msg = f"SauceNAO"+MessageSegment.image(
-            file=pic[0]) + f"相似度:{pic[1]}\n标题:{pic[2]}\npixivid:{pic[3]}\nmember:{pic[4]}"
+        msg = MessageSegment.image(
+            file=pic[0]) + f"SauceNAO\n相似度:{pic[1]}\n标题:{pic[2]}\npixivid:{pic[3]}\nmember:{pic[4]}"
         yield msg
     pass

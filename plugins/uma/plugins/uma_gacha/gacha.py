@@ -240,6 +240,7 @@ class Up_Pool():
             self.update_pool()
         with open(self.pool_data_path,"r",encoding="utf-8")as f:
             self.pool_data_list=json.load(f)
+            f.close
         self.up_chara_name=self.pool_data_list["chara_name"]
         self.up_card_name=self.pool_data_list["card_name"]
         self.up_chara_id=[]

@@ -15,7 +15,6 @@ from nonebot.typing import T_State
 from nonebot.utils import DataclassEncoder
 from nonebot_plugin_guild_patch import GuildMessageEvent
 
-from plugins.recreations.plugins.nonebot_plugin_picsearcher.data_source import PicSearcherService
 from .ex import get_des as get_des_ex
 from .iqdb import get_des as get_des_iqdb
 from .saucenao import get_des as get_des_sau
@@ -54,7 +53,7 @@ async def get_des(url: str, mode: str):
             yield msg
 
 
-setu = PicSearcherService().on_command("搜图", "搜图",aliases={"search"},# rule=to_me()
+setu = on_command("搜图",aliases={"search"},# rule=to_me()
 )
 
 
@@ -72,7 +71,7 @@ async def get_setu(bot: Bot,
                    event: MessageEvent,
                    state: T_State = State(),
                    msg: Message = Arg("setu")):
-    list=["1","asc","yandex"]
+    list=["1","asc"]
     if state["setu"]== "setu":
         return
     try:
@@ -119,11 +118,11 @@ async def get_setu(bot: Bot,
 
 
 
-setu = PicSearcherService().on_command("搜图", "搜图",aliases={"search"}, #rule=to_me()
+setu = on_command("搜图",aliases={"search"}, #rule=to_me()
 )
 @setu.handle()
 async def get_setu(bot: Bot,event: MessageEvent):
-    list=["1","asc","yandex"]
+    list=["1","asc"]
     try:
         if event.reply:
             msg: Message = event.reply.message

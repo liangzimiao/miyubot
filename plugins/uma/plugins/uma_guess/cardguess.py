@@ -30,7 +30,7 @@ gm = GameMaster(DB_PATH)
 
 
 
-matcher = UmaGuess().on_command("猜支援卡卡面排行榜", "猜支援卡卡面排行榜", aliases={"猜支援卡卡面排名", "猜支援卡卡面群排行"}, priority=5)
+matcher = UmaGuess().on_command("猜支援卡卡面排行榜", "猜支援卡卡面排行榜", aliases={"猜支援卡卡面排名", "猜支援卡排名", "猜支援卡排行榜","猜支援卡卡面群排行"}, priority=5)
 
 
 @matcher.handle()
@@ -41,7 +41,7 @@ async def description_guess_group_ranking(bot: Bot, event: MessageEvent,args: Me
     get_gid=get_id(event)[1]
     type=get_id(event)[2]
     ranking = gm.db.get_ranking(get_gid)
-    msg = ["【猜卡面小游戏排行榜】"]
+    msg = ["【猜支援卡卡面小游戏排行榜】"]
     for i, item in enumerate(ranking):
         uid, count = item
         if type == 'guild':
