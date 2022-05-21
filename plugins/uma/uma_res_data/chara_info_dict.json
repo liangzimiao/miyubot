@@ -557,7 +557,7 @@
         "cn_name":"【RUN＆WIN】优秀素质",
         "png_name":"106002",
         "url":"https://patchwiki.biligame.com/images/umamusume/thumb/7/7f/2wf86mq9bwsgf94dm6ur8bnuwdoq6oa.png/200px-Chr_icon_1060_106002_01.png",
-        "jp_name":"【RUN＆WIN】"
+        "jp_name":"RUN＆WIN"
     },
     "106101":{
         "star":"1",
@@ -573,7 +573,7 @@
         "cn_name":"【白く気高き激励の装】帝王光辉",
         "png_name":"106102",
         "url":"https://patchwiki.biligame.com/images/umamusume/thumb/7/77/6fpzxzbvb6p0389vb4fvx1o22nuoygw.png/200px-Chr_icon_1061_106102_01.png",
-        "jp_name":"【白く気高き激励の装】"
+        "jp_name":"白く気高き激励の装"
     },
     "106201":{
         "star":"2",
@@ -582,6 +582,14 @@
         "png_name":"106201",
         "url":"https://patchwiki.biligame.com/images/umamusume/thumb/1/14/iu42g0zutj88ag33biseori7ojpy24b.png/200px-Chr_icon_1062_106201_01.png",
         "jp_name":"ぱんぱかティルトット"
+    },
+    "106401":{
+        "star":"3",
+        "chara_web":"https://wiki.biligame.com//umamusume/%E7%9B%AE%E7%99%BD%E5%96%84%E4%BF%A1",
+        "cn_name":"目白善信",
+        "png_name":"106401",
+        "url":"https://patchwiki.biligame.com/images/umamusume/thumb/2/23/lel1cnsmadb3et3y95b07j4xyiyosls.png/200px-Chr_icon_1064_106401_01.png",
+        "jp_name":"Line Breakthrough"
     },
     "106701":{
         "star":"3",

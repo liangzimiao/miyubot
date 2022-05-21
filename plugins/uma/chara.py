@@ -6,12 +6,13 @@ from fuzzywuzzy import fuzz
 from nonebot.adapters.onebot.v11 import Bot
 from nonebot.permission import SUPERUSER
 from nonebot.adapters.onebot.v11.event import MessageEvent
+from plugins.uma.plugins.uma_gacha import gacha
 import utils
 from utils import R
 import difflib
 from nonebot.adapters.onebot.v11 import  MessageSegment
-from . import uma_data
-
+from .uma_res_data import uma_data
+from .import uma_res_data 
 
 UNKNOWN = 1000
 UnavailableChara = {
@@ -24,9 +25,9 @@ class Roster:
         self.update()
 
     def update(self):
-        importlib.reload(uma_data)
+        importlib.reload(uma_res_data)
         self._roster.clear()
-        for idx, names in uma_data.CHARA_NAME.items():
+        for idx, names in uma_res_data.CHARA_NAME.items():
             names_list=[]
             names_list.append(names)
             for n in names:
@@ -99,14 +100,14 @@ class Chara:
     @property
     def name(self):
         names_list=[]
-        names_list.append(uma_data.CHARA_NAME[self.id])
-        return uma_data.CHARA_NAME[self.id][0] if self.id in uma_data.CHARA_NAME else uma_data.CHARA_NAME[UNKNOWN][0]
+        names_list.append(uma_res_data.CHARA_NAME[self.id])
+        return uma_res_data.CHARA_NAME[self.id][0] if self.id in uma_res_data.CHARA_NAME else uma_res_data.CHARA_NAME[UNKNOWN][0]
 
 
     @property
     def icon(self):
         icon_path=f'resources\\uma\\img\\unit\\icon_unit_{self.id}.png'
-        uma_res.chara_icon_download(self.id)
+        uma_data.chara_icon_download(self.id)
         try:
             f = open(icon_path,"rb")
             img= f.read()   
@@ -117,19 +118,7 @@ class Chara:
             res = R.img(f'priconne/unit/icon_unit_{UNKNOWN}31.png')
         return res
 
-from plugins.uma.uma_data.resources import uma_res
 
-matcher = on_command("重载马娘花名册", permission=SUPERUSER, priority=5)
-
-@matcher.handle()
-async def reload_uma_chara():
-    try:
-        uma_res.update_chara_name() 
-        roster.update()
-        await matcher.send('ok')
-    except Exception as e:
-        logger.exception(e)
-        await matcher.send(f'Error: {type(e)}')
 
 
 matcher = on_command("下载马娘角色头像", permission=SUPERUSER, priority=5)
@@ -139,14 +128,11 @@ async def download_pcr_chara_icon(bot: Bot,event:MessageEvent):
     try:
         id = roster.get_id(event.message.extract_plain_text().strip("下载马娘角色头像 "))
         assert id != UNKNOWN, '未知角色名'
-        uma_res.chara_icon_download(id)
+        uma_data.chara_icon_download(id)
         await matcher.send(f'ok')
     except Exception as e:
         logger.exception(e)
         await matcher.send(f'Error: {type(e)}')
-
-
-
 
 
 matcher = on_command("更新马娘资源", permission=SUPERUSER, priority=5)
@@ -154,9 +140,11 @@ matcher = on_command("更新马娘资源", permission=SUPERUSER, priority=5)
 @matcher.handle()
 async def update_uma_data():
     try:
-        uma_res.update_chara_res()
-        uma_res.update_chara_name()
-        uma_res.update_card_res()
+        uma_data.update_chara_res()
+        uma_data.update_card_res()
+        uma_data.update_pool()
+        roster.update()
+        importlib.reload(gacha)
         await matcher.send('ok')
     except Exception as e:
         logger.exception(e)

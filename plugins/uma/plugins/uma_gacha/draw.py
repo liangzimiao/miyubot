@@ -1,14 +1,12 @@
 import random
 from PIL import Image
-from numpy import size
-
-from plugins.uma.uma_data.resources import uma_res
+from plugins.uma import uma_res_data
 
 
 
 
-star_id_dic=uma_res.star_id_dict
-rare_id_dic=uma_res.rare_id_dict    
+star_id_dic=uma_res_data.STAR_ID_DICT
+rare_id_dic=uma_res_data.RARE_ID_DICT   
 #print (star_id_dic)
 #uma_backgroud_dir = "resources\\uma\\img\\gacha\\bg\\uma_back.png"
 uma_support_backgroud_one_dir="resources\\uma\\img\\gacha\\bg\\supportcard_back_one.png"
@@ -21,7 +19,7 @@ uma_backgroud_dir= "resources\\uma\\img\\gacha\\bg\\uma_back.png"
 
 def load_icon(id: str, size: float = 1.0) -> Image:
 
-    uma_res.chara_icon_download(id)
+    uma_res_data.uma_data.chara_icon_download(id)
     icon_dir = f'resources\\uma\\img\\unit\\icon_unit_{id}.png'
     im = Image.open(icon_dir)
     icon = im.convert("RGBA")
@@ -29,7 +27,7 @@ def load_icon(id: str, size: float = 1.0) -> Image:
 
 def load_card(id: str, size: float = 1.0) -> Image:
 
-    uma_res.support_card_download(id)
+    uma_res_data.uma_data.support_card_download(id)
     card_dir = f'resources\\uma\\img\\support_card\\Support_thumb_{id}.png'
     im = Image.open(card_dir)
     card = im.convert("RGBA")

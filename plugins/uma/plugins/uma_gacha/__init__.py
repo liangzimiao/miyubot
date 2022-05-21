@@ -1,33 +1,33 @@
-from nonebot import  logger, on_command
+from nonebot import  logger
 from nonebot.permission import SUPERUSER
 from nonebot.adapters.onebot.v11 import  MessageSegment
-from plugins.uma.plugins.uma_gacha.data_source import UmaGachaService
-from plugins.uma.plugins.uma_gacha.draw import draw
-from plugins.uma.plugins.uma_gacha.gacha import uppool, gacha, supgacha
-from plugins.uma.uma_data.resources import uma_res
-from utils import  pic2b64
 from nonebot.adapters.onebot.v11.event import MessageEvent
 from nonebot.adapters.onebot.v11 import Message
+from plugins.uma.plugins.uma_gacha.data_source import UmaGachaService
+from plugins.uma.plugins.uma_gacha.draw import draw
+from plugins.uma import uma_res_data
+from utils import  pic2b64
 from PIL import Image
-
+from .import gacha
 
 check_pick = UmaGachaService().on_command('查看马娘卡池','查看马娘卡池',priority=5)
 
 @check_pick.handle()
 async def gacha_info(bot, event: MessageEvent):
-    up_chara = uppool.up_card_id
-    if up_chara == 1000:
+    up_chara = uma_res_data.POOL_DATA_LIST["chara_id"]
+    if up_chara == 100101:
         msg = f'当前卡池无up角色'
     else:
-        msg = f'当前卡池时间为\n{uppool.up_time}\n'
-        msg += f'当前赛马娘卡池为\n{uppool.up_chara_pool}'
-        res = Image.open(uppool.up_chara_pool_img).convert('RGBA') .resize((480, 120))
+        msg = f'当前卡池时间为\n{uma_res_data.POOL_DATA_LIST["time"]}\n'
+        msg += f'当前赛马娘卡池为\n{uma_res_data.POOL_DATA_LIST["chara_pool_title"]}'
+
+        res = Image.open(uma_res_data.uma_data.up_chara_pool_img).convert('RGBA') .resize((480, 120))
         box = (30, 0, 400,120)
         img =res.crop(box) 
         res=pic2b64(img)
         msg += f"{MessageSegment.image(file =res  ,cache=False,)}"
-        msg += f'当前支援卡卡池为\n{uppool.up_card_pool}'
-        res = Image.open(uppool.up_card_pool_img).convert('RGBA') .resize((480, 120))
+        msg += f'当前支援卡卡池为\n{uma_res_data.POOL_DATA_LIST["card_pool_title"]}'
+        res = Image.open(uma_res_data.uma_data.up_card_pool_img).convert('RGBA') .resize((480, 120))
         img =res.crop(box) 
         res=pic2b64(img)
         msg += f"{MessageSegment.image(file =res ,cache=False,)}"
@@ -45,8 +45,8 @@ matcher = UmaGachaService().on_command("马娘单抽", "马娘单抽",aliases={"
 
 @matcher.handle()
 async def handle_func():
-    up_chara=uppool.up_chara_id
-    result = gacha.gacha_one(up_chara)
+    up_chara=uma_res_data.UP_CHARA_ID
+    result = gacha.UMAGACHA.gacha_one(up_chara)
     res=draw.draw_one(result)
     res=pic2b64(res)
     await matcher.send(
@@ -60,8 +60,8 @@ matcher = UmaGachaService().on_command("马娘十连","马娘十连", aliases={"
 @matcher.handle()
 async def handle_func():
 
-    up_chara=uppool.up_chara_id
-    result = gacha.gacha_ten(up_chara)
+    up_chara=uma_res_data.UP_CHARA_ID
+    result = gacha.UMAGACHA.gacha_ten(up_chara)
     res=draw.draw_ten(result)
     res=pic2b64(res)
     await matcher.send(
@@ -74,8 +74,10 @@ matcher = UmaGachaService().on_command("马娘一井","马娘一井", aliases={"
 
 @matcher.handle()
 async def handle_func():
-    up_chara=uppool.up_chara_id
-    result = gacha.gacha_jing(up_chara)
+    up_chara=uma_res_data.UP_CHARA_ID
+    print(uma_res_data.UP_CHARA_ID)
+    result =gacha.UMAGACHA.gacha_jing(up_chara)
+    print(result[0])
     s3=len(result[0])
     s2=result[1]
     s1=result[2]
@@ -127,8 +129,8 @@ matcher = UmaGachaService().on_command("支援卡单抽","支援卡单抽" ,alia
 
 @matcher.handle()
 async def handle_func(): 
-    up_card=uppool.up_card_id
-    result = supgacha.gacha_one(up_card)
+    up_card=uma_res_data.UP_CARD_ID
+    result = gacha.SUPGACHA.gacha_one(up_card)
     print(result)
     #result="20013"
     res=draw.draw_support_one(result)
@@ -143,8 +145,8 @@ matcher = UmaGachaService().on_command("支援卡十连","支援卡十连", alia
 
 @matcher.handle()
 async def handle_func():
-    up_card=uppool.up_card_id
-    result = supgacha.gacha_ten(up_card)
+    up_card=uma_res_data.UP_CARD_ID
+    result = gacha.SUPGACHA.gacha_ten(up_card)
     res=draw.draw_support_ten(result)
     res=pic2b64(res)
     await matcher.send(
@@ -156,8 +158,8 @@ matcher = UmaGachaService().on_command("支援卡一井","支援卡一井", alia
 
 @matcher.handle()
 async def handle_func(): 
-    up_card=uppool.up_card_id
-    result = supgacha.gacha_jing(up_card)
+    up_card=uma_res_data.UP_CARD_ID
+    result = gacha.SUPGACHA.gacha_jing(up_card)
     s3=len(result[0])
     s2=result[1]
     s1=result[2]
@@ -202,19 +204,6 @@ async def handle_func():
             msg,
         at_sender=True)
 
-matcher = UmaGachaService().on_command("更新马娘卡池","更新马娘卡池", permission=SUPERUSER, priority=5)
-
-@matcher.handle()
-async def update_uma_pool():
-    try:
-        uma_res.update_chara_res()
-        uma_res.update_chara_name()
-        uma_res.update_card_res()
-        uppool.update_pool()
-        await matcher.send('ok')
-    except Exception as e:
-        logger.exception(e)
-        await matcher.send(f'Error: {type(e)}')
 # Export something for other plugin
 # export = nonebot.export()
 # export.foo = "bar"

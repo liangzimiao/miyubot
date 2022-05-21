@@ -163,3 +163,6 @@ data
 plugins/uma/plugins/uma_gacha/card_pool_img.png
 plugins/uma/plugins/uma_gacha/chara_pool_img.png
 plugins/uma/plugins/uma_gacha/pool_data.json
+plugins/uma/uma_res_data/card_pool_img.png
+plugins/uma/uma_res_data/chara_pool_img.png
+plugins/uma/uma_res_data/uma_alias.json

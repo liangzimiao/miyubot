@@ -10,9 +10,7 @@ import os
 import random
 from nonebot.adapters.onebot.v11 import Bot, MessageSegment, Message
 from nonebot.adapters.onebot.v11.event import MessageEvent
-from nonebot.permission import SUPERUSER
-from nonebot.typing import T_State
-from plugins.uma.uma_data.resources import uma_res
+from plugins.uma import uma_res_data
 import utils
 from .data_source import UmaGuess
 from nonebot.params import  CommandArg
@@ -25,7 +23,7 @@ BLACKLIST_ID = []  # 黑名单ID
 
 ONE_TURN_TIME = 20
 
-DB_PATH = os.sep.join(['plugins', 'uma', 'data', 'uma_card_guess.db'])
+DB_PATH = os.sep.join(['plugins', 'uma', 'game_data', 'uma_card_guess.db'])
 gm = GameMaster(DB_PATH)
 
 
@@ -66,7 +64,7 @@ async def avatar_guess(bot: Bot, event: MessageEvent,args: Message = CommandArg(
     if gm.is_playing(get_gid):
         await matcher.finish("游戏仍在进行中…")
     with gm.start_game(get_gid) as game:
-        card_info_path=os.path.abspath(os.sep.join(['plugins', 'uma', 'uma_data', 'card_info_dict.json']))
+        card_info_path=os.path.abspath(os.sep.join(['plugins', 'uma', 'uma_res_data', 'card_info_dict.json']))
         with open (card_info_path,"r",encoding="utf-8")as f:
             card_info_dict=json.load(f)
         #print(card_info_dict)
@@ -79,7 +77,7 @@ async def avatar_guess(bot: Bot, event: MessageEvent,args: Message = CommandArg(
             game.answer = random.choice(ids)
 
         c = card_info_dict[game.answer]["chara"]
-        uma_res.support_card_download(game.answer)
+        uma_res_data.uma_data.support_card_download(game.answer)
         card_dir = f'resources\\uma\\img\\support_card\\Support_thumb_{game.answer}.png'
 
         img = Image.open(card_dir)
@@ -115,7 +113,7 @@ async def on_input_card_name(bot: Bot, event: MessageEvent):
     
     c = event.message.extract_plain_text()
 
-    card_info_path=os.path.abspath(os.sep.join(['plugins', 'uma', 'uma_data', 'card_info_dict.json']))
+    card_info_path=os.path.abspath(os.sep.join(['plugins', 'uma', 'uma_res_data', 'card_info_dict.json']))
     with open (card_info_path,"r",encoding="utf-8")as f:
         card_info_dict=json.load(f)
     answer = card_info_dict[game.answer]["chara"]   
