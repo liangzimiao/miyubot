@@ -111,7 +111,7 @@ async def get_setu(bot: Bot,
                                                         )
                         add_withdraw_job(bot, **msg_info)
         else:
-                await setu.finish("这不是图,重来!")
+                return
     except (IndexError, ClientError):
         await bot.send(event, "traceback.format_exc()")
         await setu.finish("参数错误")

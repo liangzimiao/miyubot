@@ -51,6 +51,8 @@ async def handle_serivce(bot: Bot,state: T_State = State()):
 
     service_name=str(state["serivce"])
     print(service_name)
+    if len(service_name)>2:
+        return  
     if service_name not in ["国", "台", "日", "国服", "台服", "日服", "cn", "jp", "tw", "CN", "TW", "JP", "陆","陆服", "b", "B"]:
         await matcher.finish("你想查询的区服暂不支持，请重新输入！")
 
@@ -78,6 +80,8 @@ async def _(bot: Bot, event: MessageEvent):
     service_name = plain_text.split("r", 1)[0]
     if  service_name == plain_text:
         service_name = plain_text.split("R", 1)[0]
+    if len(service_name)>2:
+        return
     if service_name not in ["国", "台", "日", "国服", "台服", "日服", "cn", "jp", "tw", "CN", "TW", "JP", "陆","陆服", "b", "B" "b服", "B服"]:
         await matcher2.finish("你想查询的区服暂不支持，请重新输入！")
     service=get_service(service_name)

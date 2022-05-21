@@ -5,3 +5,7 @@
 - [ATRI](https://github.com/Kyomotoi/ATRI)
 
 - [HoshinoBot](https://github.com/Ice-Cirno/HoshinoBot)
+
+<h3>资源出处</h3>
+
+- [赛马娘中文wiki](https://wiki.biligame.com/umamusume/%E9%A6%96%E9%A1%B5)
