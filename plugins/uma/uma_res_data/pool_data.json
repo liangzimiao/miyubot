@@ -1,21 +1,21 @@
 {
-    "time":"2022/5/20 11:00\n~\n2022/5/30 10:59",
-    "chara_pool_title":"3★目白善信Pickup卡池",
-    "chara_pool_img":"https://patchwiki.biligame.com/images/umamusume/0/00/r63dcgg3vydcfpsweqg54njqcv7p5ol.png",
+    "time":"2022/6/20 11:00\n~\n2022/6/30 10:59",
+    "chara_pool_title":"3★东商变革Pickup卡池",
+    "chara_pool_img":"https://patchwiki.biligame.com/images/umamusume/3/37/cll6btq4caxer527gxp7r5jr59tqn8d.png",
     "chara_name":[
-        "目白善信"
+        "东商变革"
     ],
     "chara_id":[
-        "106401"
+        "104401"
     ],
-    "card_pool_title":"SSR待兼福来、SSR米浴 Pickup卡池",
-    "card_pool_img":"https://patchwiki.biligame.com/images/umamusume/1/10/q93ocm5toam2ki0y2sn0ngcfvkcd094.png",
+    "card_pool_title":"SSR大树快车 Pickup卡池",
+    "card_pool_img":"https://patchwiki.biligame.com/images/umamusume/1/1a/7dyodidbw35d09hxb435tjk9o7ip7x7.png",
     "card_name":[
-        "【袖振り合えば福となる♪】マチカネフクキタル",
-        "【幸せは曲がり角の向こう】ライスシャワー"
+        "【Hands up, crook!】タイキシャトル",
+        "【好きなんだ、ご飯が】オグリキャップ"
     ],
     "card_img_altt":[
-        "Support_thumb_30078.png",
-        "Support_thumb_30034.png"
+        "Support_thumb_30053.png",
+        "Support_thumb_20048.png"
     ]
 }

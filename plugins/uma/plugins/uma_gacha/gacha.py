@@ -1,6 +1,6 @@
 from nonebot import logger
 import random
-from plugins.uma import uma_res_data
+from plugins.uma.uma_res_data import UMA_DATA
 
 
 UNKNOWN = 1000
@@ -16,10 +16,10 @@ class UmaGacha(object):
 
         try:
             if self.type=="chara":
-                self.dic=uma_res_data.STAR_ID_DICT
+                self.dic=UMA_DATA.star_id_dict
                 self.rare=["3","2","1"]
             elif self.type=="support_card":
-                self.dic=uma_res_data.RARE_ID_DICT
+                self.dic=UMA_DATA.rare_id_dict
                 self.rare=["SSR","SR","R"]
             else:
                 logger.error(f'uma-gacha初始化失败')

@@ -1,4 +1,48 @@
 {
+    "30053":{
+        "rare":"SSR",
+        "type":"速度",
+        "effecct":"速度加成, 力量加成, 训练效果提升, 初期羁绊计量格提升, 赛后加成, 粉丝数加成, 启发等级提升, 启发发生率提升, 得意率提升",
+        "png_name":"Support_thumb_30053",
+        "url":"https://patchwiki.biligame.com/images/umamusume/thumb/6/6a/klw1q4r729gxu0bbucpfipk79tihrr6.png/200px-Support_thumb_30053.png",
+        "jp_name":"【Hands up, crook!】タイキシャトル",
+        "cn_name":"【Hands up, crook!】タイキシャトル",
+        "chara":"大树快车",
+        "origin":"卡池"
+    },
+    "30100":{
+        "rare":"SSR",
+        "type":"智力",
+        "effecct":"速度加成, 智力加成, 初期羁绊计量格提升, 赛后加成, 粉丝数加成, 启发等级提升, 启发发生率提升, 得意率提升, 智力友情回复量提升",
+        "png_name":"Support_thumb_30100",
+        "url":"https://patchwiki.biligame.com/images/umamusume/thumb/4/41/08b42ixt4wahykpo6yykacnns5nw8fj.png/200px-Support_thumb_30100.png",
+        "jp_name":"【あこがれの景色】ライスシャワー",
+        "cn_name":"【憧憬的景色】米浴",
+        "chara":"米浴",
+        "origin":"活动"
+    },
+    "30099":{
+        "rare":"SSR",
+        "type":"耐力",
+        "effecct":"干劲效果提升, 耐力加成, 初期毅力提升, 初期羁绊计量格提升, 赛后加成, 粉丝数加成, 启发等级提升, 启发发生率提升",
+        "png_name":"Support_thumb_30099",
+        "url":"https://patchwiki.biligame.com/images/umamusume/thumb/d/dc/g0k09k9x8y4omyt1rq1mylv236giue0.png/200px-Support_thumb_30099.png",
+        "jp_name":"【愛すべき金蘭のつどい】イクノディクタス",
+        "cn_name":"【珍爱之至契若金兰】狄杜斯",
+        "chara":"狄杜斯",
+        "origin":"卡池"
+    },
+    "30098":{
+        "rare":"SSR",
+        "type":"力量",
+        "effecct":"干劲效果提升, 训练效果提升, 初期力量提升, 初期羁绊计量格提升, 赛后加成, 粉丝数加成, 启发发生率提升, 技能Pt加成",
+        "png_name":"Support_thumb_30098",
+        "url":"https://patchwiki.biligame.com/images/umamusume/thumb/e/e6/s6y1vyjt42yx6it1xrct5g92pp9fm9e.png/200px-Support_thumb_30098.png",
+        "jp_name":"【うららか・ぱっしょん♪】ハルウララ",
+        "cn_name":"【乌拉拉之歌・Passion♪】春乌拉拉",
+        "chara":"春乌拉拉",
+        "origin":"卡池"
+    },
     "30097":{
         "rare":"SSR",
         "type":"智力",
@@ -2118,8 +2162,8 @@
         "png_name":"Support_thumb_10020",
         "url":"https://patchwiki.biligame.com/images/umamusume/thumb/5/51/qvbc949cni00ldpu3ijxhi4o6ffi1as.png/200px-Support_thumb_10020.png",
         "jp_name":"【トレセン学園】ハルウララ",
-        "cn_name":"【特雷森学园】乌拉拉",
-        "chara":"乌拉拉",
+        "cn_name":"【特雷森学园】春乌拉拉",
+        "chara":"春乌拉拉",
         "origin":""
     },
     "10019":{

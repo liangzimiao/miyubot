@@ -1,4 +1,5 @@
 import importlib
+import os
 from nonebot import logger
 from nonebot.plugin import on_command
 import pygtrie
@@ -11,7 +12,7 @@ import utils
 from utils import R
 import difflib
 from nonebot.adapters.onebot.v11 import  MessageSegment
-from .uma_res_data import uma_data
+from .uma_res_data import UMA_DATA
 from .import uma_res_data 
 
 UNKNOWN = 1000
@@ -107,7 +108,7 @@ class Chara:
     @property
     def icon(self):
         icon_path=f'resources\\uma\\img\\unit\\icon_unit_{self.id}.png'
-        uma_data.chara_icon_download(self.id)
+        UMA_DATA.chara_icon_download(self.id)
         try:
             f = open(icon_path,"rb")
             img= f.read()   
@@ -128,7 +129,7 @@ async def download_pcr_chara_icon(bot: Bot,event:MessageEvent):
     try:
         id = roster.get_id(event.message.extract_plain_text().strip("下载马娘角色头像 "))
         assert id != UNKNOWN, '未知角色名'
-        uma_data.chara_icon_download(id)
+        UMA_DATA.chara_icon_download(id)
         await matcher.send(f'ok')
     except Exception as e:
         logger.exception(e)
@@ -140,11 +141,15 @@ matcher = on_command("更新马娘资源", permission=SUPERUSER, priority=5)
 @matcher.handle()
 async def update_uma_data():
     try:
-        uma_data.update_chara_res()
-        uma_data.update_card_res()
-        uma_data.update_pool()
+        UMA_DATA.update_chara_res()
+        UMA_DATA.update_card_res()
+        UMA_DATA.update_pool()
         roster.update()
         importlib.reload(gacha)
+        path = os.path.join(os.path.join(os.path.dirname(__file__), '__pycache__'),'temp.py')
+        with open(path, "w",encoding="utf-8") as f:
+            f.write("m")
+            f.close
         await matcher.send('ok')
     except Exception as e:
         logger.exception(e)

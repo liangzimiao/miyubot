@@ -10,7 +10,7 @@ import os
 import random
 from nonebot.adapters.onebot.v11 import Bot, MessageSegment, Message
 from nonebot.adapters.onebot.v11.event import MessageEvent
-from plugins.uma import uma_res_data
+from plugins.uma.uma_res_data import UMA_DATA
 import utils
 from .data_source import UmaGuess
 from nonebot.params import  CommandArg
@@ -77,7 +77,7 @@ async def avatar_guess(bot: Bot, event: MessageEvent,args: Message = CommandArg(
             game.answer = random.choice(ids)
 
         c = card_info_dict[game.answer]["chara"]
-        uma_res_data.uma_data.support_card_download(game.answer)
+        UMA_DATA.support_card_download(game.answer)
         card_dir = f'resources\\uma\\img\\support_card\\Support_thumb_{game.answer}.png'
 
         img = Image.open(card_dir)

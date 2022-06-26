@@ -271,6 +271,14 @@
         "url":"https://patchwiki.biligame.com/images/umamusume/thumb/4/41/8txgqk9a2589qcw98rpb1d1un2woc4k.png/200px-Chr_icon_1022_102201_01.png",
         "jp_name":"Noble Seamair"
     },
+    "102202":{
+        "star":"3",
+        "chara_web":"https://wiki.biligame.com//umamusume/%E3%80%90Titania%E3%80%91%E7%BE%8E%E5%A6%99%E5%A7%BF%E5%8A%BF",
+        "cn_name":"【Titania】美妙姿势",
+        "png_name":"102202",
+        "url":"https://patchwiki.biligame.com/images/umamusume/thumb/0/02/fsgq45i7hnd0yf5yzce13mk8p7ih7ju.png/200px-Chr_icon_1022_102202_01.png",
+        "jp_name":"Titania"
+    },
     "102301":{
         "star":"3",
         "chara_web":"https://wiki.biligame.com//umamusume/%E7%90%B5%E7%90%B6%E6%99%A8%E5%85%89",
@@ -383,6 +391,14 @@
         "url":"https://patchwiki.biligame.com/images/umamusume/thumb/d/dd/qbqowwstr3s6tq9q4v1xky6vqtpwvwf.png/200px-Chr_icon_1033_103301_01.png",
         "jp_name":"Starry Nocturne"
     },
+    "103401":{
+        "star":"3",
+        "chara_web":"https://wiki.biligame.com//umamusume/%E7%A8%BB%E8%8D%B7%E4%B8%80",
+        "cn_name":"稻荷一",
+        "png_name":"103401",
+        "url":"https://patchwiki.biligame.com/images/umamusume/thumb/3/3f/916h3hbymr2wfwpd3dvhtfv0y7lwimh.png/200px-Chr_icon_1034_103401_01.png",
+        "jp_name":"稲荷所縁江戸紫"
+    },
     "103501":{
         "star":"1",
         "chara_web":"https://wiki.biligame.com//umamusume/%E8%83%9C%E5%88%A9%E5%A5%96%E5%88%B8",
@@ -415,6 +431,14 @@
         "url":"https://patchwiki.biligame.com/images/umamusume/thumb/2/21/lnb5w1ae8uacozj5wlqz4moobej1qt3.png/200px-Chr_icon_1038_103801_01.png",
         "jp_name":"フィーユ・エクレール"
     },
+    "103802":{
+        "star":"3",
+        "chara_web":"https://wiki.biligame.com//umamusume/%E3%80%90%E6%9C%94%E6%9C%88%E3%81%AE%E3%83%9E%E3%83%BB%E3%82%B7%E3%82%A7%E3%83%AA%E3%80%91%E7%9C%9F%E6%9C%BA%E4%BC%B6",
+        "cn_name":"【朔月のマ・シェリ】真机伶",
+        "png_name":"103802",
+        "url":"https://patchwiki.biligame.com/images/umamusume/thumb/d/d0/9tuykeadkuvzyfe1rdbuv7sus26knwo.png/200px-Chr_icon_1038_103802_01.png",
+        "jp_name":"朔月のマ・シェリ"
+    },
     "103901":{
         "star":"3",
         "chara_web":"https://wiki.biligame.com//umamusume/%E5%B7%9D%E4%B8%8A%E5%85%AC%E4%B8%BB",
@@ -446,6 +470,14 @@
         "png_name":"104101",
         "url":"https://patchwiki.biligame.com/images/umamusume/thumb/6/64/eatkvvxofj7u3hiuhg62gv35nc62i0w.png/200px-Chr_icon_1041_104101_01.png",
         "jp_name":"サクラ、すすめ！"
+    },
+    "104401":{
+        "star":"3",
+        "chara_web":"https://wiki.biligame.com//umamusume/%E4%B8%9C%E5%95%86%E5%8F%98%E9%9D%A9",
+        "cn_name":"东商变革",
+        "png_name":"104401",
+        "url":"https://patchwiki.biligame.com/images/umamusume/thumb/1/12/9hxqri25y9qihyim1ipxi0ap1qksqaa.png/200px-Chr_icon_1044_104401_01.png",
+        "jp_name":"プラタナス・ウィッチ"
     },
     "104501":{
         "star":"2",

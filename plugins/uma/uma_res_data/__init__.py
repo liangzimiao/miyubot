@@ -16,11 +16,7 @@ from pyquery import PyQuery as pq
 UNKNOWN=100101
 
 CHARA_NAME = {}
-STAR_ID_DICT = {}
-RARE_ID_DICT = {}
-POOL_DATA_LIST = {}
-UP_CARD_ID = []
-UP_CHARA_ID = []
+
 
 class Uma_Data:
 
@@ -70,8 +66,7 @@ class Uma_Data:
             for id in self.chara_info_dict:
                 self.star_id_dict.setdefault(self.chara_info_dict[id]["star"],[]).append(id)
                 self.id_name_dict[id]=[self.chara_info_dict[id]["cn_name"],self.chara_info_dict[id]["jp_name"]]
-            global STAR_ID_DICT
-            STAR_ID_DICT = self.star_id_dict
+
             logger.info(f'star_id_dict(马娘)更新成功')
             logger.info(f'id_name_dict(wiki)更新成功')
         except Exception as e:
@@ -93,8 +88,7 @@ class Uma_Data:
                     self.rare_id_dict.setdefault(self.card_info_dict[id]["rare"],[]).append(id)
                 else:
                     continue
-            global RARE_ID_DICT
-            RARE_ID_DICT = self.rare_id_dict
+
             logger.info(f'rare_id_dict(支援卡)更新成功')
         except Exception as e:
             logger.warning(f'获取card_info失败:{e}')
@@ -148,25 +142,22 @@ class Uma_Data:
             self.update_pool()
         with open(self.pool_data_path,"r",encoding="utf-8")as f:
             self.pool_data_list=json.load(f)
-            global POOL_DATA_LIST
-            POOL_DATA_LIST = self.pool_data_list
             f.close
-        self.up_chara_pool=POOL_DATA_LIST["chara_pool_title"]
-        self.up_card_pool=POOL_DATA_LIST["card_pool_title"]
-        self.up_chara_name=POOL_DATA_LIST["chara_name"]
-        self.up_card_name=POOL_DATA_LIST["card_name"]
-        self.up_chara_id=POOL_DATA_LIST["chara_id"]
+
+        self.up_chara_pool=self.pool_data_list["chara_pool_title"]
+        self.up_card_pool=self.pool_data_list["card_pool_title"]
+        self.up_chara_name=self.pool_data_list["chara_name"]
+        self.up_card_name=self.pool_data_list["card_name"]
+        self.up_chara_id=self.pool_data_list["chara_id"]
         
         if len(self.up_chara_name)>0:
             logger.info(f'up角色:{self.up_chara_name};id:{self.up_chara_id}')
         else:
             self.up_chara_id.append(str(UNKNOWN))
-        global UP_CHARA_ID
-        UP_CHARA_ID = self.up_chara_id
 
         self.up_card_id=[]
-        if len(POOL_DATA_LIST["card_img_altt"])>0:
-            for i in POOL_DATA_LIST["card_img_altt"]:
+        if len(self.pool_data_list["card_img_altt"])>0:
+            for i in self.pool_data_list["card_img_altt"]:
                 m=i.replace(" ","_")
                 m=i.split("_")[2]
                 i=m.split(".")[0]
@@ -176,19 +167,18 @@ class Uma_Data:
             logger.info(f'up支援卡:{self.up_card_name};id:{self.up_card_id}')
         else:
             self.up_card_id.append(str(UNKNOWN))
-        global UP_CARD_ID
-        UP_CARD_ID = self.up_card_id
+
 
         save_path=os.path.join(os.path.dirname(__file__), 'chara_pool_img.png')
         #if not os.path.exists(save_path):
-        rsp = requests.get(POOL_DATA_LIST["chara_pool_img"], stream=True, timeout=5).content
+        rsp = requests.get(self.pool_data_list["chara_pool_img"], stream=True, timeout=5).content
         with open(save_path,"wb")as fp:
             fp.write(rsp) 
         self.up_chara_pool_img=save_path
 
         save_path=os.path.join(os.path.dirname(__file__), 'card_pool_img.png')
         #if not os.path.exists(save_path):
-        rsp = requests.get(POOL_DATA_LIST["card_pool_img"], stream=True, timeout=5).content
+        rsp = requests.get(self.pool_data_list["card_pool_img"], stream=True, timeout=5).content
         with open(save_path,"wb")as fp:
             fp.write(rsp) 
         self.up_card_pool_img=save_path
@@ -275,7 +265,7 @@ class Uma_Data:
             j=pq(a)
             chara_name_list.append(j.attr("title"))
             j=str(j)
-            src='100px-Chr_icon_1064_(.*?)_01.png"'
+            src='100px-Chr_icon_.*?_(.*?)_01.png"'
             alt = re.findall(src,j,re.S)
             img_alt=alt[0]
             chara_id_list.append(img_alt)
@@ -344,7 +334,6 @@ class Uma_Data:
         
 
 
-
-uma_data = Uma_Data()
+UMA_DATA = Uma_Data()
 
 
