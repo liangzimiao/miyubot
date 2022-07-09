@@ -122,7 +122,7 @@ setu = on_command("搜图",aliases={"search"}, #rule=to_me()
 )
 @setu.handle()
 async def get_setu(bot: Bot,event: MessageEvent):
-    list=["1","asc"]
+    list=["1","yandex"]
     try:
         if event.reply:
             msg: Message = event.reply.message
@@ -165,9 +165,8 @@ async def get_setu(bot: Bot,event: MessageEvent):
                         add_withdraw_job(bot, **msg_info)
             else:
                 await setu.finish("这不是图,重来!")
-    except (IndexError, ClientError):
-        await bot.send(event, "traceback.format_exc()")
-
+    except Exception as e:
+        await bot.send(event, "出现错误traceback.format_exc()")
  
 import time
 import datetime
