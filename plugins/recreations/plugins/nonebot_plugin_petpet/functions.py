@@ -428,9 +428,14 @@ def police(img: BuildImage = UserImg(), arg=NoArg()):
 
 
 def police1(img: BuildImage = UserImg(), arg=NoArg()):
-    img = img.convert("RGBA").resize((60, 75), keep_ratio=True).rotate(16, expand=True)
-    frame = load_image("police/1.png")
-    frame.paste(img, (37, 291), below=True)
+    img1 = img.convert("RGBA").resize((399, 397))
+    img2 = img.convert("RGBA").resize((60, 75), keep_ratio=True).rotate(16, expand=True)
+    frame = load_image("police/2.png")
+    frame.paste(img2, (37, 291), below=True)
+    frame.paste(img1, (-40, 0), below=True)
+    #img = img.convert("RGBA").resize((60, 75), keep_ratio=True).rotate(16, expand=True)
+    #frame = load_image("police/1.png")
+    #frame.paste(img, (37, 291), below=True)
     return frame.save_jpg()
 
 
