@@ -119,6 +119,14 @@
         "url":"https://patchwiki.biligame.com/images/umamusume/thumb/7/72/nr52qx8dhij8cvtn796laltguikz45x.png/200px-Chr_icon_1010_101001_01.png",
         "jp_name":"ワイルド・フロンティア"
     },
+    "101002":{
+        "star":"3",
+        "chara_web":"https://wiki.biligame.com//umamusume/%E3%80%90Bubblegum%E2%98%86Memories%E3%80%91%E5%A4%A7%E6%A0%91%E5%BF%AB%E8%BD%A6",
+        "cn_name":"【Bubblegum☆Memories】大树快车",
+        "png_name":"101002",
+        "url":"https://patchwiki.biligame.com/images/umamusume/thumb/a/a9/gc0y9qjub4ga27tv35r7516plp2l82z.png/200px-Chr_icon_1010_101002_01.png",
+        "jp_name":"Bubblegum ☆ Memories"
+    },
     "101101":{
         "star":"2",
         "chara_web":"https://wiki.biligame.com//umamusume/%E8%8D%89%E4%B8%8A%E9%A3%9E",
@@ -574,6 +582,14 @@
         "png_name":"105901",
         "url":"https://patchwiki.biligame.com/images/umamusume/thumb/d/d5/99ni3yb0tiro2hflxez8jb017tmtv8b.png/200px-Chr_icon_1059_105901_01.png",
         "jp_name":"ツイステッド・ライン"
+    },
+    "105902":{
+        "star":"3",
+        "chara_web":"https://wiki.biligame.com//umamusume/%E3%80%90%E3%83%90%E3%82%AB%E3%83%B3%E3%82%B9%E3%83%BB%E3%82%B5%E3%83%95%E3%82%A3%E3%83%BC%E3%83%AB%E3%80%91%E7%9B%AE%E7%99%BD%E5%A4%9A%E4%BC%AF",
+        "cn_name":"【バカンス・サフィール】目白多伯",
+        "png_name":"105902",
+        "url":"https://patchwiki.biligame.com/images/umamusume/thumb/3/3b/2y7pxahbv3imoo5pgpt0zczo8mdh5gi.png/200px-Chr_icon_1059_105902_01.png",
+        "jp_name":"バカンス・サフィール"
     },
     "106001":{
         "star":"1",

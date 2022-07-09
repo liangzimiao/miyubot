@@ -1,21 +1,25 @@
 {
-    "time":"2022/6/20 11:00\n~\n2022/6/30 10:59",
-    "chara_pool_title":"3★东商变革Pickup卡池",
-    "chara_pool_img":"https://patchwiki.biligame.com/images/umamusume/3/37/cll6btq4caxer527gxp7r5jr59tqn8d.png",
+    "time":"2022/6/30 11:00\n~\n2022/7/11 10:59",
+    "chara_pool_title":"3★大树快车 3★目白多伯Pickup卡池",
+    "chara_pool_img":"https://patchwiki.biligame.com/images/umamusume/8/89/ft0xn2qps615qpds6e45yc44ih30c1t.png",
     "chara_name":[
-        "东商变革"
+        "【Bubblegum☆Memories】大树快车",
+        "【バカンス・サフィール】目白多伯"
     ],
     "chara_id":[
-        "104401"
+        "101002",
+        "105902"
     ],
-    "card_pool_title":"SSR大树快车 Pickup卡池",
-    "card_pool_img":"https://patchwiki.biligame.com/images/umamusume/1/1a/7dyodidbw35d09hxb435tjk9o7ip7x7.png",
+    "card_pool_title":"SSR神鹰、SSR待兼诗歌剧 Pickup卡池",
+    "card_pool_img":"https://patchwiki.biligame.com/images/umamusume/3/35/lcnu3qm1d46mp9oc9xrzltrgzhcezw5.png",
     "card_name":[
-        "【Hands up, crook!】タイキシャトル",
-        "【好きなんだ、ご飯が】オグリキャップ"
+        "【キラキラカケル∞】エルコンドルパサー",
+        "【マチタン☆アドベンチャー】マチカネタンホイザ",
+        "【『ロードナイトと夢の石』】ゼンノロブロイ"
     ],
     "card_img_altt":[
-        "Support_thumb_30053.png",
-        "Support_thumb_20048.png"
+        "Support_thumb_30102.png",
+        "Support_thumb_30103.png",
+        "Support_thumb_30104.png"
     ]
 }

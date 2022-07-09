@@ -1,13 +1,35 @@
 {
-    "30053":{
+    "30104":{
         "rare":"SSR",
-        "type":"速度",
-        "effecct":"速度加成, 力量加成, 训练效果提升, 初期羁绊计量格提升, 赛后加成, 粉丝数加成, 启发等级提升, 启发发生率提升, 得意率提升",
-        "png_name":"Support_thumb_30053",
-        "url":"https://patchwiki.biligame.com/images/umamusume/thumb/6/6a/klw1q4r729gxu0bbucpfipk79tihrr6.png/200px-Support_thumb_30053.png",
-        "jp_name":"【Hands up, crook!】タイキシャトル",
-        "cn_name":"【Hands up, crook!】タイキシャトル",
-        "chara":"大树快车",
+        "type":"耐力",
+        "effecct":"耐力加成, 初期耐力提升, 初期毅力提升, 初期羁绊计量格提升, 赛后加成, 粉丝数加成, 启发等级提升, 启发发生率提升, 得意率提升",
+        "png_name":"Support_thumb_30104",
+        "url":"https://patchwiki.biligame.com/images/umamusume/thumb/e/e4/fkwvrrsr376ufhuxlyh2xnmojwvt6bx.png/200px-Support_thumb_30104.png",
+        "jp_name":"【『ロードナイトと夢の石』】ゼンノロブロイ",
+        "cn_name":"【『领主骑士与梦之石』】荒漠英雄",
+        "chara":"荒漠英雄",
+        "origin":"活动"
+    },
+    "30103":{
+        "rare":"SSR",
+        "type":"智力",
+        "effecct":"速度加成, 智力加成, 初期速度提升, 初期智力提升, 初期羁绊计量格提升, 赛后加成, 粉丝数加成, 得意率提升, 智力友情回复量提升",
+        "png_name":"Support_thumb_30103",
+        "url":"https://patchwiki.biligame.com/images/umamusume/thumb/3/30/gu87cfmowuyx8ic0jf0fvj63c40ouon.png/200px-Support_thumb_30103.png",
+        "jp_name":"【マチタン☆アドベンチャー】マチカネタンホイザ",
+        "cn_name":"【诗歌剧碳☆adventure】待兼诗歌剧",
+        "chara":"待兼诗歌剧",
+        "origin":"卡池"
+    },
+    "30102":{
+        "rare":"SSR",
+        "type":"毅力",
+        "effecct":"毅力加成, 初期毅力提升, 初期羁绊计量格提升, 赛后加成, 粉丝数加成, 启发等级提升, 启发发生率提升, 得意率提升",
+        "png_name":"Support_thumb_30102",
+        "url":"https://patchwiki.biligame.com/images/umamusume/thumb/4/49/p1zlqgvxhwm9xsnqmtw74mgmwxwyzie.png/200px-Support_thumb_30102.png",
+        "jp_name":"【キラキラカケル∞】エルコンドルパサー",
+        "cn_name":"【闪闪发光的奔跑∞】神鹰",
+        "chara":"神鹰",
         "origin":"卡池"
     },
     "30100":{
@@ -516,6 +538,17 @@
         "chara":"优秀素质",
         "origin":"卡池"
     },
+    "30053":{
+        "rare":"SSR",
+        "type":"速度",
+        "effecct":"速度加成, 力量加成, 训练效果提升, 初期羁绊计量格提升, 赛后加成, 粉丝数加成, 启发等级提升, 启发发生率提升, 得意率提升",
+        "png_name":"Support_thumb_30053",
+        "url":"https://patchwiki.biligame.com/images/umamusume/thumb/6/6a/klw1q4r729gxu0bbucpfipk79tihrr6.png/200px-Support_thumb_30053.png",
+        "jp_name":"【Hands up, crook!】タイキシャトル",
+        "cn_name":"【Hands up, crook!】大树快车",
+        "chara":"大树快车",
+        "origin":"卡池"
+    },
     "30048":{
         "rare":"SSR",
         "type":"毅力",
@@ -1020,6 +1053,17 @@
         "jp_name":"【日本一のステージを】スペシャルウィーク",
         "cn_name":"【在日本第一的舞台】特别周",
         "chara":"特别周",
+        "origin":"卡池"
+    },
+    "20048":{
+        "rare":"SR",
+        "type":"毅力",
+        "effecct":"速度加成, 训练效果提升, 初期羁绊计量格提升, 赛后加成, 粉丝数加成, 启发等级提升, 启发发生率提升, 得意率提升",
+        "png_name":"Support_thumb_20048",
+        "url":"https://patchwiki.biligame.com/images/umamusume/thumb/6/62/omq82e3aekly2pag4g7gduwx7hcjoil.png/200px-Support_thumb_20048.png",
+        "jp_name":"【好きなんだ、ご飯が】オグリキャップ",
+        "cn_name":"【喜欢着啊，吃饭】小栗帽",
+        "chara":"小栗帽",
         "origin":"卡池"
     },
     "20047":{
