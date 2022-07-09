@@ -154,6 +154,8 @@ class Service:
     ) -> Type[Matcher]:
         if not rule:
             rule = self.rule
+        else:
+            rule = rule & self.rule
         if not permission:
             permission = self.permission
         if not handlers:
