@@ -30,7 +30,9 @@ class ContentParse(HTMLParser):
         self.is_title = False
 
     def handle_starttag(self, tag, attrs):
-        if 'cl-t' in attrs[0]:
+        if tag == "br":
+            self.is_title = True
+        elif 'cl-t' in attrs[0]:
             self.is_title = True
         else:
             self.is_title = False
