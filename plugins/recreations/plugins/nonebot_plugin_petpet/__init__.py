@@ -6,7 +6,8 @@ from nonebot.matcher import Matcher
 from nonebot.typing import T_Handler
 #from nonebot.plugin import PluginMetadata
 from nonebot import on_command, require, on_message
-from nonebot.adapters.onebot.v11 import MessageSegment
+from nonebot.adapters.onebot.v11 import MessageSegment, MessageEvent
+from utils.CD_Checker import check_cd
 
 require("nonebot_plugin_imageutils")
 
@@ -40,8 +41,9 @@ async def _():
 def create_matchers():
     def handler(command: Command) -> T_Handler:
         async def handle(
-            matcher: Matcher, res: Union[str, BytesIO] = Depends(command.func)
+            matcher: Matcher, event: MessageEvent, res: Union[str, BytesIO] = Depends(command.func)
         ):
+            await check_cd(matcher,event,__name__)
             matcher.stop_propagation()
             if isinstance(res, str):
                 await matcher.finish(res)
