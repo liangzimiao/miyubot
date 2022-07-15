@@ -162,8 +162,9 @@ async def _user_block_service(bot: Bot, event: MessageEvent):
     msg = str(event.message).strip()
     pattern = r"对用户(.*?)禁用(.*)"
     reg = re.findall(pattern, msg)
-    aim_user = reg[0]
-    aim_service = reg[1]
+    print(reg)
+    aim_user = reg[0][0]
+    aim_service = reg[0][1]
 
     is_ok = Manage().control_user_service(aim_service, aim_user, False)
     if not is_ok:
@@ -181,8 +182,9 @@ async def _user_unblock_service(bot: Bot, event: MessageEvent):
     msg = str(event.message).strip()
     pattern = r"对用户(.*?)启用(.*)"
     reg = re.findall(pattern, msg)
-    aim_user = reg[0]
-    aim_service = reg[1]
+    print(reg)
+    aim_user = reg[0][0]
+    aim_service = reg[0][1]
 
     is_ok = Manage().control_user_service(aim_service, aim_user, True)
     if not is_ok:

@@ -67,7 +67,7 @@ async def handle_serivce(bot: Bot,state: T_State = State()):
         img = f.read()
         f.close()
         meg += f'{MessageSegment.image(img, cache=False, )}'
-    await matcher.finish(Message(notice + meg), at_sender=True)
+    await matcher.send(Message(notice + meg), at_sender=True)
 
 
 matcher2 =Rank().on_regex(r'^([陆国日台Bb][服]|[陆国日台Bb])[Rr]ank(表)?',"rank表", priority=5)
@@ -96,6 +96,6 @@ async def _(bot: Bot, event: MessageEvent):
         f.close()
         meg += f'{MessageSegment.image(img, cache=False, )}'
         
-    await matcher2.finish(Message(notice + meg), at_sender=True)
+    await matcher2.send(Message(notice + meg), at_sender=True)
         
 
