@@ -1,25 +1,21 @@
 {
-    "time":"2022/6/30 11:00\n~\n2022/7/11 10:59",
-    "chara_pool_title":"3★大树快车 3★目白多伯Pickup卡池",
-    "chara_pool_img":"https://patchwiki.biligame.com/images/umamusume/8/89/ft0xn2qps615qpds6e45yc44ih30c1t.png",
+    "time":"2022/7/11 11:00\n~\n2022/7/20 10:59",
+    "chara_pool_title":"3★空中神宫 Pickup卡池",
+    "chara_pool_img":"https://patchwiki.biligame.com/images/umamusume/5/59/rdncyt3ii00dhirp9pxu1jepegwg91l.png",
     "chara_name":[
-        "【Bubblegum☆Memories】大树快车",
-        "【バカンス・サフィール】目白多伯"
+        "空中神宫"
     ],
     "chara_id":[
-        "101002",
-        "105902"
+        "103601"
     ],
-    "card_pool_title":"SSR神鹰、SSR待兼诗歌剧 Pickup卡池",
-    "card_pool_img":"https://patchwiki.biligame.com/images/umamusume/3/35/lcnu3qm1d46mp9oc9xrzltrgzhcezw5.png",
+    "card_pool_title":"SSR气槽、SR黄金城 Pickup卡池",
+    "card_pool_img":"https://patchwiki.biligame.com/images/umamusume/1/1b/kv0hgv6urcr0wi06jp1pn421ru6j3uh.png",
     "card_name":[
-        "【キラキラカケル∞】エルコンドルパサー",
-        "【マチタン☆アドベンチャー】マチカネタンホイザ",
-        "【『ロードナイトと夢の石』】ゼンノロブロイ"
+        "【理想へ向かう青嵐】エアグルーヴ",
+        "【金色を目指して】ゴールドシチー"
     ],
     "card_img_altt":[
-        "Support_thumb_30102.png",
-        "Support_thumb_30103.png",
-        "Support_thumb_30104.png"
+        "Support_thumb_30106.png",
+        "Support_thumb_20049.png"
     ]
 }

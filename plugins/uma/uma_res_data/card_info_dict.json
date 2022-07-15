@@ -1,4 +1,15 @@
 {
+    "30106":{
+        "rare":"SSR",
+        "type":"力量",
+        "effecct":"干劲效果提升, 耐力加成, 初期耐力提升, 初期力量提升, 初期羁绊计量格提升, 赛后加成, 粉丝数加成, 得意率提升",
+        "png_name":"Support_thumb_30106",
+        "url":"https://patchwiki.biligame.com/images/umamusume/thumb/1/1e/dprk22socijsq8gy1vl1mkykstqoe9v.png/200px-Support_thumb_30106.png",
+        "jp_name":"【理想へ向かう青嵐】エアグルーヴ",
+        "cn_name":"【奔向理想的熏风】气槽",
+        "chara":"气槽",
+        "origin":"卡池"
+    },
     "30104":{
         "rare":"SSR",
         "type":"耐力",
@@ -1053,6 +1064,17 @@
         "jp_name":"【日本一のステージを】スペシャルウィーク",
         "cn_name":"【在日本第一的舞台】特别周",
         "chara":"特别周",
+        "origin":"卡池"
+    },
+    "20049":{
+        "rare":"SR",
+        "type":"智力",
+        "effecct":"智力加成, 初期速度提升, 初期智力提升, 初期羁绊计量格提升, 启发等级提升, 启发发生率提升, 得意率提升, 智力友情回复量提升",
+        "png_name":"Support_thumb_20049",
+        "url":"https://patchwiki.biligame.com/images/umamusume/thumb/5/56/pmmo9anupwol1r8mb7ex6wbxf0lqu9v.png/200px-Support_thumb_20049.png",
+        "jp_name":"【金色を目指して】ゴールドシチー",
+        "cn_name":"【以金色为目标】黄金城",
+        "chara":"黄金城",
         "origin":"卡池"
     },
     "20048":{
