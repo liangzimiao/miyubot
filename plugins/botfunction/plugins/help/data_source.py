@@ -38,7 +38,7 @@ class Helper(Service):
 
     @staticmethod
     def about() -> str:
-        return f'你好呀~我是{config.dict().get("nickname")}~'
+        return f'你好呀~我是飞鹰子~'
         # temp_list = list()
         # for i in BotSelfConfig.nickname:
         #     temp_list.append(i)

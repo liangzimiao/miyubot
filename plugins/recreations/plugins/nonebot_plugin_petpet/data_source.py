@@ -6,7 +6,7 @@ commands = [
     Command(petpet, ("摸", "摸摸", "摸头", "rua"), r"摸摸?头?|rua"),
     Command(kiss, ("亲", "亲亲"), r"亲亲?"),
     Command(rub, ("贴", "贴贴", "蹭", "蹭蹭"), r"贴贴?|蹭蹭?"),
-    Command(play, ("顶", "玩")),
+    Command(play, ("顶", "玩","吞")),
     Command(pat, ("拍",)),
     Command(rip, ("撕",)),
     Command(throw, ("丢", "扔")),
