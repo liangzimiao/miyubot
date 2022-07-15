@@ -7,6 +7,8 @@ from plugins.uma.plugins.uma_gacha.draw import draw
 from plugins.uma.uma_res_data import UMA_DATA
 from utils import  pic2b64
 from PIL import Image
+
+from utils.CD_Checker import check_cd
 from .import gacha
 
 check_pick = UmaGachaService().on_command('查看马娘卡池','查看马娘卡池',priority=5)
@@ -43,7 +45,8 @@ async def gacha_info(bot, event: MessageEvent):
 matcher = UmaGachaService().on_command("马娘单抽", "马娘单抽",aliases={"uma gahca one","来发马娘单抽"}, priority=5)
 
 @matcher.handle()
-async def handle_func():
+async def handle_func(event: MessageEvent):
+    await check_cd(matcher,event,__name__)
     up_chara=UMA_DATA.up_chara_id
     result = gacha.UMAGACHA.gacha_one(up_chara)
     res=draw.draw_one(result)
@@ -57,8 +60,8 @@ async def handle_func():
 matcher = UmaGachaService().on_command("马娘十连","马娘十连", aliases={"马娘10连","十连马娘"},  priority=5)
 
 @matcher.handle()
-async def handle_func():
-
+async def handle_func(event: MessageEvent):
+    await check_cd(matcher,event,__name__)
     up_chara=UMA_DATA.up_chara_id
     result = gacha.UMAGACHA.gacha_ten(up_chara)
     res=draw.draw_ten(result)
@@ -72,7 +75,8 @@ async def handle_func():
 matcher = UmaGachaService().on_command("马娘一井","马娘一井", aliases={"马之井","来一井马娘"},  priority=5)
 
 @matcher.handle()
-async def handle_func():
+async def handle_func(event: MessageEvent):
+    await check_cd(matcher,event,__name__)    
     up_chara=UMA_DATA.up_chara_id
     print(up_chara)
     result =gacha.UMAGACHA.gacha_jing(up_chara)
@@ -126,7 +130,8 @@ async def handle_func():
 matcher = UmaGachaService().on_command("支援卡单抽","支援卡单抽" ,aliases={"uma gahca support one","来发支援卡单抽"}, priority=5)
 
 @matcher.handle()
-async def handle_func(): 
+async def handle_func(event: MessageEvent): 
+    await check_cd(matcher,event,__name__)    
     up_card=UMA_DATA.up_card_id
     result = gacha.SUPGACHA.gacha_one(up_card)
     print(result)
@@ -142,7 +147,8 @@ async def handle_func():
 matcher = UmaGachaService().on_command("支援卡十连","支援卡十连", aliases={"支援卡10连","十连支援卡"}, priority=5)
 
 @matcher.handle()
-async def handle_func():
+async def handle_func(event: MessageEvent):
+    await check_cd(matcher,event,__name__)    
     up_card=UMA_DATA.up_card_id
     result = gacha.SUPGACHA.gacha_ten(up_card)
     res=draw.draw_support_ten(result)
@@ -155,7 +161,8 @@ async def handle_func():
 matcher = UmaGachaService().on_command("支援卡一井","支援卡一井", aliases={"卡之井","来一井支援卡"}, priority=5)
 
 @matcher.handle()
-async def handle_func(): 
+async def handle_func(event: MessageEvent): 
+    await check_cd(matcher,event,__name__)
     up_card=UMA_DATA.up_card_id
     result = gacha.SUPGACHA.gacha_jing(up_card)
     s3=len(result[0])
