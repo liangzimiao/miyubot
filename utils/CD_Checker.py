@@ -18,7 +18,7 @@ async def check_cd(matcher:Type[Matcher],event:MessageEvent,name:str):
     except:
         cd = cdTime + 1
 
-    if cd > cdTime: #or event.get_user_id() in nonebot.get_driver().config.superusers:
+    if cd > cdTime or event.get_user_id() in nonebot.get_driver().config.superusers:
         writeJson(event.get_user_id(), event.time, event.message_id, data,name)
         try:
             return 
@@ -26,5 +26,5 @@ async def check_cd(matcher:Type[Matcher],event:MessageEvent,name:str):
                 logger.warning(e)
                 removeJson(event.get_user_id(),name)
     else:
-        await matcher.finish(f"别急~  CD还有{cdTime - cd}秒", at_sender=True)
-        #return False
+        #await matcher.finish(f"别急~  CD还有{cdTime - cd}秒", at_sender=True)
+        await matcher.finish(f"别急~  还在CD中", at_sender=True)
