@@ -11,4 +11,4 @@ xx是谁？
 
 class Whois(Service):
     def __init__(self):
-        Service.__init__(self, "whois", __doc__, rule=is_in_service("whois"))
+        Service.__init__(self, "pcr_whois", __doc__, rule=is_in_service("pcr_whois"))

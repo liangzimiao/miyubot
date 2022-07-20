@@ -8,7 +8,7 @@ __doc__ = '''
 
 class Arena(Service):
     def __init__(self):
-        Service.__init__(self, "arena", __doc__)
+        Service.__init__(self, "pcr_arena", __doc__)
 
 
 

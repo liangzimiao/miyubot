@@ -11,4 +11,4 @@ __doc__ = '''
 
 class Guess(Service):
     def __init__(self):
-        Service.__init__(self, "guess", __doc__, rule=is_in_service("guess"))
+        Service.__init__(self, "pcr_guess", __doc__, rule=is_in_service("pcr_guess"))

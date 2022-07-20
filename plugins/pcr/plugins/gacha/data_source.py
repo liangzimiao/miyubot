@@ -20,5 +20,5 @@ __doc__ = """
 
 class GachaService(Service):
     def __init__(self):
-        Service.__init__(self, "抽卡", __doc__, rule=is_in_service("抽卡"))
+        Service.__init__(self, "pcr_gacha", __doc__, rule=is_in_service("pcr_gacha"))
 

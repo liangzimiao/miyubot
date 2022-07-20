@@ -8,16 +8,14 @@
 from utils.service import Service
 from utils.rule import is_in_service
 __doc__ = """
-- [十连] 转蛋模拟
-- [来发单抽] 转蛋模拟
-- [来一井] 3w钻！
-- [查看马娘卡池] 模拟卡池&出率
-- [切换马娘卡池] 更换模拟卡池
-- [更新卡池] 用于更新卡池
+- [马娘/支援卡十连] 转蛋模拟
+- [马娘/支援卡单抽] 转蛋模拟
+- [马娘/支援卡一井] 3w钻！
+- [查看马娘卡池] 模拟卡池
 """
 
 
 class UmaGachaService(Service):
     def __init__(self):
-        Service.__init__(self, "uma抽卡", __doc__, rule=is_in_service("uma抽卡"))
+        Service.__init__(self, "uma_gacha", __doc__, rule=is_in_service("uma_gacha"))
 
