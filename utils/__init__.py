@@ -78,7 +78,7 @@ class DailyNumberLimiter:
 
     def check(self, key) -> bool:
         now = datetime.now(self.tz)
-        day = (now - timedelta(hours=5)).day
+        day = (now - timedelta(hours=0)).day
         if day != self.today:
             self.today = day
             self.count.clear()

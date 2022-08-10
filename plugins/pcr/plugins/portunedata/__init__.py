@@ -150,12 +150,13 @@ async def portune(bot, event: MessageEvent):
     args = str(event.get_message()).strip()
     if args:
         return
-    # if not lmt.check(uid):
-    # await bot.finish(ev, f'你今天已经抽过签了，欢迎明天再来~', at_sender=True)
-    # lmt.increase(uid)
-    model = 'DEFAULT'
-    pic = drawing_pic(model)
-    await pcr_portune.send(pic, at_sender=True)
+    if not lmt.check(event.get_user_id()):
+        await pcr_portune.send( f'你今天已经抽过签了，欢迎明天再来~', at_sender=True)
+    else:
+        lmt.increase(event.get_user_id())
+        model = 'DEFAULT'
+        pic = drawing_pic(model)
+        await pcr_portune.send(pic, at_sender=True)
 
 
 xcw_portune = PortuneData().on_keyword({'抽镜华签', '抽小仓唯签', '抽xcw签', '抽露娜签'}, "抽特定签")
