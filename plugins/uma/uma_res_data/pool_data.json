@@ -1,21 +1,23 @@
 {
-    "time":"2022/7/11 11:00\n~\n2022/7/20 10:59",
-    "chara_pool_title":"3★空中神宫 Pickup卡池",
-    "chara_pool_img":"https://patchwiki.biligame.com/images/umamusume/5/59/rdncyt3ii00dhirp9pxu1jepegwg91l.png",
+    "time":"2022/7/29 11:00\n~\n2022/8/10 10:59",
+    "chara_pool_title":"3★目白麦昆、黄金船 Pickup卡池",
+    "chara_pool_img":"https://patchwiki.biligame.com/images/umamusume/b/bb/6lpqopjl5qsg22qod4559walx74cxb5.png",
     "chara_name":[
-        "空中神宫"
+        "【さざ波フェアレディ】目白麦昆",
+        "【RUN！乱！ランチャー！！】黄金船"
     ],
     "chara_id":[
-        "103601"
+        "101303",
+        "100702"
     ],
-    "card_pool_title":"SSR气槽、SR黄金城 Pickup卡池",
-    "card_pool_img":"https://patchwiki.biligame.com/images/umamusume/1/1b/kv0hgv6urcr0wi06jp1pn421ru6j3uh.png",
+    "card_pool_title":"SSR丸善斯基、SSR中山庆典 Pickup卡池",
+    "card_pool_img":"https://patchwiki.biligame.com/images/umamusume/1/16/pjve45ls4ojk8gm991wzyvpmpsgr7tu.png",
     "card_name":[
-        "【理想へ向かう青嵐】エアグルーヴ",
-        "【金色を目指して】ゴールドシチー"
+        "【おセンチ注意報♪】マルゼンスキー",
+        "【一天地六に身を任せ】ナカヤマフェスタ"
     ],
     "card_img_altt":[
-        "Support_thumb_30106.png",
-        "Support_thumb_20049.png"
+        "Support_thumb_30107.png",
+        "Support_thumb_30108.png"
     ]
 }

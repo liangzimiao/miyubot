@@ -2,7 +2,7 @@ from nonebot import logger
 import random
 from plugins.uma.uma_res_data import UMA_DATA
 
-
+BLACK_NAME=["100103"]
 UNKNOWN = 1000
 
 class UmaGacha(object):
@@ -45,7 +45,7 @@ class UmaGacha(object):
                 gacha_one=str(random.choice(up))
             else:
                 gacha_one=random.choice(self.dic[self.rare[0]]) 
-            while gacha_one not in self.dic[self.rare[0]]:
+            while gacha_one not in self.dic[self.rare[0]] or gacha_one in BLACK_NAME :
                 gacha_one=str(random.choice(up)) 
         elif pick<180: #出2星
             if up2>=1 and pick<48.75:
@@ -79,7 +79,7 @@ class UmaGacha(object):
                 gacha_ten.append(str(random.choice(up))) 
             else:
                 gacha_ten.append(random.choice(self.dic[self.rare[0]])) 
-            while gacha_ten[-1] not in self.dic[self.rare[0]]:
+            while gacha_ten[-1] not in self.dic[self.rare[0]] or gacha_ten[-1] in BLACK_NAME :
                 del(gacha_ten[-1])
                 gacha_ten.append(str(random.choice(up)))  
         else :

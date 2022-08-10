@@ -1,4 +1,37 @@
 {
+    "30109":{
+        "rare":"SSR",
+        "type":"毅力",
+        "effecct":"速度加成, 毅力加成, 初期速度提升, 初期力量提升, 初期毅力提升, 初期羁绊计量格提升, 得意率提升",
+        "png_name":"Support_thumb_30109",
+        "url":"https://patchwiki.biligame.com/images/umamusume/thumb/b/b3/4z96jj0wdxbivyz62u3ftnmsw5gj9ep.png/200px-Support_thumb_30109.png",
+        "jp_name":"【チョベリグ心あれば桜心】サクラチヨノオー",
+        "cn_name":"【超very good若有心，则为樱心】樱花千代王",
+        "chara":"樱花千代王",
+        "origin":"活动"
+    },
+    "30108":{
+        "rare":"SSR",
+        "type":"智力",
+        "effecct":"干劲效果提升, 智力加成, 训练效果提升, 初期羁绊计量格提升, 赛后加成, 粉丝数加成, 启发等级提升, 启发发生率提升, 技能Pt加成, 智力友情回复量提升",
+        "png_name":"Support_thumb_30108",
+        "url":"https://patchwiki.biligame.com/images/umamusume/thumb/6/61/9f2dk8v59yv2hlepejml797bnyl7p1p.png/200px-Support_thumb_30108.png",
+        "jp_name":"【一天地六に身を任せ】ナカヤマフェスタ",
+        "cn_name":"【委身于骰子】中山庆典",
+        "chara":"中山庆典",
+        "origin":"卡池"
+    },
+    "30107":{
+        "rare":"SSR",
+        "type":"速度",
+        "effecct":"干劲效果提升, 速度加成, 力量加成, 初期羁绊计量格提升, 赛后加成, 粉丝数加成, 启发等级提升, 启发发生率提升, 得意率提升",
+        "png_name":"Support_thumb_30107",
+        "url":"https://patchwiki.biligame.com/images/umamusume/thumb/3/32/mrnkh261ahrw9dob0oke6gj4zmes3sr.png/200px-Support_thumb_30107.png",
+        "jp_name":"【おセンチ注意報♪】マルゼンスキー",
+        "cn_name":"【感伤预报♪】丸善斯基",
+        "chara":"丸善斯基",
+        "origin":"卡池"
+    },
     "30106":{
         "rare":"SSR",
         "type":"力量",
@@ -9,6 +42,17 @@
         "cn_name":"【奔向理想的熏风】气槽",
         "chara":"气槽",
         "origin":"卡池"
+    },
+    "30105":{
+        "rare":"SSR",
+        "type":"毅力",
+        "effecct":"干劲效果提升, 毅力加成, 训练效果提升, 初期力量提升, 初期羁绊计量格提升, 赛后加成, 粉丝数加成, 启发等级提升, 启发发生率提升, 得意率提升",
+        "png_name":"Support_thumb_30105",
+        "url":"https://patchwiki.biligame.com/images/umamusume/thumb/a/a0/m6fke6odunjciivko1rtrdzcpbhnavg.png/200px-Support_thumb_30105.png",
+        "jp_name":"【私たちと夢、掴みましょう！】スペシャルウィーク",
+        "cn_name":"【一起试着，抓住我们的梦想吧！】特别周",
+        "chara":"特别周",
+        "origin":"主线"
     },
     "30104":{
         "rare":"SSR",
@@ -404,6 +448,17 @@
         "jp_name":"【かなし君、うつくし君】カレンチャン",
         "cn_name":"【可爱的你，华丽的你】真机伶",
         "chara":"真机伶",
+        "origin":"卡池"
+    },
+    "30067":{
+        "rare":"SSR",
+        "type":"团队",
+        "effecct":"速度加成, 训练效果提升, 初期速度提升, 初期羁绊计量格提升, 赛后加成, 粉丝数加成, 事件回复量提升, 事件效果提升, 智力友情回复量提升",
+        "png_name":"Support_thumb_30067",
+        "url":"https://patchwiki.biligame.com/images/umamusume/thumb/a/ab/d3zmvbswbqw8y129ryhfsqzll5jmjdi.png/200px-Support_thumb_30067.png",
+        "jp_name":"【尊尚親愛】玉座に集いし者たち",
+        "cn_name":"【尊尚亲爱】聚集于宝座的人们",
+        "chara":"聚集于宝座的人们",
         "origin":"卡池"
     },
     "30066":{
@@ -1231,6 +1286,17 @@
         "chara":"目白阿尔丹",
         "origin":"卡池"
     },
+    "20033":{
+        "rare":"SR",
+        "type":"速度",
+        "effecct":"干劲效果提升, 力量加成, 训练效果提升, 初期羁绊计量格提升, 赛后加成, 粉丝数加成, 得意率提升",
+        "png_name":"Support_thumb_20033",
+        "url":"https://patchwiki.biligame.com/images/umamusume/thumb/7/74/drssa6lvdcl68921lt308hlcef5aa8g.png/200px-Support_thumb_20033.png",
+        "jp_name":"【泥まみれのコンパネーロ】エルコンドルパサー",
+        "cn_name":"【浑身是泥的compañero(搭档)】神鹰",
+        "chara":"神鹰",
+        "origin":"卡池"
+    },
     "20032":{
         "rare":"SR",
         "type":"力量",
@@ -1581,6 +1647,17 @@
         "jp_name":"【やれやれ、お帰り】フジキセキ",
         "cn_name":"【哎呀呀，欢迎回来】富士奇迹",
         "chara":"富士奇迹",
+        "origin":"卡池"
+    },
+    "10081":{
+        "rare":"R",
+        "type":"毅力",
+        "effecct":"干劲效果提升, 毅力加成, 初期羁绊计量格提升, 启发等级提升, 启发发生率提升, 得意率提升",
+        "png_name":"Support_thumb_10081",
+        "url":"https://patchwiki.biligame.com/images/umamusume/thumb/7/77/cwaoh5i5xlijbp04a8eznevy5cimwpn.png/200px-Support_thumb_10081.png",
+        "jp_name":"【トレセン学園】ツルマルツヨシ",
+        "cn_name":"【特雷森学园】鹤丸刚志",
+        "chara":"鹤丸刚志",
         "origin":"卡池"
     },
     "10078":{
