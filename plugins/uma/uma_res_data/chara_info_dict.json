@@ -583,6 +583,14 @@
         "url":"https://patchwiki.biligame.com/images/umamusume/thumb/a/a0/ly2fkwp8itixuo0bihghmoc24l7x26n.png/200px-Chr_icon_1052_105202_01.png",
         "jp_name":"初うらら♪さくさくら"
     },
+    "105301":{
+        "star":"3",
+        "chara_web":"https://wiki.biligame.com//umamusume/%E9%9D%92%E7%AB%B9%E5%9B%9E%E5%BF%86",
+        "cn_name":"青竹回忆",
+        "png_name":"105301",
+        "url":"https://patchwiki.biligame.com/images/umamusume/thumb/1/11/q703pn0y576wn4cywt06c2o82qwrez1.png/200px-Chr_icon_1053_105301_01.png",
+        "jp_name":"黒鉄の大志"
+    },
     "105601":{
         "star":"1",
         "chara_web":"https://wiki.biligame.com//umamusume/%E5%BE%85%E5%85%BC%E7%A6%8F%E6%9D%A5",
@@ -601,8 +609,8 @@
     },
     "105801":{
         "star":"3",
-        "chara_web":"https://wiki.biligame.com//umamusume/%E5%90%8D%E5%B0%86%E6%88%B7%E4%BB%81",
-        "cn_name":"名将户仁",
+        "chara_web":"https://wiki.biligame.com//umamusume/%E5%90%8D%E5%B0%86%E6%80%92%E6%B6%9B",
+        "cn_name":"名将怒涛",
         "png_name":"105801",
         "url":"https://patchwiki.biligame.com/images/umamusume/thumb/e/eb/fnpk915lxul0o6at3wvk2asm2o5ft42.png/200px-Chr_icon_1058_105801_01.png",
         "jp_name":"ブルー/レイジング"

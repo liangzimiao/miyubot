@@ -1,23 +1,21 @@
 {
-    "time":"2022/7/29 11:00\n~\n2022/8/10 10:59",
-    "chara_pool_title":"3★目白麦昆、黄金船 Pickup卡池",
-    "chara_pool_img":"https://patchwiki.biligame.com/images/umamusume/b/bb/6lpqopjl5qsg22qod4559walx74cxb5.png",
+    "time":"2022/8/10 11:00\n~\n2022/8/19 10:59",
+    "chara_pool_title":"3★青竹回忆 Pickup卡池",
+    "chara_pool_img":"https://patchwiki.biligame.com/images/umamusume/f/f4/f42ba1g8jzmaok9pvyh0rd4g05pawsd.png",
     "chara_name":[
-        "【さざ波フェアレディ】目白麦昆",
-        "【RUN！乱！ランチャー！！】黄金船"
+        "青竹回忆"
     ],
     "chara_id":[
-        "101303",
-        "100702"
+        "105301"
     ],
-    "card_pool_title":"SSR丸善斯基、SSR中山庆典 Pickup卡池",
-    "card_pool_img":"https://patchwiki.biligame.com/images/umamusume/1/16/pjve45ls4ojk8gm991wzyvpmpsgr7tu.png",
+    "card_pool_title":"SSR狄杜斯、SSR雪之美人 Pickup卡池",
+    "card_pool_img":"https://patchwiki.biligame.com/images/umamusume/e/e1/kjze7clytt6vcrv4dpyj6v3hl2nbweg.png",
     "card_name":[
-        "【おセンチ注意報♪】マルゼンスキー",
-        "【一天地六に身を任せ】ナカヤマフェスタ"
+        "【心と足元は温かく】イクノディクタス",
+        "【ふるさと直送エール！】ユキノビジン"
     ],
     "card_img_altt":[
-        "Support_thumb_30107.png",
-        "Support_thumb_30108.png"
+        "Support_thumb_30063.png",
+        "Support_thumb_30031.png"
     ]
 }
