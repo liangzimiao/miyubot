@@ -1,4 +1,15 @@
 {
+    "30110":{
+        "rare":"SSR",
+        "type":"耐力",
+        "effecct":"毅力加成, 训练效果提升, 初期羁绊计量格提升, 赛后加成, 粉丝数加成, 启发等级提升, 启发发生率提升, 得意率提升, 技能Pt加成",
+        "png_name":"Support_thumb_30110",
+        "url":"https://patchwiki.biligame.com/images/umamusume/thumb/e/e2/jkvly4sptritzl1puxdyla1hvkywbbw.png/200px-Support_thumb_30110.png",
+        "jp_name":"【It's on the house.】マンハッタンカフェ",
+        "cn_name":"【It's on the house.】曼城茶座",
+        "chara":"曼城茶座",
+        "origin":"卡池"
+    },
     "30109":{
         "rare":"SSR",
         "type":"毅力",
@@ -1121,6 +1132,17 @@
         "chara":"特别周",
         "origin":"卡池"
     },
+    "20050":{
+        "rare":"SR",
+        "type":"智力",
+        "effecct":"干劲效果提升, 训练效果提升, 初期羁绊计量格提升, 启发等级提升, 启发发生率提升, 得意率提升, 技能Pt加成, 智力友情回复量提升",
+        "png_name":"Support_thumb_20050",
+        "url":"https://patchwiki.biligame.com/images/umamusume/thumb/5/59/cv18j79be9p2y86bmoj3khpnvszson9.png/200px-Support_thumb_20050.png",
+        "jp_name":"【ゆるっと、まにまに】セイウンスカイ",
+        "cn_name":"【慢慢悠悠，顺其自然】星云天空",
+        "chara":"星云天空",
+        "origin":"卡池"
+    },
     "20049":{
         "rare":"SR",
         "type":"智力",
@@ -1789,7 +1811,7 @@
         "url":"https://patchwiki.biligame.com/images/umamusume/thumb/3/39/jgu3ib3cdttd1n3dkdh6301ljdbzj8r.png/200px-Support_thumb_10067.png",
         "jp_name":"【トレセン学園】ナカヤマフェスタ",
         "cn_name":"【特雷森学园】中山庆典",
-        "chara":"ナカヤマフェスタ",
+        "chara":"中山庆典",
         "origin":"卡池"
     },
     "10066":{
@@ -2151,8 +2173,8 @@
         "png_name":"Support_thumb_10034",
         "url":"https://patchwiki.biligame.com/images/umamusume/thumb/8/8c/bvbjnzo7we29ccz31xmute6pqtj5cg7.png/200px-Support_thumb_10034.png",
         "jp_name":"【トレセン学園】ユキノビジン",
-        "cn_name":"【特雷森学园】雪中美人",
-        "chara":"雪中美人",
+        "cn_name":"【特雷森学园】雪之美人",
+        "chara":"雪之美人",
         "origin":""
     },
     "10033":{

@@ -1,21 +1,21 @@
 {
-    "time":"2022/8/10 11:00\n~\n2022/8/19 10:59",
-    "chara_pool_title":"3★青竹回忆 Pickup卡池",
-    "chara_pool_img":"https://patchwiki.biligame.com/images/umamusume/f/f4/f42ba1g8jzmaok9pvyh0rd4g05pawsd.png",
+    "time":"2022/8/19 11:00\n~\n2022/8/29 10:59",
+    "chara_pool_title":"3★小林历奇 Pickup卡池",
+    "chara_pool_img":"https://patchwiki.biligame.com/images/umamusume/d/d6/cdxxx9y6co1hso4i9hlf3jxz5tzphq6.png",
     "chara_name":[
-        "青竹回忆"
+        "小林历奇"
     ],
     "chara_id":[
-        "105301"
+        "109801"
     ],
-    "card_pool_title":"SSR狄杜斯、SSR雪之美人 Pickup卡池",
-    "card_pool_img":"https://patchwiki.biligame.com/images/umamusume/e/e1/kjze7clytt6vcrv4dpyj6v3hl2nbweg.png",
+    "card_pool_title":"SSR曼城茶座、SR星云天空 Pickup卡池",
+    "card_pool_img":"https://patchwiki.biligame.com/images/umamusume/b/b5/49hggrsvd2a3dpny7roaq4zzcrvr5gy.png",
     "card_name":[
-        "【心と足元は温かく】イクノディクタス",
-        "【ふるさと直送エール！】ユキノビジン"
+        "【It's on the house.】マンハッタンカフェ",
+        "【ゆるっと、まにまに】セイウンスカイ"
     ],
     "card_img_altt":[
-        "Support_thumb_30063.png",
-        "Support_thumb_30031.png"
+        "Support_thumb_30110.png",
+        "Support_thumb_20050.png"
     ]
 }

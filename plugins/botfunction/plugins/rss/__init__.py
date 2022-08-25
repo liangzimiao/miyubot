@@ -10,7 +10,7 @@ import string
 import time
 import traceback
 from io import BytesIO
-
+from nonebot.permission import SUPERUSER
 import aiohttp
 import feedparser
 from PIL import Image
@@ -377,7 +377,7 @@ def rss_set_mode(gc_id, mode):
     return msg
 
 
-rss = on_command('rss')
+rss = on_command('rss', permission=SUPERUSER)
 
 
 @rss.handle()
