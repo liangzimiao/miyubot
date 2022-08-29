@@ -29,7 +29,7 @@ async def whois(bot: Bot, event: MessageEvent,state: T_State):
         #msg = f'特雷森似乎没有叫"{name}"的人...\n角色别称补全计划:https://github.com/chieri-bot/umamusume-alias'
         #await matcher.send(Message(msg))
         msg = f'您有{confi}%的可能在找{guess_name} {c.icon} {c.name}'
-        await matcher.send(Message(msg))
+        await matcher.send(Message(msg), at_sender=True)
     else:
         msg = f'{c.icon}{c.name}'
         await matcher.send(Message(msg), at_sender=True)

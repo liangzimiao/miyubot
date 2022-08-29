@@ -1,4 +1,15 @@
 {
+    "30121":{
+        "rare":"SSR",
+        "type":"速度",
+        "effecct":"速度加成, 初期速度提升, 初期羁绊计量格提升, 启发等级提升, 启发发生率提升, 得意率提升, 技能Pt加成",
+        "png_name":"Support_thumb_30121",
+        "url":"https://patchwiki.biligame.com/images/umamusume/thumb/e/e8/lx9grwxofq9x6e1wbm0ur6bm424o9a5.png/200px-Support_thumb_30121.png",
+        "jp_name":"【U &amp; Me】ミホノブルボン",
+        "cn_name":"【U &amp; Me】美浦波旁",
+        "chara":"美浦波旁",
+        "origin":"1.5周年"
+    },
     "30110":{
         "rare":"SSR",
         "type":"耐力",
@@ -96,6 +107,17 @@
         "jp_name":"【キラキラカケル∞】エルコンドルパサー",
         "cn_name":"【闪闪发光的奔跑∞】神鹰",
         "chara":"神鹰",
+        "origin":"卡池"
+    },
+    "30101":{
+        "rare":"SSR",
+        "type":"速度",
+        "effecct":"速度加成, 训练效果提升, 初期速度提升, 初期羁绊计量格提升, 启发等级提升, 启发发生率提升, 得意率提升, 技能Pt加成",
+        "png_name":"Support_thumb_30101",
+        "url":"https://patchwiki.biligame.com/images/umamusume/thumb/8/80/6n2xo5rdap3gavksq7egqrq0yohsqp2.png/200px-Support_thumb_30101.png",
+        "jp_name":"【Q≠0】アグネスタキオン",
+        "cn_name":"【Q≠0】爱丽速子",
+        "chara":"爱丽速子",
         "origin":"卡池"
     },
     "30100":{
@@ -600,8 +622,8 @@
         "png_name":"Support_thumb_30055",
         "url":"https://patchwiki.biligame.com/images/umamusume/thumb/d/d3/178huk797xtwg9wvpxe0svmpde9cbmm.png/200px-Support_thumb_30055.png",
         "jp_name":"【明日は全国的に赤でしょう♪】セイウンスカイ",
-        "cn_name":"【明天全国都会是红色吧♪】星云天空",
-        "chara":"星云天空",
+        "cn_name":"【明天全国都会是红色吧♪】青云天空",
+        "chara":"青云天空",
         "origin":"卡池"
     },
     "30054":{
@@ -624,6 +646,17 @@
         "jp_name":"【Hands up, crook!】タイキシャトル",
         "cn_name":"【Hands up, crook!】大树快车",
         "chara":"大树快车",
+        "origin":"卡池"
+    },
+    "30052":{
+        "rare":"SSR",
+        "type":"友人",
+        "effecct":"初期速度提升, 初期毅力提升, 初期羁绊计量格提升, 赛后加成, 粉丝数加成, 事件回复量提升, 事件效果提升, 失败率下降, 体力消费下降",
+        "png_name":"Support_thumb_30052",
+        "url":"https://patchwiki.biligame.com/images/umamusume/thumb/a/ad/1ju9dpa6qft7wvapx0pxbvdrcj29mji.png/200px-Support_thumb_30052.png",
+        "jp_name":"【from the GROUND UP】ライトハロー",
+        "cn_name":"【from the GROUND UP】light hello",
+        "chara":"轻柔致意",
         "origin":"卡池"
     },
     "30048":{
@@ -1051,8 +1084,8 @@
         "png_name":"Support_thumb_30008",
         "url":"https://patchwiki.biligame.com/images/umamusume/thumb/0/03/qbfntycvl8j3hgih2hbxczhq5890s8u.png/200px-Support_thumb_30008.png",
         "jp_name":"【待望の大謀】セイウンスカイ",
-        "cn_name":"【期望已久的大谋略】星云天空",
-        "chara":"星云天空",
+        "cn_name":"【期望已久的大谋略】青云天空",
+        "chara":"青云天空",
         "origin":"卡池"
     },
     "30007":{
@@ -1139,8 +1172,8 @@
         "png_name":"Support_thumb_20050",
         "url":"https://patchwiki.biligame.com/images/umamusume/thumb/5/59/cv18j79be9p2y86bmoj3khpnvszson9.png/200px-Support_thumb_20050.png",
         "jp_name":"【ゆるっと、まにまに】セイウンスカイ",
-        "cn_name":"【慢慢悠悠，顺其自然】星云天空",
-        "chara":"星云天空",
+        "cn_name":"【慢慢悠悠，顺其自然】青云天空",
+        "chara":"青云天空",
         "origin":"卡池"
     },
     "20049":{
@@ -2393,8 +2426,8 @@
         "png_name":"Support_thumb_10014",
         "url":"https://patchwiki.biligame.com/images/umamusume/thumb/3/3e/9p1hkomxfg29nim7lgyqe4xb1f5orj1.png/200px-Support_thumb_10014.png",
         "jp_name":"【トレセン学園】セイウンスカイ",
-        "cn_name":"【特雷森学园】星云天空",
-        "chara":"星云天空",
+        "cn_name":"【特雷森学园】青云天空",
+        "chara":"青云天空",
         "origin":""
     },
     "10013":{

@@ -1,21 +1,21 @@
 {
-    "time":"2022/8/19 11:00\n~\n2022/8/29 10:59",
-    "chara_pool_title":"3★小林历奇 Pickup卡池",
-    "chara_pool_img":"https://patchwiki.biligame.com/images/umamusume/d/d6/cdxxx9y6co1hso4i9hlf3jxz5tzphq6.png",
+    "time":"2022/8/24 11:00\n~\n2022/9/12 10:59",
+    "chara_pool_title":"3★醒目飞鹰 Pickup卡池",
+    "chara_pool_img":"https://patchwiki.biligame.com/images/umamusume/7/75/mj6xm1obdcnso02m4wu5tbsxjeb7s73.png",
     "chara_name":[
-        "小林历奇"
+        "【黄昏トライアンフ】醒目飞鹰"
     ],
     "chara_id":[
-        "109801"
+        "104602"
     ],
-    "card_pool_title":"SSR曼城茶座、SR星云天空 Pickup卡池",
-    "card_pool_img":"https://patchwiki.biligame.com/images/umamusume/b/b5/49hggrsvd2a3dpny7roaq4zzcrvr5gy.png",
+    "card_pool_title":"SSRライトハロー、SSR爱丽速子 Pickup卡池",
+    "card_pool_img":"https://patchwiki.biligame.com/images/umamusume/c/c9/naqe99dvldbaak2fxy3ow3axajxkgw8.png",
     "card_name":[
-        "【It's on the house.】マンハッタンカフェ",
-        "【ゆるっと、まにまに】セイウンスカイ"
+        "【from the GROUND UP】ライトハロー",
+        "【Q≠0】アグネスタキオン"
     ],
     "card_img_altt":[
-        "Support_thumb_30110.png",
-        "Support_thumb_20050.png"
+        "Support_thumb_30052.png",
+        "Support_thumb_30101.png"
     ]
 }
