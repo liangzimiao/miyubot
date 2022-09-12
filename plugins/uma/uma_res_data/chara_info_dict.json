@@ -439,6 +439,14 @@
         "url":"https://patchwiki.biligame.com/images/umamusume/thumb/1/15/3ylq1he3l76mm595xsf5oozg3zb7gpu.png/200px-Chr_icon_1035_103501_01.png",
         "jp_name":"Go To Winning!"
     },
+    "103502":{
+        "star":"3",
+        "chara_web":"https://wiki.biligame.com//umamusume/%E3%80%90Dream_Deliverer%E3%80%91%E8%83%9C%E5%88%A9%E5%A5%96%E5%88%B8",
+        "cn_name":"【Dream Deliverer】胜利奖券",
+        "png_name":"103502",
+        "url":"https://patchwiki.biligame.com/images/umamusume/thumb/9/9f/25jlpir74nf08surdjmfeoe6081shgu.png/200px-Chr_icon_1035_103502_01.png",
+        "jp_name":"Dream Deliverer"
+    },
     "103601":{
         "star":"3",
         "chara_web":"https://wiki.biligame.com//umamusume/%E7%A9%BA%E4%B8%AD%E7%A5%9E%E5%AE%AB",
@@ -566,6 +574,14 @@
         "png_name":"105001",
         "url":"https://patchwiki.biligame.com/images/umamusume/thumb/9/9e/ge52o4hxomi8vb02nm9whqjhiyo33s7.png/200px-Chr_icon_1050_105001_01.png",
         "jp_name":"Nevertheless"
+    },
+    "105002":{
+        "star":"3",
+        "chara_web":"https://wiki.biligame.com//umamusume/%E3%80%90%E3%83%87%E3%82%A3%E3%83%95%E3%82%A1%E3%83%AC%E3%83%B3%E3%82%B9%E3%83%BB%E3%82%A8%E3%83%B3%E3%82%B8%E3%83%8B%E3%82%A2%E3%80%91%E6%88%90%E7%94%B0%E5%A4%A7%E8%BF%9B",
+        "cn_name":"【ディファレンス・エンジニア】成田大进",
+        "png_name":"105002",
+        "url":"https://patchwiki.biligame.com/images/umamusume/thumb/0/0b/hke9udzvm2c7rr5jg7s8jry9nxm93ob.png/200px-Chr_icon_1050_105002_01.png",
+        "jp_name":"ディファレンス・エンジニア"
     },
     "105101":{
         "star":"3",

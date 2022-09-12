@@ -1,21 +1,23 @@
 {
-    "time":"2022/8/24 11:00\n~\n2022/9/12 10:59",
-    "chara_pool_title":"3★醒目飞鹰 Pickup卡池",
-    "chara_pool_img":"https://patchwiki.biligame.com/images/umamusume/7/75/mj6xm1obdcnso02m4wu5tbsxjeb7s73.png",
+    "time":"2022/8/29 11:00\n~\n2022/9/12 10:59",
+    "chara_pool_title":"3★胜利奖券、3★成田大进 Pickup卡池",
+    "chara_pool_img":"https://patchwiki.biligame.com/images/umamusume/e/e4/4fj2fixgbr8fser1iglgcfqazv41084.png",
     "chara_name":[
-        "【黄昏トライアンフ】醒目飞鹰"
+        "【Dream Deliverer】胜利奖券",
+        "【ディファレンス・エンジニア】成田大进"
     ],
     "chara_id":[
-        "104602"
+        "103502",
+        "105002"
     ],
-    "card_pool_title":"SSRライトハロー、SSR爱丽速子 Pickup卡池",
-    "card_pool_img":"https://patchwiki.biligame.com/images/umamusume/c/c9/naqe99dvldbaak2fxy3ow3axajxkgw8.png",
+    "card_pool_title":"SSR东海帝皇、SSR双涡轮 Pickup卡池",
+    "card_pool_img":"https://patchwiki.biligame.com/images/umamusume/1/13/hjjb3tjkfx87xlbqcxmsfm4gbzcy7a4.png",
     "card_name":[
-        "【from the GROUND UP】ライトハロー",
-        "【Q≠0】アグネスタキオン"
+        "【テイオー・オー・オー！！！】トウカイテイオー",
+        "【TT Ignition!】ツインターボ"
     ],
     "card_img_altt":[
-        "Support_thumb_30052.png",
-        "Support_thumb_30101.png"
+        "Support_thumb_30111.png",
+        "Support_thumb_30112.png"
     ]
 }

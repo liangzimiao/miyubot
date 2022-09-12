@@ -10,6 +10,39 @@
         "chara":"美浦波旁",
         "origin":"1.5周年"
     },
+    "30113":{
+        "rare":"SSR",
+        "type":"耐力",
+        "effecct":"耐力加成, 初期耐力提升, 初期羁绊计量格提升, 赛后加成, 粉丝数加成, 启发等级提升, 启发发生率提升, 得意率提升, 技能Pt加成",
+        "png_name":"Support_thumb_30113",
+        "url":"https://patchwiki.biligame.com/images/umamusume/thumb/9/9c/jdcmipl80eumfhg9380jg6rnrr98huh.png/200px-Support_thumb_30113.png",
+        "jp_name":"【ユークロニア・アーキテクト】ビワハヤヒデ",
+        "cn_name":"【无时之国・设计师】琵琶晨光",
+        "chara":"琵琶晨光",
+        "origin":"活动"
+    },
+    "30112":{
+        "rare":"SSR",
+        "type":"毅力",
+        "effecct":"速度加成, 力量加成, 初期羁绊计量格提升, 启发等级提升, 启发发生率提升, 得意率提升, 技能Pt加成",
+        "png_name":"Support_thumb_30112",
+        "url":"https://patchwiki.biligame.com/images/umamusume/thumb/b/b6/k7nybsoug0tgw98ufyrtggwckistxki.png/200px-Support_thumb_30112.png",
+        "jp_name":"【TT Ignition!】ツインターボ",
+        "cn_name":"【TT Ignition!】双涡轮",
+        "chara":"双涡轮",
+        "origin":"卡池"
+    },
+    "30111":{
+        "rare":"SSR",
+        "type":"智力",
+        "effecct":"速度加成, 智力加成, 初期羁绊计量格提升, 赛后加成, 粉丝数加成, 启发等级提升, 启发发生率提升, 得意率提升, 智力友情回复量提升",
+        "png_name":"Support_thumb_30111",
+        "url":"https://patchwiki.biligame.com/images/umamusume/thumb/7/7c/t8t3uvzaq3cgssb3h6yyq7kvj416b39.png/200px-Support_thumb_30111.png",
+        "jp_name":"【テイオー・オー・オー！！！】トウカイテイオー",
+        "cn_name":"【TEIO・O・O！！！】东海帝皇",
+        "chara":"东海帝皇",
+        "origin":"卡池"
+    },
     "30110":{
         "rare":"SSR",
         "type":"耐力",
@@ -655,8 +688,8 @@
         "png_name":"Support_thumb_30052",
         "url":"https://patchwiki.biligame.com/images/umamusume/thumb/a/ad/1ju9dpa6qft7wvapx0pxbvdrcj29mji.png/200px-Support_thumb_30052.png",
         "jp_name":"【from the GROUND UP】ライトハロー",
-        "cn_name":"【from the GROUND UP】light hello",
-        "chara":"轻柔致意",
+        "cn_name":"【from the GROUND UP】无忧呼唤",
+        "chara":"无忧呼唤",
         "origin":"卡池"
     },
     "30048":{
