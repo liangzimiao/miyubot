@@ -1,23 +1,21 @@
 {
-    "time":"2022/8/29 11:00\n~\n2022/9/12 10:59",
-    "chara_pool_title":"3★胜利奖券、3★成田大进 Pickup卡池",
-    "chara_pool_img":"https://patchwiki.biligame.com/images/umamusume/e/e4/4fj2fixgbr8fser1iglgcfqazv41084.png",
+    "time":"2022/9/12 11:00\n~\n2022/9/20 10:59",
+    "chara_pool_title":"3★雪之美人 Pickup卡池",
+    "chara_pool_img":"https://patchwiki.biligame.com/images/umamusume/6/6c/llu44spfo8q9d87uzlskisvhd8nwqx4.png",
     "chara_name":[
-        "【Dream Deliverer】胜利奖券",
-        "【ディファレンス・エンジニア】成田大进"
+        "雪之美人"
     ],
     "chara_id":[
-        "103502",
-        "105002"
+        "102901"
     ],
-    "card_pool_title":"SSR东海帝皇、SSR双涡轮 Pickup卡池",
-    "card_pool_img":"https://patchwiki.biligame.com/images/umamusume/1/13/hjjb3tjkfx87xlbqcxmsfm4gbzcy7a4.png",
+    "card_pool_title":"SSR醒目飞鹰、SSR无声铃鹿 Pickup卡池",
+    "card_pool_img":"https://patchwiki.biligame.com/images/umamusume/b/b4/dudjsd4nj8ehd9ju8dmc5atrea9z171.png",
     "card_name":[
-        "【テイオー・オー・オー！！！】トウカイテイオー",
-        "【TT Ignition!】ツインターボ"
+        "【これが私のウマドル道☆】スマートファルコン",
+        "【輝く景色の、その先に】サイレンススズカ"
     ],
     "card_img_altt":[
-        "Support_thumb_30111.png",
-        "Support_thumb_30112.png"
+        "Support_thumb_30017.png",
+        "Support_thumb_30002.png"
     ]
 }

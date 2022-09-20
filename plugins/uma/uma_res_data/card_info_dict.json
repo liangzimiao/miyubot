@@ -17,7 +17,7 @@
         "png_name":"Support_thumb_30113",
         "url":"https://patchwiki.biligame.com/images/umamusume/thumb/9/9c/jdcmipl80eumfhg9380jg6rnrr98huh.png/200px-Support_thumb_30113.png",
         "jp_name":"【ユークロニア・アーキテクト】ビワハヤヒデ",
-        "cn_name":"【无时之国・设计师】琵琶晨光",
+        "cn_name":"【乌托时'\"`UNIQ--ref-00000000-QINU`\"'・设计师】琵琶晨光",
         "chara":"琵琶晨光",
         "origin":"活动"
     },
@@ -1735,6 +1735,17 @@
         "jp_name":"【やれやれ、お帰り】フジキセキ",
         "cn_name":"【哎呀呀，欢迎回来】富士奇迹",
         "chara":"富士奇迹",
+        "origin":"卡池"
+    },
+    "10083":{
+        "rare":"R",
+        "type":"友人",
+        "effecct":"初期毅力提升, 初期羁绊计量格提升, 赛后加成, 粉丝数加成, 事件回复量提升, 事件效果提升, 失败率下降, 体力消费下降",
+        "png_name":"Support_thumb_10083",
+        "url":"https://patchwiki.biligame.com/images/umamusume/thumb/3/30/p8j6ny4tuh31oiuyy8tm2bgu8mljxjk.png/200px-Support_thumb_10083.png",
+        "jp_name":"【イベントプロデューサー】ライトハロー",
+        "cn_name":"【活动制作人】无忧呼唤",
+        "chara":"无忧呼唤",
         "origin":"卡池"
     },
     "10081":{
