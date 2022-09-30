@@ -10,6 +10,17 @@
         "chara":"美浦波旁",
         "origin":"1.5周年"
     },
+    "30114":{
+        "rare":"SSR",
+        "type":"力量",
+        "effecct":"训练效果提升, 初期力量提升, 初期毅力提升, 初期羁绊计量格提升, 得意率提升, 技能Pt加成",
+        "png_name":"Support_thumb_30114",
+        "url":"https://patchwiki.biligame.com/images/umamusume/thumb/6/62/51bdgxdt8j0m4lshlul6y10o0bbh1ae.png/200px-Support_thumb_30114.png",
+        "jp_name":"【嗚呼華麗ナル一族】ダイイチルビー",
+        "cn_name":"【啊啊，多么华丽的一族】第一红宝",
+        "chara":"ダイイチルビー",
+        "origin":"卡池"
+    },
     "30113":{
         "rare":"SSR",
         "type":"耐力",
@@ -17,7 +28,7 @@
         "png_name":"Support_thumb_30113",
         "url":"https://patchwiki.biligame.com/images/umamusume/thumb/9/9c/jdcmipl80eumfhg9380jg6rnrr98huh.png/200px-Support_thumb_30113.png",
         "jp_name":"【ユークロニア・アーキテクト】ビワハヤヒデ",
-        "cn_name":"【乌托时'\"`UNIQ--ref-00000000-QINU`\"'・设计师】琵琶晨光",
+        "cn_name":"【乌托时・设计师】琵琶晨光",
         "chara":"琵琶晨光",
         "origin":"活动"
     },
@@ -1196,6 +1207,17 @@
         "jp_name":"【日本一のステージを】スペシャルウィーク",
         "cn_name":"【在日本第一的舞台】特别周",
         "chara":"特别周",
+        "origin":"卡池"
+    },
+    "20051":{
+        "rare":"SR",
+        "type":"毅力",
+        "effecct":"毅力加成, 初期毅力提升, 初期羁绊计量格提升, 启发等级提升, 启发发生率提升, 得意率提升",
+        "png_name":"Support_thumb_20051",
+        "url":"https://patchwiki.biligame.com/images/umamusume/thumb/b/ba/iv7uqne3pcvem7s20p9qfy9hxobdpoj.png/200px-Support_thumb_20051.png",
+        "jp_name":"【The 3rd MIRACLE】ケイエスミラクル",
+        "cn_name":"【The 3rd MIRACLE】凯斯奇迹",
+        "chara":"凯斯奇迹",
         "origin":"卡池"
     },
     "20050":{

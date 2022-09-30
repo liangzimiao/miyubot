@@ -1,21 +1,27 @@
 {
-    "time":"2022/9/12 11:00\n~\n2022/9/20 10:59",
-    "chara_pool_title":"3★雪之美人 Pickup卡池",
-    "chara_pool_img":"https://patchwiki.biligame.com/images/umamusume/6/6c/llu44spfo8q9d87uzlskisvhd8nwqx4.png",
+    "time":"2022/9/20 11:00\n~\n2022/9/29 10:59",
+    "chara_pool_title":"3★采珠 Pickup卡池",
+    "chara_pool_img":"https://patchwiki.biligame.com/images/umamusume/4/4f/hat3vrqx1na3hrbxp95y24jnf4a2jmw.png",
     "chara_name":[
-        "雪之美人"
+        "采珠",
+        "【Maverick】成田白仁"
     ],
     "chara_id":[
-        "102901"
+        "104201",
+        "101601"
     ],
-    "card_pool_title":"SSR醒目飞鹰、SSR无声铃鹿 Pickup卡池",
-    "card_pool_img":"https://patchwiki.biligame.com/images/umamusume/b/b4/dudjsd4nj8ehd9ju8dmc5atrea9z171.png",
+    "card_pool_title":"SSR第一红宝石、SR凯斯奇迹 Pickup卡池",
+    "card_pool_img":"https://patchwiki.biligame.com/images/umamusume/4/4a/q5on3phlvwcbtiigc9f8axexzdomrbb.png",
     "card_name":[
-        "【これが私のウマドル道☆】スマートファルコン",
-        "【輝く景色の、その先に】サイレンススズカ"
+        "【嗚呼華麗ナル一族】ダイイチルビー",
+        "【The 3rd MIRACLE】ケイエスミラクル",
+        "【トレセン学園】ダイイチルビー",
+        "【トレセン学園】ケイエスミラクル"
     ],
     "card_img_altt":[
-        "Support_thumb_30017.png",
-        "Support_thumb_30002.png"
+        "Support_thumb_30114.png",
+        "Support_thumb_20051.png",
+        "Support_thumb_10079.png",
+        "Support_thumb_10080.png"
     ]
 }
