@@ -76,7 +76,7 @@ matcher = UmaGachaService().on_command("马娘一井","马娘一井", aliases={"
 
 @matcher.handle()
 async def handle_func(event: MessageEvent):
-    await check_cd(matcher,event,__name__)    
+    await check_cd(matcher,event,__name__,cdTime=30,displayCD=True)
     up_chara=UMA_DATA.up_chara_id
     print(up_chara)
     result =gacha.UMAGACHA.gacha_jing(up_chara)
@@ -162,7 +162,7 @@ matcher = UmaGachaService().on_command("支援卡一井","支援卡一井", alia
 
 @matcher.handle()
 async def handle_func(event: MessageEvent): 
-    await check_cd(matcher,event,__name__)
+    await check_cd(matcher,event,__name__,cdTime=30,displayCD=True)
     up_card=UMA_DATA.up_card_id
     result = gacha.SUPGACHA.gacha_jing(up_card)
     s3=len(result[0])

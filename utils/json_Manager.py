@@ -18,15 +18,15 @@ def readJson(name:str):
             json.dump({}, f_out)
 
 
-def writeJson(qid: str, time: int, mid: int, data: dict, name:str):
+def writeJson(qid: str, time: int, mid: int, data: dict, name: str, num=0):
     try:
-        data[qid] = [time, mid]
+        data[qid] = [time, mid,num]
     except:    
         data = {}
         with open(data_dir + f"{name}usercd.json", "w") as f_out:
             json.dump(data, f_out)
         f_out.close()
-        data[qid] = [time, mid]
+        data[qid] = [time, mid, num]
     with open(data_dir + f"{name}usercd.json", "w") as f_out:
         json.dump(data, f_out)
         f_out.close()
