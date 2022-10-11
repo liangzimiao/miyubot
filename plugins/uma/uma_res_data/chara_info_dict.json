@@ -271,6 +271,14 @@
         "url":"https://patchwiki.biligame.com/images/umamusume/thumb/6/62/qqv1s8ycmat3ftde786ph8ny5jxbc76.png/200px-Chr_icon_1019_101901_01.png",
         "jp_name":"超特急！フルカラー特殊PP"
     },
+    "101902":{
+        "star":"3",
+        "chara_web":"https://wiki.biligame.com//umamusume/%E3%80%90%E6%84%9B%E9%BA%97%E2%99%A1%E3%82%AD%E3%83%A7%E3%83%B3%E3%82%B7%E3%83%BC%E3%80%91%E7%88%B1%E4%B8%BD%E6%95%B0%E7%A0%81",
+        "cn_name":"【愛麗♡キョンシー】爱丽数码",
+        "png_name":"101902",
+        "url":"https://patchwiki.biligame.com/images/umamusume/thumb/4/4d/i5xqu69cwrpmiaz7xib4oh7r5nv6uip.png/200px-Chr_icon_1019_101902_01.png",
+        "jp_name":"愛麗♡キョンシー"
+    },
     "102001":{
         "star":"3",
         "chara_web":"https://wiki.biligame.com//umamusume/%E9%9D%92%E4%BA%91%E5%A4%A9%E7%A9%BA",
@@ -654,6 +662,14 @@
         "png_name":"105801",
         "url":"https://patchwiki.biligame.com/images/umamusume/thumb/e/eb/fnpk915lxul0o6at3wvk2asm2o5ft42.png/200px-Chr_icon_1058_105801_01.png",
         "jp_name":"ブルー/レイジング"
+    },
+    "105802":{
+        "star":"3",
+        "chara_web":"https://wiki.biligame.com//umamusume/%E3%80%90Dot-o%27-Lantern%E3%80%91%E5%90%8D%E5%B0%86%E6%80%92%E6%B6%9B",
+        "cn_name":"【Dot-o&#39;-Lantern】名将怒涛",
+        "png_name":"105802",
+        "url":"https://patchwiki.biligame.com/images/umamusume/thumb/8/88/gxdk99ezpc7cv1pf1b4nkfkqfigk8z3.png/200px-Chr_icon_1058_105802_01.png",
+        "jp_name":"Dot-o'-Lantern"
     },
     "105901":{
         "star":"3",
