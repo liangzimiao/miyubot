@@ -1,23 +1,21 @@
 {
-    "time":"2022/9/29 11:00\n~\n2022/10/11 10:59",
-    "chara_pool_title":"3★爱丽数码、3★名将怒涛 Pickup卡池",
-    "chara_pool_img":"https://patchwiki.biligame.com/images/umamusume/a/a6/pdzymob1xplzy0vb0anrum2d3o5mnhy.png",
+    "time":"2022/10/11 11:00\n~\n2022/10/19 10:59",
+    "chara_pool_title":"3★真弓快车 Pickup卡池",
+    "chara_pool_img":"https://patchwiki.biligame.com/images/umamusume/5/5c/10fxfian5mgnrb396miwpjs9au8epuk.png",
     "chara_name":[
-        "【愛麗♡キョンシー】爱丽数码",
-        "【Dot-o'-Lantern】名将怒涛"
+        "真弓快车"
     ],
     "chara_id":[
-        "101902",
-        "105802"
+        "108701"
     ],
-    "card_pool_title":"SSR目白善信、SSR大拓太阳神 Pickup卡池",
-    "card_pool_img":"https://patchwiki.biligame.com/images/umamusume/f/ff/cpya2xk3alew7mo25onwbkqoi811kl7.png",
+    "card_pool_title":"SSR丸善斯基、SSR美妙姿势 Pickup卡池",
+    "card_pool_img":"https://patchwiki.biligame.com/images/umamusume/0/05/bhhngos0gmqn7xktz6twxuypcl4avfi.png",
     "card_name":[
-        "【月下の悪魔ちゃん♪】メジロパーマー",
-        "【お日さま天使ちゃん♪】ダイタクヘリオス"
+        "【おセンチ注意報♪】マルゼンスキー",
+        "【感謝は指先まで込めて】ファインモーション"
     ],
     "card_img_altt":[
-        "Support_thumb_30115.png",
-        "Support_thumb_30116.png"
+        "Support_thumb_30107.png",
+        "Support_thumb_30010.png"
     ]
 }
