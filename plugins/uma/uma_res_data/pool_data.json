@@ -1,27 +1,23 @@
 {
-    "time":"2022/9/20 11:00\n~\n2022/9/29 10:59",
-    "chara_pool_title":"3★采珠 Pickup卡池",
-    "chara_pool_img":"https://patchwiki.biligame.com/images/umamusume/4/4f/hat3vrqx1na3hrbxp95y24jnf4a2jmw.png",
+    "time":"2022/9/29 11:00\n~\n2022/10/11 10:59",
+    "chara_pool_title":"3★爱丽数码、3★名将怒涛 Pickup卡池",
+    "chara_pool_img":"https://patchwiki.biligame.com/images/umamusume/a/a6/pdzymob1xplzy0vb0anrum2d3o5mnhy.png",
     "chara_name":[
-        "采珠",
-        "【Maverick】成田白仁"
+        "【愛麗♡キョンシー】爱丽数码",
+        "【Dot-o'-Lantern】名将怒涛"
     ],
     "chara_id":[
-        "104201",
-        "101601"
+        "101902",
+        "105802"
     ],
-    "card_pool_title":"SSR第一红宝石、SR凯斯奇迹 Pickup卡池",
-    "card_pool_img":"https://patchwiki.biligame.com/images/umamusume/4/4a/q5on3phlvwcbtiigc9f8axexzdomrbb.png",
+    "card_pool_title":"SSR目白善信、SSR大拓太阳神 Pickup卡池",
+    "card_pool_img":"https://patchwiki.biligame.com/images/umamusume/f/ff/cpya2xk3alew7mo25onwbkqoi811kl7.png",
     "card_name":[
-        "【嗚呼華麗ナル一族】ダイイチルビー",
-        "【The 3rd MIRACLE】ケイエスミラクル",
-        "【トレセン学園】ダイイチルビー",
-        "【トレセン学園】ケイエスミラクル"
+        "【月下の悪魔ちゃん♪】メジロパーマー",
+        "【お日さま天使ちゃん♪】ダイタクヘリオス"
     ],
     "card_img_altt":[
-        "Support_thumb_30114.png",
-        "Support_thumb_20051.png",
-        "Support_thumb_10079.png",
-        "Support_thumb_10080.png"
+        "Support_thumb_30115.png",
+        "Support_thumb_30116.png"
     ]
 }

@@ -10,6 +10,39 @@
         "chara":"美浦波旁",
         "origin":"1.5周年"
     },
+    "30117":{
+        "rare":"SSR",
+        "type":"毅力",
+        "effecct":"毅力加成, 初期速度提升, 初期力量提升, 初期毅力提升, 初期羁绊计量格提升, 启发等级提升, 启发发生率提升, 得意率提升",
+        "png_name":"Support_thumb_30117",
+        "url":"https://patchwiki.biligame.com/images/umamusume/thumb/e/ea/bhig5fenx4b729au4o10rn95kd4e92h.png/200px-Support_thumb_30117.png",
+        "jp_name":"【とびだせ！恐怖の魔王軍】シンコウウインディ",
+        "cn_name":"【蹦出来啦！恐怖的魔王军】新光风",
+        "chara":"新光风",
+        "origin":"活动"
+    },
+    "30116":{
+        "rare":"SSR",
+        "type":"速度",
+        "effecct":"速度加成, 初期羁绊计量格提升, 赛后加成, 粉丝数加成, 启发等级提升, 启发发生率提升, 得意率提升, 技能Pt加成",
+        "png_name":"Support_thumb_30116",
+        "url":"https://patchwiki.biligame.com/images/umamusume/thumb/4/4d/kvpudaj45hbpwtql284tud29gcw9o1a.png/200px-Support_thumb_30116.png",
+        "jp_name":"【お日さま天使ちゃん♪】ダイタクヘリオス",
+        "cn_name":"【太阳天使酱♪】大拓太阳神",
+        "chara":"大拓太阳神",
+        "origin":"卡池"
+    },
+    "30115":{
+        "rare":"SSR",
+        "type":"耐力",
+        "effecct":"初期耐力提升, 初期毅力提升, 初期羁绊计量格提升, 启发等级提升, 启发发生率提升, 得意率提升, 技能Pt加成",
+        "png_name":"Support_thumb_30115",
+        "url":"https://patchwiki.biligame.com/images/umamusume/thumb/6/61/3relowdpj6jjgw1q4c551kl107vb27n.png/200px-Support_thumb_30115.png",
+        "jp_name":"【月下の悪魔ちゃん♪】メジロパーマー",
+        "cn_name":"【月下恶魔酱♪】目白善信",
+        "chara":"目白善信",
+        "origin":"卡池"
+    },
     "30114":{
         "rare":"SSR",
         "type":"力量",
