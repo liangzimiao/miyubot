@@ -12,17 +12,10 @@ from nonebot.adapters.onebot.v11 import  MessageSegment
 from nonebot.adapters.onebot.v11.event import MessageEvent
 from nonebot.adapters.onebot.v11 import Message
 from nonebot.params import  CommandArg
-from utils import get_event_gid,aiorequests
+from utils import get_event_gid,aiorequests, img_check, upload_oss
 from .data_source import Ai_Draw
 from utils.CD_Checker import check_cd
-sv_help = '''
-主要功能：
-【绘图 XXX】
-【以图绘图 XXX 图片】
-【本群/个人XP排行】
-【本群/个人XP缝合】
-【绘图各参数指南】
-'''.strip()
+
 
 api_ip = config.api_ip
 token = config.token
@@ -66,15 +59,25 @@ def process_tags(gid,uid,tags,add_db=config.add_db,trans=config.trans,limit_word
     return tags,error_msg,tags_guolu
 
 
-def process_img(data):
+async def process_img(data):
     error_msg ="" #报错信息
+    imgmes=""
+    msg=""
     try:
         msgdata = json.loads(re.findall('{"steps".+?}',str(data))[0])
         msg = f'\nseed:{msgdata["seed"]}   scale:{msgdata["scale"]}'
         img = Image.open(BytesIO(data)).convert("RGB")
         buffer = BytesIO()  # 创建缓存
         img.save(buffer, format="png")
-        imgmes = 'base64://' + b64encode(buffer.getvalue()).decode()
+        flag = await img_check.check(data)
+        print(flag)
+        if not flag : 
+            imgme = 'base64://' + b64encode(buffer.getvalue()).decode()
+            imgmes = f'{MessageSegment.image(imgme, cache=False, )}'
+        else:
+            file_name = str(msgdata["seed"])+".jpg"
+            imgmes = upload_oss.upd.upload_file("3483623696",BytesIO(data).read(),file_name)
+            print(imgmes)
     except Exception as e:
         error_msg = "处理图像失败"
     return msg,imgmes,error_msg
@@ -99,18 +102,17 @@ async def special_title11(event: MessageEvent,args: Message = CommandArg()):
         await matcher.send( f"将使用默认tag：{tags_moren}", at_sender=True)
     try:
         url = (f"http://{api_ip}/got_image") + (f"?tags={tags}")+ (f"&token={token}")
-        response = await aiorequests.get(url, timeout = 30)
+        response = await aiorequests.get(url, timeout = 45)
         data = await response.content
     except Exception as e:
         await matcher.finish(f"请求超时~", at_sender=True)
-    msg,imgmes,error_msg = process_img(data)
+
+        
+    msg,imgmes,error_msg = await process_img(data)
     if len(error_msg):
         await matcher.finish( f"已报错：{error_msg}", at_sender=True)
-    #resultmes = f"[CQ:image,file={imgmes}]"
-    #resultmes += msg
-    #resultmes = f'{imgmes}{msg}'
     #resultmes += f"\n tags:{tags}"
-    resultmes  = f'{MessageSegment.image(imgmes, cache=False, )}'
+    resultmes  = imgmes
     await matcher.send( Message(resultmes+msg), at_sender=True)
 
 matcher = Ai_Draw().on_command("以图绘图","ai绘图" ,aliases={"ai以图绘图","以画绘画"}, priority=5)
@@ -160,13 +162,12 @@ async def img2img(event: MessageEvent,args: Message = CommandArg()):
         data = await response.content
     except Exception as e:
         await matcher.finish(f"请求超时~", at_sender=True)
-    msg,imgmes,error_msg = process_img(data)
+
+    msg,imgmes,error_msg = await process_img(data)
     if len(error_msg):
         await matcher.finish( f"已报错：{error_msg}", at_sender=True)
-    #resultmes = f"[CQ:image,file={imgmes}]"
-    #resultmes += msg
     #resultmes += f"\n tags:{tags}"
-    resultmes  = f'{MessageSegment.image(imgmes, cache=False, )}'
+    resultmes  = imgmes
     await matcher.send( Message(resultmes+msg), at_sender=True)
 
 '''
