@@ -84,8 +84,9 @@ matcher = Ai_Draw().on_command("绘图","ai绘图" ,aliases={"ai绘图","aidraw"
 
 @matcher.handle()
 async def special_title11(event: MessageEvent,args: Message = CommandArg()):
-    await check_cd(matcher,event,__name__,cdTime=0)
+    await check_cd(matcher,event,__name__,cdTime=45)
     gid = get_event_gid(event)
+    #gid = event.user_id
     uid = event.user_id
     tags = args.extract_plain_text() 
     tags,error_msg,tags_guolu=process_tags(gid,uid,tags) #tags处理过程
@@ -105,16 +106,18 @@ async def special_title11(event: MessageEvent,args: Message = CommandArg()):
     msg,imgmes,error_msg = process_img(data)
     if len(error_msg):
         await matcher.finish( f"已报错：{error_msg}", at_sender=True)
-    resultmes = f"[CQ:image,file={imgmes}]"
-    resultmes += msg
+    #resultmes = f"[CQ:image,file={imgmes}]"
+    #resultmes += msg
+    #resultmes = f'{imgmes}{msg}'
     #resultmes += f"\n tags:{tags}"
-    await matcher.send( resultmes, at_sender=True)
+    resultmes  = f'{MessageSegment.image(imgmes, cache=False, )}'
+    await matcher.send( Message(resultmes+msg), at_sender=True)
 
 matcher = Ai_Draw().on_command("以图绘图","ai绘图" ,aliases={"ai以图绘图","以画绘画"}, priority=5)
 
 @matcher.handle()
 async def img2img(event: MessageEvent,args: Message = CommandArg()):
-    await check_cd(matcher,event,__name__,cdTime=0)
+    await check_cd(matcher,event,__name__,cdTime=45)
     gid = get_event_gid(event)
     uid = event.user_id
     tags = args.extract_plain_text() 
@@ -160,10 +163,11 @@ async def img2img(event: MessageEvent,args: Message = CommandArg()):
     msg,imgmes,error_msg = process_img(data)
     if len(error_msg):
         await matcher.finish( f"已报错：{error_msg}", at_sender=True)
-    resultmes = f"[CQ:image,file={imgmes}]"
-    resultmes += msg
+    #resultmes = f"[CQ:image,file={imgmes}]"
+    #resultmes += msg
     #resultmes += f"\n tags:{tags}"
-    await matcher.send( resultmes, at_sender=True)
+    resultmes  = f'{MessageSegment.image(imgmes, cache=False, )}'
+    await matcher.send( Message(resultmes+msg), at_sender=True)
 
 '''
 @sv.on_fullmatch(['本群XP排行'])

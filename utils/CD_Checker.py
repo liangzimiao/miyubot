@@ -19,7 +19,7 @@ async def check_cd(matcher:Type[Matcher],event:MessageEvent,name:str,cdTime=60,d
     except:
         num = 0
 
-    if cd > cdTime :#or event.get_user_id() in nonebot.get_driver().config.superusers:
+    if cd > cdTime or event.get_user_id() in nonebot.get_driver().config.superusers:
         writeJson(event.get_user_id(), event.time, event.message_id, data,name)
         try:
             return 
