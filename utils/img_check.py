@@ -26,10 +26,10 @@ async def check(img):
         data = await response.json()
         print(data)
         if data["errMsg"] == "ok":
-            return 0
+            return 0    #无风险
         else:
-            return 1
+            return 1    #有风险
     except Exception as e:
         
-        return 1
+        return 1        #调用失败 默认有风险
 

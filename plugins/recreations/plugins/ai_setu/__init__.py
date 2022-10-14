@@ -1,6 +1,7 @@
 # 2022.10.10 20:40
 
 
+import base64
 from distutils.log import error
 from PIL import Image
 from base64 import b64encode
@@ -12,7 +13,7 @@ from nonebot.adapters.onebot.v11 import  MessageSegment
 from nonebot.adapters.onebot.v11.event import MessageEvent
 from nonebot.adapters.onebot.v11 import Message
 from nonebot.params import  CommandArg
-from utils import get_event_gid,aiorequests, img_check, upload_oss
+from utils import check_iamge, get_event_gid,aiorequests, img_check, upload_oss
 from .data_source import Ai_Draw
 from utils.CD_Checker import check_cd
 
@@ -65,19 +66,20 @@ async def process_img(data):
     msg=""
     try:
         msgdata = json.loads(re.findall('{"steps".+?}',str(data))[0])
-        msg = f'\nseed:{msgdata["seed"]}   scale:{msgdata["scale"]}'
         img = Image.open(BytesIO(data)).convert("RGB")
         buffer = BytesIO()  # 创建缓存
         img.save(buffer, format="png")
         flag = await img_check.check(data)
-        print(flag)
-        if not flag : 
-            imgme = 'base64://' + b64encode(buffer.getvalue()).decode()
-            imgmes = f'{MessageSegment.image(imgme, cache=False, )}'
-        else:
+        flag2,value = await check_iamge.porn_pic_index(base64.b64encode(data))
+        print(bool(flag or flag2))
+        if  bool(flag or flag2): 
             file_name = str(msgdata["seed"])+".jpg"
             imgmes = upload_oss.upd.upload_file("3483623696",BytesIO(data).read(),file_name)
             print(imgmes)
+        else:
+            imgme = 'base64://' + b64encode(buffer.getvalue()).decode()
+            imgmes = f'{MessageSegment.image(imgme, cache=False, )}'
+        msg = f'\nseed:{msgdata["seed"]}   分数:{value}'
     except Exception as e:
         error_msg = "处理图像失败"
     return msg,imgmes,error_msg
