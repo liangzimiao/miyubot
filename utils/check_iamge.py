@@ -1,9 +1,13 @@
 import requests
 from utils import aiorequests
+import nonebot
 
 
-API_KEY = ''   #你的API Key
-SECRET_KEY = ''#你的Secret Key
+driver = nonebot.get_driver()
+config = driver.config
+
+API_KEY = config.baidu_appid   #你的API Key
+SECRET_KEY = config.baidu_appsecret   #你的Secret Key
 
 host = f'https://aip.baidubce.com/oauth/2.0/token?grant_type=client_credentials&client_id={API_KEY}&client_secret={SECRET_KEY}'
 response = requests.get(host)

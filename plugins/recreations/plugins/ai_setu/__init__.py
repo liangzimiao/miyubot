@@ -84,12 +84,12 @@ async def process_img(data):
         error_msg = "处理图像失败"
     return msg,imgmes,error_msg
 
-matcher = Ai_Draw().on_command("绘图","ai绘图" ,aliases={"ai绘图","aidraw","绘画","ai绘画"}, priority=5)
+matcher = Ai_Draw().on_command("绘图","ai绘图" ,aliases={"ai绘图","ai_draw","绘画","ai绘画"}, priority=5)
 
 
 @matcher.handle()
 async def special_title11(event: MessageEvent,args: Message = CommandArg()):
-    await check_cd(matcher,event,__name__,cdTime=45)
+    await check_cd(matcher,event,__name__,cdTime=60)
     gid = get_event_gid(event)
     #gid = event.user_id
     uid = event.user_id
@@ -121,7 +121,7 @@ matcher = Ai_Draw().on_command("以图绘图","ai绘图" ,aliases={"ai以图绘�
 
 @matcher.handle()
 async def img2img(event: MessageEvent,args: Message = CommandArg()):
-    await check_cd(matcher,event,__name__,cdTime=45)
+    await check_cd(matcher,event,__name__,cdTime=60)
     gid = get_event_gid(event)
     uid = event.user_id
     tags = args.extract_plain_text() 

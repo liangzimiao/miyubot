@@ -1,14 +1,15 @@
-import math
+import time
 import httpx
+import hashlib
 import imageio
 from io import BytesIO
 from dataclasses import dataclass
 from PIL.Image import Image as IMG
-from typing_extensions import Literal
-from typing import Callable, List, Tuple, Protocol
+from typing import Callable, List, Literal, Protocol, Tuple
 
-from nonebot.utils import run_sync
-from nonebot_plugin_imageutils import BuildImage, Text2Image
+from nonebot_plugin_imageutils import BuildImage
+
+from .config import petpet_config
 
 
 @dataclass
@@ -22,7 +23,8 @@ class UserInfo:
 
 
 @dataclass
-class Command:
+class Meme:
+    name: str
     func: Callable
     keywords: Tuple[str, ...]
     pattern: str = ""
@@ -35,7 +37,29 @@ class Command:
 def save_gif(frames: List[IMG], duration: float) -> BytesIO:
     output = BytesIO()
     imageio.mimsave(output, frames, format="gif", duration=duration)
-    return output
+
+    # 没有超出最大大小，直接返回
+    nbytes = output.getbuffer().nbytes
+    if nbytes <= petpet_config.petpet_gif_max_size * 10**6:
+        return output
+
+    # 超出最大大小，帧数超出最大帧数时，缩减帧数
+    n_frames = len(frames)
+    gif_max_frames = petpet_config.petpet_gif_max_frames
+    if n_frames > gif_max_frames:
+        index = range(n_frames)
+        ratio = n_frames / gif_max_frames
+        index = (int(i * ratio) for i in range(gif_max_frames))
+        new_duration = duration * ratio
+        new_frames = [frames[i] for i in index]
+        return save_gif(new_frames, new_duration)
+
+    # 超出最大大小，帧数没有超出最大帧数时，缩小尺寸
+    new_frames = [
+        frame.resize((int(frame.width * 0.9), int(frame.height * 0.9)))
+        for frame in frames
+    ]
+    return save_gif(new_frames, duration)
 
 
 class Maker(Protocol):
@@ -43,70 +67,97 @@ class Maker(Protocol):
         ...
 
 
-def make_jpg_or_gif(
-    img: BuildImage, func: Maker, gif_zoom: float = 1, gif_max_frames: int = 50
-) -> BytesIO:
+def get_avg_duration(image: IMG) -> float:
+    if not getattr(image, "is_animated", False):
+        return 0
+    total_duration = 0
+    for i in range(image.n_frames):
+        image.seek(i)
+        total_duration += image.info["duration"]
+    return total_duration / image.n_frames
+
+
+def make_jpg_or_gif(img: BuildImage, func: Maker) -> BytesIO:
     """
     制作静图或者动图
     :params
       * ``img``: 输入图片，如头像
       * ``func``: 图片处理函数，输入img，返回处理后的图片
-      * ``gif_zoom``: gif 图片缩放比率，避免生成的 gif 太大
-      * ``gif_max_frames``: gif 最大帧数，避免生成的 gif 太大
     """
     image = img.image
     if not getattr(image, "is_animated", False):
         return func(img.convert("RGBA")).save_jpg()
     else:
-        index = range(image.n_frames)
-        ratio = image.n_frames / gif_max_frames
-        duration = image.info["duration"] / 1000
-        if ratio > 1:
-            index = (int(i * ratio) for i in range(gif_max_frames))
-            duration *= ratio
-
-        frames = []
-        for i in index:
+        duration = get_avg_duration(image) / 1000
+        frames: List[IMG] = []
+        for i in range(image.n_frames):
             image.seek(i)
-            new_img = func(BuildImage(image).convert("RGBA"))
-            frames.append(
-                new_img.resize(
-                    (int(new_img.width * gif_zoom), int(new_img.height * gif_zoom))
-                ).image
-            )
+            frames.append(func(BuildImage(image).convert("RGBA")).image)
         return save_gif(frames, duration)
 
 
-async def translate(text: str) -> str:
-    url = f"http://fanyi.youdao.com/translate"
-    params = {"type": "ZH_CN2JA", "i": text, "doctype": "json"}
-    try:
-        async with httpx.AsyncClient() as client:
-            resp = await client.get(url, params=params)
-            result = resp.json()
-        return result["translateResult"][0][0]["tgt"]
-    except:
-        return ""
+def make_gif_or_combined_gif(
+    img: BuildImage, functions: List[Maker], duration: float
+) -> BytesIO:
+    """
+    使用静图或动图制作gif
+    :params
+      * ``img``: 输入图片，如头像
+      * ``functions``: 图片处理函数数组，每个函数输入img并返回处理后的图片
+      * ``duration``: 相邻帧之间的时间间隔，单位为秒
+    """
+    image = img.image
+    if not getattr(image, "is_animated", False):
+        img = img.convert("RGBA")
+        frames: List[IMG] = []
+        for func in functions:
+            frames.append(func(img).image)
+        return save_gif(frames, duration)
+
+    img_frames: List[BuildImage] = []
+    n_frames = image.n_frames
+    img_duration = get_avg_duration(image) / 1000
+
+    n_frame = 0
+    time_start = 0
+    for i in range(len(functions)):
+        while n_frame < n_frames:
+            if (
+                n_frame * img_duration
+                <= i * duration - time_start
+                < (n_frame + 1) * img_duration
+            ):
+                image.seek(n_frame)
+                img_frames.append(BuildImage(image).convert("RGBA"))
+                break
+            else:
+                n_frame += 1
+                if n_frame >= n_frames:
+                    n_frame = 0
+                    time_start += n_frames * img_duration
+
+    frames: List[IMG] = []
+    for func, img_frame in zip(functions, img_frames):
+        frames.append(func(img_frame).image)
+    return save_gif(frames, duration)
 
 
-@run_sync
-def help_image(commands: List[Command]) -> BytesIO:
-    def cmd_text(cmds: List[Command], start: int = 1) -> str:
-        return "\n".join(
-            [f"{i + start}. " + "/".join(cmd.keywords) for i, cmd in enumerate(cmds)]
-        )
-
-    text1 = "摸头等头像相关表情制作\n触发方式：指令 + @某人 / qq号 / 自己 / [图片]\n支持的指令："
-    idx = math.ceil(len(commands) / 2)
-    text2 = cmd_text(commands[:idx])
-    text3 = cmd_text(commands[idx:], start=idx + 1)
-    img1 = Text2Image.from_text(text1, 30, weight="bold").to_image(padding=(20, 10))
-    img2 = Text2Image.from_text(text2, 30).to_image(padding=(20, 10))
-    img3 = Text2Image.from_text(text3, 30).to_image(padding=(20, 10))
-    w = max(img1.width, img2.width + img3.width)
-    h = img1.height + max(img2.height, img2.height)
-    img = BuildImage.new("RGBA", (w, h), "white")
-    img.paste(img1, alpha=True)
-    img.paste(img2, (0, img1.height), alpha=True)
-    img.paste(img3, (img2.width, img1.height), alpha=True)
-    return img.save_jpg()
+async def translate(text: str, lang_from: str = "auto", lang_to: str = "zh") -> str:
+    salt = str(round(time.time() * 1000))
+    appid = petpet_config.baidu_trans_appid
+    apikey = petpet_config.baidu_trans_apikey
+    sign_raw = appid + text + salt + apikey
+    sign = hashlib.md5(sign_raw.encode("utf8")).hexdigest()
+    params = {
+        "q": text,
+        "from": lang_from,
+        "to": lang_to,
+        "appid": appid,
+        "salt": salt,
+        "sign": sign,
+    }
+    url = "https://fanyi-api.baidu.com/api/trans/vip/translate"
+    async with httpx.AsyncClient() as client:
+        resp = await client.get(url, params=params)
+        result = resp.json()
+    return result["trans_result"][0]["dst"]
