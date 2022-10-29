@@ -65,10 +65,12 @@ async def process_img(data):
     imgmes=""
     msg=""
     try:
+        print("1111")
         msgdata = json.loads(re.findall('{"steps".+?}',str(data))[0])
         img = Image.open(BytesIO(data)).convert("RGB")
         buffer = BytesIO()  # 创建缓存
         img.save(buffer, format="png")
+        print("11111111111111")
         flag = await img_check.check(data)
         flag2,value = await check_iamge.porn_pic_index(base64.b64encode(data))
         print(bool(flag or flag2))
@@ -81,6 +83,7 @@ async def process_img(data):
             imgmes = f'{MessageSegment.image(imgme, cache=False, )}'
         msg = f'\nseed:{msgdata["seed"]}   分数:{value}'
     except Exception as e:
+        print(e)
         error_msg = "处理图像失败"
     return msg,imgmes,error_msg
 

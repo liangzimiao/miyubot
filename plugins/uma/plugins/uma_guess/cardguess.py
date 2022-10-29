@@ -19,7 +19,7 @@ from PIL import Image
 from plugins.uma.chara import  guess_id
 PIC_SIDE_LENGTH = 50
 
-BLACKLIST_ID = []  # 黑名单ID
+BLACKLIST_ID = [30067,30081,30036,10060,30021,10021]  # 黑名单ID
 
 ONE_TURN_TIME = 20
 

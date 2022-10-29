@@ -1,3 +1,4 @@
+from utils.CD_Checker import check_cd
 from .data_source import RealESRGAN
 from .utils import *
 from nonebot.adapters.onebot.v11 import Message, MessageEvent, MessageSegment, Bot, Event
@@ -23,7 +24,8 @@ async def real_esrgan_handle_first(
     event: MessageEvent,
     state: T_State,
     args: Message = CommandArg(),
-):
+):  
+    await check_cd(real_esrgan ,event,__name__)
     state['id'] = event.get_user_id()
     state["mode"] = "anime"
     for seg in args:
