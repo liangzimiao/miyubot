@@ -1,21 +1,23 @@
 {
-    "time":"2022/10/11 11:00\n~\n2022/10/19 10:59",
-    "chara_pool_title":"3★真弓快车 Pickup卡池",
-    "chara_pool_img":"https://patchwiki.biligame.com/images/umamusume/5/5c/10fxfian5mgnrb396miwpjs9au8epuk.png",
+    "time":"2022/10/19 11:00\n~\n2022/10/28 10:59",
+    "chara_pool_title":"3★也文摄辉 Pickup卡池",
+    "chara_pool_img":"https://patchwiki.biligame.com/images/umamusume/b/bc/sayxpcyltf8m0tymhk1y4ah73plmid1.png",
     "chara_name":[
-        "真弓快车"
+        "也文摄辉"
     ],
     "chara_id":[
-        "108701"
+        "107801"
     ],
-    "card_pool_title":"SSR丸善斯基、SSR美妙姿势 Pickup卡池",
-    "card_pool_img":"https://patchwiki.biligame.com/images/umamusume/0/05/bhhngos0gmqn7xktz6twxuypcl4avfi.png",
+    "card_pool_title":"SSR吉兆、SR鹤丸刚志 Pickup卡池",
+    "card_pool_img":"https://patchwiki.biligame.com/images/umamusume/8/8a/ev5uapqmtnxlt0hkkdjhv167bvqxkov.png",
     "card_name":[
-        "【おセンチ注意報♪】マルゼンスキー",
-        "【感謝は指先まで込めて】ファインモーション"
+        "【A Win Foreshadowed】シンボリクリスエス",
+        "【『フレフレ、ツヨシ！』】ツルマルツヨシ",
+        "【トレセン学園】シンボリクリスエス"
     ],
     "card_img_altt":[
-        "Support_thumb_30107.png",
-        "Support_thumb_30010.png"
+        "Support_thumb_30118.png",
+        "Support_thumb_20052.png",
+        "Support_thumb_10082.png"
     ]
 }
