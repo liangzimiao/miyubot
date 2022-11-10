@@ -1,4 +1,14 @@
-{
+{   "30146":{
+        "rare":"SSR",
+        "type":"智力",
+        "effecct":"干劲效果提升, 训练效果提升, 初期羁绊计量格提升, 赛后加成, 粉丝数加成, 启发等级提升, 启发发生率提升, 得意率提升, 技能Pt加成",
+        "png_name":"Support_thumb_30146",
+        "url":"https://patchwiki.biligame.com/images/umamusume/thumb/9/90/oqcfglat8i51pypmldaisbex6v64zq2.png/200px-Support_thumb_30146.png",
+        "jp_name":"【駆けよ、駆けよ、駆けよ！！】オグリキャップ",
+        "cn_name":"【駆けよ、駆けよ、駆けよ！！】オグリキャップ",
+        "chara":"小栗帽",
+        "origin":"卡池"
+    },
     "30145":{
         "rare":"SSR",
         "type":"力量",
@@ -20,6 +30,28 @@
         "cn_name":"【U &amp; Me】美浦波旁",
         "chara":"美浦波旁",
         "origin":"1.5周年"
+    },
+    "30120":{
+        "rare":"SSR",
+        "type":"毅力",
+        "effecct":"速度加成, 初期速度提升, 初期羁绊计量格提升, 启发等级提升, 启发发生率提升, 得意率提升, 技能Pt加成",
+        "png_name":"Support_thumb_30120",
+        "url":"https://patchwiki.biligame.com/images/umamusume/thumb/4/49/a6yn3asdxpjwh6o9mcyuvtru6clbxa0.png/200px-Support_thumb_30120.png",
+        "jp_name":"【天まで焦がせ祈りの火】ヤエノムテキ",
+        "cn_name":"【天まで焦がせ祈りの火】ヤエノムテキ",
+        "chara":"八重无敌",
+        "origin":"卡池"
+    },
+    "30119":{
+        "rare":"SSR",
+        "type":"速度",
+        "effecct":"速度加成, 初期速度提升, 初期羁绊计量格提升, 启发等级提升, 启发发生率提升, 得意率提升, 技能Pt加成",
+        "png_name":"Support_thumb_30119",
+        "url":"https://patchwiki.biligame.com/images/umamusume/thumb/e/e6/ctp8uvf28xf1pnxvhf6i20ss3i88gia.png/200px-Support_thumb_30119.png",
+        "jp_name":"【夜風に舞うは祈りの花】メジロアルダン",
+        "cn_name":"【夜風に舞うは祈りの花】メジロアルダン",
+        "chara":"目白阿尔丹",
+        "origin":"活动"
     },
     "30118":{
         "rare":"SSR",

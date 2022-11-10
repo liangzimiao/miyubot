@@ -1,23 +1,25 @@
 {
-    "time":"2022/10/19 11:00\n~\n2022/10/28 10:59",
-    "chara_pool_title":"3★也文摄辉 Pickup卡池",
-    "chara_pool_img":"https://patchwiki.biligame.com/images/umamusume/b/bc/sayxpcyltf8m0tymhk1y4ah73plmid1.png",
+    "time":"2022/10/28 11:00\n~\n2022/11/9 10:59",
+    "chara_pool_title":"3★玉藻十字 3★稻荷一 Pickup卡池",
+    "chara_pool_img":"https://patchwiki.biligame.com/images/umamusume/5/5e/1vyaffc32mekv2cnfavjj8frs8vbnyn.png",
     "chara_name":[
-        "也文摄辉"
+        "【猛ル鳴神】玉藻十字",
+        "【夢ノ金原】稻荷一"
     ],
     "chara_id":[
-        "107801"
+        "102102",
+        "103402"
     ],
-    "card_pool_title":"SSR吉兆、SR鹤丸刚志 Pickup卡池",
-    "card_pool_img":"https://patchwiki.biligame.com/images/umamusume/8/8a/ev5uapqmtnxlt0hkkdjhv167bvqxkov.png",
+    "card_pool_title":"SSR小栗帽、SSR八重无敌 Pickup卡池",
+    "card_pool_img":"https://patchwiki.biligame.com/images/umamusume/a/a3/hoz1ynuzm0ec7v4343jf3hejlb6berd.png",
     "card_name":[
-        "【A Win Foreshadowed】シンボリクリスエス",
-        "【『フレフレ、ツヨシ！』】ツルマルツヨシ",
-        "【トレセン学園】シンボリクリスエス"
+        "【駆けよ、駆けよ、駆けよ！！】オグリキャップ",
+        "【天まで焦がせ祈りの火】ヤエノムテキ",
+        "【夜風に舞うは祈りの花】メジロアルダン"
     ],
     "card_img_altt":[
-        "Support_thumb_30118.png",
-        "Support_thumb_20052.png",
-        "Support_thumb_10082.png"
+        "Support_thumb_30146.png",
+        "Support_thumb_30120.png",
+        "Support_thumb_30119.png"
     ]
 }
