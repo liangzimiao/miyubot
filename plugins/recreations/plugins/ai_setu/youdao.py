@@ -12,13 +12,6 @@ app_key = config.app_key
 
 
 
-def isContainChinese(s):
-    for c in s:
-        if ('\u4e00' <= c <= '\u9fa5'):
-            return True
-    return False
-
-
 def youdaoTranslate(translate_text):
     '''
     :param translate_text: 待翻译的句子
@@ -58,7 +51,13 @@ def youdaoTranslate(translate_text):
     # print("翻译后的结果：" + r["translation"][0])  # 获取翻译内容
     return r["translation"][0]
 
-def tag_trans(tags):
-    if(isContainChinese(tags)):
-        tags=youdaoTranslate(tags)
+async def tag_trans(tags):
+    for c in tags:
+        if ('\u4e00' <= c <= '\u9fa5'):
+            isChinese = True
+            break
+        else:
+            isChinese = False
+    if(isChinese):
+        tags= await youdaoTranslate(tags)
     return tags
