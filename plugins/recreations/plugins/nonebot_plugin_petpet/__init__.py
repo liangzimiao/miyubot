@@ -25,6 +25,8 @@ from nonebot.adapters.onebot.v11.permission import (
     PRIVATE_FRIEND,
 )
 
+from utils.CD_Checker import check_cd
+
 require("nonebot_plugin_imageutils")
 from nonebot_plugin_imageutils import BuildImage, Text2Image
 
@@ -198,9 +200,11 @@ def create_matchers():
     def handler(meme: Meme) -> T_Handler:
         async def handle(
             matcher: Matcher,
+            event: MessageEvent,
             flag: Literal[True] = check_flag(meme),
             res: Union[str, BytesIO] = Depends(meme.func),
-        ):
+        ):  
+            await check_cd(matcher ,event,__name__)
             if not flag:
                 return
             matcher.stop_propagation()

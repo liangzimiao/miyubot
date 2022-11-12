@@ -303,6 +303,14 @@
         "url":"https://patchwiki.biligame.com/images/umamusume/thumb/4/47/b7u73dv56mbizwu1ckp2tj73i166xxm.png/200px-Chr_icon_1021_102101_01.png",
         "jp_name":"疾風迅雷"
     },
+    "102102":{
+        "star":"3",
+        "chara_web":"https://wiki.biligame.com//umamusume/%E3%80%90%E7%8C%9B%E3%83%AB%E9%B3%B4%E7%A5%9E%E3%80%91%E7%8E%89%E8%97%BB%E5%8D%81%E5%AD%97",
+        "cn_name":"【猛ル鳴神】玉藻十字",
+        "png_name":"102102",
+        "url":"https://patchwiki.biligame.com/images/umamusume/thumb/d/da/fg5z8jqwrp9175q2kczoi6pzmuroe3y.png/200px-Chr_icon_1021_102102_01.png",
+        "jp_name":"猛ル鳴神"
+    },
     "102201":{
         "star":"3",
         "chara_web":"https://wiki.biligame.com//umamusume/%E7%BE%8E%E5%A6%99%E5%A7%BF%E5%8A%BF",
@@ -446,6 +454,14 @@
         "png_name":"103401",
         "url":"https://patchwiki.biligame.com/images/umamusume/thumb/3/3f/916h3hbymr2wfwpd3dvhtfv0y7lwimh.png/200px-Chr_icon_1034_103401_01.png",
         "jp_name":"稲荷所縁江戸紫"
+    },
+    "103402":{
+        "star":"3",
+        "chara_web":"https://wiki.biligame.com//umamusume/%E3%80%90%E5%A4%A2%E3%83%8E%E9%87%91%E5%8E%9F%E3%80%91%E7%A8%BB%E8%8D%B7%E4%B8%80",
+        "cn_name":"【夢ノ金原】稻荷一",
+        "png_name":"103402",
+        "url":"https://patchwiki.biligame.com/images/umamusume/thumb/b/b8/nbkj7mb4zw2hn1lbluwhlgdsmdxgld0.png/200px-Chr_icon_1034_103402_01.png",
+        "jp_name":"夢ノ金原"
     },
     "103501":{
         "star":"1",
@@ -782,6 +798,14 @@
         "png_name":"107401",
         "url":"https://patchwiki.biligame.com/images/umamusume/thumb/3/3d/s983wgl7q0cclfuqhbmrtnou8y9ckye.png/200px-Chr_icon_1074_107401_01.png",
         "jp_name":"ブリュニサージュ・ライン"
+    },
+    "107801":{
+        "star":"3",
+        "chara_web":"https://wiki.biligame.com//umamusume/%E4%B9%9F%E6%96%87%E6%91%84%E8%BE%89",
+        "cn_name":"也文摄辉",
+        "png_name":"107801",
+        "url":"https://patchwiki.biligame.com/images/umamusume/thumb/1/14/r4oe6dz6w03wwey738ocgr376vnq3uw.png/200px-Chr_icon_1078_107801_01.png",
+        "jp_name":"Fluttertail Spirit"
     },
     "108701":{
         "star":"3",

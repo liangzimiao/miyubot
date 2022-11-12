@@ -1,21 +1,25 @@
 {
-    "time":"2022/10/11 11:00\n~\n2022/10/19 10:59",
-    "chara_pool_title":"3★真弓快车 Pickup卡池",
-    "chara_pool_img":"https://patchwiki.biligame.com/images/umamusume/5/5c/10fxfian5mgnrb396miwpjs9au8epuk.png",
+    "time":"2022/10/28 11:00\n~\n2022/11/9 10:59",
+    "chara_pool_title":"3★玉藻十字 3★稻荷一 Pickup卡池",
+    "chara_pool_img":"https://patchwiki.biligame.com/images/umamusume/5/5e/1vyaffc32mekv2cnfavjj8frs8vbnyn.png",
     "chara_name":[
-        "真弓快车"
+        "【猛ル鳴神】玉藻十字",
+        "【夢ノ金原】稻荷一"
     ],
     "chara_id":[
-        "108701"
+        "102102",
+        "103402"
     ],
-    "card_pool_title":"SSR丸善斯基、SSR美妙姿势 Pickup卡池",
-    "card_pool_img":"https://patchwiki.biligame.com/images/umamusume/0/05/bhhngos0gmqn7xktz6twxuypcl4avfi.png",
+    "card_pool_title":"SSR小栗帽、SSR八重无敌 Pickup卡池",
+    "card_pool_img":"https://patchwiki.biligame.com/images/umamusume/a/a3/hoz1ynuzm0ec7v4343jf3hejlb6berd.png",
     "card_name":[
-        "【おセンチ注意報♪】マルゼンスキー",
-        "【感謝は指先まで込めて】ファインモーション"
+        "【駆けよ、駆けよ、駆けよ！！】オグリキャップ",
+        "【天まで焦がせ祈りの火】ヤエノムテキ",
+        "【夜風に舞うは祈りの花】メジロアルダン"
     ],
     "card_img_altt":[
-        "Support_thumb_30107.png",
-        "Support_thumb_30010.png"
+        "Support_thumb_30146.png",
+        "Support_thumb_30120.png",
+        "Support_thumb_30119.png"
     ]
 }
