@@ -1,25 +1,21 @@
 {
-    "time":"2022/10/28 11:00\n~\n2022/11/9 10:59",
-    "chara_pool_title":"3★玉藻十字 3★稻荷一 Pickup卡池",
-    "chara_pool_img":"https://patchwiki.biligame.com/images/umamusume/5/5e/1vyaffc32mekv2cnfavjj8frs8vbnyn.png",
+    "time":"2022/11/9 11:00\n~\n2022/11/17 10:59",
+    "chara_pool_title":"3★中山庆典 Pickup卡池",
+    "chara_pool_img":"https://patchwiki.biligame.com/images/umamusume/f/f0/4n2q4ae29praubq4zndhd6kx4d14qt6.png",
     "chara_name":[
-        "【猛ル鳴神】玉藻十字",
-        "【夢ノ金原】稻荷一"
+        "中山庆典"
     ],
     "chara_id":[
-        "102102",
-        "103402"
+        "104901"
     ],
-    "card_pool_title":"SSR小栗帽、SSR八重无敌 Pickup卡池",
-    "card_pool_img":"https://patchwiki.biligame.com/images/umamusume/a/a3/hoz1ynuzm0ec7v4343jf3hejlb6berd.png",
+    "card_pool_title":"SSR千明代表、超级小海湾 Pickup卡池",
+    "card_pool_img":"https://patchwiki.biligame.com/images/umamusume/4/4e/k8ynbzzqnf5yg30u03tiljowgx0znbf.png",
     "card_name":[
-        "【駆けよ、駆けよ、駆けよ！！】オグリキャップ",
-        "【天まで焦がせ祈りの火】ヤエノムテキ",
-        "【夜風に舞うは祈りの花】メジロアルダン"
+        "【Dear Mr. C.B.】ミスターシービー",
+        "【一粒の安らぎ】スーパークリーク"
     ],
     "card_img_altt":[
-        "Support_thumb_30146.png",
-        "Support_thumb_30120.png",
-        "Support_thumb_30119.png"
+        "Support_thumb_30097.png",
+        "Support_thumb_30016.png"
     ]
 }
