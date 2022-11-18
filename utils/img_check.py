@@ -31,5 +31,5 @@ async def check(img):
             return 1    #有风险
     except Exception as e:
         
-        return 1        #调用失败 默认有风险
+        return 0        #调用失败 默认有风险
 

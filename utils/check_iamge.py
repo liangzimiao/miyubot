@@ -53,6 +53,8 @@ async def porn_pic_index(base):
                 return 1,value
             if  r["conclusionType"] == 3: #疑似
                 return 0,value
+            if  r["conclusionType"] == 4: #失败
+                return 1,value
         else:
             #return { 'code': -1, 'msg': 'API Error' }
             return 1,0 #调用失败 默认有风险

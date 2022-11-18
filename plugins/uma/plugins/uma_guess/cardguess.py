@@ -19,8 +19,8 @@ from PIL import Image
 from plugins.uma.chara import  guess_id
 PIC_SIDE_LENGTH = 50
 
-BLACKLIST_ID = [30067,30081,30036,10060,30021,10021]  # 黑名单ID
-
+BLACKLIST_ID = [30067,30081,30036,10060,30021,10021,30080,10074,20021,10022]  
+# 黑名单ID（皇团,团队＜天狼星＞,樫本理子,骏川缰绳,安心泽刺刺美,桐生院葵
 ONE_TURN_TIME = 20
 
 DB_PATH = os.sep.join(['plugins', 'uma', 'game_data', 'uma_card_guess.db'])
