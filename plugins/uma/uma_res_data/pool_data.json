@@ -1,21 +1,21 @@
 {
-    "time":"2022/11/9 11:00\n~\n2022/11/17 10:59",
-    "chara_pool_title":"3★中山庆典 Pickup卡池",
-    "chara_pool_img":"https://patchwiki.biligame.com/images/umamusume/f/f0/4n2q4ae29praubq4zndhd6kx4d14qt6.png",
+    "time":"2022/11/17 11:00\n~\n2022/11/28 10:59",
+    "chara_pool_title":"3★奇锐骏 Pickup卡池",
+    "chara_pool_img":"https://patchwiki.biligame.com/images/umamusume/8/82/el4isaxj0z4qde0vswn58aj4e8estrz.png",
     "chara_name":[
-        "中山庆典"
+        "奇锐骏"
     ],
     "chara_id":[
-        "104901"
+        "110001"
     ],
-    "card_pool_title":"SSR千明代表、超级小海湾 Pickup卡池",
-    "card_pool_img":"https://patchwiki.biligame.com/images/umamusume/4/4e/k8ynbzzqnf5yg30u03tiljowgx0znbf.png",
+    "card_pool_title":"SSR荣进闪耀、SR成田路 Pickup卡池",
+    "card_pool_img":"https://patchwiki.biligame.com/images/umamusume/7/75/f9l23qp3rb0bw64jiuq4j310eanphl5.png",
     "card_name":[
-        "【Dear Mr. C.B.】ミスターシービー",
-        "【一粒の安らぎ】スーパークリーク"
+        "【Danke schön】エイシンフラッシュ",
+        "【ストップ、委員長！】ナリタトップロード"
     ],
     "card_img_altt":[
-        "Support_thumb_30097.png",
-        "Support_thumb_30016.png"
+        "Support_thumb_30122.png",
+        "Support_thumb_20053.png"
     ]
 }

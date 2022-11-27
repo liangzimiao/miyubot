@@ -21,6 +21,17 @@
         "chara":"谷水琴蕾",
         "origin":"赠送"
     },
+    "30122":{
+        "rare":"SSR",
+        "type":"速度",
+        "effecct":"速度加成, 力量加成, 训练效果提升, 初期速度提升, 初期力量提升, 初期羁绊计量格提升, 启发等级提升, 启发发生率提升, 得意率提升",
+        "png_name":"Support_thumb_30122",
+        "url":"https://patchwiki.biligame.com/images/umamusume/thumb/5/53/ffr9nnleugwekhm6cwodi73ee7fyizz.png/200px-Support_thumb_30122.png",
+        "jp_name":"【Danke schön】エイシンフラッシュ",
+        "cn_name":"【万分感激】荣进闪耀",
+        "chara":"荣进闪耀",
+        "origin":"卡池"
+    },
     "30121":{
         "rare":"SSR",
         "type":"速度",
@@ -1295,6 +1306,17 @@
         "jp_name":"【日本一のステージを】スペシャルウィーク",
         "cn_name":"【在日本第一的舞台】特别周",
         "chara":"特别周",
+        "origin":"卡池"
+    },
+    "20053":{
+        "rare":"SR",
+        "type":"力量",
+        "effecct":"干劲效果提升, 力量加成, 初期耐力提升, 初期力量提升, 初期羁绊计量格提升, 启发等级提升, 启发发生率提升, 得意率提升",
+        "png_name":"Support_thumb_20053",
+        "url":"https://patchwiki.biligame.com/images/umamusume/thumb/e/e1/392cer1sqgidkbl7adi0b2aa6xqm2hb.png/200px-Support_thumb_20053.png",
+        "jp_name":"【ストップ、委員長！】ナリタトップロード",
+        "cn_name":"【停下，班长！】成田路",
+        "chara":"成田路",
         "origin":"卡池"
     },
     "20052":{

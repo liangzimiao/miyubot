@@ -21,7 +21,7 @@ except:
 # JEWEL_EXCEED_NOTICE = f'您今天已经抽过{jewel_limit.max}钻了，欢迎明早5点后再来！'
 # TENJO_EXCEED_NOTICE = f'您今天已经抽过{tenjo_limit.max}张天井券了，欢迎明早5点后再来！'
 POOL = ('MIX', 'JP', 'TW', 'BL')
-DEFAULT_POOL = POOL[0]
+DEFAULT_POOL = POOL[3]
 
 _pool_config_file = os.path.join(os.path.dirname(__file__), 'group_pool_config.json')
 _group_pool = {}

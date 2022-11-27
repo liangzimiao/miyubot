@@ -24,7 +24,7 @@ from utils import send_guild_message, get_event_gid
 from utils.base_config import BotInfo
 rss_news = {}
 data = {
-    'rsshub': 'http://127.0.0.1:1200',
+    'rsshub': 'http://127.0.0.1:1201',
     'proxy': '',
     'proxy_urls': [],
     'last_time': {},
