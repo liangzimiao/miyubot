@@ -2,6 +2,7 @@ from os import truncate
 import re
 import ast
 from html.parser import HTMLParser
+import datetime
 
 
 keyword_list = [
@@ -30,9 +31,7 @@ class ContentParse(HTMLParser):
         self.is_title = False
 
     def handle_starttag(self, tag, attrs):
-        if tag == "br":
-            self.is_title = True
-        elif 'cl-t' in attrs[0]:
+        if len(attrs) != 0 and 'cl-t' in attrs[0]:
             self.is_title = True
         else:
             self.is_title = False
@@ -56,6 +55,7 @@ def parse_content(day_content):
 def extract_calendar_data(js_text):
     # 提取js的data部分转换为python对象
     data_str = re.search(r'\[.*?\]', js_text, re.S).group(0)
+    data_str = data_str.replace('//', '#')
     for keyword in keyword_list:
         data_str = data_str.replace(keyword, f'"{keyword}"')
     data = ast.literal_eval(data_str)
@@ -70,6 +70,7 @@ def extract_calendar_data(js_text):
 def transform_calendar_data(data):
     event_cache = {}
     event_list = []
+    today = datetime.date(datetime.date.today().year, datetime.date.today().month, datetime.date.today().day)
     for i in range(len(data)):
         for day_str in data[i]['day']:
             #print(data[i]['year'], data[i]['month'], day_str, data[i]['day'][day_str])
@@ -77,11 +78,13 @@ def transform_calendar_data(data):
             year = int(data[i]['year'])
             month = int(data[i]['month'])
             day = int(day_str)
+            event_number = 0
             for keyword in event_keyword_list:
                 end_time = '23:59'
                 if keyword == 'qdhd':
                     end_time = '04:59'
                 for event_name in data[i]['day'][day_str][keyword]:
+                    event_number = event_number + 1
                     if event_name not in event_cache.keys():
                         #event_cache[event_name] = {'year': year, 'month': month, 'day': int(day)}
                         event_cache[event_name] = {
@@ -93,6 +96,12 @@ def transform_calendar_data(data):
                             'end_day': day,
                             'end_time': end_time,
                         }
+            try:
+                diff = (datetime.date(year, month, day) - today) / datetime.timedelta(1)
+            except: 
+                continue
+            if diff == 0 and event_number == 0: #无今日数据
+                return []
             for event_name in list(event_cache.keys()):
                 is_active = False 
                 for keyword in event_keyword_list:

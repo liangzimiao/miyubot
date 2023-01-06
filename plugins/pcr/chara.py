@@ -1,5 +1,6 @@
 import importlib
 from io import BytesIO
+import os
 from nonebot.adapters.onebot.v11.event import MessageEvent
 from nonebot import logger
 from nonebot.plugin import on_command
@@ -131,36 +132,42 @@ def gen_team_pic(team, size=64, star_slot_verbose=True):
 def download_chara_icon(id_, star):
     url = f'https://redive.estertion.win/icon/unit/{id_}{star}1.webp'
     save_path = R.img(f'priconne/unit/icon_unit_{id_}{star}1.png').path
+    if os.path.exists(save_path):
+            logger.info(f'chara icon {save_path}已存在')
+            return
     logger.info(f'Downloading chara icon from {url}')
     try:
-        rsp = requests.get(url, stream=True, timeout=5)
+        rsp = requests.get(url, stream=True, timeout=20)
+        if 200 == rsp.status_code:
+            img = Image.open(BytesIO(rsp.content))
+            img.save(save_path)
+            logger.info(f'Saved to {save_path}')
+        else:
+            logger.error(f'Failed to download {url}. HTTP {rsp.status_code}')
     except Exception as e:
         logger.error(f'Failed to download {url}. {type(e)}')
-        logger.exception(e)
-    if 200 == rsp.status_code:
-        img = Image.open(BytesIO(rsp.content))
-        img.save(save_path)
-        logger.info(f'Saved to {save_path}')
-    else:
-        logger.error(f'Failed to download {url}. HTTP {rsp.status_code}')
+        #logger.exception(e)
+    
 
 
 def download_chara_card(id_, star):
     url = f'https://redive.estertion.win/card/full/{id_}{star}1.webp'
     save_path = R.img(f'priconne/card/{id_}{star}1.png').path
+    if os.path.exists(save_path):
+            logger.info(f'chara card {save_path}已存在') 
+            return
     logger.info(f'Downloading chara card from {url}')
     try:
         rsp = requests.get(url, stream=True, timeout=10)
+        if 200 == rsp.status_code:
+            img = Image.open(BytesIO(rsp.content))
+            img.save(save_path)
+            logger.info(f'Saved to {save_path}')
+        else:
+            logger.error(f'Failed to download {url}. HTTP {rsp.status_code}')
     except Exception as e:
         logger.error(f'Failed to download {url}. {type(e)}')
-        logger.exception(e)
-    if 200 == rsp.status_code:
-        img = Image.open(BytesIO(rsp.content))
-        img.save(save_path)
-        logger.info(f'Saved to {save_path}')
-    else:
-        logger.error(f'Failed to download {url}. HTTP {rsp.status_code}')
-
+        #logger.exception(e)
 
 class Chara:
 

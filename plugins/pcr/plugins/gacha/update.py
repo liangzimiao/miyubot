@@ -36,15 +36,19 @@ async def get_online_pcrdata():
     """
     获取在线的角色数据信息, 并处理为json格式
     """
-    online_pcrdata = await aiorequests.get(url=online_pcr_data_url, timeout=10, verify=False)
-    if online_pcrdata.status_code != 200:
-        logger.error(f'获取在线角色数据时发生错误{online_pcrdata.status_code}')
+    try:
+        online_pcrdata = await aiorequests.get(url=online_pcr_data_url, timeout=10, verify=False)
+        if online_pcrdata.status_code != 200:
+            logger.error(f'获取在线角色数据时发生错误{online_pcrdata.status_code}')
+            return {}
+        # 移除开头的'CHARA_NAME = ', 格式化为json便于处理
+        online_pcrdata_text = await online_pcrdata.text
+        online_pcrdata_text = online_pcrdata_text.replace('CHARA_NAME = ', '')
+        online_pcrdata_json = literal_eval(online_pcrdata_text)
+        return online_pcrdata_json
+    except Exception as e:
+        logger.error(f'获取在线角色数据时发生错误 {type(e)}')
         return {}
-    # 移除开头的'CHARA_NAME = ', 格式化为json便于处理
-    online_pcrdata_text = await online_pcrdata.text
-    online_pcrdata_text = online_pcrdata_text.replace('CHARA_NAME = ', '')
-    online_pcrdata_json = literal_eval(online_pcrdata_text)
-    return online_pcrdata_json
 
 
 def sort_priority(values, group):
@@ -119,16 +123,18 @@ async def get_online_ver() -> int:
     """
     获取在线版本号
     """
-    online_pool_ver = await aiorequests.get(url=online_ver_url, timeout=10, verify=False)
-
-    if online_pool_ver.status_code != 200:
-        logger.error(f'获取在线卡池版本时发生错误{online_pool_ver.status_code}')
-        return online_pool_ver.status_code
-    online_pool_ver_json = await online_pool_ver.json()
-    online_ver = int(online_pool_ver_json["ver"])
-
-    logger.info(f'检查卡池更新, 在线卡池版本{online_ver}')
-    return online_ver
+    try:
+        online_pool_ver = await aiorequests.get(url=online_ver_url, timeout=10, verify=False)
+        if online_pool_ver.status_code != 200:
+            logger.error(f'获取在线卡池版本时发生错误{online_pool_ver.status_code}')
+            return online_pool_ver.status_code
+        online_pool_ver_json = await online_pool_ver.json()
+        online_ver = int(online_pool_ver_json["ver"])
+        logger.info(f'检查卡池更新, 在线卡池版本{online_ver}')
+        return online_ver
+    except Exception as e:
+        logger.error(f'获取在线卡池版本时发生错误 {type(e)}')
+        return 0
 
 
 def update_local_ver(ver: int) -> None:
@@ -146,12 +152,16 @@ async def get_online_pool():
     获取在线卡池, 返回json格式
     """
     logger.info(f'开始获取在线卡池')
-    online_pool_f = await aiorequests.get(online_pool_url, timeout=10, verify=False)
-    if online_pool_f.status_code != 200:
-        logger.error(f'获取在线卡池时发生错误{online_pool_f.status_code}')
-        return online_pool_f.status_code
-    online_pool = await online_pool_f.json()
-    return online_pool
+    try:
+        online_pool_f = await aiorequests.get(online_pool_url, timeout=10, verify=False)
+        if online_pool_f.status_code != 200:
+            logger.error(f'获取在线卡池时发生错误{online_pool_f.status_code}')
+            return online_pool_f.status_code
+        online_pool = await online_pool_f.json()
+        return online_pool
+    except Exception as e:
+        logger.error(f'获取在线卡池时发生错误 {type(e)}')
+    
 
 
 def update_local_pool(online_pool) -> None:
