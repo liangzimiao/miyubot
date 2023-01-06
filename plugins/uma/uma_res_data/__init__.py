@@ -298,6 +298,105 @@ class Uma_Data:
             f.write(json.dumps(pool_data_item, ensure_ascii=False, indent=4, separators=(',', ':')))
             f.close
 
+    def update_pool2(self) -> None:##更新马娘卡池资源(卡池页)
+        url="https://wiki.biligame.com/umamusume/%E5%8D%A1%E6%B1%A0"
+        res=requests.get(url).text
+        data= pq(res)
+        data_list=data(".mw-parser-output>table>tbody>tr")
+        pool_data_path = os.path.join(os.path.dirname(__file__), 'pool_data.html')
+        #with open(pool_data_path, "w",encoding="utf-8") as f:
+        #    f.write(str(data_list))
+        tr=pq(data_list.eq(1))
+        td=tr("td")
+        chara=td.eq(3)(".popup>span>div>a")
+        time = td.eq(0).text()
+        chara_pool_title = td.eq(2)(".center div>a").attr("title")
+        chara_pool_img = re.findall('1.5x, (.*?) 2x',str(td.eq(2)(".center div>a")("img").attr("srcset")),re.S)[0]
+        chara_name_list=[]
+        chara_id_list=[]
+        for a in chara:
+            j=pq(a)
+            chara_name_list.append(j.attr("title"))
+            j=str(j)
+            src='100px-Chr_icon_.*?_(.*?)_01.png"'
+            alt = re.findall(src,j,re.S)
+            img_alt=alt[0]
+            chara_id_list.append(img_alt)
+        tr=pq(data_list.eq(2))
+        td=tr("td")
+        card=td.eq(2)(".popup>span>div>a")
+        card_pool_title = td.eq(1)(".center div>a").attr("title")
+        card_pool_img = re.findall('1.5x, (.*?) 2x',str(td.eq(1)(".center div>a")("img").attr("srcset")),re.S)[0]
+        card_name_list=[]
+        card_img_alt_list=[]
+        for a in card:
+            j=pq(a)
+            card_name_list.append(j.attr("title"))
+            j=str(j)
+            src='100px-Support_thumb_(.*?).png"'
+            alt = re.findall(src,j,re.S)
+            img_alt=f"Support_thumb_{alt[0]}.png"
+            card_img_alt_list.append(img_alt)
+
+        pool_data_item={
+                            "time":time,
+                            "chara_pool_title":chara_pool_title,
+                            "chara_pool_img":chara_pool_img,
+                            "chara_name":chara_name_list,
+                            "chara_id":chara_id_list,
+                            "card_pool_title":card_pool_title,
+                            "card_pool_img":card_pool_img,
+                            "card_name":card_name_list,
+                            "card_img_altt":card_img_alt_list,
+                        }
+        self.pool_data_path = os.path.join(os.path.dirname(__file__), 'pool_data.json')
+        with open(self.pool_data_path, "w",encoding="utf-8") as f:
+            f.write(json.dumps(pool_data_item, ensure_ascii=False, indent=4, separators=(',', ':')))
+            f.close
+
+        ''' pool_data_list=[]     
+        i=1
+        for one in data_list:
+            tr=pq(one)
+            td=tr("td")
+            if i==2:
+                #pool=td.eq(2)(".center div>a")
+                chara=td.eq(3)(".popup>span>div>a")
+                chara_name_list=[]
+                chara_img_alt_list=[]
+                for a in chara:
+                    j=pq(a)
+                    chara_name_list.append(j.attr("title"))
+                    chara_img_alt_list.append(j("img").attr("alt"))
+                pool_data_item={
+                    "time":td.eq(0).text(),
+                    "chara_type":td.eq(1).text(),
+                    "chara_pool_title":td.eq(2)(".center div>a").attr("title"),
+                    "chara_pool_img":td.eq(2)(".center div>a")("img").attr("src"),
+                    "chara_name":chara_name_list,
+                    "chara_img_alt":chara_img_alt_list,
+                }
+                i=1
+            else:
+                #pool=td.eq(1)(".center div>a")
+                card=td.eq(2)(".popup>span>div>a")
+                card_name_list=[]
+                card_img_alt_list=[]
+                for a in card:
+                    j=pq(a)
+                    card_name_list.append(j.attr("title"))
+                    card_img_alt_list.append(j("img").attr("alt"))
+                pool_data_item={
+                    "card_type":td.eq(0).text(),
+                    "card_pool_title":td.eq(1)(".center div>a").attr("title"),
+                    "card_pool_img":td.eq(1)(".center div>a")("img").attr("src"),
+                    "card_name":card_name_list,
+                    "card_img_altt":card_img_alt_list,
+                }
+                i=2
+
+            pool_data_list.append(pool_data_item)'''  
+
     def chara_icon_download(self,id) -> None:   #下载角色卡icon
         id=str(id)
         icon_save_path = f'resources\\uma\\img\\unit\\icon_unit_{self.chara_info_dict[id]["png_name"]}.png'

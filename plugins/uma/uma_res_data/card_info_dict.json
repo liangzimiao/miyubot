@@ -21,6 +21,83 @@
         "chara":"谷水琴蕾",
         "origin":"赠送"
     },
+    "30129":{
+        "rare":"SSR",
+        "type":"力量",
+        "effecct":"力量加成, 初期力量提升, 初期羁绊计量格提升, 赛后加成, 粉丝数加成, 启发等级提升, 启发发生率提升, 得意率提升",
+        "png_name":"Support_thumb_30129",
+        "url":"https://patchwiki.biligame.com/images/umamusume/thumb/1/12/kolzynmnvl1idz3ns2fiznki53oke0v.png/200px-Support_thumb_30129.png",
+        "jp_name":"【遥か流るる冬夏青青】グラスワンダー",
+        "cn_name":"【源远流长冬夏青青】草上飞",
+        "chara":"草上飞",
+        "origin":"活动"
+    },
+    "30128":{
+        "rare":"SSR",
+        "type":"智力",
+        "effecct":"干劲效果提升, 智力加成, 初期羁绊计量格提升, 赛后加成, 粉丝数加成, 启发等级提升, 启发发生率提升, 得意率提升, 技能Pt加成, 智力友情回复量提升",
+        "png_name":"Support_thumb_30128",
+        "url":"https://patchwiki.biligame.com/images/umamusume/thumb/6/68/a737iap5xxx2bfjolshxcpgs6laktc7.png/200px-Support_thumb_30128.png",
+        "jp_name":"【気まぐれ絶佳】スイープトウショウ",
+        "cn_name":"【阴晴不定的绝世佳人】东商变革",
+        "chara":"东商变革",
+        "origin":"卡池"
+    },
+    "30127":{
+        "rare":"SSR",
+        "type":"耐力",
+        "effecct":"耐力加成, 毅力加成, 训练效果提升, 初期羁绊计量格提升, 赛后加成, 粉丝数加成, 启发等级提升, 启发发生率提升, 得意率提升, 技能Pt加成",
+        "png_name":"Support_thumb_30127",
+        "url":"https://patchwiki.biligame.com/images/umamusume/thumb/7/71/q5gjy8pqq5516oo9g7j337we0c79dg8.png/200px-Support_thumb_30127.png",
+        "jp_name":"【ハネ退け魔を退け願い込め】スペシャルウィーク",
+        "cn_name":"【向羽毛祈愿驱魔】特别周",
+        "chara":"特别周",
+        "origin":"卡池"
+    },
+    "30126":{
+        "rare":"SSR",
+        "type":"毅力",
+        "effecct":"速度加成, 毅力加成, 训练效果提升, 初期速度提升, 初期羁绊计量格提升, 赛后加成, 粉丝数加成, 启发等级提升, 启发发生率提升, 得意率提升",
+        "png_name":"Support_thumb_30126",
+        "url":"https://patchwiki.biligame.com/images/umamusume/thumb/5/5d/tuk1f1zzmvr0blhcpti0ctt7gq918ml.png/200px-Support_thumb_30126.png",
+        "jp_name":"【誰も知らない風へ】ヤマニンゼファー",
+        "cn_name":"【向着那谁也不曾知晓的风】也文摄辉",
+        "chara":"也文摄辉",
+        "origin":"卡池"
+    },
+    "30125":{
+        "rare":"SSR",
+        "type":"耐力",
+        "effecct":"干劲效果提升, 毅力加成, 初期耐力提升, 初期毅力提升, 初期羁绊计量格提升, 赛后加成, 粉丝数加成, 得意率提升",
+        "png_name":"Support_thumb_30125",
+        "url":"https://patchwiki.biligame.com/images/umamusume/thumb/5/54/hbbja9v6y49n5jnftsvntufo9e6nrf3.png/200px-Support_thumb_30125.png",
+        "jp_name":"【ここからはDon't stop!】サクラローレル",
+        "cn_name":"【从现在开始Don't stop!】",
+        "chara":"樱花桂冠",
+        "origin":"活动"
+    },
+    "30124":{
+        "rare":"SSR",
+        "type":"智力",
+        "effecct":"干劲效果提升, 速度加成, 智力加成, 训练效果提升, 初期羁绊计量格提升, 赛后加成, 粉丝数加成, 得意率提升, 智力友情回复量提升",
+        "png_name":"Support_thumb_30124",
+        "url":"https://patchwiki.biligame.com/images/umamusume/thumb/b/b2/q129fntkopg7vqkj9ejpimr7yk0faqh.png/200px-Support_thumb_30124.png",
+        "jp_name":"【Are you merry?】エアグルーヴ",
+        "cn_name":"【Are you merry?】",
+        "chara":"气槽",
+        "origin":"卡池"
+    },
+    "30123":{
+        "rare":"SSR",
+        "type":"力量",
+        "effecct":"耐力加成, 初期羁绊计量格提升, 赛后加成, 粉丝数加成, 启发等级提升, 启发发生率提升, 得意率提升, 技能Pt加成",
+        "png_name":"Support_thumb_30123",
+        "url":"https://patchwiki.biligame.com/images/umamusume/thumb/7/79/lttd63ci6u0w58fcbw0p6b8w2cge5ez.png/200px-Support_thumb_30123.png",
+        "jp_name":"【GLAD TIDINGS】ナリタブライアン",
+        "cn_name":"【GLAD TIDINGS】",
+        "chara":"成田白仁",
+        "origin":"卡池"
+    },
     "30122":{
         "rare":"SSR",
         "type":"速度",
@@ -1308,6 +1385,17 @@
         "chara":"特别周",
         "origin":"卡池"
     },
+    "20054":{
+        "rare":"SR",
+        "type":"耐力",
+        "effecct":"耐力加成, 初期耐力提升, 初期毅力提升, 初期羁绊计量格提升, 赛后加成, 粉丝数加成, 得意率提升",
+        "png_name":"Support_thumb_20054",
+        "url":"https://patchwiki.biligame.com/images/umamusume/thumb/b/be/c6dnces5lmpj9vink68d390jzqmx1u3.png/200px-Support_thumb_20054.png",
+        "jp_name":"【偉大なるフォトグラフィーア】テイエムオペラオー",
+        "cn_name":"【伟大的Fotografia 】好歌剧",
+        "chara":"好歌剧",
+        "origin":"卡池"
+    },
     "20053":{
         "rare":"SR",
         "type":"力量",
@@ -1880,6 +1968,28 @@
         "chara":"富士奇迹",
         "origin":"卡池"
     },
+    "10086":{
+        "rare":"R",
+        "type":"毅力",
+        "effecct":"速度加成, 毅力加成, 训练效果提升, 初期羁绊计量格提升, 赛后加成, 粉丝数加成, 启发等级提升, 启发发生率提升, 得意率提升",
+        "png_name":"Support_thumb_10086",
+        "url":"https://patchwiki.biligame.com/images/umamusume/thumb/b/b8/2tbksfmazhhkdq93t4cd4s5io0h5tpf.png/200px-Support_thumb_10086.png",
+        "jp_name":"【トレセン学園】ヤマニンゼファー",
+        "cn_name":"【特雷森学园】也文摄辉",
+        "chara":"也文摄辉",
+        "origin":"卡池"
+    },
+    "10085":{
+        "rare":"R",
+        "type":"耐力",
+        "effecct":"干劲效果提升, 毅力加成, 初期耐力提升, 初期毅力提升, 初期羁绊计量格提升, 赛后加成, 粉丝数加成, 得意率提升",
+        "png_name":"Support_thumb_10085",
+        "url":"https://patchwiki.biligame.com/images/umamusume/thumb/0/06/1vd33t3dbjmf02em3fezjpwp1krn32e.png/200px-Support_thumb_10085.png",
+        "jp_name":"【トレセン学園】サクラローレル",
+        "cn_name":"【特雷森学园】樱花桂冠",
+        "chara":"樱花桂冠",
+        "origin":"卡池"
+    },
     "10084":{
         "rare":"R",
         "type":"力量",
@@ -1889,7 +1999,7 @@
         "jp_name":"【トレセン学園】タニノギムレット",
         "cn_name":"【特雷森学园】谷水琴蕾",
         "chara":"谷水琴蕾",
-        "origin":""
+        "origin":"卡池"
     },
     "10083":{
         "rare":"R",
@@ -1933,7 +2043,7 @@
         "jp_name":"【トレセン学園】ケイエスミラクル",
         "cn_name":"【特雷森学园】凯斯奇迹",
         "chara":"凯斯奇迹",
-        "origin":""
+        "origin":"卡池"
     },
     "10079":{
         "rare":"R",
@@ -1944,7 +2054,7 @@
         "jp_name":"【トレセン学園】ダイイチルビー",
         "cn_name":"【特雷森学园】第一红宝石",
         "chara":"第一红宝石",
-        "origin":""
+        "origin":"卡池"
     },
     "10078":{
         "rare":"R",

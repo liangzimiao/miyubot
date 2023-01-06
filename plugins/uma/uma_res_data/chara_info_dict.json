@@ -119,6 +119,14 @@
         "url":"https://patchwiki.biligame.com/images/umamusume/thumb/b/bd/iu317chs3yh8e1jw76sotm9s2dwcfw6.png/200px-Chr_icon_1008_100801_01.png",
         "jp_name":"ワイルドトップギア"
     },
+    "100802":{
+        "star":"3",
+        "chara_web":"https://wiki.biligame.com//umamusume/%E3%80%90%E4%B8%8D%E5%87%8D%E3%81%AE%E3%82%A2%E3%82%AF%E3%82%A2%E3%83%BB%E3%82%A6%E3%82%A3%E3%82%BF%E3%82%A8%E3%80%91%E4%BC%8F%E7%89%B9%E5%8A%A0",
+        "cn_name":"【不凍のアクア・ウィタエ】伏特加",
+        "png_name":"100802",
+        "url":"https://patchwiki.biligame.com/images/umamusume/thumb/e/ed/4bvoel9kj19lwvhuiuz9uiqohdzptw7.png/200px-Chr_icon_1008_100802_01.png",
+        "jp_name":"不凍のアクア・ウィタエ"
+    },
     "100901":{
         "star":"2",
         "chara_web":"https://wiki.biligame.com//umamusume/%E5%A4%A7%E5%92%8C%E8%B5%A4%E9%AA%A5",
@@ -126,6 +134,14 @@
         "png_name":"100901",
         "url":"https://patchwiki.biligame.com/images/umamusume/thumb/1/15/ggqhn7h7b0r5skkgq6ziuahtu71bybs.png/200px-Chr_icon_1009_100901_01.png",
         "jp_name":"トップ・オブ・ブルー"
+    },
+    "100902":{
+        "star":"3",
+        "chara_web":"https://wiki.biligame.com//umamusume/%E3%80%90%E7%B7%8B%E8%89%B2%E3%81%AE%E3%83%8B%E3%83%A5%E3%82%A4%E3%83%BB%E3%82%A8%E3%83%88%E3%83%AF%E3%83%AC%E3%80%91%E5%A4%A7%E5%92%8C%E8%B5%A4%E9%AA%A5",
+        "cn_name":"【緋色のニュイ・エトワレ】大和赤骥",
+        "png_name":"100902",
+        "url":"https://patchwiki.biligame.com/images/umamusume/thumb/4/45/1za635wf2t0t9mfskwdyqfg54gtbvhy.png/200px-Chr_icon_1009_100902_01.png",
+        "jp_name":"緋色のニュイ・エトワレ"
     },
     "101001":{
         "star":"3",
@@ -137,8 +153,8 @@
     },
     "101002":{
         "star":"3",
-        "chara_web":"https://wiki.biligame.com//umamusume/%E3%80%90Bubblegum%E2%98%86Memories%E3%80%91%E5%A4%A7%E6%A0%91%E5%BF%AB%E8%BD%A6",
-        "cn_name":"【Bubblegum☆Memories】大树快车",
+        "chara_web":"https://wiki.biligame.com//umamusume/%E3%80%90Bubblegum_%E2%98%86_Memories%E3%80%91%E5%A4%A7%E6%A0%91%E5%BF%AB%E8%BD%A6",
+        "cn_name":"【Bubblegum ☆ Memories】大树快车",
         "png_name":"101002",
         "url":"https://patchwiki.biligame.com/images/umamusume/thumb/a/a9/gc0y9qjub4ga27tv35r7516plp2l82z.png/200px-Chr_icon_1010_101002_01.png",
         "jp_name":"Bubblegum ☆ Memories"
@@ -230,6 +246,14 @@
         "png_name":"101601",
         "url":"https://patchwiki.biligame.com/images/umamusume/thumb/9/90/bue89r5a3yqfl7bnq4dcfnyj2au9jm1.png/200px-Chr_icon_1016_101601_01.png",
         "jp_name":"Maverick"
+    },
+    "101602":{
+        "star":"3",
+        "chara_web":"https://wiki.biligame.com//umamusume/%E3%80%90%E9%A4%93%E7%8B%BC%E3%80%91%E6%88%90%E7%94%B0%E7%99%BD%E4%BB%81",
+        "cn_name":"【餓狼】成田白仁",
+        "png_name":"101602",
+        "url":"https://patchwiki.biligame.com/images/umamusume/thumb/f/f8/5nigr9vcstosyasyk1swnvx71u33z39.png/200px-Chr_icon_1016_101602_01.png",
+        "jp_name":"餓狼"
     },
     "101701":{
         "star":"3",
@@ -599,6 +623,14 @@
         "url":"https://patchwiki.biligame.com/images/umamusume/thumb/4/41/qnia8z2ih4i9ue19yka4fxpnjgogs1h.png/200px-Chr_icon_1046_104602_01.png",
         "jp_name":"黄昏トライアンフ"
     },
+    "104701":{
+        "star":"3",
+        "chara_web":"https://wiki.biligame.com//umamusume/%E8%8D%92%E6%BC%A0%E8%8B%B1%E9%9B%84",
+        "cn_name":"荒漠英雄",
+        "png_name":"104701",
+        "url":"https://patchwiki.biligame.com/images/umamusume/thumb/1/1f/exdyiv3wlj61d5lsv0p6ni9buxr41km.png/200px-Chr_icon_1047_104701_01.png",
+        "jp_name":"Heroic Author"
+    },
     "104801":{
         "star":"3",
         "chara_web":"https://wiki.biligame.com//umamusume/%E4%B8%9C%E7%80%9B%E4%BD%90%E6%95%A6",
@@ -767,6 +799,14 @@
         "url":"https://patchwiki.biligame.com/images/umamusume/thumb/f/f4/cqx7dfpkzks9zxgdwvrfo3y2vyfghbo.png/200px-Chr_icon_1067_106701_01.png",
         "jp_name":"Natural Brilliance"
     },
+    "106702":{
+        "star":"3",
+        "chara_web":"https://wiki.biligame.com//umamusume/%E3%80%90%E8%8A%B1%E5%BD%A2%E3%83%BB%E5%BC%A5%E6%A0%84%E4%B9%8B%E7%BF%A0%E3%80%91%E9%87%8C%E8%A7%81%E5%85%89%E9%92%BB",
+        "cn_name":"【花形・弥栄之翠】里见光钻",
+        "png_name":"106702",
+        "url":"https://patchwiki.biligame.com/images/umamusume/thumb/3/36/kwlz268i2nz354jqi13crmv33l0pekg.png/200px-Chr_icon_1067_106702_01.png",
+        "jp_name":"花形・弥栄之翠"
+    },
     "106801":{
         "star":"3",
         "chara_web":"https://wiki.biligame.com//umamusume/%E5%8C%97%E9%83%A8%E7%8E%84%E9%A9%B9",
@@ -774,6 +814,14 @@
         "png_name":"106801",
         "url":"https://patchwiki.biligame.com/images/umamusume/thumb/a/ab/au2pzmlspa8gdfq9xqwqi1is73glrcg.png/200px-Chr_icon_1068_106801_01.png",
         "jp_name":"錦上・大判御輿"
+    },
+    "106802":{
+        "star":"3",
+        "chara_web":"https://wiki.biligame.com//umamusume/%E3%80%90%E7%9C%9F%E6%89%93%E3%83%BB%E6%85%B6%E9%B6%B4%E4%B9%8B%E5%BF%97%E3%80%91%E5%8C%97%E9%83%A8%E7%8E%84%E9%A9%B9",
+        "cn_name":"【真打・慶鶴之志】北部玄驹",
+        "png_name":"106802",
+        "url":"https://patchwiki.biligame.com/images/umamusume/thumb/3/3b/pxqcysu6yefs047f4n9crhxk06j3x9r.png/200px-Chr_icon_1068_106802_01.png",
+        "jp_name":"真打・慶鶴之志"
     },
     "106901":{
         "star":"3",
@@ -836,7 +884,7 @@
         "chara_web":"https://wiki.biligame.com//umamusume/%E5%A5%87%E9%94%90%E9%AA%8F",
         "cn_name":"奇锐骏",
         "png_name":"110001",
-        "url":"https://patchwiki.biligame.com/images/umamusume/thumb/1/12/biua4sfeyp7i8qjqg1gr4lndihl22ni.png/200px-Chr_icon_1100_110001_01.png",
+        "url":"https://patchwiki.biligame.com/images/umamusume/thumb/1/12/6kkenjdmgix43noamdz1vzcmkdcyf85.png/200px-Chr_icon_1100_110001_01.png",
         "jp_name":"Butterfly Sting"
     }
 }
