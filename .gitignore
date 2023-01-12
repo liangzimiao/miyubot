@@ -167,3 +167,6 @@ plugins/uma/uma_res_data/card_pool_img.png
 plugins/uma/uma_res_data/chara_pool_img.png
 
 plugins/recreations/plugins/ai_setu/config.py
+poetry.lock
+Googlelens_page.html
+GoogleSearch_page.html

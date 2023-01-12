@@ -1,23 +1,21 @@
 {
-    "time":"2023/01/10 11:59\n~\n2022/12/29 12:00",
-    "chara_pool_title":"「新岁迎曙光，朝霞之羁绊」活动卡池",
-    "chara_pool_img":"https://patchwiki.biligame.com/images/umamusume/thumb/b/bb/p38ypqa5hjsu2hd6m2p4mgg4dt1rmbx.png/800px-Gacha_banner_30138.png",
+    "time":"2023/1/20 11:59\n~\n2023/1/10 12:00",
+    "chara_pool_title":"北港火山UP卡池",
+    "chara_pool_img":"https://patchwiki.biligame.com/images/umamusume/thumb/1/13/o0yxejy6dltcydmeqf35h8jnsiyec19.png/800px-Gacha_banner_30140.png",
     "chara_name":[
-        "【真打・慶鶴之志】北部玄驹",
-        "【花形・弥栄之翠】里见光钻"
+        "北港火山"
     ],
     "chara_id":[
-        "106802",
-        "106702"
+        "109901"
     ],
-    "card_pool_title":"「新岁迎曙光，朝霞之羁绊」活动支援卡池",
-    "card_pool_img":"https://patchwiki.biligame.com/images/umamusume/thumb/0/0b/sqko8fxdurmfb0uab9nzky016u8bv54.png/800px-Gacha_banner_30139.png",
+    "card_pool_title":"SSR爱丽速子、东海帝王UP卡池",
+    "card_pool_img":"https://patchwiki.biligame.com/images/umamusume/thumb/4/48/tlqontn1gokdz8kfwafyosahtbldqpb.png/800px-Gacha_banner_30141.png",
     "card_name":[
-        "【ハネ退け魔を退け願い込め】スペシャルウィーク",
-        "【気まぐれ絶佳】スイープトウショウ"
+        "【Q≠0】アグネスタキオン",
+        "【テイオー・オー・オー！！！】トウカイテイオー"
     ],
     "card_img_altt":[
-        "Support_thumb_30127.png",
-        "Support_thumb_30128.png"
+        "Support_thumb_30101.png",
+        "Support_thumb_30111.png"
     ]
 }
