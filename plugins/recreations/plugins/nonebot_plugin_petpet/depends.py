@@ -2,6 +2,8 @@ import re
 import shlex
 from io import BytesIO
 from typing import List, Optional
+import requests
+import json
 
 from nonebot.rule import Rule
 from nonebot import get_driver
@@ -32,6 +34,14 @@ REGEX_ARG = "REGEX_ARG"
 command_start = petpet_config.petpet_command_start or "|".join(
     get_driver().config.command_start
 )
+
+def get_guild_member_profile(guild_id,user_id):
+    url = f'http://127.0.0.1:5700/get_guild_member_profile?guild_id={guild_id}&user_id={user_id}'
+    req = requests.get(url)
+    d = json.loads(req.text)
+    print(d)
+    info=d["data"]
+    return info
 
 
 def regex(pattern: str) -> Rule:
@@ -148,6 +158,13 @@ async def get_user_info(bot: Bot, user: UserInfo):
         )
         user.name = info.get("card", "") or info.get("nickname", "")
         user.gender = info.get("sex", "")
+    elif user.channel_id:
+        info = get_guild_member_profile(
+            guild_id=int(user.guild_id), user_id=int(user.qq)
+        )
+        user.name = info["nickname"] 
+        user.gender = "female"
+        user.img_url = info["avatar_url"] 
     else:
         info = await bot.get_stranger_info(user_id=int(user.qq))
         user.name = info.get("nickname", "")
@@ -156,7 +173,9 @@ async def get_user_info(bot: Bot, user: UserInfo):
 
 async def download_image(user: UserInfo):
     img = None
-    if user.qq:
+    if user.guild_id:
+        img = await download_url(user.img_url)
+    elif user.qq:
         img = await download_avatar(user.qq)
     elif user.img_url:
         img = await download_url(user.img_url)
@@ -166,8 +185,13 @@ async def download_image(user: UserInfo):
 
 
 def Users(min_num: int = 1, max_num: int = 1):
-    async def dependency(bot: Bot, state: T_State):
+    async def dependency(bot: Bot, state: T_State, ev: MessageEvent):
         users: List[UserInfo] = state[USERS_KEY]
+        message_type = str(ev.message_type)
+        if message_type == 'guild':
+            for user in users:
+                user.guild_id=ev.guild_id
+                user.channel_id=ev.channel_id
         if len(users) > max_num or len(users) < min_num:
             return
 
@@ -188,8 +212,17 @@ def User():
 
 
 def UserImgs(min_num: int = 1, max_num: int = 1):
-    async def dependency(state: T_State):
+    async def dependency(state: T_State,ev: MessageEvent):
         users: List[UserInfo] = state[USERS_KEY]
+        message_type = str(ev.message_type)
+        if message_type == 'guild':
+            for user in users:
+                print(user)
+                if user.qq:
+                    user.guild_id=ev.guild_id
+                    user.channel_id=ev.channel_id
+                    info=get_guild_member_profile(user.guild_id,user.qq)
+                    user.img_url=info["avatar_url"]
         if len(users) > max_num or len(users) < min_num:
             return
 
@@ -209,8 +242,12 @@ def UserImg():
 
 
 def Sender():
-    async def dependency(bot: Bot, state: T_State):
+    async def dependency(bot: Bot, state: T_State, ev: MessageEvent):
         sender: UserInfo = state[SENDER_KEY]
+        message_type = str(ev.message_type)
+        if message_type == 'guild':
+            sender.guild_id=ev.guild_id
+            sender.channel_id=ev.channel_id
         await get_user_info(bot, sender)
         await download_image(sender)
         return sender
@@ -219,8 +256,14 @@ def Sender():
 
 
 def SenderImg():
-    async def dependency(state: T_State):
+    async def dependency(state: T_State, ev: MessageEvent):
         sender: UserInfo = state[SENDER_KEY]
+        message_type = str(ev.message_type)
+        if message_type == 'guild':
+            sender.guild_id=ev.guild_id
+            sender.channel_id=ev.channel_id
+            info=get_guild_member_profile(sender.guild_id,sender.qq)
+            sender.img_url=info["avatar_url"]
         await download_image(sender)
         return sender.img
 

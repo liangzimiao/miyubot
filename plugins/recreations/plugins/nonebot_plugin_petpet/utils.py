@@ -20,6 +20,8 @@ class UserInfo:
     gender: Literal["male", "female", "unknown"] = "unknown"
     img_url: str = ""
     img: BuildImage = BuildImage.new("RGBA", (640, 640))
+    guild_id: str = "" 
+    channel_id: str = "" 
 
 
 @dataclass
