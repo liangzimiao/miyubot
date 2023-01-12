@@ -2,10 +2,12 @@
 
 import re
 import traceback
+import requests
+from typing import  Union
 
 from nonebot import get_driver
 from nonebot import logger
-from nonebot.adapters.onebot.v11 import Bot, Message
+from nonebot.adapters.onebot.v11 import Bot, Message,MessageSegment
 from nonebot.plugin import on_regex
 from nonebot.typing import T_State
 from nonebot_plugin_apscheduler import scheduler
@@ -118,9 +120,11 @@ async def send_calendar(gc_id):
     bot:Bot = get_driver().bots[str(BotInfo.bot_id)]
     for server in guild_data[str(gc_id)]['server_list']:
         im = await generate_day_schedule(server)
+        #save_path=os.path.join(os.path.dirname(__file__),f"data/calendar/{server}.png")
+        #im.save(save_path)
         base64_str = im2base64str(im)
         if 'cardimage' not in guild_data[gc_id] or not guild_data[gc_id]['cardimage']:
-            msg = f'[CQ:image,file={base64_str}]'
+            msg=MessageSegment.image(base64_str)
         else:
             msg = f'[CQ:cardimage,file={base64_str}]'
         for _ in range(5):  # 失败重试5次
@@ -130,6 +134,9 @@ async def send_calendar(gc_id):
                     logger.info(f'群{gc_id}推送{server}日历成功')
                 else:
                     await send_guild_message(splits[0], splits[1], msg)
+                    #save_path=os.path.abspath(save_path)f'file:///{os.path.abspath(save_path)}'
+                    #message = {"type": "image", "data": {"file": f"file:///{save_path}"}}
+                    #await send_guild_message2(splits[0], splits[1],message)
                     logger.info(f'频道{gc_id}推送{server}日历成功')
                 break
             except:
@@ -158,3 +165,16 @@ def startup():
 
 
 startup()
+
+async def send_guild_message2(guild_id,channel_id,message):
+    
+    data={
+        "guild_id":guild_id,
+        "channel_id":channel_id,
+        "message":message
+    }
+    url = f'http://127.0.0.1:5700/send_guild_channel_msg'
+    req = requests.post(url,json=data)
+    d = json.loads(req.text)
+    print(d)
+    return 

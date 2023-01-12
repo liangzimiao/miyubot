@@ -17,7 +17,7 @@ from PIL import Image
 from nonebot import get_driver
 from nonebot import logger
 from nonebot import on_command
-from nonebot.adapters.onebot.v11 import Bot, Message
+from nonebot.adapters.onebot.v11 import Bot, Message,MessageSegment
 from nonebot_plugin_apscheduler import scheduler
 from nonebot.adapters.onebot.v11.event import MessageEvent
 from utils import send_guild_message, get_event_gid
@@ -273,7 +273,7 @@ def format_msg(news):
     msg += f"\n----------\n{remove_lf(news['content'])}"
     if news['image']:
         base64_str = f"base64://{base64.b64encode(add_salt(news['image'])).decode()}"
-        msg += f'[CQ:image,file={base64_str}]'
+        msg += MessageSegment.image(base64_str)#f'[CQ:image,file={base64_str}]'
     return msg
 
 
