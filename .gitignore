@@ -170,3 +170,4 @@ plugins/recreations/plugins/ai_setu/config.py
 poetry.lock
 Googlelens_page.html
 GoogleSearch_page.html
+plugins/recreations/plugins/nonebot_plugin_moyu/subscribe.json
