@@ -70,7 +70,7 @@ async def handle_serivce(bot: Bot,state: T_State = State()):
     await matcher.send(Message(notice + meg), at_sender=True)
 
 
-matcher2 =Rank().on_regex(r'^([陆国日台Bb][服]|[陆国日台Bb])[Rr]ank(表)?',"rank表", priority=5)
+matcher2 =Rank().on_regex(r'^([陆国日台Bb][服]|[陆国日台Bb])[Rr]ank(表)?$',"rank表", priority=5)
 
 
 @matcher2.handle()

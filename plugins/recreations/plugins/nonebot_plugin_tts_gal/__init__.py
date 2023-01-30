@@ -59,6 +59,22 @@ def _():
     asyncio.ensure_future(checkEnv(Config.parse_obj(get_driver().config)))
 
 
+async def voice_async(text,index,net_g_ms,filename,hps_ms):
+    try:
+        with no_grad():
+            x_tst = text.unsqueeze(0)
+            x_tst_lengths = LongTensor([text.size(0)])
+            sid = LongTensor([index]) if not index == None else None
+            audio = net_g_ms.infer(x_tst, x_tst_lengths, sid=sid, noise_scale=.667,noise_scale_w=0.8, length_scale=1)[0][0, 0].data.cpu().float().numpy()
+        write(voice_path / filename, hps_ms.data.sampling_rate, audio)
+        new_voice = Path(change_by_decibel(voice_path / filename, voice_path, plugin_config.decibel))
+        return new_voice
+    except IndexError as e:
+        logger.error(str(e))
+        return None
+
+
+
 voice = on_message(
     regex(r"(?P<name>\S+?)(?:说|发送)(?P<text>.*?)$"), block=True, priority=5)
 
@@ -70,8 +86,7 @@ async def voicHandler(
     text: str = RegexArg("text")
 ):
     # 预处理
-    if len(text)>100:
-        await voice.finish(MessageSegment.at(event.get_user_id()) + "要说的话太长了哦~")
+
     id_ = chara.name2id(name)
     confi = 100
     if id_ == chara.UNKNOWN:
@@ -86,6 +101,8 @@ async def voicHandler(
     if config_file == "":
         return
         #await voice.finish(MessageSegment.at(event.get_user_id()) + "暂时还未有该角色")
+    if len(text)>100:
+        await voice.finish(MessageSegment.at(event.get_user_id()) + "要说的话太长了哦~")
 
     first_name = "".join(random.sample([x for x in string.ascii_letters + string.digits], 8))
     filename = hashlib.md5(first_name.encode()).hexdigest() + ".mp3"
@@ -117,14 +134,10 @@ async def voicHandler(
 
     try:
         logger.info("正在生成中...")
-        with no_grad():
-            x_tst = text.unsqueeze(0)
-            x_tst_lengths = LongTensor([text.size(0)])
-            sid = LongTensor([index]) if not index == None else None
-            audio = net_g_ms.infer(x_tst, x_tst_lengths, sid=sid, noise_scale=.667,
-                                   noise_scale_w=0.8, length_scale=1)[0][0, 0].data.cpu().float().numpy()
-        write(voice_path / filename, hps_ms.data.sampling_rate, audio)
-        new_voice = Path(change_by_decibel(voice_path / filename, voice_path, plugin_config.decibel))
+        loop = asyncio.get_event_loop()
+        task_voice = loop.create_task(voice_async(text,index,net_g_ms,filename,hps_ms))
+        loop.run_until_complete(task_voice)
+        new_voice = task_voice.result()
     except:
         traceback.print_exc()
         await voice.finish('生成失败')

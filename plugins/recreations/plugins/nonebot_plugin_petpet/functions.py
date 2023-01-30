@@ -1388,10 +1388,12 @@ def divorce(img: BuildImage = UserImg(), arg=NoArg()):
         img_w = 1500
     elif img_w < 800:
         img_h = int(img_h * img_w / 800)
-    frame2 = img.resize_canvas((img_w, img_h)).resize_height(1080)
-    frame = load_image("divorce/0.png")
-    #img = img.convert("RGBA").resize(frame.size, keep_ratio=True)
-    frame.paste(frame2, below=True)
+    frame = img.resize_canvas((img_w, img_h)).resize_height(1080)
+    left = load_image("divorce/0.png")
+    right = load_image("divorce/1.png")
+    frame.paste(left, alpha=True).paste(
+        right, (frame.width - right.width, 0), alpha=True
+    )
     return frame.save_jpg()
 
 

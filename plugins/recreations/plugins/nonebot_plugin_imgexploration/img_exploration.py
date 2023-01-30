@@ -24,7 +24,7 @@ class Imgexploration:
         self.__pic_url = pic_url
         self.__py_path = os.path.dirname(os.path.abspath(__file__))  # 当前py文件所在目录,用于加载字体
         self.setFront(big_size=25, nomal_size=20, small_size=15)
-        self.setProxy(f"http://127.0.0.1:{proxy_port}")
+        self.setProxy(proxy_port)
         general_header = {
             "sec-ch-ua": '"Chromium";v="104", " Not A;Brand";v="99", "Google Chrome";v="104"',
             "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36",
@@ -95,15 +95,20 @@ class Imgexploration:
         self.__font_n = Font.find("HarmonyOS_Sans_SC_Bold").load_font(nomal_size)#ImageFont.truetype("HarmonyOS_Sans_SC_Bold", nomal_size)
         self.__font_s = Font.find("HarmonyOS_Sans_SC_Light").load_font(small_size)#ImageFont.truetype("HarmonyOS_Sans_SC_Light", small_size)
 
-    def setProxy(self, proxy):
+    def setProxy(self, proxy_port):
         """
         Parameters
         ----------
             * proxy : 代理地址链接 例如 "http://127.0.0.1:7890"
 
         """
-        self.__proxy = proxy
-
+        if proxy_port:
+            proxy=f"http://127.0.0.1:{proxy_port}"
+            self.__proxy = proxy
+            self.__proxy2 = None
+        else:
+            self.__proxy2 = None
+            self.__proxy = None
     @staticmethod
     def ImageBatchDownload(urls: list, client: httpx.AsyncClient) -> list:
 
@@ -397,7 +402,7 @@ class Imgexploration:
                 "url": self.__imgopsUrl,
             }
             result_li = []
-            async with httpx.AsyncClient(proxies=self.__proxy) as client:
+            async with httpx.AsyncClient(proxies=self.__proxy2) as client:
                 yandexPage = await client.get(url=yandexurl, params=data, headers=self.__generalHeader, timeout=20)
                 yandexHtml = etree.HTML(yandexPage.text)
                 InfoJSON = yandexHtml.xpath('//*[@class="cbir-section cbir-section_name_sites"]/div/@data-state')[0]

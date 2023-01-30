@@ -19,7 +19,7 @@ def check_character(name, valid_names, tts_gal):
     config_file = ""
     model_file = ""
     for names, model in tts_gal.items():
-        if names in valid_names and ((isinstance(names,str) and names == name)):# or name in names):
+        if names in valid_names and ((isinstance(names,str) and names == name) or name in names):
             config_file = model[0] + ".json"
             model_file = model[0] + ".pth"
             index = None if len(model) == 1 else int(model[1])

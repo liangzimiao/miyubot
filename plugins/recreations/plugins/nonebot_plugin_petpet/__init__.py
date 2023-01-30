@@ -204,7 +204,7 @@ def create_matchers():
             flag: Literal[True] = check_flag(meme),
             res: Union[str, BytesIO] = Depends(meme.func),
         ):  
-            await check_cd(matcher ,event,__name__)
+            await check_cd(matcher ,event,__name__,cdTime=5)
             if not flag:
                 return
             matcher.stop_propagation()

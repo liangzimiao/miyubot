@@ -2,6 +2,7 @@ import json
 import httpx
 import hashlib
 import asyncio
+import os
 from pathlib import Path
 from nonebot.log import logger
 from nonebot import get_driver
@@ -52,13 +53,12 @@ async def check_font(family: str, fontname: str):
     try:
         Font.find(family)
     except ValueError:
-        await add_font(fontname, resource_url(f"fonts/{fontname}"))
+        await add_font(fontname, f"data/fonts/{fontname}")
 
 
 async def check_resources():
-    resource_list = json.loads(
-        (await download_resource("resource_list.json")).decode("utf-8")
-    )
+    with open( (os.path.join(data_path ,"resource_list.json")), encoding='utf8') as f:
+        resource_list = json.load(f)
     for resource in resource_list:
         file_name = str(resource["path"])
         file_path = data_path / file_name

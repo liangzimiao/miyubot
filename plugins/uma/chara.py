@@ -47,6 +47,8 @@ class Roster:
         """@return: id, name, score"""
         #name, score = process.extractOne(name, self._all_name_list, processor=utils.normalize_str)
         name, score = match(name, self._all_name_list)
+        if score==0:
+            return UNKNOWN, name, score
         return self._roster[name], name, score
 
     def parse_team(self, namestr):
@@ -72,9 +74,10 @@ def match(query, choices):
     a = difflib.get_close_matches(query,choices,1,cutoff=0.6)
     if a  :
         a = a[0]
+        b = fuzz.ratio(query,a)
     else :
-        a = choices[0]
-    b=fuzz.ratio(query,a)
+        a = "未知角色"
+        b = 0
     logger.info(f'匹配结果 {a} 相似度{b}')
     return a,b
 

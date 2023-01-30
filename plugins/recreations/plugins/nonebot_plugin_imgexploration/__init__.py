@@ -36,6 +36,8 @@ imgexploration = on_command(cmd="搜图", priority=1, block=False)
 
 @imgexploration.handle()
 async def cmd_receive(event: Union[GroupMessageEvent, PrivateMessageEvent, GuildMessageEvent], state: T_State, pic: Message = CommandArg()):
+    if bool(event.reply):
+        state["Message_pic"] = event.reply.message
     if pic:
         state["Message_pic"] = pic
 
