@@ -1,21 +1,21 @@
 {
-    "time":"2023/1/20 11:59\n~\n2023/1/10 12:00",
-    "chara_pool_title":"北港火山UP卡池",
-    "chara_pool_img":"https://patchwiki.biligame.com/images/umamusume/thumb/1/13/o0yxejy6dltcydmeqf35h8jnsiyec19.png/800px-Gacha_banner_30140.png",
+    "time":"2023/02/24 10:59\n~\n2023/02/13 11:00",
+    "chara_pool_title":"新光风 UP卡池",
+    "chara_pool_img":"https://patchwiki.biligame.com/images/umamusume/thumb/4/43/9kg3shrlxf9kki0t2ontjefu7zq43zq.png/800px-Gacha_banner_30148.png",
     "chara_name":[
-        "北港火山"
+        "新光风"
     ],
     "chara_id":[
-        "109901"
+        "104301"
     ],
-    "card_pool_title":"SSR爱丽速子、东海帝王UP卡池",
-    "card_pool_img":"https://patchwiki.biligame.com/images/umamusume/thumb/4/48/tlqontn1gokdz8kfwafyosahtbldqpb.png/800px-Gacha_banner_30141.png",
+    "card_pool_title":"SSR丸善斯基、西野花 UP卡池",
+    "card_pool_img":"https://patchwiki.biligame.com/images/umamusume/thumb/7/7e/9jmnudyjiwyoki1oqk8wk8yhcdqvplq.png/800px-Gacha_banner_30149.png",
     "card_name":[
-        "【Q≠0】アグネスタキオン",
-        "【テイオー・オー・オー！！！】トウカイテイオー"
+        "【小さなカップに想いをこめて】ニシノフラワー",
+        "【おセンチ注意報♪】マルゼンスキー"
     ],
     "card_img_altt":[
-        "Support_thumb_30101.png",
-        "Support_thumb_30111.png"
+        "Support_thumb_30082.png",
+        "Support_thumb_30107.png"
     ]
 }

@@ -21,6 +21,50 @@
         "chara":"谷水琴蕾",
         "origin":"赠送"
     },
+    "30133":{
+        "rare":"SSR",
+        "type":"智力",
+        "effecct":"干劲效果提升, 初期速度提升, 初期智力提升, 初期羁绊计量格提升, 启发等级提升, 启发发生率提升, 得意率提升, 技能Pt加成, 智力友情回复量提升",
+        "png_name":"Support_thumb_30133",
+        "url":"https://patchwiki.biligame.com/images/umamusume/thumb/1/14/cpm5fx9hkg1anisb2rsr2rfwg0nbvsz.png/200px-Support_thumb_30133.png",
+        "jp_name":"【フォンデンテで笑って】ヒシアケボノ",
+        "cn_name":"【巧克力味的微笑】菱曙",
+        "chara":"菱曙",
+        "origin":"活动"
+    },
+    "30132":{
+        "rare":"SSR",
+        "type":"力量",
+        "effecct":"干劲效果提升, 力量加成, 初期力量提升, 初期羁绊计量格提升, 赛后加成, 粉丝数加成, 得意率提升, 技能Pt加成",
+        "png_name":"Support_thumb_30132",
+        "url":"https://patchwiki.biligame.com/images/umamusume/thumb/d/dc/awgoatg6cu83esy2m43jaxuz7zf0v6d.png/200px-Support_thumb_30132.png",
+        "jp_name":"【変身！ギャルソンフォーム！】ビコーペガサス",
+        "cn_name":"【变身！青年形态！】微光飞驹",
+        "chara":"微光飞驹",
+        "origin":"卡池"
+    },
+    "30131":{
+        "rare":"SSR",
+        "type":"速度",
+        "effecct":"干劲效果提升, 速度加成, 力量加成, 初期羁绊计量格提升, 赛后加成, 粉丝数加成, 启发等级提升, 启发发生率提升, 得意率提升, 技能Pt加成",
+        "png_name":"Support_thumb_30131",
+        "url":"https://patchwiki.biligame.com/images/umamusume/thumb/a/ab/llkh75t6drjbkvtk32fvzk5c9z0256e.png/200px-Support_thumb_30131.png",
+        "jp_name":"【マーベラス☆ショコラSHOW】マーベラスサンデー",
+        "cn_name":"【Marvelous☆巧克力SHOW】美丽周日",
+        "chara":"美丽周日",
+        "origin":"卡池"
+    },
+    "30130":{
+        "rare":"SSR",
+        "type":"毅力",
+        "effecct":"干劲效果提升, 速度加成, 力量加成, 初期羁绊计量格提升, 赛后加成, 粉丝数加成, 启发等级提升, 启发发生率提升, 得意率提升, 技能Pt加成",
+        "png_name":"Support_thumb_30130",
+        "url":"https://patchwiki.biligame.com/images/umamusume/thumb/1/1e/gwggozrgb1s2fg5bfdfiy11hlyrnuue.png/200px-Support_thumb_30130.png",
+        "jp_name":"【To you】ケイエスミラクル",
+        "cn_name":"【To you】ケイエスミラクル",
+        "chara":"凯斯奇迹",
+        "origin":"卡池"
+    },
     "30129":{
         "rare":"SSR",
         "type":"力量",
@@ -1966,6 +2010,17 @@
         "jp_name":"【やれやれ、お帰り】フジキセキ",
         "cn_name":"【哎呀呀，欢迎回来】富士奇迹",
         "chara":"富士奇迹",
+        "origin":"卡池"
+    },
+    "10087":{
+        "rare":"R",
+        "type":"速度",
+        "effecct":"速度加成, 训练效果提升, 初期力量提升, 初期羁绊计量格提升, 启发等级提升, 启发发生率提升, 得意率提升",
+        "png_name":"Support_thumb_10087",
+        "url":"https://patchwiki.biligame.com/images/umamusume/thumb/5/5d/19k20uy7t09zcr9ieijdmhchz5xmzt7.png/200px-Support_thumb_10087.png",
+        "jp_name":"【トレセン学園】アストンマーチャン",
+        "cn_name":"【特雷森学园】真弓快车",
+        "chara":"真弓快车",
         "origin":"卡池"
     },
     "10086":{

@@ -415,6 +415,14 @@
         "url":"https://patchwiki.biligame.com/images/umamusume/thumb/d/d1/bvniaq0nwo565lwr8ctiaexapxjk0xr.png/200px-Chr_icon_1027_102701_01.png",
         "jp_name":"ストレート・ライン"
     },
+    "102702":{
+        "star":"3",
+        "chara_web":"https://wiki.biligame.com//umamusume/%E3%80%90%E3%83%9E%E3%83%BC%E3%82%AC%E3%83%AC%E3%83%83%E3%83%88%E3%83%BB%E3%83%A9%E3%83%83%E3%83%86%E3%80%91%E7%9B%AE%E7%99%BD%E8%B5%96%E6%81%A9",
+        "cn_name":"【マーガレット・ラッテ】目白赖恩",
+        "png_name":"102702",
+        "url":"https://patchwiki.biligame.com/images/umamusume/thumb/a/a5/qs71kbidjlfv5uzqth9mpbxy7arfo49.png/200px-Chr_icon_1027_102702_01.png",
+        "jp_name":"マーガレット・ラッテ"
+    },
     "102801":{
         "star":"3",
         "chara_web":"https://wiki.biligame.com//umamusume/%E8%8F%B1%E6%9B%99",
@@ -454,6 +462,14 @@
         "png_name":"103101",
         "url":"https://patchwiki.biligame.com/images/umamusume/thumb/d/d6/grr55i21i3k7x4zepgpxd5sx038o8is.png/200px-Chr_icon_1031_103101_01.png",
         "jp_name":"オールタイム・フィーバー"
+    },
+    "103102":{
+        "star":"3",
+        "chara_web":"https://wiki.biligame.com//umamusume/%E3%80%90MELTY_GIFT%E3%80%91%E8%89%BE%E5%B0%BC%E6%96%AF%E9%A3%8E%E7%A5%9E",
+        "cn_name":"【MELTY GIFT】艾尼斯风神",
+        "png_name":"103102",
+        "url":"https://patchwiki.biligame.com/images/umamusume/thumb/1/10/9um9hp2dz22u3g485myyfbswhcfjtwn.png/200px-Chr_icon_1031_103102_01.png",
+        "jp_name":"MELTY GIFT"
     },
     "103201":{
         "star":"1",
@@ -582,6 +598,14 @@
         "png_name":"104201",
         "url":"https://patchwiki.biligame.com/images/umamusume/thumb/4/48/nhu57vnlwk3yy8y6pk2w3as5kfn7xo2.png/200px-Chr_icon_1042_104201_01.png",
         "jp_name":"Rocket☆Star"
+    },
+    "104301":{
+        "star":"3",
+        "chara_web":"https://wiki.biligame.com//umamusume/%E6%96%B0%E5%85%89%E9%A3%8E",
+        "cn_name":"新光风",
+        "png_name":"104301",
+        "url":"https://patchwiki.biligame.com/images/umamusume/thumb/c/cd/h7z4tkdt3zjcmup9ltv569y7t29mr7b.png/200px-Chr_icon_1043_104301_01.png",
+        "jp_name":"Wicked Punk"
     },
     "104401":{
         "star":"3",
@@ -790,6 +814,14 @@
         "png_name":"106401",
         "url":"https://patchwiki.biligame.com/images/umamusume/thumb/2/23/lel1cnsmadb3et3y95b07j4xyiyosls.png/200px-Chr_icon_1064_106401_01.png",
         "jp_name":"Line Breakthrough"
+    },
+    "106501":{
+        "star":"3",
+        "chara_web":"https://wiki.biligame.com//umamusume/%E5%A4%A7%E6%8B%93%E5%A4%AA%E9%98%B3%E7%A5%9E",
+        "cn_name":"大拓太阳神",
+        "png_name":"106501",
+        "url":"https://patchwiki.biligame.com/images/umamusume/thumb/5/5b/tlicih76lx147birzj6nhsfbb2musg9.png/200px-Chr_icon_1065_106501_01.png",
+        "jp_name":"Fun☆Fun☆ぱりない"
     },
     "106701":{
         "star":"3",
