@@ -61,13 +61,29 @@ def _():
 
 async def voice_async(text,index,net_g_ms,filename,hps_ms):
     try:
+        logger.info("正在生成中22")
         with no_grad():
+            logger.info("正在生成中33")
             x_tst = text.unsqueeze(0)
+            logger.info("正在生成中44")
             x_tst_lengths = LongTensor([text.size(0)])
+            logger.info("正在生成中55")
             sid = LongTensor([index]) if not index == None else None
-            audio = net_g_ms.infer(x_tst, x_tst_lengths, sid=sid, noise_scale=.667,noise_scale_w=0.8, length_scale=1)[0][0, 0].data.cpu().float().numpy()
+            logger.info("正在生成中66")
+            #loop2 = asyncio.get_event_loop()
+            #audio = loop2.create_task(net_g_ms.infer(x_tst, x_tst_lengths, sid=sid, noise_scale=.667,noise_scale_w=0.8, length_scale=1))
+            #loop2.run_until_complete(audio)
+            #logger.info("正在生成中666")
+            audio = await net_g_ms.infer(x_tst, x_tst_lengths, sid=sid, noise_scale=.667,noise_scale_w=0.8, length_scale=1)
+            logger.info("正在生成中666")
+            audio = audio[0][0, 0].data.cpu().float().numpy()
+
+            #audio = net_g_ms.infer(x_tst, x_tst_lengths, sid=sid, noise_scale=.667,noise_scale_w=0.8, length_scale=1)[0][0, 0].data.cpu().float().numpy()
+            logger.info("正在生成中77")
         write(voice_path / filename, hps_ms.data.sampling_rate, audio)
+        logger.info("正在生成中88")
         new_voice = Path(change_by_decibel(voice_path / filename, voice_path, plugin_config.decibel))
+        logger.info("正在生成中99")
         return new_voice
     except IndexError as e:
         logger.error(str(e))
@@ -101,7 +117,7 @@ async def voicHandler(
     if config_file == "":
         return
         #await voice.finish(MessageSegment.at(event.get_user_id()) + "暂时还未有该角色")
-    if len(text)>100:
+    if len(text)>50:
         await voice.finish(MessageSegment.at(event.get_user_id()) + "要说的话太长了哦~")
 
     first_name = "".join(random.sample([x for x in string.ascii_letters + string.digits], 8))
@@ -134,10 +150,13 @@ async def voicHandler(
 
     try:
         logger.info("正在生成中...")
-        loop = asyncio.get_event_loop()
-        task_voice = loop.create_task(voice_async(text,index,net_g_ms,filename,hps_ms))
-        loop.run_until_complete(task_voice)
-        new_voice = task_voice.result()
+        '''
+        task = asyncio.create_task(voice_async(text,index,net_g_ms,filename,hps_ms))
+        logger.info("正在生成中11")
+        task_voice = await task 
+        new_voice = task_voice'''
+
+        new_voice = await voice_async(text,index,net_g_ms,filename,hps_ms)
     except:
         traceback.print_exc()
         await voice.finish('生成失败')

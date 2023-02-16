@@ -35,7 +35,7 @@ def get_service(service_name: str):
     return service
 
 
-matcher = Rank().on_command("/rank表","rank表",aliases={"/rank", "/品级", "rank表","rank","Rank表","/Rank"}, priority=5)
+matcher = Rank().on_command("rank表","rank表",aliases={"品级", "rank","Rank表","Rank"}, priority=5)
 
 
 @matcher.handle()
@@ -54,7 +54,8 @@ async def handle_serivce(bot: Bot,state: T_State = State()):
     if len(service_name)>2:
         return  
     if service_name not in ["国", "台", "日", "国服", "台服", "日服", "cn", "jp", "tw", "CN", "TW", "JP", "陆","陆服", "b", "B"]:
-        await matcher.finish("你想查询的区服暂不支持，请重新输入！")
+        return
+        #await matcher.finish("你想查询的区服暂不支持，请重新输入！")
 
     service=get_service(service_name)
     config = get_json(service)
@@ -83,7 +84,8 @@ async def _(bot: Bot, event: MessageEvent):
     if len(service_name)>2:
         return
     if service_name not in ["国", "台", "日", "国服", "台服", "日服", "cn", "jp", "tw", "CN", "TW", "JP", "陆","陆服", "b", "B" "b服", "B服"]:
-        await matcher2.finish("你想查询的区服暂不支持，请重新输入！")
+        return
+        #buhaowanawait matcher2.finish("你想查询的区服暂不支持，请重新输入！")
     service=get_service(service_name)
     config = get_json(service)
     print(service)

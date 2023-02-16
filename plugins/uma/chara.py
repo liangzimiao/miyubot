@@ -147,6 +147,7 @@ async def update_uma_data():
         UMA_DATA.update_chara_res()
         UMA_DATA.update_card_res()
         UMA_DATA.update_pool2()
+        UMA_DATA.update_uma_alias()
         roster.update()
         importlib.reload(gacha)
         path = os.path.join(os.path.join(os.path.dirname(__file__), '__pycache__'),'temp.py')

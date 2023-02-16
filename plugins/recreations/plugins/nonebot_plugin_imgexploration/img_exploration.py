@@ -56,7 +56,7 @@ class Imgexploration:
                 img.save(res, format="JPEG")
                 self.__pic_bytes = res.getvalue()
         except Exception as e:
-            logger.error(e)
+            logger.error(f'获取图片 failed:{e}')
 
     async def __uploadToImgops(self):
         logger.info("图片上传到Imgops")
@@ -76,7 +76,7 @@ class Imgexploration:
                 self.__imgopsUrl = "https:/" + (await client.post("https://imgops.com/store", files=files, data=data, headers=headers, timeout=10)).text
         except Exception as e:
             self.__imgopsUrl = self.__pic_url
-            logger.error(e)
+            logger.error(f'图片上传到Imgops failed:{e}')
 
     def setFront(self, big_size: int, nomal_size: int, small_size: int):
         """
@@ -209,13 +209,13 @@ class Imgexploration:
             img.save(save, format="JPEG", quality=95)
             return save.getvalue()
         except Exception as e:
-            logger.error(e)
+            logger.error(f'Drawing... failed:{e}')
 
     async def __saucenao_build_result(self, result_num=10, minsim=60, max_num=5) -> dict:
         resList = []
         logger.info("saucenao searching...")
         try:
-            async with Network(proxies=self.__proxy, timeout=20) as client:
+            async with Network(proxies=self.__proxy, timeout=40) as client:
                 saucenao = SauceNAO(client=client, api_key=self.__saucenao_apikey, numres=result_num)
                 saucenao_result = await saucenao.search(url=self.__imgopsUrl)
 
@@ -242,7 +242,7 @@ class Imgexploration:
                     resList.append(sin_di)
             return resList
         except IndexError as e:
-            logger.error(str(e))
+            logger.error(f"saucenao failed:{e}")
         finally:
             logger.success(f"saucenao result:{len(resList)}")
             return resList
@@ -310,7 +310,7 @@ class Imgexploration:
 
             return resList
         except Exception as e:
-            logger.error(e)
+            logger.error(f"google failed:{e}")
             with open("Googlelens_page.html", "w+", encoding="utf-8") as file:
                 file.write(google_lens_text)
             with open("GoogleSearch_page.html", "w+", encoding="utf-8") as file:
@@ -337,7 +337,7 @@ class Imgexploration:
         """
         logger.info("ascii2d searching...")
         try:
-            async with Network(proxies=self.__proxy, timeout=20) as client:
+            async with Network(proxies=self.__proxy, timeout=40) as client:
 
                 ascii2d_sh = Ascii2D(client=client, bovw=False)
 
@@ -384,7 +384,7 @@ class Imgexploration:
             logger.success(f"ascii2d result:{len(result_li)}")
             return result_li
         except Exception as e:
-            logger.error(e)
+            logger.error(f"ascii2d failed:{e}")
             return []
 
     async def __yandex_build_result(self, result_num=5) -> dict:
@@ -402,8 +402,8 @@ class Imgexploration:
                 "url": self.__imgopsUrl,
             }
             result_li = []
-            async with httpx.AsyncClient(proxies=self.__proxy2) as client:
-                yandexPage = await client.get(url=yandexurl, params=data, headers=self.__generalHeader, timeout=20)
+            async with httpx.AsyncClient(proxies=self.__proxy) as client:
+                yandexPage = await client.get(url=yandexurl, params=data, headers=self.__generalHeader, timeout=40)
                 yandexHtml = etree.HTML(yandexPage.text)
                 InfoJSON = yandexHtml.xpath('//*[@class="cbir-section cbir-section_name_sites"]/div/@data-state')[0]
                 result_dict = json.loads(InfoJSON)
@@ -427,7 +427,7 @@ class Imgexploration:
             logger.success(f"yandex result:{len(result_li)}")
             return result_li
         except Exception as e:
-            logger.error(e)
+            logger.error(f"yandex failed:{e}")
         finally:
             return result_li
 
