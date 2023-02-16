@@ -315,7 +315,7 @@ class Uma_Data:
         #    f.write(str(data_list))
         tr=pq(data_list.eq(1))
         td=tr("td")
-        chara=td.eq(3)(".popup>span>div>a")
+        chara=td.eq(3)("span>span>div>a")
         time = td.eq(0).text()
         chara_pool_title = td.eq(2)(".center div>a").attr("title")
         chara_pool_img = re.findall('1.5x, (.*?) 2x',str(td.eq(2)(".center div>a")("img").attr("srcset")),re.S)[0]
@@ -331,7 +331,7 @@ class Uma_Data:
             chara_id_list.append(img_alt)
         tr=pq(data_list.eq(2))
         td=tr("td")
-        card=td.eq(2)(".popup>span>div>a")
+        card=td.eq(2)("span>span>div>a")
         card_pool_title = td.eq(1)(".center div>a").attr("title")
         card_pool_img = re.findall('1.5x, (.*?) 2x',str(td.eq(1)(".center div>a")("img").attr("srcset")),re.S)[0]
         card_name_list=[]
