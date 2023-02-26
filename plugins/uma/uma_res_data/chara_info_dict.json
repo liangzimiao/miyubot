@@ -735,6 +735,14 @@
         "url":"https://patchwiki.biligame.com/images/umamusume/thumb/e/ef/fj3tnjuvsof4dldainvp4vqnm6ualyf.png/200px-Chr_icon_1056_105602_01.png",
         "jp_name":"吉兆・初あらし"
     },
+    "105701":{
+        "star":"3",
+        "chara_web":"https://wiki.biligame.com//umamusume/%E5%8D%83%E6%98%8E%E4%BB%A3%E8%A1%A8",
+        "cn_name":"千明代表",
+        "png_name":"105701",
+        "url":"https://patchwiki.biligame.com/images/umamusume/thumb/c/c2/6ckqexbqwx0g4q2wl8r0kje6s3vqr5y.png/200px-Chr_icon_1057_105701_01.png",
+        "jp_name":"Clear Bliss"
+    },
     "105801":{
         "star":"3",
         "chara_web":"https://wiki.biligame.com//umamusume/%E5%90%8D%E5%B0%86%E6%80%92%E6%B6%9B",
@@ -822,6 +830,14 @@
         "png_name":"106501",
         "url":"https://patchwiki.biligame.com/images/umamusume/thumb/5/5b/tlicih76lx147birzj6nhsfbb2musg9.png/200px-Chr_icon_1065_106501_01.png",
         "jp_name":"Fun☆Fun☆ぱりない"
+    },
+    "106601":{
+        "star":"1",
+        "chara_web":"https://wiki.biligame.com//umamusume/%E5%8F%8C%E6%B6%A1%E8%BD%AE",
+        "cn_name":"双涡轮",
+        "png_name":"106601",
+        "url":"https://patchwiki.biligame.com/images/umamusume/thumb/8/82/ikyhej9vn8dnv4ma9lpmgh1myp8av56.png/200px-Chr_icon_1066_106601_01.png",
+        "jp_name":"爆走！ターボエンジン"
     },
     "106701":{
         "star":"3",

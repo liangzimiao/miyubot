@@ -1,21 +1,35 @@
 {
-    "time":"2023/02/24 10:59\n~\n2023/02/13 11:00",
-    "chara_pool_title":"新光风 UP卡池",
-    "chara_pool_img":"https://patchwiki.biligame.com/images/umamusume/thumb/4/43/9kg3shrlxf9kki0t2ontjefu7zq43zq.png/800px-Gacha_banner_30148.png",
+    "time":"2023/03/20 11:59\n~\n2023/02/24 12:00",
+    "chara_pool_title":"2nd Anniversary卡池",
+    "chara_pool_img":"https://patchwiki.biligame.com/images/umamusume/thumb/1/15/0wmnzd9vvjtroqzj51n2pzi8dwh0u42.png/800px-Gacha_banner_30150.png",
     "chara_name":[
-        "新光风"
+        "千明代表",
+        "双涡轮"
     ],
     "chara_id":[
-        "104301"
+        "105701",
+        "106601"
     ],
-    "card_pool_title":"SSR丸善斯基、西野花 UP卡池",
-    "card_pool_img":"https://patchwiki.biligame.com/images/umamusume/thumb/7/7e/9jmnudyjiwyoki1oqk8wk8yhcdqvplq.png/800px-Gacha_banner_30149.png",
+    "card_pool_title":"2nd Anniversary支援卡池",
+    "card_pool_img":"https://patchwiki.biligame.com/images/umamusume/thumb/8/8e/g3s5ammnv6qyx29x2go79po8zbva1tx.png/800px-Gacha_banner_30151.png",
     "card_name":[
-        "【小さなカップに想いをこめて】ニシノフラワー",
-        "【おセンチ注意報♪】マルゼンスキー"
+        "【燦爛】メジロラモーヌ",
+        "【デッド・エンド【通せん坊】】ジャングルポケット",
+        "【ふわり、さらり】メジロドーベル",
+        "【放課後、君が笑った】シンボリルドルフ",
+        "【嗚呼素晴らしき甘味哉】アグネスタキオン",
+        "【トレセン学園】メジロラモーヌ",
+        "【トレセン学園】ジャングルポケット",
+        "【トレセン学園】カツラギエース"
     ],
     "card_img_altt":[
-        "Support_thumb_30082.png",
-        "Support_thumb_30107.png"
+        "Support_thumb_30134.png",
+        "Support_thumb_20056.png",
+        "Support_thumb_20057.png",
+        "Support_thumb_20058.png",
+        "Support_thumb_20059.png",
+        "Support_thumb_10088.png",
+        "Support_thumb_10089.png",
+        "Support_thumb_10091.png"
     ]
 }

@@ -21,6 +21,39 @@
         "chara":"谷水琴蕾",
         "origin":"赠送"
     },
+    "30136":{
+        "rare":"SSR",
+        "type":"毅力",
+        "effecct":"训练效果提升, 初期毅力提升, 初期羁绊计量格提升, 启发等级提升, 启发发生率提升, 得意率提升, 技能Pt加成",
+        "png_name":"Support_thumb_30136",
+        "url":"https://patchwiki.biligame.com/images/umamusume/thumb/9/99/8vjnnni8cruzrm0zjwpmrpt8ylfs1oq.png/200px-Support_thumb_30136.png",
+        "jp_name":"【Unyielding resolve】シンボリクリスエス",
+        "cn_name":"【Unyielding resolve】吉兆",
+        "chara":"吉兆",
+        "origin":"周年任务、周年登录奖励"
+    },
+    "30135":{
+        "rare":"SSR",
+        "type":"速度",
+        "effecct":"干劲效果提升, 初期羁绊计量格提升, 赛后加成, 粉丝数加成, 启发等级提升, 启发发生率提升, 得意率提升, 技能Pt加成",
+        "png_name":"Support_thumb_30135",
+        "url":"https://patchwiki.biligame.com/images/umamusume/thumb/e/e7/rfucczru5w6i71or4vajsr73ty9zu9v.png/200px-Support_thumb_30135.png",
+        "jp_name":"【掲げよ、燃え盛る灯を】カツラギエース",
+        "cn_name":"【挂起吧，高燃的灯火】葛城王牌",
+        "chara":"葛城王牌",
+        "origin":"活动"
+    },
+    "30134":{
+        "rare":"SSR",
+        "type":"智力",
+        "effecct":"智力加成, 初期羁绊计量格提升, 赛后加成, 粉丝数加成, 启发等级提升, 启发发生率提升, 得意率提升, 技能Pt加成, 智力友情回复量提升",
+        "png_name":"Support_thumb_30134",
+        "url":"https://patchwiki.biligame.com/images/umamusume/thumb/4/45/boeihcwgosuf1uqpky7n4rrhiai4qez.png/200px-Support_thumb_30134.png",
+        "jp_name":"【燦爛】メジロラモーヌ",
+        "cn_name":"【绚烂】目白高峰",
+        "chara":"目白高峰",
+        "origin":"卡池"
+    },
     "30133":{
         "rare":"SSR",
         "type":"智力",
@@ -1427,6 +1460,50 @@
         "jp_name":"【日本一のステージを】スペシャルウィーク",
         "cn_name":"【在日本第一的舞台】特别周",
         "chara":"特别周",
+        "origin":"卡池"
+    },
+    "20059":{
+        "rare":"SR",
+        "type":"力量",
+        "effecct":"初期速度提升, 初期力量提升, 初期羁绊计量格提升, 赛后加成, 粉丝数加成, 启发等级提升, 启发发生率提升, 得意率提升, 技能Pt加成",
+        "png_name":"Support_thumb_20059",
+        "url":"https://patchwiki.biligame.com/images/umamusume/thumb/d/d7/tazbpkwajfkiccz6j0cah4wpi3ua5jh.png/200px-Support_thumb_20059.png",
+        "jp_name":"【嗚呼素晴らしき甘味哉】アグネスタキオン",
+        "cn_name":"【呜呼多么美好的甜味哉】爱丽速子",
+        "chara":"爱丽速子",
+        "origin":"卡池"
+    },
+    "20058":{
+        "rare":"SR",
+        "type":"耐力",
+        "effecct":"训练效果提升, 初期耐力提升, 初期羁绊计量格提升, 赛后加成, 粉丝数加成, 启发等级提升, 启发发生率提升, 得意率提升, 技能Pt加成",
+        "png_name":"Support_thumb_20058",
+        "url":"https://patchwiki.biligame.com/images/umamusume/thumb/e/e4/mxveptjhdz4r4u8ld7gf3kvzswq0nxl.png/200px-Support_thumb_20058.png",
+        "jp_name":"【放課後、君が笑った】シンボリルドルフ",
+        "cn_name":"【放学后，你嫣然而笑】皇帝",
+        "chara":"皇帝",
+        "origin":"卡池"
+    },
+    "20057":{
+        "rare":"SR",
+        "type":"毅力",
+        "effecct":"干劲效果提升, 毅力加成, 训练效果提升, 初期毅力提升, 初期羁绊计量格提升, 启发等级提升, 启发发生率提升, 得意率提升",
+        "png_name":"Support_thumb_20057",
+        "url":"https://patchwiki.biligame.com/images/umamusume/thumb/f/f7/75l550ydidj1wmcqgvz67mnz67vc9r4.png/200px-Support_thumb_20057.png",
+        "jp_name":"【ふわり、さらり】メジロドーベル",
+        "cn_name":"【轻飘、柔爽】目白多伯",
+        "chara":"目白多伯",
+        "origin":"卡池"
+    },
+    "20056":{
+        "rare":"SR",
+        "type":"速度",
+        "effecct":"干劲效果提升, 力量加成, 初期羁绊计量格提升, 赛后加成, 粉丝数加成, 启发等级提升, 启发发生率提升, 得意率提升",
+        "png_name":"Support_thumb_20056",
+        "url":"https://patchwiki.biligame.com/images/umamusume/thumb/2/26/3ek6bxjmnnrlhasnouivx9o2uo3k7ji.png/200px-Support_thumb_20056.png",
+        "jp_name":"【デッド・エンド【通せん坊】】ジャングルポケット",
+        "cn_name":"【Dead・End【禁止通行】】森林宝穴",
+        "chara":"森林宝穴",
         "origin":"卡池"
     },
     "20054":{
