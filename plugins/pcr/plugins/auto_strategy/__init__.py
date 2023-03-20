@@ -31,7 +31,7 @@ def general_info(config,type_set):
             msg += MessageSegment.image(f'file:///{image_path}')
     return msg
 
-matcher = on_regex(r"^((活动(攻略|图)?)|(?i)sp|(?i)vh)$", priority=5)
+matcher = on_regex(r"^((活动(攻略|图)?)|(?i)sp|(?i)vh)$", priority=6)
 
 @matcher.handle()
 async def activity(bot: Bot, event: MessageEvent):
@@ -54,7 +54,7 @@ async def equipment(bot: Bot, event: MessageEvent):
     else:
         await matcher.send("请先发送【更新攻略缓存】")
 
-matcher = on_regex(r"^半月刊|大记事$", priority=5)
+matcher = on_regex(r"^半月刊|大记事$", priority=6)
 @matcher.handle()
 async def half_month(bot: Bot, event: MessageEvent):
     type = 'half_month'
@@ -76,7 +76,7 @@ async def gocha(bot: Bot, event: MessageEvent):
     else:
         await matcher.send("请先发送【更新攻略缓存】")
 
-matcher = on_regex(r"^地下城|ex(\d{1})?$", priority=5)
+matcher = on_regex(r"^地下城|ex(\d{1})?$", priority=6)
 @matcher.handle()
 async def dragon(bot: Bot, event: MessageEvent):
     type = 'dragon'
@@ -87,7 +87,7 @@ async def dragon(bot: Bot, event: MessageEvent):
     else:
         await matcher.send("请先发送【更新攻略缓存】")
 
-matcher = on_regex(r"^(屯|存|囤)体$", priority=5)
+matcher = on_regex(r"^(屯|存|囤)体$", priority=6)
 @matcher.handle()
 async def save_strength(bot: Bot, event: MessageEvent):
     type = 'strength'

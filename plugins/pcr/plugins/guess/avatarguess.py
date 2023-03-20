@@ -22,7 +22,7 @@ ONE_TURN_TIME = 20
 DB_PATH = os.sep.join(['plugins', 'pcr', 'data', 'pcr_avatar_guess.db'])
 BLACKLIST_ID = [1072, 1908, 4031, 9000]
 gm = GameMaster(DB_PATH)
-
+finish_event = asyncio.Event()
 
 matcher = Guess().on_command("猜头像排行","猜头像排行", aliases={"猜头像排名", "猜头像排行榜"}, priority=5)
 
@@ -75,12 +75,17 @@ async def avatar_guess(bot: Bot, event: MessageEvent, state: T_State,args: Messa
         cropped = utils.pic2b64(cropped)
         await matcher.send(
                 f"猜猜这个图片是哪位角色头像的一部分?({ONE_TURN_TIME}s后公布答案)" + MessageSegment.image(cropped, cache=False))
-        await asyncio.sleep(ONE_TURN_TIME)
-        if game.winner:
-            return
-    txt = f"正确答案是：{c.name}"
-    meg = c.icon.cqcode
-    await matcher.send(Message(txt + meg) + f"\n很遗憾，没有人答对~")
+        try:
+            await asyncio.wait_for(finish_event.wait(), timeout=ONE_TURN_TIME) # 等待15秒或者收到指令
+        except asyncio.TimeoutError:
+            if game.winner:
+                return
+            txt = f"正确答案是：{c.name}"
+            meg = c.icon.cqcode
+            await matcher.send(Message(txt + meg) + f"\n很遗憾，没有人答对~") # 发送消息
+        finally:
+            finish_event.clear() # 清除事件标志
+            print("事件响应器结束")
 
 
 sv = Guess().on_message(priority=5)
@@ -99,6 +104,7 @@ async def on_input_chara_name(bot: Bot, event: MessageEvent):
         txt = f"猜对了，真厉害！TA已经猜对{n}次了~\n正确答案是{c.name}"
         msg = c.icon.cqcode
         await sv.send(Message(txt + msg) + f"\n(此轮游戏将在几秒后自动结束，请耐心等待)", at_sender=True)
+        finish_event.set() 
 
 
 

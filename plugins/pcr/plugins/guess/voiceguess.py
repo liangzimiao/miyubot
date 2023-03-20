@@ -32,7 +32,7 @@ RES_PATH = os.path.expanduser(RES_DIR)
 DIR_PATH = os.path.join(RES_PATH, 'voice_ci')
 DB_PATH = os.sep.join(['plugins', 'pcr', 'data',  'pcr_voice_guess.db'])
 gm = GameMaster(DB_PATH)
-
+finish_event = asyncio.Event()
 
 def get_estertion_id_list():
     url = 'https://redive.estertion.win/sound/vo_ci/'
@@ -143,14 +143,18 @@ async def cygames_voice_guess(bot: Bot, event: MessageEvent, state: T_State,args
         chara_id = estertion_id2chara_id(int(estertion_id))
         game.answer = chara_id
         print(chara.fromid(game.answer).name)
-        await asyncio.sleep(ONE_TURN_TIME)
-            # 结算
-        if game.winner:
-            return
-        c = chara.fromid(game.answer)
-    txt = f"正确答案是：{c.name}"
-    meg = c.icon.cqcode
-    await matcher.send(Message(txt + meg) + f"\n很遗憾，没有人答对~")
+        try:
+            await asyncio.wait_for(finish_event.wait(), timeout=ONE_TURN_TIME) # 等待15秒或者收到指令
+        except asyncio.TimeoutError:
+            if game.winner:
+                return
+            c = chara.fromid(game.answer)
+            txt = f"正确答案是：{c.name}"
+            meg = c.icon.cqcode
+            await matcher.send(Message(txt + meg) + f"\n很遗憾，没有人答对~")
+        finally:
+            finish_event.clear() # 清除事件标志
+            print("事件响应器结束")
 
 
 matcher = Guess().on_command("猜语音","猜语音", priority=5)
@@ -198,14 +202,18 @@ async def voice_guess(bot: Bot, event: MessageEvent, state: T_State,args: Messag
 
         game.answer = chara_id
         # print(chara.fromid(game.answer).name)
-        await asyncio.sleep(ONE_TURN_TIME)
-        # 结算
-        if game.winner:
-            return
-        c = chara.fromid(game.answer)
-    txt = f"正确答案是：{c.name}"
-    meg = c.icon.cqcode
-    await matcher.send(Message(txt + meg) + f"\n很遗憾，没有人答对~")
+        try:
+            await asyncio.wait_for(finish_event.wait(), timeout=ONE_TURN_TIME) # 等待15秒或者收到指令
+        except asyncio.TimeoutError:
+            if game.winner:
+                return
+            c = chara.fromid(game.answer)
+            txt = f"正确答案是：{c.name}"
+            meg = c.icon.cqcode
+            await matcher.send(Message(txt + meg) + f"\n很遗憾，没有人答对~")
+        finally:
+            finish_event.clear() # 清除事件标志
+            print("事件响应器结束")
 
 
 sv = Guess().on_message(priority=5)
@@ -224,6 +232,7 @@ async def on_input_chara_name(bot: Bot, event: MessageEvent):
         txt = f"猜对了，真厉害！TA已经猜对{n}次了~\n正确答案是{c.name}"
         msg = c.icon.cqcode
         await sv.send(Message(txt + msg) + f"\n(此轮游戏将在几秒后自动结束，请耐心等待)", at_sender=True)
+        finish_event.set() 
 
 
 import os

@@ -77,9 +77,9 @@ async def avatar_guess(bot: Bot, event: MessageEvent, state: T_State,args: Messa
             if game.winner:
                 return
         c = chara.fromid(game.answer)
-    txt = f"正确答案是：{c.name}"
-    meg = c.icon.cqcode
-    await matcher.send(Message(txt + meg) + f"\n很遗憾，没有人答对~")
+        txt = f"正确答案是：{c.name}"
+        meg = c.icon.cqcode
+        await matcher.send(Message(txt + meg) + f"\n很遗憾，没有人答对~")
 
 
 sv = Guess().on_message(priority=5)

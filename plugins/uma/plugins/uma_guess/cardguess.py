@@ -25,7 +25,7 @@ ONE_TURN_TIME = 20
 
 DB_PATH = os.sep.join(['plugins', 'uma', 'game_data', 'uma_card_guess.db'])
 gm = GameMaster(DB_PATH)
-
+finish_event = asyncio.Event()
 
 
 matcher = UmaGuess().on_command("猜支援卡卡面排行榜", "猜支援卡卡面排行榜", aliases={"猜支援卡卡面排名", "猜支援卡排名", "猜支援卡排行榜","猜支援卡卡面群排行"}, priority=5)
@@ -89,16 +89,17 @@ async def avatar_guess(bot: Bot, event: MessageEvent,args: Message = CommandArg(
         cropped = utils.pic2b64(cropped)
         await matcher.send(
             f'猜猜这个支援卡的相关角色是哪位角色?({ONE_TURN_TIME}s后公布答案)' + MessageSegment.image(cropped, cache=False))
-        await asyncio.sleep(ONE_TURN_TIME)
-        
-        if game.winner:
-            return
-
-    meg = utils.pic2b64(img)
-
-    await matcher.send(
-        f"正确答案是：{c}" + MessageSegment.image(meg, cache=False) + f"\n很遗憾，没有人答对~\n(别名库还有待补充，目前支持wiki以及部分别名)")
-
+        try:
+            await asyncio.wait_for(finish_event.wait(), timeout=ONE_TURN_TIME) # 等待15秒或者收到指令
+        except asyncio.TimeoutError:
+            if game.winner:
+                return
+            meg = utils.pic2b64(img)
+            await matcher.send(
+            f"正确答案是：{c}" + MessageSegment.image(meg, cache=False) + f"\n很遗憾，没有人答对~\n(别名库还有待补充，目前支持wiki以及部分别名)")
+        finally:
+            finish_event.clear() # 清除事件标志
+            print("事件响应器结束")
 
 sv = UmaGuess().on_message(priority=5)
 
@@ -133,6 +134,7 @@ async def on_input_card_name(bot: Bot, event: MessageEvent):
         f"猜对了，真厉害！TA已经猜对{n}次了~\n正确答案是{answer}"
         + MessageSegment.image(meg, cache=False) 
         + f"\n(此轮游戏将在几秒后自动结束，请耐心等待)", at_sender=True)
+        finish_event.set() 
 
 
 def get_id(event: MessageEvent):
