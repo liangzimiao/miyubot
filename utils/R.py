@@ -5,8 +5,10 @@ from nonebot import logger
 from nonebot.adapters.onebot.v11 import MessageSegment
 from PIL import Image
 from utils import pic2b64
-import utils
-from configs.path_config import PCR_PATH
+from pathlib import Path
+
+# pcr图片路径
+PCR_PATH = Path("resources/pcr/")
 # 当QQ客户端与bot端不在同一台计算机时，可用http协议
 RES_PROTOCOL = 'file'
 # 资源库文件夹，需可读可写，windows下注意反斜杠转义
@@ -51,7 +53,7 @@ class ResImg(ResObj):
             return MessageSegment.image(f'file:///{os.path.abspath(self.path)}')
         else:
             try:
-                return MessageSegment.image(utils.pic2b64(self.open()))
+                return MessageSegment.image(pic2b64(self.open()))
             except Exception as e:
                 logger.exception(e)
                 return MessageSegment.text('[图片出错]')

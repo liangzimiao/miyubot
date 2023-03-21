@@ -1,10 +1,9 @@
 from nonebot.adapters.onebot.v11.event import MessageEvent
 from nonebot.plugin import on_endswith, on_startswith,on_regex
 from nonebot.typing import T_State
-from plugins.pcr import chara
+from ... import chara
 from nonebot.adapters.onebot.v11 import Bot, Message
 from .data_source import Whois
-
 
 #matcher =on_endswith({'是谁','是谁?','是谁？'},priority=5)
 matcher =Whois(). on_regex(r'^(.*)是谁([?？ ])?',"whois")

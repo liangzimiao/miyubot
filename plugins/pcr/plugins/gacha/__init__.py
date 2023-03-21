@@ -7,7 +7,7 @@ from utils import concat_pic, get_event_gid, pic2b64
 from .data_source import GachaService
 from .gacha import Gacha
 from .update import *
-from plugins.pcr import chara 
+from ... import chara 
 
 try:
     import ujson as json

@@ -1,23 +1,22 @@
 import oss2
 import requests
 from io import BytesIO
-import nonebot
+from nonebot import get_driver
+
+config = get_driver().config
 
 
-driver = nonebot.get_driver()
-config = driver.config
-
-AUTH1 = config.auth1
-AUTH2 = config.auth2
-BUCKET1 = config.bucket1
-BUCKET2 = config.bucket2
+auth1 = config.auth1
+auth2 = config.auth2
+bucket1 = config.bucket1
+bucket2 = config.bucket2
 class OssUploader:
     def __init__(self, proxies=None):
         self.bucket_url = "https://sumatofarukon.temp.chinosk6.cn/"
         self.base_folder = "image/ai"
 
-        self.auth = oss2.Auth(AUTH1, AUTH2)
-        self.bucket = oss2.Bucket(self.auth, BUCKET1, BUCKET2)
+        self.auth = oss2.Auth(auth1, auth2)
+        self.bucket = oss2.Bucket(self.auth, bucket1, bucket2)
 
         self.proxies = proxies
 

@@ -3,8 +3,8 @@ from utils import aiorequests
 import nonebot
 
 
-driver = nonebot.get_driver()
-config = driver.config
+config = nonebot.get_driver().config
+
 
 API_KEY = config.baidu_appid   #你的API Key
 SECRET_KEY = config.baidu_appsecret   #你的Secret Key

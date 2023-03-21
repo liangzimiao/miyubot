@@ -1,5 +1,5 @@
 import random
-from plugins.pcr import chara
+from ... import chara
 from utils import load_config
 
 

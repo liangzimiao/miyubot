@@ -13,10 +13,10 @@ from bs4 import BeautifulSoup
 from nonebot.adapters.onebot.v11 import Bot, MessageSegment, Message
 from nonebot.adapters.onebot.v11.event import MessageEvent
 from nonebot.typing import T_State
-from configs.path_config import PCR_PATH
+from pathlib import Path
 from .data_source import Guess
 from nonebot.params import  CommandArg
-from plugins.pcr import  chara
+from ... import  chara
 from . import  GameMaster, get_guild_member_info
 
 '''
@@ -24,6 +24,8 @@ sv = Service('voiceguess', bundle='pcr娱乐', help_=''
 [cygames] 猜猜随机的"cygames"语音来自哪位角色
 ''.strip())
 '''
+# pcr图片路径
+PCR_PATH = Path("resources/pcr/")
 RES_DIR = PCR_PATH
 DOWNLOAD_THRESHOLD = 76
 MULTIPLE_VOICE_ESTERTION_ID_LIST = ['0044']

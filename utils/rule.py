@@ -4,7 +4,6 @@ from nonebot.adapters.onebot.v11.event import PrivateMessageEvent
 from nonebot.rule import Rule
 from nonebot.adapters.onebot.v11 import MessageEvent, GroupMessageEvent
 from nonebot_plugin_guild_patch import GuildMessageEvent
-from .base_config import Config
 from .service import ServiceTools
 from nonebot.typing import T_State
 
@@ -36,9 +35,8 @@ def is_in_service(service: str) -> Rule:
 
 
 global_config = get_driver().config
-config = Config(**global_config.dict())
-bot_id = config.dict().get("bot_id")
-bot_guild_id = config.dict().get("bot_guild_id")
+bot_id = global_config.bot_id
+bot_guild_id = global_config.bot_guild_id
 
 
 def to_bot() -> Rule:

@@ -14,7 +14,7 @@ from nonebot.typing import T_State
 from nonebot.params import  CommandArg
 from .data_source import  Guess
 import utils
-from plugins.pcr import  chara, pcr_data
+from ... import  chara, pcr_data
 from . import  GameMaster, get_guild_member_info
 
 PATCH_SIZE = 32

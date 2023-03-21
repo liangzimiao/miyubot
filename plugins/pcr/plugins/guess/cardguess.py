@@ -14,7 +14,7 @@ from nonebot.typing import T_State
 import utils
 from .data_source import Guess
 from nonebot.params import  CommandArg
-from plugins.pcr import  chara, pcr_data
+from ... import  chara, pcr_data
 from . import  GameMaster, get_guild_member_info
 
 PIC_SIDE_LENGTH = 180
@@ -79,6 +79,18 @@ async def avatar_guess(bot: Bot, event: MessageEvent,args: Message = CommandArg(
         cropped = utils.pic2b64(cropped)
         await matcher.send(
             f'猜猜这个图片是哪位角色卡面的一部分?({ONE_TURN_TIME}s后公布答案)' + MessageSegment.image(cropped, cache=False))
+
+        sv = Guess().on_message(rule=rule(),priority=5,temp=True)
+
+        @sv.handle()
+        async def on_input_chara_name():
+            game.winner = event.user_id
+            n = game.record()
+            txt = f"猜对了，真厉害！TA已经猜对{n}次了~\n正确答案是{c.name}"
+            msg = c.card.cqcode
+            await sv.send(Message(txt + msg) + f"\n(此轮游戏将在几秒后自动结束，请耐心等待)", at_sender=True)
+            finish_event.set() 
+
         try:
             await asyncio.wait_for(finish_event.wait(), timeout=ONE_TURN_TIME) # 等待15秒或者收到指令
         except asyncio.TimeoutError:
@@ -93,23 +105,17 @@ async def avatar_guess(bot: Bot, event: MessageEvent,args: Message = CommandArg(
 
 
 
-sv = Guess().on_message(priority=5)
 
 
-@sv.handle()
-async def on_input_chara_name(bot: Bot, event: MessageEvent):
+
+async def rule(event: MessageEvent):
     get_gid=get_id(event)[1]
     game = gm.get_game(get_gid)
     if not game or game.winner:
-        return
+        return False
     c = chara.fromname(event.message.extract_plain_text(), game.answer[1])
     if c.id != chara.UNKNOWN and c.id == game.answer[0]:
-        game.winner = event.user_id
-        n = game.record()
-        txt = f"猜对了，真厉害！TA已经猜对{n}次了~\n正确答案是{c.name}"
-        msg = c.card.cqcode
-        await sv.send(Message(txt + msg) + f"\n(此轮游戏将在几秒后自动结束，请耐心等待)", at_sender=True)
-        finish_event.set() 
+        return True
 
 
 def get_id(event: MessageEvent):

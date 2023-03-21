@@ -143,7 +143,6 @@ dmypy.json
 .db
 phantomjs.exe
 
-requirements.txt
 twitter.db
 configs/config.py
 bilibili.db

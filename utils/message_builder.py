@@ -1,10 +1,11 @@
-from configs.path_config import IMAGE_PATH, VOICE_PATH
+from configs.path_config import IMAGE_PATH
 from nonebot.adapters.onebot.v11.message import MessageSegment
-from typing import Union, List
+from typing import Union
 from pathlib import Path
 import os
 
-
+# 图片路径
+IMAGE_PATH = Path("resources/img/")
 def image(
     img_name: Union[str, Path] = None,
     path: str = None,

@@ -4,11 +4,10 @@ import nonebot
 from utils import aiorequests
 from io import BytesIO
 
-driver = nonebot.get_driver()
-config = driver.config
+config = nonebot.get_driver().config
 
-appid = config.appid
-appsecret = config.appsecret
+appid = config.tx_appid
+appsecret = config.tx_appsecret
 
 async def check(img):
     try:

@@ -6,8 +6,8 @@ from nonebot.adapters.onebot.v11 import Bot,Event
 from nonebot import on_command, logger, get_driver
 from utils import aiorequests, normalize_str
 from utils.base_config import BotInfo
-from plugins.pcr import pcr_data
-from plugins.pcr.chara import download_chara_icon, roster
+from ... import pcr_data
+from ...chara import download_chara_icon, roster
 from nonebot_plugin_apscheduler import scheduler
 from nonebot.permission import SUPERUSER
 
