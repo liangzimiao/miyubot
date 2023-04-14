@@ -21,6 +21,50 @@
         "chara":"谷水琴蕾",
         "origin":"赠送"
     },
+    "30140":{
+        "rare":"SSR",
+        "type":"速度",
+        "effecct":"速度加成, 耐力加成, 力量加成, 训练效果提升, 初期力量提升, 初期羁绊计量格提升, 事件回复量提升, 事件效果提升, 智力友情回复量提升",
+        "png_name":"Support_thumb_30140",
+        "url":"https://patchwiki.biligame.com/images/umamusume/thumb/0/0b/aw3ml2jsjkju907fbu7q1mxmu9mmfmc.png/200px-Support_thumb_30140.png",
+        "jp_name":"【比翼のワルツ】トウカイテイオー",
+        "cn_name":"【比翼のワルツ】トウカイテイオー",
+        "chara":"东海帝皇",
+        "origin":"活动"
+    },
+    "30139":{
+        "rare":"SSR",
+        "type":"耐力",
+        "effecct":"速度加成, 耐力加成, 力量加成, 训练效果提升, 初期力量提升, 初期羁绊计量格提升, 事件回复量提升, 事件效果提升, 智力友情回复量提升",
+        "png_name":"Support_thumb_30139",
+        "url":"https://patchwiki.biligame.com/images/umamusume/thumb/c/c6/1msp1rfs2dz2xorfu5iqiiqorfcm065.png/200px-Support_thumb_30139.png",
+        "jp_name":"【心、夜風にさらわれて】メジロマックイーン",
+        "cn_name":"【心、夜風にさらわれて】メジロマックイーン",
+        "chara":"目白麦昆",
+        "origin":"卡池"
+    },
+    "30138":{
+        "rare":"SSR",
+        "type":"力量",
+        "effecct":"速度加成, 耐力加成, 力量加成, 训练效果提升, 初期力量提升, 初期羁绊计量格提升, 事件回复量提升, 事件效果提升, 智力友情回复量提升",
+        "png_name":"Support_thumb_30138",
+        "url":"https://patchwiki.biligame.com/images/umamusume/thumb/0/04/9daa73yny7do3kcub9ngxw7g0mtcp6q.png/200px-Support_thumb_30138.png",
+        "jp_name":"【今は瞳を閉じないで】ナイスネイチャ",
+        "cn_name":"【今は瞳を閉じないで】ナイスネイチャ",
+        "chara":"优秀素质",
+        "origin":"卡池"
+    },
+    "30137":{
+        "rare":"SSR",
+        "type":"团队",
+        "effecct":"速度加成, 耐力加成, 力量加成, 训练效果提升, 初期力量提升, 初期羁绊计量格提升, 事件回复量提升, 事件效果提升, 智力友情回复量提升",
+        "png_name":"Support_thumb_30137",
+        "url":"https://patchwiki.biligame.com/images/umamusume/thumb/3/38/4l5q1zjmx0oj5txpqcr0db79czzxki5.png/200px-Support_thumb_30137.png",
+        "jp_name":"【永劫続く栄光へ】祖にして導く者",
+        "cn_name":"【向着永久延续的荣光】作为引导者的祖先",
+        "chara":"作为引导者的祖先",
+        "origin":"卡池"
+    },
     "30136":{
         "rare":"SSR",
         "type":"毅力",
@@ -1460,6 +1504,17 @@
         "jp_name":"【日本一のステージを】スペシャルウィーク",
         "cn_name":"【在日本第一的舞台】特别周",
         "chara":"特别周",
+        "origin":"卡池"
+    },
+    "20060":{
+        "rare":"SR",
+        "type":"力量",
+        "effecct":"干劲效果提升, 力量加成, 初期羁绊计量格提升, 启发等级提升, 启发发生率提升, 得意率提升",
+        "png_name":"Support_thumb_20060",
+        "url":"https://patchwiki.biligame.com/images/umamusume/thumb/4/48/nxnsrb7q7pl8gaqddysu5zubuwtyaop.png/200px-Support_thumb_20060.png",
+        "jp_name":"【甘～い浮き輪を召し上がれ】ヒシアケボノ",
+        "cn_name":"【享用甜~甜的游泳圈吧】菱曙",
+        "chara":"菱曙",
         "origin":"卡池"
     },
     "20059":{

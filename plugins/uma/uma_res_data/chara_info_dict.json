@@ -879,6 +879,14 @@
         "url":"https://patchwiki.biligame.com/images/umamusume/thumb/7/7c/me6eusmfnphdlc051uq60fxuss75gqi.png/200px-Chr_icon_1069_106901_01.png",
         "jp_name":"日下開山・花あかり"
     },
+    "106902":{
+        "star":"3",
+        "chara_web":"https://wiki.biligame.com//umamusume/%E3%80%90Fleur_Enneig%C3%A9e%E3%80%91%E6%A8%B1%E8%8A%B1%E5%8D%83%E4%BB%A3%E7%8E%8B",
+        "cn_name":"【Fleur Enneigée】樱花千代王",
+        "png_name":"106902",
+        "url":"https://patchwiki.biligame.com/images/umamusume/thumb/a/a6/c77szuscnoany23c130hibmvxxr2kfa.png/200px-Chr_icon_1069_106902_01.png",
+        "jp_name":"Fleur Enneigée"
+    },
     "107101":{
         "star":"3",
         "chara_web":"https://wiki.biligame.com//umamusume/%E7%9B%AE%E7%99%BD%E9%98%BF%E5%B0%94%E4%B8%B9",
@@ -886,6 +894,14 @@
         "png_name":"107101",
         "url":"https://patchwiki.biligame.com/images/umamusume/thumb/a/ac/7h6g69j2vtm5iokx5kuheatyykwdq69.png/200px-Chr_icon_1071_107101_01.png",
         "jp_name":"クリノクロア・ライン"
+    },
+    "107102":{
+        "star":"3",
+        "chara_web":"https://wiki.biligame.com//umamusume/%E3%80%90Neige_%C3%89meraude%E3%80%91%E7%9B%AE%E7%99%BD%E9%98%BF%E5%B0%94%E4%B8%B9",
+        "cn_name":"【Neige Émeraude】目白阿尔丹",
+        "png_name":"107102",
+        "url":"https://patchwiki.biligame.com/images/umamusume/thumb/7/76/jsqweqp5e2ypvxzq75pq5h30henbv3g.png/200px-Chr_icon_1071_107102_01.png",
+        "jp_name":"Neige Émeraude"
     },
     "107201":{
         "star":"3",
@@ -910,6 +926,22 @@
         "png_name":"107801",
         "url":"https://patchwiki.biligame.com/images/umamusume/thumb/1/14/r4oe6dz6w03wwey738ocgr376vnq3uw.png/200px-Chr_icon_1078_107801_01.png",
         "jp_name":"Fluttertail Spirit"
+    },
+    "108301":{
+        "star":"3",
+        "chara_web":"https://wiki.biligame.com//umamusume/%E5%90%89%E5%85%86",
+        "cn_name":"吉兆",
+        "png_name":"108301",
+        "url":"https://patchwiki.biligame.com/images/umamusume/thumb/1/14/4xm4ww9jk385x0qtjhzpm7fh6iyyphl.png/200px-Chr_icon_1083_108301_01.png",
+        "jp_name":"Onyx Soldier"
+    },
+    "108501":{
+        "star":"3",
+        "chara_web":"https://wiki.biligame.com//umamusume/%E7%AC%AC%E4%B8%80%E7%BA%A2%E5%AE%9D%E7%9F%B3",
+        "cn_name":"第一红宝石",
+        "png_name":"108501",
+        "url":"https://patchwiki.biligame.com/images/umamusume/thumb/2/25/2yu11t47hkyi7mbwb0tsof6qzq2y6yp.png/200px-Chr_icon_1085_108501_01.png",
+        "jp_name":"華麗なる紅玉"
     },
     "108701":{
         "star":"3",

@@ -1,35 +1,23 @@
 {
-    "time":"2023/03/20 11:59\n~\n2023/02/24 12:00",
-    "chara_pool_title":"2nd Anniversary卡池",
-    "chara_pool_img":"https://patchwiki.biligame.com/images/umamusume/thumb/1/15/0wmnzd9vvjtroqzj51n2pzi8dwh0u42.png/800px-Gacha_banner_30150.png",
+    "time":"2023/04/10 11:59\n~\n2023/03/29 12:00",
+    "chara_pool_title":"「有美一人，清扬婉兮」活动卡池",
+    "chara_pool_img":"https://patchwiki.biligame.com/images/umamusume/thumb/5/5a/8uciyb8a9opv6pue388dx039m3ca1jb.png/800px-Gacha_banner_30156.png",
     "chara_name":[
-        "千明代表",
-        "双涡轮"
+        "【Neige Émeraude】目白阿尔丹",
+        "【Fleur Enneigée】樱花千代王"
     ],
     "chara_id":[
-        "105701",
-        "106601"
+        "107102",
+        "106902"
     ],
-    "card_pool_title":"2nd Anniversary支援卡池",
-    "card_pool_img":"https://patchwiki.biligame.com/images/umamusume/thumb/8/8e/g3s5ammnv6qyx29x2go79po8zbva1tx.png/800px-Gacha_banner_30151.png",
+    "card_pool_title":"「有美一人，清扬婉兮」活动支援卡池",
+    "card_pool_img":"https://patchwiki.biligame.com/images/umamusume/thumb/2/2c/c7echf1abfk8twxddsrc7nqfik9q9kf.png/800px-Gacha_banner_30157.png",
     "card_name":[
-        "【燦爛】メジロラモーヌ",
-        "【デッド・エンド【通せん坊】】ジャングルポケット",
-        "【ふわり、さらり】メジロドーベル",
-        "【放課後、君が笑った】シンボリルドルフ",
-        "【嗚呼素晴らしき甘味哉】アグネスタキオン",
-        "【トレセン学園】メジロラモーヌ",
-        "【トレセン学園】ジャングルポケット",
-        "【トレセン学園】カツラギエース"
+        "【今は瞳を閉じないで】ナイスネイチャ",
+        "【心、夜風にさらわれて】メジロマックイーン"
     ],
     "card_img_altt":[
-        "Support_thumb_30134.png",
-        "Support_thumb_20056.png",
-        "Support_thumb_20057.png",
-        "Support_thumb_20058.png",
-        "Support_thumb_20059.png",
-        "Support_thumb_10088.png",
-        "Support_thumb_10089.png",
-        "Support_thumb_10091.png"
+        "Support_thumb_30138.png",
+        "Support_thumb_30139.png"
     ]
 }
