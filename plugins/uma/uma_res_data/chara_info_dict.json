@@ -591,6 +591,14 @@
         "url":"https://patchwiki.biligame.com/images/umamusume/thumb/6/64/eatkvvxofj7u3hiuhg62gv35nc62i0w.png/200px-Chr_icon_1041_104101_01.png",
         "jp_name":"サクラ、すすめ！"
     },
+    "104102":{
+        "star":"3",
+        "chara_web":"https://wiki.biligame.com//umamusume/%E3%80%90%E3%83%AC%E3%83%83%E3%83%89%E3%83%9B%E3%83%83%E3%83%88%E2%98%86%E3%83%AA%E3%83%BC%E3%83%80%E3%83%BC%E3%80%91%E6%A8%B1%E8%8A%B1%E8%BF%9B%E7%8E%8B",
+        "cn_name":"【レッドホット☆リーダー】樱花进王",
+        "png_name":"104102",
+        "url":"https://patchwiki.biligame.com/images/umamusume/thumb/e/e7/czfevdx8ixxs0zr0o01caqr4h2xqlko.png/200px-Chr_icon_1041_104102_01.png",
+        "jp_name":"レッドホット☆リーダー"
+    },
     "104201":{
         "star":"3",
         "chara_web":"https://wiki.biligame.com//umamusume/%E9%87%87%E7%8F%A0",
@@ -815,6 +823,14 @@
         "url":"https://patchwiki.biligame.com/images/umamusume/thumb/1/14/iu42g0zutj88ag33biseori7ojpy24b.png/200px-Chr_icon_1062_106201_01.png",
         "jp_name":"ぱんぱかティルトット"
     },
+    "106202":{
+        "star":"3",
+        "chara_web":"https://wiki.biligame.com//umamusume/%E3%80%90%E3%83%96%E3%83%AB%E3%83%BC%E3%83%BB%E3%82%BF%E3%83%BC%E3%83%93%E3%83%A5%E3%83%A9%E3%83%B3%E3%82%B9%E3%80%91%E5%BE%85%E5%85%BC%E8%AF%97%E6%AD%8C%E5%89%A7",
+        "cn_name":"【ブルー・タービュランス】待兼诗歌剧",
+        "png_name":"106202",
+        "url":"https://patchwiki.biligame.com/images/umamusume/thumb/c/cf/dksnlbskkfdaqcfauo30qyjpadrj4rk.png/200px-Chr_icon_1062_106202_01.png",
+        "jp_name":"ブルー・タービュランス"
+    },
     "106401":{
         "star":"3",
         "chara_web":"https://wiki.biligame.com//umamusume/%E7%9B%AE%E7%99%BD%E5%96%84%E4%BF%A1",
@@ -919,6 +935,14 @@
         "url":"https://patchwiki.biligame.com/images/umamusume/thumb/3/3d/s983wgl7q0cclfuqhbmrtnou8y9ckye.png/200px-Chr_icon_1074_107401_01.png",
         "jp_name":"ブリュニサージュ・ライン"
     },
+    "107601":{
+        "star":"3",
+        "chara_web":"https://wiki.biligame.com//umamusume/%E6%A8%B1%E8%8A%B1%E6%A1%82%E5%86%A0",
+        "cn_name":"樱花桂冠",
+        "png_name":"107601",
+        "url":"https://patchwiki.biligame.com/images/umamusume/thumb/b/be/1n0v2xgds56s8241vncpub97lybcaj6.png/200px-Chr_icon_1076_107601_01.png",
+        "jp_name":"Saisir le rêve"
+    },
     "107801":{
         "star":"3",
         "chara_web":"https://wiki.biligame.com//umamusume/%E4%B9%9F%E6%96%87%E6%91%84%E8%BE%89",
@@ -974,5 +998,13 @@
         "png_name":"110001",
         "url":"https://patchwiki.biligame.com/images/umamusume/thumb/1/12/6kkenjdmgix43noamdz1vzcmkdcyf85.png/200px-Chr_icon_1100_110001_01.png",
         "jp_name":"Butterfly Sting"
+    },
+    "110501":{
+        "star":"3",
+        "chara_web":"https://wiki.biligame.com//umamusume/%E6%96%B0%E5%AE%87%E5%AE%99",
+        "cn_name":"新宇宙",
+        "png_name":"110501",
+        "url":"https://patchwiki.biligame.com/images/umamusume/thumb/e/e8/906duo40f95i0awsj2dt3g497a9afft.png/200px-Chr_icon_1105_110501_01.png",
+        "jp_name":"Universe-Naut"
     }
 }

@@ -21,6 +21,39 @@
         "chara":"谷水琴蕾",
         "origin":"赠送"
     },
+    "30143":{
+        "rare":"SSR",
+        "type":"力量",
+        "effecct":"干劲效果提升, 力量加成, 初期羁绊计量格提升, 启发等级提升, 启发发生率提升, 得意率提升",
+        "png_name":"Support_thumb_30143",
+        "url":"https://patchwiki.biligame.com/images/umamusume/thumb/a/a2/6o4nsxlslqb9xhdt2z1iwt321cr9nvd.png/200px-Support_thumb_30143.png",
+        "jp_name":"【たどり着いた景色】イクノディクタス",
+        "cn_name":"【终于到达的景色】生野狄杜斯",
+        "chara":"生野狄杜斯",
+        "origin":"活动"
+    },
+    "30142":{
+        "rare":"SSR",
+        "type":"耐力",
+        "effecct":"干劲效果提升, 训练效果提升, 初期羁绊计量格提升, 赛后加成, 粉丝数加成, 启发等级提升, 启发发生率提升, 得意率提升, 技能Pt加成",
+        "png_name":"Support_thumb_30142",
+        "url":"https://patchwiki.biligame.com/images/umamusume/thumb/2/27/fyfyr4a43eq9kkjnf1x9qkf5yv2kbfa.png/200px-Support_thumb_30142.png",
+        "jp_name":"【刻下、桜花爛漫】サクラローレル",
+        "cn_name":"【刻下、樱花烂漫】樱花桂冠",
+        "chara":"樱花桂冠",
+        "origin":"卡池"
+    },
+    "30141":{
+        "rare":"SSR",
+        "type":"智力",
+        "effecct":"速度加成, 智力加成, 训练效果提升, 初期羁绊计量格提升, 启发等级提升, 启发发生率提升, 得意率提升, 智力友情回复量提升",
+        "png_name":"Support_thumb_30141",
+        "url":"https://patchwiki.biligame.com/images/umamusume/thumb/6/61/k9vz8m0xp5k6su1pljb5v70sjv3aith.png/200px-Support_thumb_30141.png",
+        "jp_name":"【ミッション『心の栄養補給』】ミホノブルボン",
+        "cn_name":"【任务『心之营养补给』】美浦波旁",
+        "chara":"美浦波旁",
+        "origin":"卡池"
+    },
     "30140":{
         "rare":"SSR",
         "type":"速度",
@@ -1121,6 +1154,17 @@
         "chara":"樱花千代王",
         "origin":"卡池"
     },
+    "30037":{
+        "rare":"SSR",
+        "type":"毅力",
+        "effecct":"力量加成, 毅力加成, 训练效果提升, 初期速度提升, 初期羁绊计量格提升, 赛后加成, 粉丝数加成, 启发等级提升, 启发发生率提升, 得意率提升",
+        "png_name":"Support_thumb_30037",
+        "url":"https://patchwiki.biligame.com/images/umamusume/thumb/1/19/fxvmsrc0n9fb52xo49a4k7fbkyycb81.png/200px-Support_thumb_30037.png",
+        "jp_name":"【絶対皇帝】シンボリルドルフ",
+        "cn_name":"【绝对皇帝】皇帝",
+        "chara":"皇帝",
+        "origin":"卡池"
+    },
     "30036":{
         "rare":"SSR",
         "type":"友人",
@@ -1504,6 +1548,17 @@
         "jp_name":"【日本一のステージを】スペシャルウィーク",
         "cn_name":"【在日本第一的舞台】特别周",
         "chara":"特别周",
+        "origin":"卡池"
+    },
+    "20061":{
+        "rare":"SR",
+        "type":"耐力",
+        "effecct":"毅力加成, 初期羁绊计量格提升, 赛后加成, 粉丝数加成, 启发等级提升, 启发发生率提升, 得意率提升",
+        "png_name":"Support_thumb_20061",
+        "url":"https://patchwiki.biligame.com/images/umamusume/thumb/c/cf/aocnteu5jr8byrh64zb4km0runwbkae.png/200px-Support_thumb_20061.png",
+        "jp_name":"【ゴルシ印のスペシャリテ】ゴールドシップ",
+        "cn_name":"【金船记的招牌菜】黄金船",
+        "chara":"黄金船",
         "origin":"卡池"
     },
     "20060":{
