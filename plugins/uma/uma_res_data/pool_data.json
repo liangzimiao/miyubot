@@ -1,23 +1,21 @@
 {
-    "time":"2023/05/10 11:59\n~\n2023/04/28 12:00",
-    "chara_pool_title":"「神算鬼谋春日祭 热血激斗躲鬼球」活动卡池",
-    "chara_pool_img":"https://patchwiki.biligame.com/images/umamusume/thumb/8/84/jglvw22aq9jr0oau4n5bugilm7skaw2.png/800px-Gacha_banner_30162.png",
+    "time":"2023/05/19 11:59\n~\n2023/05/10 12:00",
+    "chara_pool_title":"菱钻奇宝UP卡池",
+    "chara_pool_img":"https://patchwiki.biligame.com/images/umamusume/thumb/9/9c/teykaumdspls0istk1ykv68wojzjwdl.png/800px-Gacha_banner_30166.png",
     "chara_name":[
-        "【ブルー・タービュランス】待兼诗歌剧",
-        "【レッドホット☆リーダー】樱花进王"
+        "菱钻奇宝"
     ],
     "chara_id":[
-        "106202",
-        "104102"
+        "110601"
     ],
-    "card_pool_title":"「神算鬼谋春日祭 热血激斗躲鬼球」活动支援卡池",
-    "card_pool_img":"https://patchwiki.biligame.com/images/umamusume/thumb/b/b2/njpro0pwsk1vu6fxkmvpjas2nfj8e8r.png/800px-Gacha_banner_30163.png",
+    "card_pool_title":"SSR凯斯奇迹、也文摄辉UP卡池",
+    "card_pool_img":"https://patchwiki.biligame.com/images/umamusume/thumb/9/9b/9gsvui63unkjvzcgp2kf5otpgrihgkv.png/800px-Gacha_banner_30167.png",
     "card_name":[
-        "【ミッション『心の栄養補給』】ミホノブルボン",
-        "【刻下、桜花爛漫】サクラローレル"
+        "【To you】ケイエスミラクル",
+        "【誰も知らない風へ】ヤマニンゼファー"
     ],
     "card_img_altt":[
-        "Support_thumb_30141.png",
-        "Support_thumb_30142.png"
+        "Support_thumb_30130.png",
+        "Support_thumb_30126.png"
     ]
 }
