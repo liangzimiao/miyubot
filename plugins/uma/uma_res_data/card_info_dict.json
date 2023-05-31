@@ -1,4 +1,48 @@
 {
+    "30150":{
+        "rare":"SSR",
+        "type":"耐力",
+        "effecct":"干劲效果提升, 毅力加成, 初期毅力提升, 初期羁绊计量格提升, 赛后加成, 粉丝数加成, 启发等级提升, 启发发生率提升, 得意率提升",
+        "png_name":"Support_thumb_30150",
+        "url":"https://patchwiki.biligame.com/images/umamusume/thumb/d/d7/db8mpm9eugs1k3k9xvh6n0tz8ey6fqf.png/200px-Support_thumb_30150.png",
+        "jp_name":"【ハート・イグニッション！！】ウオッカ",
+        "cn_name":"【Heart・点火！！】伏特加",
+        "chara":"伏特加",
+        "origin":"活动"
+    },
+    "30149":{
+        "rare":"SSR",
+        "type":"智力",
+        "effecct":"智力加成, 训练效果提升, 初期羁绊计量格提升, 赛后加成, 粉丝数加成, 启发等级提升, 启发发生率提升, 得意率提升, 技能Pt加成, 智力友情回复量提升",
+        "png_name":"Support_thumb_30149",
+        "url":"https://patchwiki.biligame.com/images/umamusume/thumb/d/df/qltixs8wdct8ybbpihntpp8cgxddjn1.png/200px-Support_thumb_30149.png",
+        "jp_name":"【オートクチュール・メモリー】アストンマーチャン",
+        "cn_name":"【高级服装店・回忆】真弓快车",
+        "chara":"真弓快车",
+        "origin":"卡池"
+    },
+    "30148":{
+        "rare":"SSR",
+        "type":"毅力",
+        "effecct":"毅力加成, 初期速度提升, 初期羁绊计量格提升, 赛后加成, 粉丝数加成, 启发等级提升, 启发发生率提升, 得意率提升, 技能Pt加成",
+        "png_name":"Support_thumb_30148",
+        "url":"https://patchwiki.biligame.com/images/umamusume/thumb/5/52/pzkrcmljyubihj7hqcyk9t6r8q0tstj.png/200px-Support_thumb_30148.png",
+        "jp_name":"【Something Blue】ダイワスカーレット",
+        "cn_name":"【Something Blue】大和赤骥",
+        "chara":"大和赤骥",
+        "origin":"卡池"
+    },
+    "30147":{
+        "rare":"SSR",
+        "type":"速度",
+        "effecct":"力量加成, 训练效果提升, 初期力量提升, 初期羁绊计量格提升, 赛后加成, 粉丝数加成, 启发等级提升, 启发发生率提升, 得意率提升, 技能Pt加成",
+        "png_name":"Support_thumb_30147",
+        "url":"https://patchwiki.biligame.com/images/umamusume/thumb/5/5b/6bxqjtd5aivbwhwhjg6397zpwz985dn.png/200px-Support_thumb_30147.png",
+        "jp_name":"【The frontier】ジャングルポケット",
+        "cn_name":"【The frontier】森林宝穴",
+        "chara":"森林宝穴",
+        "origin":"卡池"
+    },
     "30146":{
         "rare":"SSR",
         "type":"智力",
@@ -611,8 +655,8 @@
         "png_name":"Support_thumb_30090",
         "url":"https://patchwiki.biligame.com/images/umamusume/thumb/1/12/jb8rb4tc94pcmumew4hzyz40olj8gb2.png/200px-Support_thumb_30090.png",
         "jp_name":"【Enchaînement】シンボリルドルフ",
-        "cn_name":"【Enchaînement（连步）】皇帝",
-        "chara":"皇帝",
+        "cn_name":"【Enchaînement（连步）】鲁道夫象征",
+        "chara":"鲁道夫象征",
         "origin":"卡池"
     },
     "30089":{
@@ -809,8 +853,8 @@
         "png_name":"Support_thumb_30072",
         "url":"https://patchwiki.biligame.com/images/umamusume/thumb/3/30/f3bvz8264amee7thg7jrtbfpsgiqk7v.png/200px-Support_thumb_30072.png",
         "jp_name":"【フォーメーション：PARTY】マヤノトップガン",
-        "cn_name":"【Formation：PARTY（阵型：派对）】重炮",
-        "chara":"重炮",
+        "cn_name":"【Formation：PARTY（阵型：派对）】摩耶重炮",
+        "chara":"摩耶重炮",
         "origin":"卡池"
     },
     "30071":{
@@ -1161,8 +1205,8 @@
         "png_name":"Support_thumb_30037",
         "url":"https://patchwiki.biligame.com/images/umamusume/thumb/1/19/fxvmsrc0n9fb52xo49a4k7fbkyycb81.png/200px-Support_thumb_30037.png",
         "jp_name":"【絶対皇帝】シンボリルドルフ",
-        "cn_name":"【绝对皇帝】皇帝",
-        "chara":"皇帝",
+        "cn_name":"【绝对皇帝】鲁道夫象征",
+        "chara":"鲁道夫象征",
         "origin":"卡池"
     },
     "30036":{
@@ -1550,6 +1594,17 @@
         "chara":"特别周",
         "origin":"卡池"
     },
+    "20062":{
+        "rare":"SR",
+        "type":"智力",
+        "effecct":"干劲效果提升, 智力加成, 初期羁绊计量格提升, 启发等级提升, 启发发生率提升, 得意率提升, 智力友情回复量提升",
+        "png_name":"Support_thumb_20062",
+        "url":"https://patchwiki.biligame.com/images/umamusume/thumb/9/92/jgpy12i1ctijcu83f7v43i6mxmp7w6r.png/200px-Support_thumb_20062.png",
+        "jp_name":"【激マブ！ドライブ♪】マルゼンスキー",
+        "cn_name":"【超可爱耀眼！Drive♪】丸善斯基",
+        "chara":"丸善斯基",
+        "origin":"卡池"
+    },
     "20061":{
         "rare":"SR",
         "type":"耐力",
@@ -1590,8 +1645,8 @@
         "png_name":"Support_thumb_20058",
         "url":"https://patchwiki.biligame.com/images/umamusume/thumb/e/e4/mxveptjhdz4r4u8ld7gf3kvzswq0nxl.png/200px-Support_thumb_20058.png",
         "jp_name":"【放課後、君が笑った】シンボリルドルフ",
-        "cn_name":"【放学后，你嫣然而笑】皇帝",
-        "chara":"皇帝",
+        "cn_name":"【放学后，你嫣然而笑】鲁道夫象征",
+        "chara":"鲁道夫象征",
         "origin":"卡池"
     },
     "20057":{
@@ -2129,8 +2184,8 @@
         "png_name":"Support_thumb_20007",
         "url":"https://patchwiki.biligame.com/images/umamusume/thumb/4/4c/shwzum22ajqmxtw2zq694gxyie64t0j.png/200px-Support_thumb_20007.png",
         "jp_name":"【カワイイ＋カワイイは～？】マヤノトップガン",
-        "cn_name":"【可爱+可爱等于～？】重炮",
-        "chara":"重炮",
+        "cn_name":"【可爱+可爱等于～？】摩耶重炮",
+        "chara":"摩耶重炮",
         "origin":"卡池"
     },
     "20006":{
@@ -2833,8 +2888,8 @@
         "png_name":"Support_thumb_10030",
         "url":"https://patchwiki.biligame.com/images/umamusume/thumb/1/15/oe2vzxvv8rg4ll940r4mha12hkgd420.png/200px-Support_thumb_10030.png",
         "jp_name":"【トレセン学園】マヤノトップガン",
-        "cn_name":"【特雷森学园】重炮",
-        "chara":"重炮",
+        "cn_name":"【特雷森学园】摩耶重炮",
+        "chara":"摩耶重炮",
         "origin":""
     },
     "10029":{
@@ -3020,8 +3075,8 @@
         "png_name":"Support_thumb_10013",
         "url":"https://patchwiki.biligame.com/images/umamusume/thumb/6/68/2960zljrle46xd0fw0cxn8ddz1ykpxz.png/200px-Support_thumb_10013.png",
         "jp_name":"【トレセン学園】シンボリルドルフ",
-        "cn_name":"【特雷森学园】皇帝",
-        "chara":"皇帝",
+        "cn_name":"【特雷森学园】鲁道夫象征",
+        "chara":"鲁道夫象征",
         "origin":""
     },
     "10012":{

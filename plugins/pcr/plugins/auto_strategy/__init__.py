@@ -107,10 +107,10 @@ async def update_cache(bot: Bot, event: MessageEvent):
             await matcher.send(f"{type}更新失败")
     await matcher.send("更新完成")
 
-@scheduler.scheduled_job('cron', hour='17', minute='06')
-async def schedule_update_rank_cache():
-    for type in type_list:
-        try:
-            await update_data(type,False)
-        except:
-            pass
+#@scheduler.scheduled_job('cron', hour='17', minute='06')
+#async def schedule_update_rank_cache():
+#    for type in type_list:
+#        try:
+#            await update_data(type,False)
+#        except:
+#            pass

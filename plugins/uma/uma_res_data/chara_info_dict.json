@@ -183,6 +183,14 @@
         "url":"https://patchwiki.biligame.com/images/umamusume/thumb/f/fd/oz26wc32ivsu9sc2rr5zzkqtj21kmwk.png/200px-Chr_icon_1012_101201_01.png",
         "jp_name":"アマゾネス・ラピス"
     },
+    "101202":{
+        "star":"3",
+        "chara_web":"https://wiki.biligame.com//umamusume/%E3%80%90Hungry_Veil%E3%80%91%E8%8F%B1%E4%BA%9A%E9%A9%AC%E9%80%8A",
+        "cn_name":"【Hungry Veil】菱亚马逊",
+        "png_name":"101202",
+        "url":"https://patchwiki.biligame.com/images/umamusume/thumb/3/3a/ry6xq6la17ftldumbe6evr917tzwigc.png/200px-Chr_icon_1012_101202_01.png",
+        "jp_name":"Hungry Veil"
+    },
     "101301":{
         "star":"3",
         "chara_web":"https://wiki.biligame.com//umamusume/%E7%9B%AE%E7%99%BD%E9%BA%A6%E6%98%86",
@@ -257,16 +265,16 @@
     },
     "101701":{
         "star":"3",
-        "chara_web":"https://wiki.biligame.com//umamusume/%E7%9A%87%E5%B8%9D",
-        "cn_name":"皇帝",
+        "chara_web":"https://wiki.biligame.com//umamusume/%E9%B2%81%E9%81%93%E5%A4%AB%E8%B1%A1%E5%BE%81",
+        "cn_name":"鲁道夫象征",
         "png_name":"101701",
         "url":"https://patchwiki.biligame.com/images/umamusume/thumb/6/69/0pnn1xr57ihug69i8xpn2a8dcxw48qk.png/200px-Chr_icon_1017_101701_01.png",
         "jp_name":"ロード・オブ・エンペラー"
     },
     "101702":{
         "star":"3",
-        "chara_web":"https://wiki.biligame.com//umamusume/%E3%80%90%E7%9A%93%E6%9C%88%E3%81%AE%E5%BC%93%E5%8F%96%E3%82%8A%E3%80%91%E7%9A%87%E5%B8%9D",
-        "cn_name":"【皓月の弓取り】皇帝",
+        "chara_web":"https://wiki.biligame.com//umamusume/%E3%80%90%E7%9A%93%E6%9C%88%E3%81%AE%E5%BC%93%E5%8F%96%E3%82%8A%E3%80%91%E9%B2%81%E9%81%93%E5%A4%AB%E8%B1%A1%E5%BE%81",
+        "cn_name":"【皓月の弓取り】鲁道夫象征",
         "png_name":"101702",
         "url":"https://patchwiki.biligame.com/images/umamusume/thumb/e/ee/8oxqo9sxp1dpxdxz2poccn7it6y6aac.png/200px-Chr_icon_1017_101702_01.png",
         "jp_name":"皓月の弓取り"
@@ -369,16 +377,16 @@
     },
     "102401":{
         "star":"2",
-        "chara_web":"https://wiki.biligame.com//umamusume/%E9%87%8D%E7%82%AE",
-        "cn_name":"重炮",
+        "chara_web":"https://wiki.biligame.com//umamusume/%E6%91%A9%E8%80%B6%E9%87%8D%E7%82%AE",
+        "cn_name":"摩耶重炮",
         "png_name":"102401",
         "url":"https://patchwiki.biligame.com/images/umamusume/thumb/9/91/badq9lg7b8omkw3si7yc9udxeel83xu.png/200px-Chr_icon_1024_102401_01.png",
         "jp_name":"すくらんぶる☆ゾーン"
     },
     "102402":{
         "star":"3",
-        "chara_web":"https://wiki.biligame.com//umamusume/%E3%80%90%E3%82%B5%E3%83%B3%E3%83%A9%E3%82%A4%E3%83%88%C2%B7%E3%83%96%E4%B8%80%E3%82%B1%E3%80%91%E9%87%8D%E7%82%AE",
-        "cn_name":"【サンライト·ブ一ケ】重炮",
+        "chara_web":"https://wiki.biligame.com//umamusume/%E3%80%90%E3%82%B5%E3%83%B3%E3%83%A9%E3%82%A4%E3%83%88%C2%B7%E3%83%96%E4%B8%80%E3%82%B1%E3%80%91%E6%91%A9%E8%80%B6%E9%87%8D%E7%82%AE",
+        "cn_name":"【サンライト·ブ一ケ】摩耶重炮",
         "png_name":"102402",
         "url":"https://patchwiki.biligame.com/images/umamusume/thumb/b/bc/0la67lzig3bhn9t2m12wqu3uvvv2tc8.png/200px-Chr_icon_1024_102402_01.png",
         "jp_name":"サンライト・ブーケ"
@@ -703,6 +711,14 @@
         "url":"https://patchwiki.biligame.com/images/umamusume/thumb/7/7c/7zipbyvsopzlsbeazfka5pk06rr6m66.png/200px-Chr_icon_1051_105101_01.png",
         "jp_name":"ティアード・ペタル"
     },
+    "105102":{
+        "star":"3",
+        "chara_web":"https://wiki.biligame.com//umamusume/%E3%80%90Sweet_Juneberry%E3%80%91%E8%A5%BF%E9%87%8E%E8%8A%B1",
+        "cn_name":"【Sweet Juneberry】西野花",
+        "png_name":"105102",
+        "url":"https://patchwiki.biligame.com/images/umamusume/thumb/d/db/6jq3y20r65f3bvtiomcokgsta0vvfv8.png/200px-Chr_icon_1051_105102_01.png",
+        "jp_name":"Sweet Juneberry"
+    },
     "105201":{
         "star":"1",
         "chara_web":"https://wiki.biligame.com//umamusume/%E6%98%A5%E4%B9%8C%E6%8B%89%E6%8B%89",
@@ -958,6 +974,14 @@
         "png_name":"108301",
         "url":"https://patchwiki.biligame.com/images/umamusume/thumb/1/14/4xm4ww9jk385x0qtjhzpm7fh6iyyphl.png/200px-Chr_icon_1083_108301_01.png",
         "jp_name":"Onyx Soldier"
+    },
+    "108401":{
+        "star":"3",
+        "chara_web":"https://wiki.biligame.com//umamusume/%E8%B0%B7%E6%B0%B4%E7%90%B4%E8%95%BE",
+        "cn_name":"谷水琴蕾",
+        "png_name":"108401",
+        "url":"https://patchwiki.biligame.com/images/umamusume/thumb/b/b0/8dj1skmxiu5i8hj87k2wix2s4c2pgf5.png/200px-Chr_icon_1084_108401_01.png",
+        "jp_name":"身に纏うケラヴノス"
     },
     "108501":{
         "star":"3",

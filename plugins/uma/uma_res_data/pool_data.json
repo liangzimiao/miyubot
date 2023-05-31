@@ -1,21 +1,23 @@
 {
-    "time":"2023/05/19 11:59\n~\n2023/05/10 12:00",
-    "chara_pool_title":"菱钻奇宝UP卡池",
-    "chara_pool_img":"https://patchwiki.biligame.com/images/umamusume/thumb/9/9c/teykaumdspls0istk1ykv68wojzjwdl.png/800px-Gacha_banner_30166.png",
+    "time":"2023/06/09 11:59\n~\n2023/05/29 12:00",
+    "chara_pool_title":"「宣誓，至斗争的你」活动卡池",
+    "chara_pool_img":"https://patchwiki.biligame.com/images/umamusume/thumb/1/1f/qhbueb81ils95848c8zp7bbc6ogzvsx.png/800px-Gacha_banner_30170.png",
     "chara_name":[
-        "菱钻奇宝"
+        "【Hungry Veil】菱亚马逊",
+        "【Sweet Juneberry】西野花"
     ],
     "chara_id":[
-        "110601"
+        "101202",
+        "105102"
     ],
-    "card_pool_title":"SSR凯斯奇迹、也文摄辉UP卡池",
-    "card_pool_img":"https://patchwiki.biligame.com/images/umamusume/thumb/9/9b/9gsvui63unkjvzcgp2kf5otpgrihgkv.png/800px-Gacha_banner_30167.png",
+    "card_pool_title":"「宣誓，至斗争的你」活动支援卡池",
+    "card_pool_img":"https://patchwiki.biligame.com/images/umamusume/thumb/b/b4/erwkg8vlhefjb76vgwfxq846wv9q0mj.png/800px-Gacha_banner_30171.png",
     "card_name":[
-        "【To you】ケイエスミラクル",
-        "【誰も知らない風へ】ヤマニンゼファー"
+        "【Something Blue】ダイワスカーレット",
+        "【オートクチュール・メモリー】アストンマーチャン"
     ],
     "card_img_altt":[
-        "Support_thumb_30130.png",
-        "Support_thumb_30126.png"
+        "Support_thumb_30148.png",
+        "Support_thumb_30149.png"
     ]
 }
