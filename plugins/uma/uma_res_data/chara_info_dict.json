@@ -31,6 +31,14 @@
         "url":"https://patchwiki.biligame.com/images/umamusume/thumb/9/9d/13btkb976rxbih850vgfptuq721tfg0.png/200px-Chr_icon_1002_100201_01.png",
         "jp_name":"サイレントイノセンス"
     },
+    "100202":{
+        "star":"3",
+        "chara_web":"https://wiki.biligame.com//umamusume/%E3%80%90%E6%B3%A2%E9%96%93%E3%81%AE%E3%82%A8%E3%83%A1%E3%83%A9%E3%83%AB%E3%83%89%E3%80%91%E6%97%A0%E5%A3%B0%E9%93%83%E9%B9%BF",
+        "cn_name":"【波間のエメラルド】无声铃鹿",
+        "png_name":"100202",
+        "url":"https://patchwiki.biligame.com/images/umamusume/thumb/2/27/3l4heljhkc1a6dix33czzsbndpr6jt2.png/200px-Chr_icon_1002_100202_01.png",
+        "jp_name":"波間のエメラルド"
+    },
     "100301":{
         "star":"3",
         "chara_web":"https://wiki.biligame.com//umamusume/%E4%B8%9C%E6%B5%B7%E5%B8%9D%E7%9A%87",
@@ -487,6 +495,14 @@
         "url":"https://patchwiki.biligame.com/images/umamusume/thumb/2/2f/abf6v7frvljsrokp9vto07wkgbrti4a.png/200px-Chr_icon_1032_103201_01.png",
         "jp_name":"tach-nology"
     },
+    "103202":{
+        "star":"3",
+        "chara_web":"https://wiki.biligame.com//umamusume/%E3%80%90Lunatic_Lab%E3%80%91%E7%88%B1%E4%B8%BD%E9%80%9F%E5%AD%90",
+        "cn_name":"【Lunatic Lab】爱丽速子",
+        "png_name":"103202",
+        "url":"https://patchwiki.biligame.com/images/umamusume/thumb/6/6a/o5ab8v294zknryej3bowpmuzahdpp04.png/200px-Chr_icon_1032_103202_01.png",
+        "jp_name":"Lunatic Lab"
+    },
     "103301":{
         "star":"3",
         "chara_web":"https://wiki.biligame.com//umamusume/%E7%88%B1%E6%85%95%E7%BB%87%E5%A7%AC",
@@ -679,6 +695,14 @@
         "url":"https://patchwiki.biligame.com/images/umamusume/thumb/9/99/l658v1e2t6ypndexheiru5m0gtiybgk.png/200px-Chr_icon_1048_104801_01.png",
         "jp_name":"ポップス☆ジョーカー"
     },
+    "104802":{
+        "star":"3",
+        "chara_web":"https://wiki.biligame.com//umamusume/%E3%80%90Aurore%E2%98%86Vacances%E3%80%91%E4%B8%9C%E7%80%9B%E4%BD%90%E6%95%A6",
+        "cn_name":"【Aurore☆Vacances】东瀛佐敦",
+        "png_name":"104802",
+        "url":"https://patchwiki.biligame.com/images/umamusume/thumb/6/6b/1cj6qe2zy8pxyxibkv3gz9xpj4f5g1u.png/200px-Chr_icon_1048_104802_01.png",
+        "jp_name":"Aurore ☆ Vacances"
+    },
     "104901":{
         "star":"3",
         "chara_web":"https://wiki.biligame.com//umamusume/%E4%B8%AD%E5%B1%B1%E5%BA%86%E5%85%B8",
@@ -742,6 +766,22 @@
         "png_name":"105301",
         "url":"https://patchwiki.biligame.com/images/umamusume/thumb/1/11/q703pn0y576wn4cywt06c2o82qwrez1.png/200px-Chr_icon_1053_105301_01.png",
         "jp_name":"黒鉄の大志"
+    },
+    "105302":{
+        "star":"3",
+        "chara_web":"https://wiki.biligame.com//umamusume/%E3%80%90Ultra%E2%98%86Marine%E3%80%91%E9%9D%92%E7%AB%B9%E5%9B%9E%E5%BF%86",
+        "cn_name":"【Ultra☆Marine】青竹回忆",
+        "png_name":"105302",
+        "url":"https://patchwiki.biligame.com/images/umamusume/thumb/d/dc/1y67rf81083gpscfe0s876bx8vhpckt.png/200px-Chr_icon_1053_105302_01.png",
+        "jp_name":"Ultra☆Marine"
+    },
+    "105501":{
+        "star":"3",
+        "chara_web":"https://wiki.biligame.com//umamusume/%E7%BE%8E%E4%B8%BD%E5%91%A8%E6%97%A5",
+        "cn_name":"美丽周日",
+        "png_name":"105501",
+        "url":"https://patchwiki.biligame.com/images/umamusume/thumb/9/9b/o5vrmt0knjrpnxu5zy9semkx1nmnxkq.png/200px-Chr_icon_1055_105501_01.png",
+        "jp_name":"☆キラ★ドキ☆ワク∞マベ∞"
     },
     "105601":{
         "star":"1",
@@ -919,6 +959,14 @@
         "url":"https://patchwiki.biligame.com/images/umamusume/thumb/a/a6/c77szuscnoany23c130hibmvxxr2kfa.png/200px-Chr_icon_1069_106902_01.png",
         "jp_name":"Fleur Enneigée"
     },
+    "107001":{
+        "star":"3",
+        "chara_web":"https://wiki.biligame.com//umamusume/%E5%A4%A9%E7%8B%BC%E6%98%9F%E8%B1%A1%E5%BE%81",
+        "cn_name":"天狼星象征",
+        "png_name":"107001",
+        "url":"https://patchwiki.biligame.com/images/umamusume/thumb/f/f7/rb7ig38nr5qdrrlr86z0ahdi3i6y7i6.png/200px-Chr_icon_1070_107001_01.png",
+        "jp_name":"Féroce"
+    },
     "107101":{
         "star":"3",
         "chara_web":"https://wiki.biligame.com//umamusume/%E7%9B%AE%E7%99%BD%E9%98%BF%E5%B0%94%E4%B8%B9",
@@ -958,6 +1006,14 @@
         "png_name":"107601",
         "url":"https://patchwiki.biligame.com/images/umamusume/thumb/b/be/1n0v2xgds56s8241vncpub97lybcaj6.png/200px-Chr_icon_1076_107601_01.png",
         "jp_name":"Saisir le rêve"
+    },
+    "107701":{
+        "star":"3",
+        "chara_web":"https://wiki.biligame.com//umamusume/%E6%88%90%E7%94%B0%E8%B7%AF",
+        "cn_name":"成田路",
+        "png_name":"107701",
+        "url":"https://patchwiki.biligame.com/images/umamusume/thumb/2/2d/jyiroeard8g68o5wyk4kooamnghylwp.png/200px-Chr_icon_1077_107701_01.png",
+        "jp_name":"The Proud Road"
     },
     "107801":{
         "star":"3",
@@ -1022,6 +1078,14 @@
         "png_name":"110001",
         "url":"https://patchwiki.biligame.com/images/umamusume/thumb/1/12/6kkenjdmgix43noamdz1vzcmkdcyf85.png/200px-Chr_icon_1100_110001_01.png",
         "jp_name":"Butterfly Sting"
+    },
+    "110401":{
+        "star":"3",
+        "chara_web":"https://wiki.biligame.com//umamusume/%E8%91%9B%E5%9F%8E%E7%8E%8B%E7%89%8C",
+        "cn_name":"葛城王牌",
+        "png_name":"110401",
+        "url":"https://patchwiki.biligame.com/images/umamusume/thumb/b/bc/autnhh344jxbx6ss61ws0ed3svcikyc.png/200px-Chr_icon_1104_110401_01.png",
+        "jp_name":"登竜之頂"
     },
     "110501":{
         "star":"3",

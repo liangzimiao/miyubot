@@ -1,23 +1,22 @@
 {
-    "time":"2023/06/09 11:59\n~\n2023/05/29 12:00",
-    "chara_pool_title":"「宣誓，至斗争的你」活动卡池",
-    "chara_pool_img":"https://patchwiki.biligame.com/images/umamusume/thumb/1/1f/qhbueb81ils95848c8zp7bbc6ogzvsx.png/800px-Gacha_banner_30170.png",
+    "time":"2023/09/11 11:59\n~\n2023/08/24 12:00",
+    "chara_pool_title":"2.5th Anniversary卡池",
+    "chara_pool_img":"https://patchwiki.biligame.com/images/umamusume/thumb/d/dd/3ryiplqkmutqgsrha0tjbjgceya963t.png/800px-Gacha_banner_30186.png",
     "chara_name":[
-        "【Hungry Veil】菱亚马逊",
-        "【Sweet Juneberry】西野花"
+        "成田路"
     ],
     "chara_id":[
-        "101202",
-        "105102"
+        "107701"
     ],
-    "card_pool_title":"「宣誓，至斗争的你」活动支援卡池",
-    "card_pool_img":"https://patchwiki.biligame.com/images/umamusume/thumb/b/b4/erwkg8vlhefjb76vgwfxq846wv9q0mj.png/800px-Gacha_banner_30171.png",
+    "card_pool_title":"2.5th Anniversary支援卡池",
+    "card_pool_img":"https://patchwiki.biligame.com/images/umamusume/thumb/6/64/4klmikntyj77v2wy3v9ui94qd0e7bxw.png/800px-Gacha_banner_30187.png",
     "card_name":[
-        "【Something Blue】ダイワスカーレット",
-        "【オートクチュール・メモリー】アストンマーチャン"
+        "【L'aubeは迫りて】佐岳メイ",
+        "【大望は飛んでいく】エルコンドルパサー",
+        "【URA職員】佐岳メイ"
     ],
     "card_img_altt":[
-        "Support_thumb_30148.png",
-        "Support_thumb_30149.png"
+        "Support_thumb_30160.png",
+        "Support_thumb_30161.png"
     ]
 }
