@@ -1,4 +1,4 @@
-<h2>基于nonebot的频道处理bot</h2>
+<h2>基于nonebot的bot</h2>
 
 <h3>借鉴项目</h3>
 
@@ -8,4 +8,4 @@
 
 <h3>资源出处</h3>
 
-- [赛马娘中文wiki](https://wiki.biligame.com/umamusume/%E9%A6%96%E9%A1%B5)
+- [赛马娘中文 wiki](https://wiki.biligame.com/umamusume/%E9%A6%96%E9%A1%B5)

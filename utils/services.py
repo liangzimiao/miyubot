@@ -19,7 +19,7 @@ os.makedirs(SERVICES_DIR, exist_ok=True)
 GLOBAL_SERVICE_DIR = SERVICE_DIR / "global_service"
 os.makedirs(GLOBAL_SERVICE_DIR, exist_ok=True)
 
-CD_DIR = Path(".") / "data" / "CD"
+CD_DIR = Path(".") / "data" / "CD" 
 os.makedirs(CD_DIR, exist_ok=True)
 
 

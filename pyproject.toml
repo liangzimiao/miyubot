@@ -1,21 +1,33 @@
+[project]
+name = "miyubot"
+version = "3.0.1"
+description = "miyubot"
+authors = ["liangzimiao <2968274386@qq.com>"]
+readme = "README.md"
+requires-python = "^3.10"
+
+[tool.nonebot]
+adapters = [
+    { name = "OneBot V11", module_name = "nonebot.adapters.onebot.v11" },
+    { name = "Console", module_name = "nonebot.adapters.console" },
+]
+plugins = []
+plugin_dirs = ["src/plugins"]
+builtin_plugins = ["echo"]
+
 [tool.poetry]
 name = "miyubot"
-version = "0.1.0"
+version = "3.0.1"
 description = "miyubot"
-authors = []
+authors = ["liangzimiao <2968274386@qq.com>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "^3.7.3"
-nonebot2 = "^2.0.0-beta.1"
+python = "^3.10"
+requests = "^2.31.0"
+nonebot2 = "^2.0.1"
 
-[tool.poetry.dev-dependencies]
-nb-cli = "^0.6.0"
-
-[tool.nonebot]
-plugins = ["nonebot_plugin_guild_patch", "nonebot_plugin_apscheduler", "nonebot_plugin_imageutils"]
-plugin_dirs = ["src/plugins"]
 
 [build-system]
-requires = ["poetry_core>=1.0.0"]
+requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"

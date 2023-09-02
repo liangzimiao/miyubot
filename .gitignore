@@ -141,14 +141,11 @@ dmypy.json
 
 # End of https://www.toptal.com/developers/gitignore/api/python
 .db
-phantomjs.exe
 
-twitter.db
-configs/config.py
-bilibili.db
-docker-compose.yml
-Dockerfile
-go-cqhttp
+
+
+
+
 utils/log.py
 src
 **/account.json
@@ -170,4 +167,5 @@ poetry.lock
 Googlelens_page.html
 GoogleSearch_page.html
 plugins/recreations/plugins/nonebot_plugin_moyu/subscribe.json
-accounts
+
+.vscode
