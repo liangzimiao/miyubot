@@ -1,6 +1,6 @@
 [project]
 name = "miyubot"
-version = "3.0.1"
+version = "3.0.4"
 description = "miyubot"
 authors = ["liangzimiao <2968274386@qq.com>"]
 readme = "README.md"
@@ -9,15 +9,15 @@ requires-python = "^3.10"
 [tool.nonebot]
 adapters = [
     { name = "OneBot V11", module_name = "nonebot.adapters.onebot.v11" },
-    { name = "Console", module_name = "nonebot.adapters.console" },
+    #{ name = "Console", module_name = "nonebot.adapters.console" },
 ]
-plugins = []
-plugin_dirs = ["src/plugins"]
+plugins = ["nonebot_plugin_guild_patch"]
+plugin_dirs = ["src/plugins/application"]
 builtin_plugins = ["echo"]
 
 [tool.poetry]
 name = "miyubot"
-version = "3.0.1"
+version = "3.0.4"
 description = "miyubot"
 authors = ["liangzimiao <2968274386@qq.com>"]
 readme = "README.md"
@@ -26,6 +26,11 @@ readme = "README.md"
 python = "^3.10"
 requests = "^2.31.0"
 nonebot2 = "^2.0.1"
+nonebot-plugin-heweather = "^0.6.11"
+nonebot-plugin-guild-patch = "^0.2.3"
+nonebot-plugin-apscheduler = "^0.3.0"
+nonebot-plugin-picstatus = "^0.5.1"
+nonebot-plugin-memes-api = "^0.1.5"
 
 
 [build-system]
